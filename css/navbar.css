@@ -1,0 +1,40 @@
+.navbar {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background: #262626;
+    border-bottom: 5px solid #ffb600;
+    opacity: 0.9;
+}
+
+.img-title-div {
+    display: flex;
+    max-width: 160px;
+    margin: 0 auto;
+}
+
+.title-div {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.span-div {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #ffb600;
+}
+
+.img-div {
+    margin-top: 5px;
+    width: 45px;
+    height: 45px;
+    background: transparent url("../images/runner-yellow.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 45px;
+}
