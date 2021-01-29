@@ -1,16 +1,20 @@
 class Implants {
   constructor() {
     this.implantAdapter = new ImplantAdapter()
+    this.fetchInplantsSpecifications()
+    this.implants = []
   }
 
-  fetchImplantsSpecifications() {
-    this.implantAdapter.fetchImplantData().then((data) => {
-      data.map((implant) => {
-        // console.log(
-        //   `implant name: ${implant.IMPLANT}`,
-        //   `implant length: ${implant.IMPLANT_LENGTH}`
-        // )
+  fetchInplantsSpecifications() {
+    this.implantAdapter
+      .fetchImplantData()
+      .then((data) => {
+        data.map((implant) => {
+          this.implants.push(implant)
+        })
       })
-    })
+      .then(() => {
+        return this.implants
+      })
   }
 }

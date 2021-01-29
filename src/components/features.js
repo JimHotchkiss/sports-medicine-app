@@ -2,9 +2,9 @@ class Features {
   constructor() {
     this.features = []
     this.featuresAdapter = new FeaturesAdapter()
-    this.implants = new Implants()
     this.callUpdateHomePage = new UpdateHomePage()
     this.callUpdateNavBar = new UpdateNavbar()
+    this.inplants = new Implants()
     this.retrieveFeatureData()
   }
 
@@ -67,7 +67,7 @@ class Features {
         this.callUpdateNavBar.updateTitle(item, this.features)
         this.callUpdateNavBar.addHomeIcon()
         if (item.id === "implant-specifications") {
-          this.implants.fetchImplantsSpecifications()
+          this.callUpdateHomePage.renderInplants()
         } else {
           console.log("false")
         }

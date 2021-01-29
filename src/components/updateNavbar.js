@@ -1,6 +1,8 @@
 class UpdateNavbar {
   constructor() {
     this.bindHomeIconEventListener()
+    this.updateHomePage = new UpdateHomePage()
+    // this.updateNavbar()
   }
   updateTitle(item, features) {
     const navbarTitleDiv = document.getElementsByClassName("title-div")
@@ -33,10 +35,12 @@ class UpdateNavbar {
     const navbarHomeIcon = document.getElementById("navbar-home-icon")
     if (navbarHomeIcon !== null) {
       navbarHomeIcon.addEventListener("click", () => {
+        // this.updateNavbar()
         const navbar = document.getElementById("navbar")
         if (navbar) {
           navbar.parentNode.removeChild(navbar)
         }
+        this.updateHomePage.clearInnerText()
         new HomePage()
       })
     }
