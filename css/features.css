@@ -1,8 +1,7 @@
-.feature-container{
+.features-container{
     padding-top: 65px;
     padding-bottom: 16px;
     margin: 0 auto;
-    min-height: 1000px;
     background: #262626;
 }
 
@@ -35,6 +34,11 @@
 
 #complaint-img-url {
     background: transparent url(../images/complaint3.png) 0% 0% no-repeat padding-box;
+    background-size: 50px;
+}
+
+#implant-specifications-img-url {
+    background: transparent url(../images/implants.png) 0% 0% no-repeat padding-box;
     background-size: 50px;
 }
 

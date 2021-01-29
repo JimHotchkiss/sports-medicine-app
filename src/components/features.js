@@ -2,6 +2,9 @@ class Features {
   constructor() {
     this.features = []
     this.featuresAdapter = new FeaturesAdapter()
+    this.implants = new Implants()
+    this.callUpdateHomePage = new UpdateHomePage()
+    this.callUpdateNavBar = new UpdateNavbar()
     this.retrieveFeatureData()
   }
 
@@ -16,15 +19,17 @@ class Features {
       .then(() => {
         this.renderFeatures()
       })
+      .then(() => {
+        this.bindFeatureEventListener()
+      })
   }
 
   renderFeatures() {
     const root = document.getElementById("root")
     const featureContainer = document.createElement("div")
-    featureContainer.setAttribute("class", "feature-container")
-    featureContainer.setAttribute("id", "feature-container")
+    featureContainer.setAttribute("class", "features-container")
+    featureContainer.setAttribute("id", "features-container")
     return this.features.map((feature) => {
-      console.log(feature.description)
       // Feature div
       const featureDiv = document.createElement("div")
       featureDiv.setAttribute("class", "feature-div")
@@ -52,5 +57,21 @@ class Features {
       featureContainer.appendChild(featureDiv)
       root.appendChild(featureContainer)
     })
+  }
+
+  bindFeatureEventListener() {
+    const featureDivs = document.getElementsByClassName("feature-div")
+    for (let item of featureDivs) {
+      item.addEventListener("click", () => {
+        this.callUpdateHomePage.clearInnerText()
+        this.callUpdateNavBar.updateTitle(item, this.features)
+        this.callUpdateNavBar.addHomeIcon()
+        if (item.id === "implant-specifications") {
+          this.implants.fetchImplantsSpecifications()
+        } else {
+          console.log("false")
+        }
+      })
+    }
   }
 }

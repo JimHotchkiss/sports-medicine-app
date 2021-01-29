@@ -5,10 +5,13 @@ class Navbar {
   renderNavbar() {
     const navbar = document.createElement("div")
     navbar.setAttribute("class", "navbar")
+    navbar.setAttribute("id", "navbar")
     const imgTitleDiv = document.createElement("div")
     imgTitleDiv.setAttribute("class", "img-title-div")
+    imgTitleDiv.setAttribute("id", "img-title-div")
     const imgDiv = document.createElement("div")
     imgDiv.setAttribute("class", "img-div")
+    imgDiv.setAttribute("id", "img-div")
     const titleDiv = document.createElement("div")
     titleDiv.setAttribute("class", "title-div")
     const spanDiv = document.createElement("div")

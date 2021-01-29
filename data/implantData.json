@@ -2,7 +2,7 @@
     {
         "IMPLANT": "ICONIX 1\n3910-500-512\n",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(4.5mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(4.5mm  deployed)",
         "IMPLANT\nWIDTH": "1.4mm \n(3mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": " 3910500568: 20mm (from back end to end before spike); 21mm (from back end to full tip)",
@@ -14,7 +14,7 @@
     {
         "IMPLANT": "ICONIX 1 w/ Needles\n3910-500-412",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "8mm\n(4mm deployed)",
+        "IMPLANT_LENGTH": "8mm\n(4mm deployed)",
         "IMPLANT\nWIDTH": "1.4mm\n(3mm deployed)",
         "POSITIVE\n STOP?": "Yes",
         "IMPLANT DRILL DEPTH ": "3910-500-412 (drill sold in kit with implant): 17mm (tip to hard stop)",
@@ -26,7 +26,7 @@
     {
         "IMPLANT": "ICONIX 1 TT\n3910-500-312",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(4.5mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(4.5mm  deployed)",
         "IMPLANT\nWIDTH": "1.4mm \n(3mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": " 3910500568: 20mm (from back end to end before spike); 21mm (from back end to full tip)",
@@ -38,7 +38,7 @@
     {
         "IMPLANT": "ICONIX 1 TT w/ Needles \n3910-500-212",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "8mm\n(4mm deployed)",
+        "IMPLANT_LENGTH": "8mm\n(4mm deployed)",
         "IMPLANT\nWIDTH": "1.4mm\n(3mm deployed)",
         "POSITIVE\n STOP?": "Yes",
         "IMPLANT DRILL DEPTH ": "3910-500-212 (drill sold in kit with implant): 17mm (tip to hard stop)",
@@ -50,7 +50,7 @@
     {
         "IMPLANT": "ICONIX 2\n3910-500-522\n",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(8mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(8mm  deployed)",
         "IMPLANT\nWIDTH": "2.3mm \n(4.0 mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "3910-500-569: 20mm (from back end to end before spike); 21.5mm (from back end to full tip)",
@@ -62,7 +62,7 @@
     {
         "IMPLANT": "ICONIX 2 w/ needles\n3910-500-422",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm\ndeployed - same as standard ICONIX 2",
+        "IMPLANT_LENGTH": "12mm\ndeployed - same as standard ICONIX 2",
         "IMPLANT\nWIDTH": "2.3mm\ndeployed - same as standard ICONIX 2",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "3910-500-422 (drill sold in kit with implant): 22mm (tip to hard stop)",
@@ -74,7 +74,7 @@
     {
         "IMPLANT": "ICONIX 2 TT\n3910-500-322\n",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(8mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(8mm  deployed)",
         "IMPLANT\nWIDTH": "2.3mm \n(4.0 mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "3910-500-569: 20mm (from back end to end before spike); 21.5mm (from back end to full tip)",
@@ -86,7 +86,7 @@
     {
         "IMPLANT": "ICONIX 2 TT w/ needles\n3910-500-222",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm\ndeployed - same as standard ICONIX 2",
+        "IMPLANT_LENGTH": "12mm\ndeployed - same as standard ICONIX 2",
         "IMPLANT\nWIDTH": "2.3mm\ndeployed - same as standard ICONIX 2",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "3910-500-222 (drill sold in kit with implant): 22mm (tip to hard stop)",
@@ -98,7 +98,7 @@
     {
         "IMPLANT": "ICONIX 3\n3910-500-532",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(8mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(8mm  deployed)",
         "IMPLANT\nWIDTH": "2.3mm \n(4.0 mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "3910-500-569: 20mm (from back end to end before spike); 21.5mm (from back end to full tip)",
@@ -110,7 +110,7 @@
     {
         "IMPLANT": "ICONIX 25\n3910-500-525",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(8mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(8mm  deployed)",
         "IMPLANT\nWIDTH": "2.3mm \n(4.0 mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "3910-500-569: 20mm (from back end to end before spike); 21.5mm (from back end to full tip)",
@@ -122,7 +122,7 @@
     {
         "IMPLANT": "ICONIX SPEED\nTriple Loaded 1.2 mm Xbraid TT:\n3910-500-931\nDouble Loaded 2.0mm Xbraid TT:\n3910-500-920\nDouble Loaded #2 Force Fiber:\n3910-500-922\nCombo 1.2 mm & 2.0mm Xbraid TT:\n3910-500-921",
         "MATERIAL": "Polyester Suture (UHMWPE)",
-        "IMPLANT\nLENGTH": "12mm \n(8mm  deployed)",
+        "IMPLANT_LENGTH": "12mm \n(8mm  deployed)",
         "IMPLANT\nWIDTH": "2.3mm \n(4.0 mm  deployed)",
         "POSITIVE\n STOP?": "laser lines",
         "IMPLANT DRILL DEPTH ": "min insertions depth is 21mm up to  30 mm; 5 mm from min. insertion depth",
@@ -134,7 +134,7 @@
     {
         "IMPLANT": "CINCHLOCK FLEX\nCAT02643",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "12mm",
+        "IMPLANT_LENGTH": "12mm",
         "IMPLANT\nWIDTH": "2.3mm Distal Tip \n2.5mm Distal Barb \n3.8 Proximal Barb",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "17mm\n(DHF 02049)",
@@ -146,7 +146,7 @@
     {
         "IMPLANT": "CINCHLOCK SS\nCAT02462",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "12mm",
+        "IMPLANT_LENGTH": "12mm",
         "IMPLANT\nWIDTH": "2.3mm Distal Tip \n2.5mm Distal Barb \n3.8 Proximal Barb",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "17mm\n(DHF 02049)",
@@ -158,7 +158,7 @@
     {
         "IMPLANT": "NANOTACK \nCAT01386\nFLEX: CAT01858",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "7.5mm",
+        "IMPLANT_LENGTH": "7.5mm",
         "IMPLANT\nWIDTH": "1.4mm\n(1.8mm  deployed)",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "16mm\n(DHF 02049)",
@@ -170,7 +170,7 @@
     {
         "IMPLANT": "NANOTACK TT\nCAT02969",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "7.5mm",
+        "IMPLANT_LENGTH": "7.5mm",
         "IMPLANT\nWIDTH": "1.4mm\n(1.8mm  deployed)",
         "POSITIVE\n STOP?": "yes on Iconix guide",
         "IMPLANT DRILL DEPTH ": "16mm\n(DHF 02049)",
@@ -182,7 +182,7 @@
     {
         "IMPLANT": "REELX STT\n3910-600-062",
         "MATERIAL": "PEEK anchor body and Stainless Steel Core",
-        "IMPLANT\nLENGTH": "17.5mm",
+        "IMPLANT_LENGTH": "17.5mm",
         "IMPLANT\nWIDTH": "4.5mm \n(expands to 5.5mm)",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "can mallet directly\n or\n use 5mm BioZip Drill (depth: 15.2mm)    \n3910-004-032\nor \nuse 5mm BioZip Awl (depth: 12.5mm) \n3910-003-050",
@@ -194,7 +194,7 @@
     {
         "IMPLANT": "REELX STT\n3910-600-060",
         "MATERIAL": "PEEK anchor body and Stainless Steel Core",
-        "IMPLANT\nLENGTH": "19.4mm",
+        "IMPLANT_LENGTH": "19.4mm",
         "IMPLANT\nWIDTH": "5.5mm\n (expands to 6.5mm)",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "can mallet directly\n or \nuse 6.5mm Zip Drill (depth: 15.2mm)    3910-004-040\nor\nuse 6.5mm BioZip Awl (depth: 20mm to bury laser line) \n3910-003-065",
@@ -206,7 +206,7 @@
     {
         "IMPLANT": "OMEGA\nsingle 3910-500-391\ndouble double 3910-500-392",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "12.5MM",
+        "IMPLANT_LENGTH": "12.5MM",
         "IMPLANT\nWIDTH": "3.9mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap (3910-500-394): 16mm",
@@ -218,7 +218,7 @@
     {
         "IMPLANT": "OMEGA\nsingle 3910-500-471 \ndouble double 3910-500-472",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "14mm",
+        "IMPLANT_LENGTH": "14mm",
         "IMPLANT\nWIDTH": "4.75mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap (3910-500-394): 16mm",
@@ -230,7 +230,7 @@
     {
         "IMPLANT": "OMEGA\n3910-500-652",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "14mm",
+        "IMPLANT_LENGTH": "14mm",
         "IMPLANT\nWIDTH": "6.5mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap (3910-500-394): 16mm",
@@ -242,7 +242,7 @@
     {
         "IMPLANT": "BIOSTEON INTRALINE ANCHOR\n2 suture w/o needles: 3910-200-080",
         "MATERIAL": "HA (25%)/PLLA (75%)\nhydroxyapatite and non-crystalline poly-L-lactide",
-        "IMPLANT\nLENGTH": "10.8 mm",
+        "IMPLANT_LENGTH": "10.8 mm",
         "IMPLANT\nWIDTH": "4.5mm ",
         "POSITIVE\n STOP?": "laser line",
         "IMPLANT DRILL DEPTH ": "laser line",
@@ -254,7 +254,7 @@
     {
         "IMPLANT": "BIOSTEON INTRALINE ANCHOR\n2 suture w/ needles: 3910-200-082\n2 suture w/o needles: 3910-200-081\n3 suture w/o needles: 3910-200-083",
         "MATERIAL": "HA (25%)/PLLA (75%)\nhydroxyapatite and non-crystalline poly-L-lactide",
-        "IMPLANT\nLENGTH": "10.8mm",
+        "IMPLANT_LENGTH": "10.8mm",
         "IMPLANT\nWIDTH": "5.5mm",
         "POSITIVE\n STOP?": "laser line",
         "IMPLANT DRILL DEPTH ": "laser line",
@@ -266,7 +266,7 @@
     {
         "IMPLANT": "BIOSTEON INTRALINE ANCHOR\n2 suture w/ needles: 3910-200-085\n2 suture w/o needles: 3910-200-084\n3 suture w/o needles: 3910-200-086",
         "MATERIAL": "HA/PLA\nhydroxyapatite and non-crystalline poly-L-lactide",
-        "IMPLANT\nLENGTH": "10.8mm",
+        "IMPLANT_LENGTH": "10.8mm",
         "IMPLANT\nWIDTH": "6.5mm",
         "POSITIVE\n STOP?": "laser line",
         "IMPLANT DRILL DEPTH ": "laser line",
@@ -278,7 +278,7 @@
     {
         "IMPLANT": "KNOTILUS ANCHOR\n3910-500-100",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "10.5mm",
+        "IMPLANT_LENGTH": "10.5mm",
         "IMPLANT\nWIDTH": "Anchor follows a wedge design of 2.4mm to 2.9mm",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "\n8mm",
@@ -290,7 +290,7 @@
     {
         "IMPLANT": "PEEK ZIP, 5.5mm\n3910-200-035 \nw/ needles: 3910-200-030 ",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "13.5mm",
+        "IMPLANT_LENGTH": "13.5mm",
         "IMPLANT\nWIDTH": "5.5mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "15.2mm",
@@ -302,7 +302,7 @@
     {
         "IMPLANT": "PEEK ZIP, 6.5mm\n3910-200-075 \nw/ needles: 3910-200-070 ",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "13.5mm",
+        "IMPLANT_LENGTH": "13.5mm",
         "IMPLANT\nWIDTH": "6.5mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "15.2mm",
@@ -314,7 +314,7 @@
     {
         "IMPLANT": "PEEK INTRALINE ANCHOR, 5.5mm\n3910-400- 010\nw needles: 3910-400-015",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "16.9mm",
+        "IMPLANT_LENGTH": "16.9mm",
         "IMPLANT\nWIDTH": "5.5mm",
         "POSITIVE\n STOP?": "",
         "IMPLANT DRILL DEPTH ": "19.7mm",
@@ -326,7 +326,7 @@
     {
         "IMPLANT": "PEEK INTRALINE ANCHOR, 6.5mm\n3910-400- 020\nw/ needles: 3910-400-025 ",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "16.9mm",
+        "IMPLANT_LENGTH": "16.9mm",
         "IMPLANT\nWIDTH": "6.5mm",
         "POSITIVE\n STOP?": "",
         "IMPLANT DRILL DEPTH ": "19.7mm",
@@ -338,7 +338,7 @@
     {
         "IMPLANT": "TWINLOOP \n1 No. 2 force fiber: 3910-400-035\nSE 1 No. 2 force fiber: 3910-400-135\nSE 2 No. 2 force fiber: 3910-400-235",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "10.5mm",
+        "IMPLANT_LENGTH": "10.5mm",
         "IMPLANT\nWIDTH": "3.5mm",
         "POSITIVE\n STOP?": "yes ",
         "IMPLANT DRILL DEPTH ": "24.2mm",
@@ -350,7 +350,7 @@
     {
         "IMPLANT": "TWINLOOP FLEX\nsingle strand: 3910-405-638\ndouble strand: 3910-405-838 \nSE single strand: 3910-405-738 ",
         "MATERIAL": "PEEK",
-        "IMPLANT\nLENGTH": "10.5mm",
+        "IMPLANT_LENGTH": "10.5mm",
         "IMPLANT\nWIDTH": "3.5mm",
         "POSITIVE\n STOP?": "yes",
         "IMPLANT DRILL DEPTH ": "16.6mm",
@@ -362,7 +362,7 @@
     {
         "IMPLANT": "TITANIUM INTRALINE ANCHOR\n3910-400- 050\nw/ needles: 3910-400-055 ",
         "MATERIAL": "Titanium",
-        "IMPLANT\nLENGTH": "17.1mm",
+        "IMPLANT_LENGTH": "17.1mm",
         "IMPLANT\nWIDTH": "5.5mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "self tapping",
@@ -374,7 +374,7 @@
     {
         "IMPLANT": "TITANIUM INTRALINE ANCHOR\n3910-400- 060\nw/ needles: 3910-400-065 ",
         "MATERIAL": "Titanium",
-        "IMPLANT\nLENGTH": "17.1mm",
+        "IMPLANT_LENGTH": "17.1mm",
         "IMPLANT\nWIDTH": "6.5mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "self tapping",
@@ -386,7 +386,7 @@
     {
         "IMPLANT": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand w/ #2 braided polyester suture, two independent sutures: 3910-100-040\nDouble strand with #2 FF suture: 3910-100-045\nDouble strand #2 sutures, w/ needles: 3910-100-145",
         "MATERIAL": "Titanium",
-        "IMPLANT\nLENGTH": "",
+        "IMPLANT_LENGTH": "",
         "IMPLANT\nWIDTH": "6.5mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "",
@@ -398,7 +398,7 @@
     {
         "IMPLANT": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand w/ #2 braided polyester suture: 3910-100-020\nDouble strand w/ #2 braided polyester suture, two independent sutures: 3910-100-030\nDouble strand with #2 FF suture: 3910-100-035\nDouble strand #2 sutures, w/ needles: 3910-100-135",
         "MATERIAL": "Titanium",
-        "IMPLANT\nLENGTH": "",
+        "IMPLANT_LENGTH": "",
         "IMPLANT\nWIDTH": "5.0mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "",
@@ -410,7 +410,7 @@
     {
         "IMPLANT": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 braided polyester suture: 3910-100-010\nSingle strand w/ #2 FF: 3910-100-015",
         "MATERIAL": "Titanium",
-        "IMPLANT\nLENGTH": "11.3mm",
+        "IMPLANT_LENGTH": "11.3mm",
         "IMPLANT\nWIDTH": "3.0mm",
         "POSITIVE\n STOP?": "n/a",
         "IMPLANT DRILL DEPTH ": "",
