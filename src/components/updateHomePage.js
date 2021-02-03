@@ -25,6 +25,13 @@ class UpdateHomePage {
     this.implants.map((implant) => {
       // const splitImplant = implant.IMPLANT.split(" ")
       // console.log(implant)
+      if (typeof implant.IMPLANT === "object") {
+        implant.IMPLANT.ICONIX_SPEED.map((insert) => {
+          console.log(Object.keys(implant.IMPLANT)[0])
+          console.log(implant.IMPLANT, insert.name, insert.pn)
+        })
+      }
+
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
       implantDiv.innerText = implant.IMPLANT
