@@ -3,12 +3,17 @@ class UpdateHomePage {
     this.implants = new Implants().implants
   }
   clearInnerText() {
-    const root = document.getElementById("root")
-    console.log(root.children)
     const featuresContainer = document.getElementById("features-container")
 
     if (featuresContainer) {
       featuresContainer.parentNode.removeChild(featuresContainer)
+    }
+  }
+
+  clearFeatureData() {
+    const featureData = document.getElementById("root").children[0]
+    if (featureData) {
+      featureData.parentNode.removeChild(featureData)
     }
   }
 

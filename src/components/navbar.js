@@ -3,6 +3,13 @@ class Navbar {
     this.root = document.getElementById("root")
   }
   renderNavbar() {
+    const spentNavbar = this.root.children[0]
+    if (spentNavbar !== undefined) {
+      if (spentNavbar) {
+        spentNavbar.parentNode.removeChild(spentNavbar)
+      }
+    }
+
     const navbar = document.createElement("div")
     navbar.setAttribute("class", "navbar")
     navbar.setAttribute("id", "navbar")

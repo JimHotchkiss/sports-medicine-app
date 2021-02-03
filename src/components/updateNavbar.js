@@ -11,6 +11,9 @@ class UpdateNavbar {
     features.map((feature) => {
       if (feature.id === item.id) {
         const splitFeatureTitle = feature.title.split(" ")
+        if (feature.id === "complaint") {
+          navbarTitleDiv[0].style.marginLeft = "50%"
+        }
         navbarTitleDiv[0].innerText = splitFeatureTitle[0]
         spanDiv[0].innerText = splitFeatureTitle[1]
         imgDiv.classList.add("img-div-hide")
@@ -35,12 +38,12 @@ class UpdateNavbar {
     const navbarHomeIcon = document.getElementById("navbar-home-icon")
     if (navbarHomeIcon !== null) {
       navbarHomeIcon.addEventListener("click", () => {
-        // this.updateNavbar()
+        console.log("home icon")
         const navbar = document.getElementById("navbar")
         if (navbar) {
           navbar.parentNode.removeChild(navbar)
         }
-        this.updateHomePage.clearInnerText()
+        this.updateHomePage.clearFeatureData()
         new HomePage()
       })
     }
