@@ -17,4 +17,15 @@ class Implants {
         return this.implants
       })
   }
+
+  static bindingImplantsEventListener(implants) {
+    const implantDivs = document.getElementsByClassName("implant-div")
+    for (let item of implantDivs) {
+      item.addEventListener("click", () => {
+        const selectedInsert = item.id
+        UpdateHomePage.clearImplantText()
+        UpdateHomePage.showImplantDetails()
+      })
+    }
+  }
 }

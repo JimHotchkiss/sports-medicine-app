@@ -1,4 +1,17 @@
 .implant-div {
-    background: pink;
-    margin: 8px 0px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    max-width: 80%;
+    background: #ffb600;
+    border-radius: 5px;
+   
+}
+
+.implant-name-div {
+    padding: 8px 16px;
+}
+
+.implant-pn-div {
+    padding-bottom: 8px;
+   color: #272727;
 }

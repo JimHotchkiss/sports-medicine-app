@@ -12,7 +12,7 @@
 }},
 
 {"implant": {
-    "name": "ICONIX 1 with Needles",
+    "name": "ICONIX 1 \nwith Needles",
     "pn": "3910-500-412",
     "MATERIAL": "Polyester Suture (UHMWPE)",
     "IMPLANT_LENGTH": "8mm\n(4mm deployed)",
@@ -36,7 +36,7 @@
     "NOTES": "1.2mm XBRAID TT"
 }},
 {"implant":{
-    "name": "ICONIX 1 TT with Needles",
+    "name": "ICONIX 1 TT \n with Needles",
     "pn": "3910-500-212",
     "MATERIAL": "Polyester Suture (UHMWPE)",
     "IMPLANT_LENGTH": "8mm\n(4mm deployed)",
@@ -60,7 +60,7 @@
     "NOTES": "2 strands #2 Force Fiber"
 }},
 {"implant":{
-    "name": "ICONIX 2 with needles",
+    "name": "ICONIX 2 \n with needles",
     "pn": "3910-500-422",
     "MATERIAL": "Polyester Suture (UHMWPE)",
     "IMPLANT_LENGTH": "12mm\ndeployed - same as standard ICONIX 2",
@@ -84,7 +84,7 @@
         "NOTES": "2.0mm XBRAID TT"
 }},
 {"implant": {
-        "name": "ICONIX 2 TT with needles",
+        "name": "ICONIX 2 TT \n with needles",
         "pn": "3910-500-222",
         "MATERIAL": "Polyester Suture (UHMWPE)",
         "IMPLANT_LENGTH": "12mm\ndeployed - same as standard ICONIX 2",
@@ -254,7 +254,7 @@
     "NOTES": "up to 2 #2 sutures, NO Xbraid TT\ncan use any 4.0mm drill\n1 full rotation = 10 mm\n*must complete 1 fullrotation. MAX 3 rotations"
 }},
 {"implant":{
-    "name": "OMEGA single 3910-500-391\ndouble double 3910-500-392",
+    "name": "OMEGA single",
     "pn": "3910-500-391",
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "12.5MM",
@@ -278,7 +278,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "OMEGA single 3910-500-471",
+    "name": "OMEGA single",
     "pn":"3910-500-471",
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "14mm",
@@ -314,7 +314,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
     "pn": "3910-200-080",
     "MATERIAL": "HA (25%)/PLLA (75%)\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8 mm",
@@ -326,7 +326,7 @@
     "NOTES": "when using tap in normal/soft bone: beginning of depth marker is flush with the cortex; in hard bone: endof the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture with needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n with needles",
     "pn": "3910-200-082",
     "MATERIAL": "HA (25%)/PLLA (75%)\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8mm",
@@ -339,7 +339,7 @@
 }},
 
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
     "pn": "3910-200-081",
     "MATERIAL": "HA (25%)/PLLA (75%)\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8mm",
@@ -351,7 +351,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 3 suture without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 3 suture \n without needles",
     "pn": "3910-200-083",
     "MATERIAL": "HA (25%)/PLLA (75%)\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8mm",
@@ -363,7 +363,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture with needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n with needles",
     "pn":"3910-200-085",
     "MATERIAL": "HA/PLA\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8mm",
@@ -375,7 +375,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
     "pn":"3910-200-084",
     "MATERIAL": "HA/PLA\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8mm",
@@ -387,7 +387,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 3 suture without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR - 3 suture \n without needles",
     "pn":"3910-200-086",
     "MATERIAL": "HA/PLA\nhydroxyapatite and non-crystalline poly-L-lactide",
     "IMPLANT_LENGTH": "10.8mm",
@@ -398,7 +398,7 @@
     "PULL_OUT_STRENGTH": "?",
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
-{"name":{
+{"implant":{
     "name": "KNOTILUS ANCHOR",
     "pn": "3910-500-100",
     "MATERIAL": "PEEK",
@@ -423,7 +423,7 @@
     "NOTES": "2 #2 Force Fiber, fully cannulated"
 }},
 {"implant":{
-    "name": "PEEK ZIP, 5.5mm with needles ",
+    "name": "PEEK ZIP, 5.5mm \n with needles ",
     "pn": "3910-200-030",
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "13.5mm",
@@ -471,7 +471,7 @@
     "NOTES": "fully threaded, 2 #2 Force Fiber, suture eyelet"
 }},
 {"implant":{
-    "name": "PEEK INTRALINE ANCHOR, 5.5mm with needles",
+    "name": "PEEK INTRALINE ANCHOR, 5.5mm \n with needles",
     "pn":"3910-400-015",
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "16.9mm",
@@ -495,7 +495,7 @@
     "NOTES": "fully threaded, 2 #2 Force Fiber, suture eyelet"
 }},
 {"implant":{
-    "name": "PEEK INTRALINE ANCHOR, 6.5mm with needles",
+    "name": "PEEK INTRALINE ANCHOR, 6.5mm \n with needles",
     "pn":"3910-400-025",
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "16.9mm",
@@ -579,7 +579,7 @@
     "NOTES": "one strand #2 force fiber\n wedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
-    "name": "TITANIUM INTRALINE ANCHOR\nw/ needles: 3910-400-055 ",
+    "name": "TITANIUM INTRALINE ANCHOR",
     "pn":"3910-400- 050",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "17.1mm",
@@ -603,7 +603,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
-    "name": "TITANIUM INTRALINE ANCHOR\nw/ needles: 3910-400-065 ",
+    "name": "TITANIUM INTRALINE ANCHOR",
     "pn":"3910-400-060",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "17.1mm",
@@ -627,7 +627,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
-    "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand with #2 braided polyester suture, two independent sutures",
+    "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand with #2 braided polyester suture\n two independent sutures",
     "pn":"3910-100-040",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "",
@@ -651,7 +651,7 @@
     "NOTES": ""
 }},
 {"implant":{
-    "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand #2 sutures, with needles",
+    "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand #2 sutures\n with needles",
     "pn":"3910-100-045",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "",
@@ -675,7 +675,7 @@
     "NOTES": ""
 }},
 {"implant":{
-    "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 braided polyester suture, two independent sutures",
+    "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 braided polyester suture\n two independent sutures",
     "pn":"3910-100-030",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "",
@@ -699,7 +699,7 @@
     "NOTES": ""
 }},
 {"implant":{
-    "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 FF suture, with needles",
+    "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 FF suture\n with needles",
     "pn":"3910-100-035",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "",
@@ -711,7 +711,7 @@
     "NOTES": ""
 }},
 {"implant":{
-    "IMPLANT": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 braided polyester suture",
+    "name": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 braided polyester suture",
     "pn":"3910-100-010",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "11.3mm",
@@ -721,9 +721,9 @@
     "IMPLANT_DRILL_WIDTH": "",
     "PULL_OUT_STRENGTH": "",
     "NOTES": ""
-}}
+}},
 {"implant":{
-    "IMPLANT": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 FF",
+    "name": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 FF",
     "pn":"3910-100-015",
     "MATERIAL": "Titanium",
     "IMPLANT_LENGTH": "11.3mm",
