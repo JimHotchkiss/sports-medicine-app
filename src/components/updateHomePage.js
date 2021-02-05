@@ -27,11 +27,12 @@ class UpdateHomePage {
   static showImplantDetails() {}
 
   renderInplants() {
+    const inserts = Store.getInserts()
     const root = document.getElementById("root")
     const implantContainer = document.createElement("div")
     implantContainer.setAttribute("class", "implant-container")
     implantContainer.setAttribute("id", "implant-container")
-    this.implants.map((implant) => {
+    inserts.map((implant) => {
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
       implantDiv.setAttribute("id", implant.implant.pn)

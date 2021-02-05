@@ -6,16 +6,12 @@ class Implants {
   }
 
   fetchInplantsSpecifications() {
-    this.implantAdapter
-      .fetchImplantData()
-      .then((data) => {
-        data.map((implant) => {
-          this.implants.push(implant)
-        })
-      })
-      .then(() => {
-        return this.implants
-      })
+    this.implantAdapter.fetchImplantData().then((data) => {
+      Store.addInserts(data)
+    })
+    // .then(() => {
+    //   return this.implants
+    // })
   }
 
   static bindingImplantsEventListener(implants) {
