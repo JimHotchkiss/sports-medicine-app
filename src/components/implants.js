@@ -9,9 +9,6 @@ class Implants {
     this.implantAdapter.fetchImplantData().then((data) => {
       Store.addInserts(data)
     })
-    // .then(() => {
-    //   return this.implants
-    // })
   }
 
   static bindingImplantsEventListener(implants) {
@@ -20,7 +17,7 @@ class Implants {
       item.addEventListener("click", () => {
         const selectedInsert = item.id
         UpdateHomePage.clearImplantText()
-        UpdateHomePage.showImplantDetails()
+        UpdateHomePage.getImplantDetails(selectedInsert)
       })
     }
   }

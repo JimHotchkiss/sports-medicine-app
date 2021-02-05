@@ -1,6 +1,5 @@
 class UpdateHomePage {
   constructor() {
-    this.implants = new Implants().implants
     this.fetchImplants = new Implants().fetchInplantsSpecifications()
   }
   clearInnerText() {
@@ -24,7 +23,35 @@ class UpdateHomePage {
     }
   }
 
-  static showImplantDetails() {}
+  static getImplantDetails(selectedInsert) {
+    const inserts = Store.getInserts()
+    const selectedInserts = []
+    inserts.map((insert) => {
+      if (insert.implant.pn === selectedInsert) {
+        console.log(insert.implant.pn, selectedInsert)
+        selectedInserts.push(insert)
+        return inserts
+      }
+    })
+    UpdateHomePage.renderInsertDetails(selectedInserts)
+  }
+
+  static renderInsertDetails(selectedInserts) {
+    const root = document.getElementById("root")
+    const insertContainer = document.createElement("div")
+    insertContainer.setAttribute("class", "show-insert-container")
+    selectedInserts.map((insert) => {
+      const insertNameDiv = document.createElement("div")
+      const insertPnDiv = document.createElement("div")
+      insertNameDiv.innerHTML = `<div class="show-insert-name-div">${insert.implant.name}</div>`
+      insertPnDiv.innerHTML = `<div class="show-insert-pn-div">${insert.implant.pn}</div>`
+      insertContainer.appendChild(insertNameDiv)
+      insertContainer.appendChild(insertPnDiv)
+
+      root.appendChild(insertContainer)
+      console.log(insert.implant.pn)
+    })
+  }
 
   renderInplants() {
     const inserts = Store.getInserts()
