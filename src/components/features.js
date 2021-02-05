@@ -65,7 +65,9 @@ class Features {
         Navbar.updateTitle(item, this.features)
         Navbar.addHomeIcon()
         if (item.id === "implant-specifications") {
-          HomePage.renderInplants()
+          const inserts = Store.getInserts()
+          HomePage.renderSearchField()
+          HomePage.renderInplants(inserts)
         } else {
           // window.open(
           //   "https://www.stryker.com/productexperience/Legal/Agreement"

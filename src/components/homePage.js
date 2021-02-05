@@ -55,28 +55,27 @@ class HomePage {
     })
   }
 
-  static renderInplants() {
-    const inserts = Store.getInserts()
-    const root = document.getElementById("root")
-    const implantContainer = document.createElement("div")
-    implantContainer.setAttribute("class", "implant-container")
-    implantContainer.setAttribute("id", "implant-container")
+  static renderSearchField() {
     // Search feature
     const inputDiv = document.createElement("div")
     inputDiv.setAttribute("class", "input-div")
     inputDiv.innerHTML = '<i class="fas fa-search"></i>'
-    // document.createElement("i")
-    // iconTag.setAttribute("class", "fas fa-search icon")
-    // inputDiv.appendChild(iconTag)
     const inputTag = document.createElement("input")
     inputTag.setAttribute("class", "input-field")
     inputTag.setAttribute("type", "text")
-    inputTag.setAttribute("id", "search-input")
-    inputTag.setAttribute("name", "search-input")
+    inputTag.setAttribute("id", "input-field")
+    inputTag.setAttribute("name", "input-field")
     inputTag.setAttribute("placeholder", "Search by name or part number")
     inputDiv.appendChild(inputTag)
-    implantContainer.appendChild(inputDiv)
+    root.appendChild(inputDiv)
     //
+  }
+
+  static renderInplants(inserts) {
+    const root = document.getElementById("root")
+    const implantContainer = document.createElement("div")
+    implantContainer.setAttribute("class", "implant-container")
+    implantContainer.setAttribute("id", "implant-container")
     inserts.map((implant) => {
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
@@ -94,5 +93,6 @@ class HomePage {
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
+    Search.bindSearchEventListener()
   }
 }

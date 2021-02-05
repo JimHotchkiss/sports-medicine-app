@@ -1,5 +1,5 @@
 .implant-container {
-    padding-top: 80px;
+    padding-top: 0px;
 }
 
 .implant-div {
@@ -40,6 +40,7 @@
 }
 
 .input-div {
+    margin-top: 80px;
     text-align: center;
     margin-bottom: 16px;
 }
@@ -51,7 +52,7 @@ input:focus{
 .input-div i {
     position: absolute; 
     left: 310px; 
-    top: 92px; 
+    top: 95px; 
     color: #262626;
 
 }
