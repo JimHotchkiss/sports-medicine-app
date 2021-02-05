@@ -2,8 +2,6 @@ class Features {
   constructor() {
     this.features = []
     this.featuresAdapter = new FeaturesAdapter()
-    this.callUpdateHomePage = new UpdateHomePage()
-    this.callUpdateNavBar = new UpdateNavbar()
     this.inplants = new Implants()
     this.retrieveFeatureData()
   }
@@ -63,11 +61,11 @@ class Features {
     const featureDivs = document.getElementsByClassName("feature-div")
     for (let item of featureDivs) {
       item.addEventListener("click", () => {
-        this.callUpdateHomePage.clearInnerText()
-        this.callUpdateNavBar.updateTitle(item, this.features)
-        this.callUpdateNavBar.addHomeIcon()
+        HomePage.clearFeaturesText()
+        Navbar.updateTitle(item, this.features)
+        Navbar.addHomeIcon()
         if (item.id === "implant-specifications") {
-          this.callUpdateHomePage.renderInplants()
+          HomePage.renderInplants()
         } else {
           // window.open(
           //   "https://www.stryker.com/productexperience/Legal/Agreement"

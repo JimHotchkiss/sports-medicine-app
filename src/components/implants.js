@@ -16,8 +16,8 @@ class Implants {
     for (let item of implantDivs) {
       item.addEventListener("click", () => {
         const selectedInsert = item.id
-        UpdateHomePage.clearImplantText()
-        UpdateHomePage.getImplantDetails(selectedInsert)
+        HomePage.clearImplantText()
+        HomePage.getImplantDetails(selectedInsert)
       })
     }
   }
