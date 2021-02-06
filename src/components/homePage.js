@@ -59,6 +59,7 @@ class HomePage {
     // Search feature
     const inputDiv = document.createElement("div")
     inputDiv.setAttribute("class", "input-div")
+    inputDiv.setAttribute("id", "input-div")
     inputDiv.innerHTML = '<i class="fas fa-search"></i>'
     const inputTag = document.createElement("input")
     inputTag.setAttribute("class", "input-field")
@@ -93,6 +94,5 @@ class HomePage {
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
-    Search.bindSearchEventListener()
   }
 }

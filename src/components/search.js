@@ -2,6 +2,7 @@ class Search {
   static bindSearchEventListener() {
     const inputField = document.getElementById("input-field")
     inputField.addEventListener("input", (userInput) => {
+      console.log(userInput.type)
       Search.filterInserts(userInput)
     })
   }
@@ -17,5 +18,12 @@ class Search {
     })
     HomePage.clearImplantText()
     HomePage.renderInplants(filteredSearch)
+  }
+
+  static clearSearchField() {
+    const searchField = document.getElementById("input-div")
+    if (searchField) {
+      searchField.parentNode.removeChild(searchField)
+    }
   }
 }

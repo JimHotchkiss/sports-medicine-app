@@ -68,13 +68,14 @@ class Features {
           const inserts = Store.getInserts()
           HomePage.renderSearchField()
           HomePage.renderInplants(inserts)
+          Search.bindSearchEventListener()
         } else {
-          // window.open(
-          //   "https://www.stryker.com/productexperience/Legal/Agreement"
-          // )
           window.open(
-            "https://forms.office.com/Pages/ResponsePage.aspx?id=-7udTko5g0WIEFP4H4GeOyvF9t6kmYZAnEVeps1nibRUMVRQRzEzNERSTTY4SEoxTEZBM1RaS05TSy4u"
+            "https://www.stryker.com/productexperience/Legal/Agreement"
           )
+          // window.open(
+          //   "https://forms.office.com/Pages/ResponsePage.aspx?id=-7udTko5g0WIEFP4H4GeOyvF9t6kmYZAnEVeps1nibRUMVRQRzEzNERSTTY4SEoxTEZBM1RaS05TSy4u"
+          // )
           new HomePage()
         }
       })

@@ -17,6 +17,7 @@ class Implants {
       item.addEventListener("click", () => {
         const selectedInsert = item.id
         HomePage.clearImplantText()
+        Search.clearSearchField()
         HomePage.getImplantDetails(selectedInsert)
       })
     }
