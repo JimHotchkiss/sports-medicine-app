@@ -42,6 +42,11 @@
     background-size: 50px;
 }
 
+#probe-img-url {
+    background: transparent url(../images/implants.png) 0% 0% no-repeat padding-box;
+    background-size: 50px;
+}
+
 .feature-title-div {
     font-size: 22px;
     font-weight: 900;

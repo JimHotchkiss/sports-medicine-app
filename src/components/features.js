@@ -61,6 +61,7 @@ class Features {
     const featureDivs = document.getElementsByClassName("feature-div")
     for (let item of featureDivs) {
       item.addEventListener("click", () => {
+        console.log(item.id)
         HomePage.clearFeaturesText()
         Navbar.updateTitle(item, this.features)
         Navbar.addHomeIcon()
@@ -69,6 +70,8 @@ class Features {
           HomePage.renderSearchField()
           HomePage.renderInplants(inserts)
           Search.bindSearchEventListener()
+        } else if (item.id === "probe") {
+          console.log("probes")
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"

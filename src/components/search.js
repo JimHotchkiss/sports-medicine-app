@@ -2,7 +2,6 @@ class Search {
   static bindSearchEventListener() {
     const inputField = document.getElementById("input-field")
     inputField.addEventListener("input", (userInput) => {
-      console.log(userInput.type)
       Search.filterInserts(userInput)
     })
   }

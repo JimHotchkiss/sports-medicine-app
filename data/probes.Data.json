@@ -1,0 +1,236 @@
+[
+    {"probe":
+     {
+        "name": "90-S Cruise",
+        "pn": "0279401200",
+        "suction": true,
+        "small-joint":false,
+        "length": "135 mm",
+        "outer-diameter": "4.0 mm",
+        "cut-max": "11",
+        "cut-default": "9",
+        "coag": "4"
+     }
+    },
+    {"probe":
+        {
+           "name": "90-S Accelerator",
+           "pn": "0279351400",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "4.0 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "4"
+        }
+    },
+    {"probe":
+        {
+           "name": "90-S Max",
+           "pn": "0279401100",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "4.0 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "5"
+        }
+    },
+    {"probe":
+        {
+           "name": "90-S",
+           "pn": "0279351100",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "4"
+        }
+    },
+    {"probe":
+        {
+           "name": "90-S XL",
+           "pn": "0279350502",
+           "suction": true,
+           "small-joint":false,
+           "length": "180 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "7",
+           "cut-default": "5",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Aardvark",
+           "pn": "0279251101",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "2.5 mm",
+           "cut-max": "6",
+           "cut-default": "4",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "50-S",
+           "pn": "0279351250",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "50-S XL",
+           "pn": "0279351235",
+           "suction": true,
+           "small-joint":false,
+           "length": "180 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "30-S",
+           "pn": "0279351230",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "50-S Sweep +",
+           "pn": "0279351650",
+           "suction": true,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "7",
+           "coag": "4"
+        }
+    },
+    {"probe":
+        {
+           "name": "50-S Sweep + XL",
+           "pn": "0279351653",
+           "suction": true,
+           "small-joint":false,
+           "length": "180 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "7",
+           "coag": "4"
+        }
+    },
+    {"probe":
+        {
+           "name": "Direct",
+           "pn": "0279350401",
+           "suction": false,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "6",
+           "cut-default": "5",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Lat",
+           "pn": "0279350201",
+           "suction": false,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "8",
+           "cut-default": "5",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Contour",
+           "pn": "0279350301",
+           "suction": false,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "7",
+           "cut-default": "5",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Hook",
+           "pn": "0279350501",
+           "suction": false,
+           "small-joint":false,
+           "length": "135 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "7",
+           "cut-default": "5",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Hook XL",
+           "pn": "0279351103",
+           "suction": false,
+           "small-joint":false,
+           "length": "180 mm",
+           "outer-diameter": "3.5 mm",
+           "cut-max": "11",
+           "cut-default": "9",
+           "coag": "4"
+        }
+    },
+    {"probe":
+        {
+           "name": "Micro-Claw",
+           "pn": "0279250101",
+           "suction": false,
+           "small-joint":true,
+           "length": "135 mm",
+           "outer-diameter": "2.5 mm",
+           "cut-max": "6",
+           "cut-default": "4",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Micro-Bush",
+           "pn": "0279250101",
+           "suction": false,
+           "small-joint":true,
+           "length": "135 mm",
+           "outer-diameter": "2.5 mm",
+           "cut-max": "6",
+           "cut-default": "4",
+           "coag": "3"
+        }
+    }
+]
