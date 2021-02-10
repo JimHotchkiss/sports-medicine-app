@@ -34,10 +34,38 @@
    transition: 0.3s;
 }
 
-.show-insert-container{
-    padding-top: 70px;
-    color: #fff;
+#insert-name-div {
+    padding-top: 80px;
 }
+.insert-details-div h3{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 16px;
+    margin-bottom: 4px;
+}
+
+.insert-details-div p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.insert-details-div {
+    color: rgba(255, 255, 255, 0.9);    
+}
+
+.insert-details-text-div {
+    background: #ffb600;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    width: 90%;
+    padding: 12px 8px;
+    border-radius: 5px;
+}
+
+.insert-details-text {
+    color: #262626;
+}
+
 
 .input-div {
     margin-top: 80px;

@@ -222,8 +222,21 @@
     },
     {"probe":
         {
-           "name": "Micro-Bush",
-           "pn": "0279250101",
+           "name": "Micro-Brush",
+           "pn": "0279250201",
+           "suction": false,
+           "small-joint":true,
+           "length": "135 mm",
+           "outer-diameter": "2.5 mm",
+           "cut-max": "6",
+           "cut-default": "4",
+           "coag": "3"
+        }
+    },
+    {"probe":
+        {
+           "name": "Aardvark",
+           "pn": "0279251101",
            "suction": false,
            "small-joint":true,
            "length": "135 mm",
