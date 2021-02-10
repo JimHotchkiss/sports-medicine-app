@@ -24,11 +24,9 @@ class Navbar {
     imgDiv.setAttribute("id", "img-div")
     const titleDiv = document.createElement("div")
     titleDiv.setAttribute("class", "title-div")
-
     const homeDiv = document.createElement("div")
     homeDiv.setAttribute("class", "home-div")
     homeDiv.setAttribute("id", "home-div")
-
     const spanDiv = document.createElement("div")
     spanDiv.setAttribute("class", "span-div")
     titleDiv.innerText = "Sports"
