@@ -64,7 +64,7 @@ class Features {
         console.log(item.id)
         HomePage.clearFeaturesText()
         Navbar.updateTitle(item, this.features)
-        Navbar.addHomeIcon()
+        Navbar.showHomeIcon()
         if (item.id === "implant-specifications") {
           const inserts = Store.getInserts()
           HomePage.renderSearchField()

@@ -28,14 +28,9 @@ class HomePage {
   }
 
   static clearFeatureData() {
+    console.log("clear")
     const featureData = document.getElementById("root")
     featureData.innerHTML = ""
-    // const featureDataTest = document.getElementById("root").children[0]
-    // console.log(featureDataTest)
-    // console.log(featureData)
-    // if (featureData) {
-    //   featureData.parentNode.removeChild(featureData)
-    // }
   }
 
   static getImplantDetails(selectedInsert) {
@@ -43,17 +38,16 @@ class HomePage {
     const selectedInserts = []
     inserts.map((insert) => {
       if (insert.implant.pn === selectedInsert) {
-        console.log(insert.implant.pn, selectedInsert)
         selectedInserts.push(insert)
         return inserts
       }
     })
     HomePage.renderInsertDetails(selectedInserts)
+    Navbar.showBackBtn()
   }
 
   static implantName(selectedInserts) {
     selectedInserts.map((insert) => {
-      console.log(insert.implant)
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "insert-details-div")
       insertNameDiv.setAttribute("id", "insert-name-div")

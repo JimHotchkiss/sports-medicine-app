@@ -10,6 +10,12 @@ class Navbar {
     const navbar = document.createElement("div")
     navbar.setAttribute("class", "navbar")
     navbar.setAttribute("id", "navbar")
+
+    // back btn
+    const navbarBackBtn = document.createElement("div")
+    navbarBackBtn.setAttribute("class", "navbar-back-btn")
+    navbarBackBtn.setAttribute("id", "navbar-back-btn")
+    navbar.appendChild(navbarBackBtn)
     const imgTitleDiv = document.createElement("div")
     imgTitleDiv.setAttribute("class", "img-title-div")
     imgTitleDiv.setAttribute("id", "img-title-div")
@@ -18,6 +24,11 @@ class Navbar {
     imgDiv.setAttribute("id", "img-div")
     const titleDiv = document.createElement("div")
     titleDiv.setAttribute("class", "title-div")
+
+    const homeDiv = document.createElement("div")
+    homeDiv.setAttribute("class", "home-div")
+    homeDiv.setAttribute("id", "home-div")
+
     const spanDiv = document.createElement("div")
     spanDiv.setAttribute("class", "span-div")
     titleDiv.innerText = "Sports"
@@ -26,11 +37,13 @@ class Navbar {
     imgTitleDiv.appendChild(titleDiv)
     imgTitleDiv.appendChild(spanDiv)
     navbar.appendChild(imgTitleDiv)
+    navbar.appendChild(homeDiv)
     root.appendChild(navbar)
   }
-
-  // update navbar
-
+  static showBackBtn() {
+    const navbarBackBtn = document.getElementById("navbar-back-btn")
+    navbarBackBtn.classList.add("navbar-back-btn-show")
+  }
   static updateTitle(item, features) {
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
@@ -39,7 +52,6 @@ class Navbar {
       if (feature.id === item.id) {
         const splitFeatureTitle = feature.title.split(" ")
         if (feature.id === "complaint") {
-          navbarTitleDiv[0].style.marginLeft = "50%"
         }
         navbarTitleDiv[0].innerText = splitFeatureTitle[0]
         spanDiv[0].innerText = splitFeatureTitle[1]
@@ -48,24 +60,17 @@ class Navbar {
     })
   }
 
-  static addHomeIcon() {
-    const imgTitleDiv = document.getElementById("img-title-div")
-    // Resize image title div
-    imgTitleDiv.style.marginLeft = "20%"
-    // Insert new div after the img title div
-    imgTitleDiv.insertAdjacentHTML(
-      "afterend",
-      '<div id="navbar-home-icon" class="navbar-home-icon"></div>'
-    )
+  static showHomeIcon() {
+    const homeDiv = document.getElementById("home-div")
+    homeDiv.classList.add("home-div-show")
     // call the home icon event handler
     Navbar.bindHomeIconEventListener()
   }
 
   static bindHomeIconEventListener() {
-    const navbarHomeIcon = document.getElementById("navbar-home-icon")
+    const navbarHomeIcon = document.getElementById("home-div")
     if (navbarHomeIcon !== null) {
       navbarHomeIcon.addEventListener("click", () => {
-        console.log("home icon")
         const navbar = document.getElementById("navbar")
         if (navbar) {
           navbar.parentNode.removeChild(navbar)
