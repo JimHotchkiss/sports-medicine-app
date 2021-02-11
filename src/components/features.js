@@ -67,10 +67,13 @@ class Features {
         if (item.id === "implant-specifications") {
           const inserts = Store.getInserts()
           HomePage.renderSearchField()
-          HomePage.renderInplants(inserts)
-          Search.bindSearchEventListener()
+          HomePage.renderImplants(inserts)
+          Search.bindInsertSearchEventListener()
         } else if (item.id === "probe") {
-          console.log("probes")
+          const probes = Store.getProbes()
+          HomePage.renderSearchField()
+          HomePage.renderProbes(probes)
+          Search.bindProbeSearchEventListener()
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"

@@ -56,8 +56,8 @@ class Navbar {
       HomePage.clearImplantDetails()
       Navbar.hideBackBtn()
       HomePage.renderSearchField()
-      HomePage.renderInplants(implants)
-      Search.bindSearchEventListener()
+      HomePage.renderImplants(implants)
+      Search.bindInsertSearchEventListener()
     })
   }
 

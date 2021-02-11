@@ -3,6 +3,7 @@ class HomePage {
     Navbar.renderNavbar()
     this.features = new Features()
     this.implants = new Implants()
+    this.propes = new Probes()
   }
 
   static scrollToTop() {
@@ -27,9 +28,15 @@ class HomePage {
     }
   }
 
+  static clearProbeText() {
+    const probeContainer = document.getElementById("probes-container")
+    if (probeContainer) {
+      probeContainer.parentNode.removeChild(probeContainer)
+    }
+  }
+
   static clearFeatureData() {
-    console.log("clear")
-    const featureData = document.getElementById("root")
+    const featureData = HomePage.root()
     featureData.innerHTML = ""
   }
 
@@ -48,17 +55,169 @@ class HomePage {
     const inserts = Store.getInserts()
     const selectedInserts = []
     inserts.map((insert) => {
-      if (
-        insert.implant.pn === selectedInsert.id
-        // &&
-        // insert.implant.name.includes("needles") &&
-        // selectedInsert.children[0].textContent.includes("needles")
-      ) {
+      if (insert.implant.pn === selectedInsert.id) {
         return selectedInserts.push(insert)
       }
     })
     HomePage.renderInsertDetails(selectedInserts, selectedInsert)
     Navbar.showBackBtn()
+  }
+
+  static getProbeDetails(selectedProbe) {
+    const probes = Store.getProbes()
+    const selectedProbes = []
+    probes.map((probe) => {
+      if (probe.probe.pn === selectedProbe.id) {
+        return selectedProbes.push(probe)
+      }
+    })
+    HomePage.renderProbeDetails(selectedProbes)
+    Navbar.showBackBtn()
+  }
+
+  static probeName(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Name"
+      insertNameText.innerText = probe.probe.name
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static probePn(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertPnDiv = document.createElement("div")
+      insertPnDiv.setAttribute("class", "insert-details-div")
+      const insertPnTitle = document.createElement("h3")
+      insertPnTitle.setAttribute("class", "insert-details-title")
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertPnText = document.createElement("p")
+      insertPnText.setAttribute("class", "insert-details-text")
+      insertPnTitle.innerText = "Part Number"
+      insertPnText.innerText = probe.probe.pn
+      insertPnTextDiv.appendChild(insertPnText)
+      insertPnDiv.appendChild(insertPnTitle)
+      insertPnDiv.appendChild(insertPnTextDiv)
+      HomePage.root().appendChild(insertPnDiv)
+    })
+  }
+
+  static probeLength(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertPnDiv = document.createElement("div")
+      insertPnDiv.setAttribute("class", "insert-details-div")
+      const insertPnTitle = document.createElement("h3")
+      insertPnTitle.setAttribute("class", "insert-details-title")
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertPnText = document.createElement("p")
+      insertPnText.setAttribute("class", "insert-details-text")
+      insertPnTitle.innerText = "Length"
+      insertPnText.innerText = probe.probe.length
+      insertPnTextDiv.appendChild(insertPnText)
+      insertPnDiv.appendChild(insertPnTitle)
+      insertPnDiv.appendChild(insertPnTextDiv)
+      HomePage.root().appendChild(insertPnDiv)
+    })
+  }
+
+  static probeOuterDiamter(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertPnDiv = document.createElement("div")
+      insertPnDiv.setAttribute("class", "insert-details-div")
+      const insertPnTitle = document.createElement("h3")
+      insertPnTitle.setAttribute("class", "insert-details-title")
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertPnText = document.createElement("p")
+      insertPnText.setAttribute("class", "insert-details-text")
+      insertPnTitle.innerText = "Outer Diamter"
+      insertPnText.innerText = probe.probe.outer_diameter
+      insertPnTextDiv.appendChild(insertPnText)
+      insertPnDiv.appendChild(insertPnTitle)
+      insertPnDiv.appendChild(insertPnTextDiv)
+      HomePage.root().appendChild(insertPnDiv)
+    })
+  }
+
+  static probeCoag(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertPnDiv = document.createElement("div")
+      insertPnDiv.setAttribute("class", "insert-details-div")
+      const insertPnTitle = document.createElement("h3")
+      insertPnTitle.setAttribute("class", "insert-details-title")
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertPnText = document.createElement("p")
+      insertPnText.setAttribute("class", "insert-details-text")
+      insertPnTitle.innerText = "Coag"
+      insertPnText.innerText = probe.probe.coag
+      insertPnTextDiv.appendChild(insertPnText)
+      insertPnDiv.appendChild(insertPnTitle)
+      insertPnDiv.appendChild(insertPnTextDiv)
+      HomePage.root().appendChild(insertPnDiv)
+    })
+  }
+
+  static probeCutDefault(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertPnDiv = document.createElement("div")
+      insertPnDiv.setAttribute("class", "insert-details-div")
+      const insertPnTitle = document.createElement("h3")
+      insertPnTitle.setAttribute("class", "insert-details-title")
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertPnText = document.createElement("p")
+      insertPnText.setAttribute("class", "insert-details-text")
+      insertPnTitle.innerText = "Cut Default"
+      insertPnText.innerText = probe.probe.cut_default
+      insertPnTextDiv.appendChild(insertPnText)
+      insertPnDiv.appendChild(insertPnTitle)
+      insertPnDiv.appendChild(insertPnTextDiv)
+      HomePage.root().appendChild(insertPnDiv)
+    })
+  }
+
+  static probeCutMax(selectedProbes) {
+    selectedProbes.map((probe) => {
+      const insertPnDiv = document.createElement("div")
+      insertPnDiv.setAttribute("class", "insert-details-div")
+      const insertPnTitle = document.createElement("h3")
+      insertPnTitle.setAttribute("class", "insert-details-title")
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertPnText = document.createElement("p")
+      insertPnText.setAttribute("class", "insert-details-text")
+      insertPnTitle.innerText = "Cut Max"
+      insertPnText.innerText = probe.probe.cut_max
+      insertPnTextDiv.appendChild(insertPnText)
+      insertPnDiv.appendChild(insertPnTitle)
+      insertPnDiv.appendChild(insertPnTextDiv)
+      HomePage.root().appendChild(insertPnDiv)
+    })
+  }
+
+  static renderProbeDetails(selectedProbes) {
+    HomePage.scrollToTop()
+    HomePage.probeName(selectedProbes)
+    HomePage.probePn(selectedProbes)
+    HomePage.probeLength(selectedProbes)
+    HomePage.probeOuterDiamter(selectedProbes)
+    HomePage.probeCoag(selectedProbes)
+    HomePage.probeCutDefault(selectedProbes)
+    HomePage.probeCutMax(selectedProbes)
   }
 
   static implantName(selectedInserts) {
@@ -303,8 +462,121 @@ class HomePage {
     //
   }
 
-  static renderInplants(inserts) {
-    const root = document.getElementById("root")
+  static renderSuctionProbes(suctionProbes) {
+    const root = HomePage.root()
+    const probesTitleDiv = document.createElement("div")
+    probesTitleDiv.setAttribute("class", "probes-title-div")
+    probesTitleDiv.innerText = "Suction Probes:"
+    root.appendChild(probesTitleDiv)
+    const probesContainer = document.createElement("div")
+    probesContainer.setAttribute("class", "probes-container")
+    probesContainer.setAttribute("id", "probes-container")
+    suctionProbes.map((probe) => {
+      const probeDiv = document.createElement("div")
+      probeDiv.setAttribute("class", "probe-div")
+      probeDiv.setAttribute("id", probe.probe.pn)
+      const probeNameDiv = document.createElement("div")
+      probeNameDiv.setAttribute("class", "probe-name-div")
+      const probePnDiv = document.createElement("div")
+      probePnDiv.setAttribute("class", "probe-pn-div")
+
+      probeNameDiv.innerText = probe.probe.name
+      probePnDiv.innerText = probe.probe.pn
+      probeDiv.appendChild(probeNameDiv)
+      probeDiv.appendChild(probePnDiv)
+      probesContainer.appendChild(probeDiv)
+    })
+    root.appendChild(probesContainer)
+  }
+
+  static renderNonSuctionProbes(nonSuctionProbes) {
+    const root = HomePage.root()
+    const probesTitleDiv = document.createElement("div")
+    probesTitleDiv.setAttribute("class", "probes-title-div")
+    probesTitleDiv.innerText = "Non-suction Probes:"
+    root.appendChild(probesTitleDiv)
+    const probesContainer = document.createElement("div")
+    probesContainer.setAttribute("class", "probes-container")
+    probesContainer.setAttribute("id", "probes-container")
+    nonSuctionProbes.map((probe) => {
+      const probeDiv = document.createElement("div")
+      probeDiv.setAttribute("class", "probe-div")
+      probeDiv.setAttribute("id", probe.probe.pn)
+      const probeNameDiv = document.createElement("div")
+      probeNameDiv.setAttribute("class", "probe-name-div")
+      const probePnDiv = document.createElement("div")
+      probePnDiv.setAttribute("class", "probe-pn-div")
+
+      probeNameDiv.innerText = probe.probe.name
+      probePnDiv.innerText = probe.probe.pn
+      probeDiv.appendChild(probeNameDiv)
+      probeDiv.appendChild(probePnDiv)
+      probesContainer.appendChild(probeDiv)
+    })
+    root.appendChild(probesContainer)
+  }
+
+  static renderSmallJointProbes(smallJointProbes) {
+    const root = HomePage.root()
+    const probesTitleDiv = document.createElement("div")
+    probesTitleDiv.setAttribute("class", "probes-title-div")
+    probesTitleDiv.innerText = "Small Joint Probes:"
+    root.appendChild(probesTitleDiv)
+    const probesContainer = document.createElement("div")
+    probesContainer.setAttribute("class", "probes-container")
+    probesContainer.setAttribute("id", "probes-container")
+    smallJointProbes.map((probe) => {
+      const probeDiv = document.createElement("div")
+      probeDiv.setAttribute("class", "probe-div")
+      probeDiv.setAttribute("id", probe.probe.pn)
+      const probeNameDiv = document.createElement("div")
+      probeNameDiv.setAttribute("class", "probe-name-div")
+      const probePnDiv = document.createElement("div")
+      probePnDiv.setAttribute("class", "probe-pn-div")
+
+      probeNameDiv.innerText = probe.probe.name
+      probePnDiv.innerText = probe.probe.pn
+      probeDiv.appendChild(probeNameDiv)
+      probeDiv.appendChild(probePnDiv)
+      probesContainer.appendChild(probeDiv)
+    })
+    root.appendChild(probesContainer)
+  }
+
+  static renderProbes(probes) {
+    // const suctionProbes = probes.filter((probe) => probe.probe.suction)
+    // const nonSuctionProbes = probes.filter(
+    //   (probe) => !probe.probe.suction && !probe.probe.small_joint
+    // )
+    // const smallJointProbes = probes.filter((probe) => probe.probe.small_joint)
+    // HomePage.renderSuctionProbes(suctionProbes)
+    // HomePage.renderNonSuctionProbes(nonSuctionProbes)
+    // HomePage.renderSmallJointProbes(smallJointProbes)
+    const root = HomePage.root()
+    const probesContainer = document.createElement("div")
+    probesContainer.setAttribute("class", "probes-container")
+    probesContainer.setAttribute("id", "probes-container")
+    probes.map((probe) => {
+      const probeDiv = document.createElement("div")
+      probeDiv.setAttribute("class", "probe-div")
+      probeDiv.setAttribute("id", probe.probe.pn)
+      const probeNameDiv = document.createElement("div")
+      probeNameDiv.setAttribute("class", "probe-name-div")
+      const probePnDiv = document.createElement("div")
+      probePnDiv.setAttribute("class", "probe-pn-div")
+
+      probeNameDiv.innerText = probe.probe.name
+      probePnDiv.innerText = probe.probe.pn
+      probeDiv.appendChild(probeNameDiv)
+      probeDiv.appendChild(probePnDiv)
+      probesContainer.appendChild(probeDiv)
+    })
+    root.appendChild(probesContainer)
+    Probes.bindingProbesEventListener()
+  }
+
+  static renderImplants(inserts) {
+    const root = HomePage.root()
     const implantContainer = document.createElement("div")
     implantContainer.setAttribute("class", "implant-container")
     implantContainer.setAttribute("id", "implant-container")

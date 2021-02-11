@@ -2,7 +2,6 @@ class Implants {
   constructor() {
     this.implantAdapter = new ImplantAdapter()
     this.fetchInplantsSpecifications()
-    this.implants = []
   }
 
   fetchInplantsSpecifications() {
@@ -15,7 +14,7 @@ class Implants {
     return Store.getInserts()
   }
 
-  static bindingImplantsEventListener(implants) {
+  static bindingImplantsEventListener() {
     const implantDivs = document.getElementsByClassName("implant-div")
     for (let item of implantDivs) {
       item.addEventListener("click", () => {

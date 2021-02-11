@@ -12,4 +12,18 @@ class Store {
   static addInserts(fetchedInserts) {
     localStorage.setItem("inserts", JSON.stringify(fetchedInserts))
   }
+
+  static getProbes() {
+    let probes
+    if (localStorage.getItem("probes") === null) {
+      probes = []
+    } else {
+      probes = JSON.parse(localStorage.getItem("probes"))
+    }
+    return probes
+  }
+
+  static addProbes(fetchedProbes) {
+    localStorage.setItem("probes", JSON.stringify(fetchedProbes))
+  }
 }

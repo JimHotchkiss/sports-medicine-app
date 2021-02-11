@@ -1,9 +1,29 @@
 class Search {
-  static bindSearchEventListener() {
+  static bindInsertSearchEventListener() {
     const inputField = document.getElementById("input-field")
     inputField.addEventListener("input", (userInput) => {
       Search.filterInserts(userInput)
     })
+  }
+
+  static bindProbeSearchEventListener() {
+    const inputField = document.getElementById("input-field")
+    inputField.addEventListener("input", (userInput) => {
+      Search.filterProbes(userInput)
+    })
+  }
+
+  static filterProbes(userInput) {
+    const searchedProbes = userInput.target.value.toLowerCase()
+    const probes = Store.getProbes()
+    let filteredSearch = probes.filter((probe) => {
+      return (
+        probe.probe.name.toLowerCase().includes(searchedProbes) ||
+        probe.probe.pn.toLowerCase().includes(searchedProbes)
+      )
+    })
+    HomePage.clearProbeText()
+    HomePage.renderProbes(filteredSearch)
   }
 
   static filterInserts(userInput) {
@@ -16,7 +36,7 @@ class Search {
       )
     })
     HomePage.clearImplantText()
-    HomePage.renderInplants(filteredSearch)
+    HomePage.renderImplants(filteredSearch)
   }
 
   static clearSearchField() {
