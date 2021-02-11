@@ -33,6 +33,17 @@ class HomePage {
     featureData.innerHTML = ""
   }
 
+  static clearImplantDetails() {
+    const root = HomePage.root().children
+    Array.from(root).forEach(function (element) {
+      if (element.id !== "navbar") {
+        if (element) {
+          element.parentNode.removeChild(element)
+        }
+      }
+    })
+  }
+
   static getImplantDetails(selectedInsert) {
     const inserts = Store.getInserts()
     const selectedInserts = []

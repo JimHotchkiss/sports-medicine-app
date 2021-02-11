@@ -41,7 +41,19 @@ class Navbar {
   static showBackBtn() {
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
+    Navbar.bindBackBtnEventListener()
   }
+
+  static bindBackBtnEventListener() {
+    const navbarBackBtn = document.getElementById("navbar-back-btn")
+    navbarBackBtn.addEventListener("click", () => {
+      const implants = Implants.getImplantsFromStore()
+      HomePage.clearImplantDetails()
+      HomePage.renderSearchField()
+      HomePage.renderInplants(implants)
+    })
+  }
+
   static updateTitle(item, features) {
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")

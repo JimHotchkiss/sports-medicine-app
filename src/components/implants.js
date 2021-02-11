@@ -11,6 +11,10 @@ class Implants {
     })
   }
 
+  static getImplantsFromStore() {
+    return Store.getInserts()
+  }
+
   static bindingImplantsEventListener(implants) {
     const implantDivs = document.getElementsByClassName("implant-div")
     for (let item of implantDivs) {
