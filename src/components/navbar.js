@@ -44,13 +44,20 @@ class Navbar {
     Navbar.bindBackBtnEventListener()
   }
 
+  static hideBackBtn() {
+    const navbarBackBtn = document.getElementById("navbar-back-btn")
+    navbarBackBtn.classList.remove("navbar-back-btn-show")
+  }
+
   static bindBackBtnEventListener() {
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.addEventListener("click", () => {
       const implants = Implants.getImplantsFromStore()
       HomePage.clearImplantDetails()
+      Navbar.hideBackBtn()
       HomePage.renderSearchField()
       HomePage.renderInplants(implants)
+      Search.bindSearchEventListener()
     })
   }
 

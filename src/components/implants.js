@@ -19,7 +19,7 @@ class Implants {
     const implantDivs = document.getElementsByClassName("implant-div")
     for (let item of implantDivs) {
       item.addEventListener("click", () => {
-        const selectedInsert = item.id
+        const selectedInsert = item
         HomePage.clearImplantText()
         Search.clearSearchField()
         HomePage.getImplantDetails(selectedInsert)

@@ -48,12 +48,16 @@ class HomePage {
     const inserts = Store.getInserts()
     const selectedInserts = []
     inserts.map((insert) => {
-      if (insert.implant.pn === selectedInsert) {
-        selectedInserts.push(insert)
-        return inserts
+      if (
+        insert.implant.pn === selectedInsert.id
+        // &&
+        // insert.implant.name.includes("needles") &&
+        // selectedInsert.children[0].textContent.includes("needles")
+      ) {
+        return selectedInserts.push(insert)
       }
     })
-    HomePage.renderInsertDetails(selectedInserts)
+    HomePage.renderInsertDetails(selectedInserts, selectedInsert)
     Navbar.showBackBtn()
   }
 
@@ -250,18 +254,36 @@ class HomePage {
     })
   }
 
-  static renderInsertDetails(selectedInserts) {
+  static renderInsertDetails(selectedInserts, selectedInsert) {
+    let filteredInsertSelection = []
+    if (selectedInserts.length > 1) {
+      selectedInserts.map((insert) => {
+        if (
+          insert.implant.name.includes("needles") &&
+          selectedInsert.children[0].textContent.includes("needles")
+        ) {
+          filteredInsertSelection.push(insert)
+        } else if (
+          !insert.implant.name.includes("needles") &&
+          !selectedInsert.children[0].textContent.includes("needles")
+        ) {
+          filteredInsertSelection.push(insert)
+        }
+      })
+    } else {
+      filteredInsertSelection = selectedInserts
+    }
     HomePage.scrollToTop()
-    HomePage.implantName(selectedInserts)
-    HomePage.implantPn(selectedInserts)
-    HomePage.implantMaterial(selectedInserts)
-    HomePage.implantLength(selectedInserts)
-    HomePage.implantWidth(selectedInserts)
-    HomePage.implantDrillDepth(selectedInserts)
-    HomePage.implantDrillWidth(selectedInserts)
-    HomePage.implantNotes(selectedInserts)
-    HomePage.implantPositiveStop(selectedInserts)
-    HomePage.implantPullOutStrength(selectedInserts)
+    HomePage.implantName(filteredInsertSelection)
+    HomePage.implantPn(filteredInsertSelection)
+    HomePage.implantMaterial(filteredInsertSelection)
+    HomePage.implantLength(filteredInsertSelection)
+    HomePage.implantWidth(filteredInsertSelection)
+    HomePage.implantDrillDepth(filteredInsertSelection)
+    HomePage.implantDrillWidth(filteredInsertSelection)
+    HomePage.implantNotes(filteredInsertSelection)
+    HomePage.implantPositiveStop(filteredInsertSelection)
+    HomePage.implantPullOutStrength(filteredInsertSelection)
   }
 
   static renderSearchField() {
