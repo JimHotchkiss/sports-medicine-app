@@ -391,25 +391,36 @@ class HomePage {
     })
   }
 
-  static implantPullOutStrength(selectedInserts) {
-    selectedInserts.map((insert) => {
-      const insertPullOutStrengthDiv = document.createElement("div")
-      insertPullOutStrengthDiv.setAttribute("class", "insert-details-div")
-      const insertPullOutStrengthTitle = document.createElement("h3")
-      insertPullOutStrengthTitle.setAttribute("class", "insert-details-title")
-      const insertPullOutStrengthTextDiv = document.createElement("div")
-      insertPullOutStrengthTextDiv.setAttribute(
-        "class",
-        "insert-details-text-div"
-      )
-      const insertPullOutStrengthText = document.createElement("p")
-      insertPullOutStrengthText.setAttribute("class", "insert-details-text")
-      insertPullOutStrengthTitle.innerText = "Pull Out Strength"
-      insertPullOutStrengthText.innerText = insert.implant.PULL_OUT_STRENGTH
-      insertPullOutStrengthTextDiv.appendChild(insertPullOutStrengthText)
-      insertPullOutStrengthDiv.appendChild(insertPullOutStrengthTitle)
-      insertPullOutStrengthDiv.appendChild(insertPullOutStrengthTextDiv)
-      HomePage.root().appendChild(insertPullOutStrengthDiv)
+  static implantIconixOneImage(filteredInsertSelection) {
+    filteredInsertSelection.map(() => {
+      const insertUrlTextDiv = document.createElement("div")
+      insertUrlTextDiv.setAttribute("class", "insert-details-div")
+      const insertUrlDiv = document.createElement("div")
+      insertUrlDiv.setAttribute("class", "insert-img-div")
+      insertUrlDiv.setAttribute("id", "iconix1-img-div")
+      const insertUrlTitle = document.createElement("h3")
+      insertUrlTitle.setAttribute("class", "insert-details-title")
+      insertUrlTitle.innerText = "ICONIX 1 - Drill Image"
+      insertUrlTextDiv.appendChild(insertUrlTitle)
+      insertUrlTextDiv.appendChild(insertUrlDiv)
+      HomePage.root().appendChild(insertUrlTextDiv)
+    })
+  }
+
+  static implantIconixTwoImage(filteredInsertSelection) {
+    console.log("iconix 2")
+    filteredInsertSelection.map(() => {
+      const insertUrlTextDiv = document.createElement("div")
+      insertUrlTextDiv.setAttribute("class", "insert-details-div")
+      const insertUrlDiv = document.createElement("div")
+      insertUrlDiv.setAttribute("class", "insert-img-div")
+      insertUrlDiv.setAttribute("id", "iconix2-img-div")
+      const insertUrlTitle = document.createElement("h3")
+      insertUrlTitle.setAttribute("class", "insert-details-title")
+      insertUrlTitle.innerText = "ICONIX 2 - Drill Image"
+      insertUrlTextDiv.appendChild(insertUrlTitle)
+      insertUrlTextDiv.appendChild(insertUrlDiv)
+      HomePage.root().appendChild(insertUrlTextDiv)
     })
   }
 
@@ -435,6 +446,19 @@ class HomePage {
     HomePage.scrollToTop()
     HomePage.implantName(filteredInsertSelection)
     HomePage.implantPn(filteredInsertSelection)
+    selectedInserts.map((insert) => {
+      if (
+        insert.implant.name === "ICONIX 1" ||
+        insert.implant.name === "ICONIX 1 TT"
+      ) {
+        HomePage.implantIconixOneImage(filteredInsertSelection)
+      } else if (
+        insert.implant.name === "ICONIX 2" ||
+        insert.implant.name === "ICONIX 2 TT"
+      ) {
+        HomePage.implantIconixTwoImage(filteredInsertSelection)
+      }
+    })
     HomePage.implantMaterial(filteredInsertSelection)
     HomePage.implantLength(filteredInsertSelection)
     HomePage.implantWidth(filteredInsertSelection)
@@ -442,7 +466,6 @@ class HomePage {
     HomePage.implantDrillWidth(filteredInsertSelection)
     HomePage.implantNotes(filteredInsertSelection)
     HomePage.implantPositiveStop(filteredInsertSelection)
-    HomePage.implantPullOutStrength(filteredInsertSelection)
   }
 
   static renderSearchField() {

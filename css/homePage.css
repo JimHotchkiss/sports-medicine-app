@@ -34,6 +34,26 @@
    transition: 0.3s;
 }
 
+#iconix1-img-div {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 90%;
+    height: 200px;
+    background: transparent url("../images/iconix1.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 365px;
+}
+
+#iconix2-img-div {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 90%;
+    height: 200px;
+    background: transparent url("../images/iconix2.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 365px;
+}
+
 #insert-name-div {
     padding-top: 80px;
 }
@@ -65,6 +85,8 @@
 .insert-details-text {
     color: #262626;
 }
+
+/* --------------------------Search Feature -----------------------*/
 
 
 .input-div {
