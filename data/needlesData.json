@@ -1,0 +1,8 @@
+{"needles":[
+    {"name":"2.0mm Tape","pn":"P31037", "surgical_specialties_pn": "306252C-SIL", "material": "455 SST", "siliconza": "Yes", "point_style": "Taper", "circle": "1/2 Circle", "wire_diamter":{"min": ".0615", "max": "1.09"}, "radius":{"min": ".33", "max": ".36"}, "needle_length": {"min": "1.00", "max": "1.09"}, "bore_diameter": {"min": ".0425", "max": ".0440"}, "bore_depth": {"min": ".085", "max": ".100"}
+    },
+    {"name":"1.2mm Tape/#2 Suture","pn":"105-208-062", "surgical_specialties_pn": ["345000C-SIL OR", "345000E-SIL OR", "345000H-SIL OR"], "material": ["420 SST OR", "455 SST OR", "SULZLE Custom 470 SST"], "siliconza": "Yes", "point_style": "Taper Cuttin", "circle": "1/2 Circle", "wire_diamter":{"min": ".0495", "max": ".0505"}, "radius":{"min": ".33", "max": ".36"}, "needle_length": {"min": "1.00", "max": "1.09"}, "bore_diameter": {"min": ".025", "max": ".026"}, "bore_depth": {"min": ".072", "max": ".087"}
+}
+
+ ]
+}
