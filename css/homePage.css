@@ -39,17 +39,17 @@
     margin-bottom: 16px;
     width: 90%;
     height: 200px;
-    background: transparent url("../images/iconix1.png") 0% 0% no-repeat padding-box;
+    background: transparent url("../images/iconix1a.png") 0% 0% no-repeat padding-box;
     opacity: 1;
     background-size: 365px;
 }
 
 #iconix2-img-div {
     margin: 0 auto;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     width: 90%;
     height: 200px;
-    background: transparent url("../images/iconix2.png") 0% 0% no-repeat padding-box;
+    background: transparent url("../images/iconix2a.png") 0% 0% no-repeat padding-box;
     opacity: 1;
     background-size: 365px;
 }
@@ -61,7 +61,7 @@
     margin: 0px;
     padding: 0px;
     margin-left: 16px;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }
 
 .insert-details-div p {
@@ -172,5 +172,16 @@ input:focus{
     background: #ffb600;
     padding: 12px 0px;
     border-radius: 5px;
+}
+
+/******************** Measurement Image ****************************/
+.measurement-img-div {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 90%;
+    height: 550px;
+    background: transparent url("../images/measurements2.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 365px;
 }
 

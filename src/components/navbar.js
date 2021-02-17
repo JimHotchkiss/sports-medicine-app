@@ -51,12 +51,12 @@ class Navbar {
 
   static determineProduct() {
     const implants = Implants.getImplantsFromStore()
-    const product = root.children[1].children[1].children[0].innerText
+    const productIndex = root.children[1].dataset.index
     let implantProduct = false
     implants.map((implant) => {
-      if (implant.implant.name === product) {
+      if (implant.implant.id === productIndex) {
         implantProduct = true
-      } else if (implant.implant.name === product) {
+      } else if (implant.implant.name === productIndex) {
         return implantProduct
       }
     })
@@ -70,14 +70,12 @@ class Navbar {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
       if (implant === false) {
-        console.log(probes)
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()
         HomePage.renderProbes(probes)
         Search.bindProbeSearchEventListener()
       } else {
-        console.log(implants)
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()

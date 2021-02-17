@@ -224,6 +224,7 @@ class HomePage {
     selectedInserts.map((insert) => {
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "insert-details-div")
+      insertNameDiv.setAttribute("data-index", insert.implant.id)
       insertNameDiv.setAttribute("id", "insert-name-div")
       const insertNameTitle = document.createElement("h3")
       insertNameTitle.setAttribute("class", "insert-details-title")
@@ -408,7 +409,6 @@ class HomePage {
   }
 
   static implantIconixTwoImage(filteredInsertSelection) {
-    console.log("iconix 2")
     filteredInsertSelection.map(() => {
       const insertUrlTextDiv = document.createElement("div")
       insertUrlTextDiv.setAttribute("class", "insert-details-div")
@@ -459,6 +459,19 @@ class HomePage {
         HomePage.implantIconixTwoImage(filteredInsertSelection)
       }
     })
+
+    // Measurement image insert
+    selectedInserts.map((insert) => {
+      if (
+        insert.implant.name.includes("ICONIX") &&
+        insert.implant.id !== "3910-2" &&
+        insert.implant.id !== "3910-4"
+      ) {
+        HomePage.implantMeasurementImg()
+      } else {
+        return
+      }
+    })
     HomePage.implantMaterial(filteredInsertSelection)
     HomePage.implantLength(filteredInsertSelection)
     HomePage.implantWidth(filteredInsertSelection)
@@ -466,6 +479,20 @@ class HomePage {
     HomePage.implantDrillWidth(filteredInsertSelection)
     HomePage.implantNotes(filteredInsertSelection)
     HomePage.implantPositiveStop(filteredInsertSelection)
+  }
+
+  static implantMeasurementImg() {
+    const insertUrlTextDiv = document.createElement("div")
+    insertUrlTextDiv.setAttribute("class", "insert-details-div")
+    const insertUrlDiv = document.createElement("div")
+    insertUrlDiv.setAttribute("class", "measurement-img-div")
+    // insertUrlDiv.setAttribute("id", "iconix2-img-div")
+    const insertUrlTitle = document.createElement("h3")
+    insertUrlTitle.setAttribute("class", "insert-details-title")
+    insertUrlTitle.innerText = "ICONIX Measurements"
+    insertUrlTextDiv.appendChild(insertUrlTitle)
+    insertUrlTextDiv.appendChild(insertUrlDiv)
+    HomePage.root().appendChild(insertUrlTextDiv)
   }
 
   static renderSearchField() {
@@ -567,13 +594,11 @@ class HomePage {
   }
 
   static renderProbes(probes) {
-    console.log(probes)
     const root = HomePage.root()
     const probesContainer = document.createElement("div")
     probesContainer.setAttribute("class", "probes-container")
     probesContainer.setAttribute("id", "probes-container")
     probes.map((probe) => {
-      console.log(probe.probe)
       const probeDiv = document.createElement("div")
       probeDiv.setAttribute("class", "probe-div")
       probeDiv.setAttribute("id", probe.probe.pn)
@@ -601,6 +626,7 @@ class HomePage {
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
       implantDiv.setAttribute("id", implant.implant.pn)
+      implantDiv.setAttribute("data-index", implant.implant.id)
       const implantNameDiv = document.createElement("div")
       implantNameDiv.setAttribute("class", "implant-name-div")
       const implantPnDiv = document.createElement("div")
