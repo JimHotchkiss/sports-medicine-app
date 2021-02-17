@@ -28,6 +28,7 @@ class Features {
     featureContainer.setAttribute("class", "features-container")
     featureContainer.setAttribute("id", "features-container")
     return this.features.map((feature) => {
+      console.log(feature)
       // Feature div
       const featureDiv = document.createElement("div")
       featureDiv.setAttribute("class", "feature-div")

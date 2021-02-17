@@ -69,7 +69,7 @@
            "name": "Aardvark",
            "pn": "0279251101",
            "suction": true,
-           "small_joint":false,
+           "small_joint":true,
            "length": "135 mm",
            "outer_diameter": "2.5 mm",
            "cut_max": "6",
@@ -232,18 +232,6 @@
            "cut_default": "4",
            "coag": "3"
         }
-    },
-    {"probe":
-        {
-           "name": "Aardvark",
-           "pn": "0279251101",
-           "suction": false,
-           "small_joint":true,
-           "length": "135 mm",
-           "outer_diameter": "2.5 mm",
-           "cut_max": "6",
-           "cut_default": "4",
-           "coag": "3"
-        }
     }
+    
 ]

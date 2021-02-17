@@ -6,6 +6,7 @@
 }
 
 .feature-div {
+    min-width: 275px;
     margin: 24px auto;
     text-align: center;
     max-width: 300px;

@@ -49,15 +49,41 @@ class Navbar {
     navbarBackBtn.classList.remove("navbar-back-btn-show")
   }
 
+  static determineProduct() {
+    const implants = Implants.getImplantsFromStore()
+    const product = root.children[1].children[1].children[0].innerText
+    let implantProduct = false
+    implants.map((implant) => {
+      if (implant.implant.name === product) {
+        implantProduct = true
+      } else if (implant.implant.name === product) {
+        return implantProduct
+      }
+    })
+    return implantProduct
+  }
+
   static bindBackBtnEventListener() {
+    const implant = Navbar.determineProduct()
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.addEventListener("click", () => {
       const implants = Implants.getImplantsFromStore()
-      HomePage.clearImplantDetails()
-      Navbar.hideBackBtn()
-      HomePage.renderSearchField()
-      HomePage.renderImplants(implants)
-      Search.bindInsertSearchEventListener()
+      const probes = Probes.getProbesFromStore()
+      if (implant === false) {
+        console.log(probes)
+        HomePage.clearImplantDetails()
+        Navbar.hideBackBtn()
+        HomePage.renderSearchField()
+        HomePage.renderProbes(probes)
+        Search.bindProbeSearchEventListener()
+      } else {
+        console.log(implants)
+        HomePage.clearImplantDetails()
+        Navbar.hideBackBtn()
+        HomePage.renderSearchField()
+        HomePage.renderImplants(implants)
+        Search.bindInsertSearchEventListener()
+      }
     })
   }
 

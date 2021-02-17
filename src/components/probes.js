@@ -10,6 +10,14 @@ class Probes {
     })
   }
 
+  static getSuctionProbesFromStore() {
+    return Store.getSuctionProbes()
+  }
+
+  static getProbesFromStore() {
+    return Store.getProbes()
+  }
+
   static bindingProbesEventListener() {
     const probeDivs = document.getElementsByClassName("probe-div")
     for (let item of probeDivs) {

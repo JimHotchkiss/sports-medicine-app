@@ -26,4 +26,18 @@ class Store {
   static addProbes(fetchedProbes) {
     localStorage.setItem("probes", JSON.stringify(fetchedProbes))
   }
+
+  static getSuctionProbes() {
+    let suctionProbes
+    if (localStorage.getItem("suction probes") === null) {
+      suctionProbes = []
+    } else {
+      suctionProbes = JSON.parse(localStorage.getItem("suction probes"))
+    }
+    return suctionProbes
+  }
+
+  static addSuctionProbes(suctionProbes) {
+    localStorage.setItem("suction probes", JSON.stringify(suctionProbes))
+  }
 }

@@ -17,6 +17,7 @@ class Search {
     const searchedProbes = userInput.target.value.toLowerCase()
     const probes = Store.getProbes()
     let filteredSearch = probes.filter((probe) => {
+      console.log(probe.probe.suction)
       return (
         probe.probe.name.toLowerCase().includes(searchedProbes) ||
         probe.probe.pn.toLowerCase().includes(searchedProbes)

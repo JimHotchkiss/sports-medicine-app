@@ -3,7 +3,7 @@ class HomePage {
     Navbar.renderNavbar()
     this.features = new Features()
     this.implants = new Implants()
-    this.propes = new Probes()
+    this.probes = new Probes()
   }
 
   static scrollToTop() {
@@ -567,19 +567,13 @@ class HomePage {
   }
 
   static renderProbes(probes) {
-    // const suctionProbes = probes.filter((probe) => probe.probe.suction)
-    // const nonSuctionProbes = probes.filter(
-    //   (probe) => !probe.probe.suction && !probe.probe.small_joint
-    // )
-    // const smallJointProbes = probes.filter((probe) => probe.probe.small_joint)
-    // HomePage.renderSuctionProbes(suctionProbes)
-    // HomePage.renderNonSuctionProbes(nonSuctionProbes)
-    // HomePage.renderSmallJointProbes(smallJointProbes)
+    console.log(probes)
     const root = HomePage.root()
     const probesContainer = document.createElement("div")
     probesContainer.setAttribute("class", "probes-container")
     probesContainer.setAttribute("id", "probes-container")
     probes.map((probe) => {
+      console.log(probe.probe)
       const probeDiv = document.createElement("div")
       probeDiv.setAttribute("class", "probe-div")
       probeDiv.setAttribute("id", probe.probe.pn)

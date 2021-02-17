@@ -11,7 +11,6 @@
     "PULL_OUT_STRENGTH": "65 lb",
     "NOTES": "1 strand #2 Force Fiber"
 }},
-
 {"implant": {
     "name": "ICONIX 1 \nwith Needles",
     "pn": "3910-500-412",
@@ -104,7 +103,7 @@
         "NOTES": "2.0mm XBraid TT (Drill Depth 20mm Taper Needle Radius .345)"
     }
     },
-{"implant":{
+    {"implant":{
         "name": "ICONIX 3",
         "pn": "3910-500-532",
         "img_url": "",
@@ -130,7 +129,6 @@
         "PULL_OUT_STRENGTH": "123.6 lb",
         "NOTES": "2 strands #5 Force Fiber"
 }},
-
 {"implant":{
         "name": "IONIX SPEED Triple Loaded 1.2 mm Xbraid TT",
         "pn": "3910-500-931",
@@ -365,7 +363,6 @@
     "PULL_OUT_STRENGTH": "95 lb",
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
-
 {"implant":{
     "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
     "pn": "3910-200-081",
