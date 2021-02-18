@@ -40,4 +40,18 @@ class Store {
   static addSuctionProbes(suctionProbes) {
     localStorage.setItem("suction probes", JSON.stringify(suctionProbes))
   }
+
+  static addNeedles(fetchedNeedles) {
+    localStorage.setItem("probes", JSON.stringify(fetchedNeedles))
+  }
+
+  static getNeedles() {
+    let needles
+    if (localStorage.getItem("needles") === null) {
+      needles = []
+    } else {
+      needles = JSON.parse(localStorage.getItem("needles"))
+    }
+    return needles
+  }
 }

@@ -2,8 +2,8 @@ class Implants {
   constructor() {
     this.implantAdapter = new ImplantAdapter()
     this.fetchInplantsSpecifications()
-    this.fetchNeedleSpecifications()
     this.needleAdapter = new NeedleAdapter()
+    this.fetchNeedleSpecifications()
   }
 
   fetchInplantsSpecifications() {
@@ -13,11 +13,9 @@ class Implants {
   }
 
   fetchNeedleSpecifications() {
-    console.log(this.needleAdapter)
-    // this.needleAdapter.fetchNeedleData().then((data) => {
-    //   console.log(data)
-    //   Store.addInserts(data)
-    // })
+    this.needleAdapter.fetchNeedleData().then((data) => {
+      Store.addNeedles(data)
+    })
   }
 
   static getImplantsFromStore() {

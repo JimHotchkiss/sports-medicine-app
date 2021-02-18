@@ -1,6 +1,6 @@
 class NeedleAdapter {
   constructor() {
-    this.dataUrl = "../../data/needleData.json"
+    this.dataUrl = "../../data/needlesData.json"
   }
 
   fetchNeedleData() {
