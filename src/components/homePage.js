@@ -438,17 +438,139 @@ class HomePage {
   static render2_0NeedleData() {
     const needles = Store.getNeedles().needles[0]
     console.log(needles)
-    const needlesDetailsDiv = document.createElement("div")
-    needlesDetailsDiv.setAttribute("class", "insert-details-div")
+    const needlesDetailsContainer = document.createElement("div")
+    needlesDetailsContainer.setAttribute("class", "insert-details-container")
     const needleTitle = document.createElement("h3")
     needleTitle.setAttribute("class", "insert-details-title")
     needleTitle.innerText = "ICONIX Needles"
-
-    const needleName = document.createElement("p")
+    // Name
+    const needleDetailsDiv = document.createElement("div")
+    needleDetailsDiv.setAttribute("class", "needle-details-div")
+    const needleName = document.createElement("div")
     needleName.setAttribute("class", "needle-details")
+    needleName.innerText = `Name: ${needles.name}`
+    needleDetailsDiv.appendChild(needleName)
+    // Surgical specialties part number
+    const surgerySpecialtyPn = document.createElement("div")
+    surgerySpecialtyPn.setAttribute("class", "needle-details")
+    surgerySpecialtyPn.innerText = `Surgical Specialties PN: ${needles.pn}`
+    needleDetailsDiv.appendChild(surgerySpecialtyPn)
+    // Material
+    const needleMaterial = document.createElement("div")
+    needleMaterial.setAttribute("class", "needle-details")
+    needleMaterial.innerText = `Material: ${needles.material}`
+    needleDetailsDiv.appendChild(needleMaterial)
+    // Siliconza
+    const needleSiliconza = document.createElement("div")
+    needleSiliconza.setAttribute("class", "needle-details")
+    needleSiliconza.innerText = `Siliconza: ${needles.siliconza}`
+    needleDetailsDiv.appendChild(needleSiliconza)
+    // Point Style
+    const needlePointStyle = document.createElement("div")
+    needlePointStyle.setAttribute("class", "needle-details")
+    needlePointStyle.innerText = `Point Style: ${needles.point_style}`
+    needleDetailsDiv.appendChild(needlePointStyle)
+    // Circle
+    const needleCircle = document.createElement("div")
+    needleCircle.setAttribute("class", "needle-details")
+    needleCircle.innerText = `Circle: ${needles.circle}`
+    needleDetailsDiv.appendChild(needleCircle)
+    // Wire Diamter
+    const needleWireDiameter = document.createElement("div")
+    needleWireDiameter.setAttribute("class", "needle-details")
+    needleWireDiameter.innerText = `Wire Diamter`
+    // Min
+    const wireDiameterMin = document.createElement("div")
+    wireDiameterMin.setAttribute("class", "wire-diameter")
+    wireDiameterMin.innerText = `Min: ${needles.wire_diamter.min}`
+    needleWireDiameter.appendChild(wireDiameterMin)
+    // Max
+    const wireDiameterMax = document.createElement("div")
+    wireDiameterMax.setAttribute("class", "wire-diameter")
+    wireDiameterMax.innerText = `Max: ${needles.wire_diamter.max}`
+    needleWireDiameter.appendChild(wireDiameterMax)
 
-    needlesDetailsDiv.appendChild(needleTitle)
-    HomePage.root().appendChild(needlesDetailsDiv)
+    needleDetailsDiv.appendChild(needleWireDiameter)
+    // Wire Radius
+    const needleWireRadius = document.createElement("div")
+    needleWireRadius.setAttribute("class", "needle-details")
+    needleWireRadius.innerText = `Radius`
+    // Min
+    const wireRadiusMin = document.createElement("div")
+    wireRadiusMin.setAttribute("class", "wire-diameter")
+    wireRadiusMin.innerText = `Min: ${needles.radius.min}`
+    needleWireRadius.appendChild(wireRadiusMin)
+    // Max
+    const wireRadiusMax = document.createElement("div")
+    wireRadiusMax.setAttribute("class", "wire-diameter")
+    wireRadiusMax.innerText = `Max: ${needles.radius.max}`
+    needleWireRadius.appendChild(wireRadiusMax)
+
+    needleDetailsDiv.appendChild(needleWireRadius)
+    // Needle Length
+    const needleWireLength = document.createElement("div")
+    needleWireLength.setAttribute("class", "needle-details")
+    needleWireLength.innerText = `Needle Length`
+    // Min
+    const wireLengthMin = document.createElement("div")
+    wireLengthMin.setAttribute("class", "wire-diameter")
+    wireLengthMin.innerText = `Min: ${needles.needle_length.min}`
+    needleWireLength.appendChild(wireLengthMin)
+    // Max
+    const wireLengthMax = document.createElement("div")
+    wireLengthMax.setAttribute("class", "wire-diameter")
+    wireLengthMax.innerText = `Max: ${needles.needle_length.max}`
+    needleWireLength.appendChild(wireLengthMax)
+
+    needleDetailsDiv.appendChild(needleWireLength)
+    // Bore Diameter
+    const needleboreDiameter = document.createElement("div")
+    needleboreDiameter.setAttribute("class", "needle-details")
+    needleboreDiameter.innerText = `Bore Diameter`
+    // Min
+    const boreDiameterMin = document.createElement("div")
+    boreDiameterMin.setAttribute("class", "wire-diameter")
+    boreDiameterMin.innerText = `Min: ${needles.bore_diameter.min}`
+    needleboreDiameter.appendChild(boreDiameterMin)
+    // Max
+    const boreDiameterMax = document.createElement("div")
+    boreDiameterMax.setAttribute("class", "wire-diameter")
+    boreDiameterMax.innerText = `Max: ${needles.bore_diameter.max}`
+    needleboreDiameter.appendChild(boreDiameterMax)
+
+    needleDetailsDiv.appendChild(needleboreDiameter)
+    // Bore Depth
+    const needleboreDepth = document.createElement("div")
+    needleboreDepth.setAttribute("class", "needle-details")
+    needleboreDepth.innerText = `Bore Depth`
+    // Min
+    const boreDepthMin = document.createElement("div")
+    boreDepthMin.setAttribute("class", "wire-diameter")
+    boreDepthMin.innerText = `Min: ${needles.bore_depth.min}`
+    needleboreDepth.appendChild(boreDepthMin)
+    // Max
+    const boreDepthMax = document.createElement("div")
+    boreDepthMax.setAttribute("class", "wire-diameter")
+    boreDepthMax.innerText = `Max: ${needles.bore_depth.max}`
+    needleboreDepth.appendChild(boreDepthMax)
+
+    needleDetailsDiv.appendChild(needleboreDepth)
+
+    // Needle Image
+    const needleImgContainer = document.createElement("div")
+    needleImgContainer.setAttribute("class", "needle-img-container")
+    const needleImgTitle = document.createElement("h3")
+    needleImgTitle.setAttribute("class", "needle-img-title")
+    needleImgTitle.innerText = "Iconix Needle Image"
+    const oneTwoNeedleImage = document.createElement("div")
+    oneTwoNeedleImage.setAttribute("class", "needle-one-image")
+    needleImgContainer.appendChild(needleImgTitle)
+    needleImgContainer.appendChild(oneTwoNeedleImage)
+
+    needlesDetailsContainer.appendChild(needleTitle)
+    needlesDetailsContainer.appendChild(needleDetailsDiv)
+    HomePage.root().appendChild(needlesDetailsContainer)
+    HomePage.root().appendChild(needleImgContainer)
   }
 
   static render1_2NeedleData(filteredInserts) {
