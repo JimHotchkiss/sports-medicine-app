@@ -4,7 +4,6 @@ class NeedleAdapter {
   }
 
   fetchNeedleData() {
-    console.log("fetch")
     return fetch(this.dataUrl).then((resp) => resp.json())
   }
 }

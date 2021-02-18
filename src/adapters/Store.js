@@ -42,7 +42,7 @@ class Store {
   }
 
   static addNeedles(fetchedNeedles) {
-    localStorage.setItem("probes", JSON.stringify(fetchedNeedles))
+    localStorage.setItem("needles", JSON.stringify(fetchedNeedles))
   }
 
   static getNeedles() {

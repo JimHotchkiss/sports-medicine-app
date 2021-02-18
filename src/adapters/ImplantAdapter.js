@@ -4,7 +4,6 @@ class ImplantAdapter {
   }
 
   fetchImplantData() {
-    console.log("fetch implant")
     return fetch(this.dataUrl).then((resp) => resp.json())
   }
 }

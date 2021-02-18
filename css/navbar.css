@@ -12,12 +12,12 @@
 
 
 .navbar-back-btn-show{
-    margin-top: 18px;
+    margin-top: 20px;
     width: 20px;
     height: 30px;
-    background: transparent url("../images/back-btn.png") 0% 0% no-repeat padding-box;
+    background: transparent url("../images/back.png") 0% 0% no-repeat padding-box;
     opacity: 1;
-    background-size: 15px;
+    background-size: 25px;
 }
 
 .navbar-back-btn-show:hover{
@@ -69,7 +69,7 @@
     margin-top: 5px;
     width: 45px;
     height: 45px;
-    background: transparent url("../images/runner-yellow.png") 0% 0% no-repeat padding-box;
+    background: transparent url("../images/runner.png") 0% 0% no-repeat padding-box;
     opacity: 1;
     background-size: 45px;
 }

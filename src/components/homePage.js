@@ -2,7 +2,6 @@ class HomePage {
   constructor() {
     Navbar.renderNavbar()
     this.features = new Features()
-    this.implants = new Implants()
     this.probes = new Probes()
   }
 
@@ -424,7 +423,78 @@ class HomePage {
     })
   }
 
+  static filterNeedleData(selectedInsert) {
+    if (
+      selectedInsert.id === "3910-500-412" ||
+      selectedInsert.id === "3910-500-212" ||
+      selectedInsert.id === "3910-500-422"
+    ) {
+      HomePage.render2_0NeedleData(selectedInsert)
+    } else if (selectedInsert.id === "3910-500-222") {
+      HomePage.render1_2NeedleData(selectedInsert)
+    }
+  }
+
+  static render2_0NeedleData() {
+    const needles = Store.getNeedles().needles[0]
+    console.log(needles)
+    const needlesDetailsDiv = document.createElement("div")
+    needlesDetailsDiv.setAttribute("class", "insert-details-div")
+    const needleTitle = document.createElement("h3")
+    needleTitle.setAttribute("class", "insert-details-title")
+    needleTitle.innerText = "ICONIX Needles"
+
+    const needleName = document.createElement("p")
+    needleName.setAttribute("class", "needle-details")
+
+    needlesDetailsDiv.appendChild(needleTitle)
+    HomePage.root().appendChild(needlesDetailsDiv)
+  }
+
+  static render1_2NeedleData(filteredInserts) {
+    console.log(filteredInserts)
+  }
+
+  static iconixImage(selectedInserts, filteredInsertSelection) {
+    selectedInserts.map((insert) => {
+      if (
+        insert.implant.name === "ICONIX 1" ||
+        insert.implant.name === "ICONIX 1 TT"
+      ) {
+        HomePage.implantIconixOneImage(filteredInsertSelection)
+      } else if (
+        insert.implant.name === "ICONIX 2" ||
+        insert.implant.name === "ICONIX 2 TT"
+      ) {
+        HomePage.implantIconixTwoImage(filteredInsertSelection)
+      }
+    })
+  }
+
+  static filteredInsertSelection(selectedInserts, selectedInsert) {
+    let filteredInsertSelection = []
+    if (selectedInserts.length > 1) {
+      selectedInserts.map((insert) => {
+        if (
+          insert.implant.name.includes("needles") &&
+          selectedInsert.children[0].textContent.includes("needles")
+        ) {
+          filteredInsertSelection.push(insert)
+        } else if (
+          !insert.implant.name.includes("needles") &&
+          !selectedInsert.children[0].textContent.includes("needles")
+        ) {
+          filteredInsertSelection.push(insert)
+        }
+      })
+    } else {
+      filteredInsertSelection = selectedInserts
+    }
+  }
+
   static renderInsertDetails(selectedInserts, selectedInsert) {
+    // HomePage.filterForIconixInserts()
+    console.log(selectedInserts)
     let filteredInsertSelection = []
     if (selectedInserts.length > 1) {
       selectedInserts.map((insert) => {
@@ -446,19 +516,10 @@ class HomePage {
     HomePage.scrollToTop()
     HomePage.implantName(filteredInsertSelection)
     HomePage.implantPn(filteredInsertSelection)
-    selectedInserts.map((insert) => {
-      if (
-        insert.implant.name === "ICONIX 1" ||
-        insert.implant.name === "ICONIX 1 TT"
-      ) {
-        HomePage.implantIconixOneImage(filteredInsertSelection)
-      } else if (
-        insert.implant.name === "ICONIX 2" ||
-        insert.implant.name === "ICONIX 2 TT"
-      ) {
-        HomePage.implantIconixTwoImage(filteredInsertSelection)
-      }
-    })
+    // Iconix 1 and 2 images
+    HomePage.iconixImage(selectedInserts, filteredInsertSelection)
+    // Needle data and image
+    HomePage.filterNeedleData(selectedInsert)
 
     // Measurement image insert
     selectedInserts.map((insert) => {
