@@ -179,10 +179,10 @@ input:focus{
     margin: 0 auto;
     margin-bottom: 8px;
     width: 90%;
-    height: 550px;
+    height: 470px;
     background: transparent url("../images/measurements2.png") 0% 0% no-repeat padding-box;
     opacity: 1;
-    background-size: 330px;
+    background-size: 320px;
 }
 
 /*********************** Needles ******************************/
@@ -216,7 +216,7 @@ input:focus{
     margin: 0 auto;
     margin-bottom: 16px;
     width: 90%;
-    height: 390px;
+    height: 340px;
     background: transparent url("../images/trocar_tip.png") 0% 0% no-repeat padding-box;
     opacity: 1;
     background-size: 320px;

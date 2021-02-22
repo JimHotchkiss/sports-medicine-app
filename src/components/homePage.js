@@ -557,20 +557,19 @@ class HomePage {
     needleDetailsDiv.appendChild(needleboreDepth)
 
     // Needle Image
-    const needleImgContainer = document.createElement("div")
-    needleImgContainer.setAttribute("class", "needle-img-container")
-    const needleImgTitle = document.createElement("h3")
-    needleImgTitle.setAttribute("class", "needle-img-title")
-    needleImgTitle.innerText = "Iconix Needle Image"
-    const oneTwoNeedleImage = document.createElement("div")
-    oneTwoNeedleImage.setAttribute("class", "needle-one-image")
-    needleImgContainer.appendChild(needleImgTitle)
-    needleImgContainer.appendChild(oneTwoNeedleImage)
+    // const needleImgContainer = document.createElement("div")
+    // needleImgContainer.setAttribute("class", "needle-img-container")
+    // const needleImgTitle = document.createElement("h3")
+    // needleImgTitle.setAttribute("class", "needle-img-title")
+    // needleImgTitle.innerText = "Iconix Needle Image"
+    // const oneTwoNeedleImage = document.createElement("div")
+    // oneTwoNeedleImage.setAttribute("class", "needle-one-image")
+    // needleImgContainer.appendChild(needleImgTitle)
+    // needleImgContainer.appendChild(oneTwoNeedleImage)
 
     needlesDetailsContainer.appendChild(needleTitle)
     needlesDetailsContainer.appendChild(needleDetailsDiv)
     HomePage.root().appendChild(needlesDetailsContainer)
-    HomePage.root().appendChild(needleImgContainer)
   }
 
   static render1_2NeedleData(filteredInserts) {
