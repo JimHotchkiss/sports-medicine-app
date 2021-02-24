@@ -231,3 +231,12 @@ input:focus{
     color: #fff;
 }
 
+.needle-details-text {
+    margin-left: 16px;
+}
+
+.needle-details-text-last {
+    margin-left: 16px;
+    margin-bottom: 8px;
+}
+

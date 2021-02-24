@@ -429,14 +429,18 @@ class HomePage {
       selectedInsert.id === "3910-500-212" ||
       selectedInsert.id === "3910-500-422"
     ) {
-      HomePage.render2_0NeedleData(selectedInsert)
+      const needles = Store.getNeedles().needles[1]
+      HomePage.renderNeedleData(needles)
     } else if (selectedInsert.id === "3910-500-222") {
-      HomePage.render1_2NeedleData(selectedInsert)
+      const needles = Store.getNeedles().needles[0]
+      console.log(needles)
+      HomePage.renderNeedleData(needles)
     }
   }
 
-  static render2_0NeedleData() {
-    const needles = Store.getNeedles().needles[0]
+  // Try and consolidate this into on function, and just pass the function the correct data
+  // rename from render2_0NeedleData to renderNeedleData
+  static renderNeedleData(needles) {
     console.log(needles)
     const needlesDetailsContainer = document.createElement("div")
     needlesDetailsContainer.setAttribute("class", "insert-details-container")
@@ -450,16 +454,57 @@ class HomePage {
     needleName.setAttribute("class", "needle-details")
     needleName.innerText = `Name: ${needles.name}`
     needleDetailsDiv.appendChild(needleName)
-    // Surgical specialties part number
-    const surgerySpecialtyPn = document.createElement("div")
-    surgerySpecialtyPn.setAttribute("class", "needle-details")
-    surgerySpecialtyPn.innerText = `Surgical Specialties PN: ${needles.pn}`
-    needleDetailsDiv.appendChild(surgerySpecialtyPn)
-    // Material
-    const needleMaterial = document.createElement("div")
-    needleMaterial.setAttribute("class", "needle-details")
-    needleMaterial.innerText = `Material: ${needles.material}`
-    needleDetailsDiv.appendChild(needleMaterial)
+    if (needles.pn === "105-208-062") {
+      const surgerySpecialtyPn = document.createElement("div")
+      surgerySpecialtyPn.setAttribute("class", "needle-details")
+      surgerySpecialtyPn.innerText = `Surgical Specialties PNs:`
+      needleDetailsDiv.appendChild(surgerySpecialtyPn)
+      needles.surgical_specialties_pn.map((pn, index) => {
+        if (index === 2) {
+          // Surgical specialties part number
+          const surgerySpecialtyPn = document.createElement("div")
+          surgerySpecialtyPn.setAttribute("class", "needle-details-text-last")
+          surgerySpecialtyPn.innerText = `${pn},`
+          needleDetailsDiv.appendChild(surgerySpecialtyPn)
+        } else {
+          // Surgical specialties part number
+          const surgerySpecialtyPn = document.createElement("div")
+          surgerySpecialtyPn.setAttribute("class", "needle-details-text")
+          surgerySpecialtyPn.innerText = `${pn},`
+          needleDetailsDiv.appendChild(surgerySpecialtyPn)
+        }
+      })
+      // Material
+      const needleMaterial = document.createElement("div")
+      needleMaterial.setAttribute("class", "needle-details")
+      needleMaterial.innerText = `Materials:`
+      needleDetailsDiv.appendChild(needleMaterial)
+      needles.material.map((each_material, index) => {
+        // Material
+        if (index === 2) {
+          const needleMaterial = document.createElement("div")
+          needleMaterial.setAttribute("class", "needle-details-text-last")
+          needleMaterial.innerText = `Material: ${each_material}`
+          needleDetailsDiv.appendChild(needleMaterial)
+        } else {
+          const needleMaterial = document.createElement("div")
+          needleMaterial.setAttribute("class", "needle-details-text")
+          needleMaterial.innerText = `Material: ${each_material}`
+          needleDetailsDiv.appendChild(needleMaterial)
+        }
+      })
+    } else {
+      // Surgical specialties part number
+      const surgerySpecialtyPn = document.createElement("div")
+      surgerySpecialtyPn.setAttribute("class", "needle-details")
+      surgerySpecialtyPn.innerText = `Surgical Specialties PN: ${needles.surgical_specialties_pn}`
+      needleDetailsDiv.appendChild(surgerySpecialtyPn)
+      // Material
+      const needleMaterial = document.createElement("div")
+      needleMaterial.setAttribute("class", "needle-details")
+      needleMaterial.innerText = `Material: ${needles.material}`
+      needleDetailsDiv.appendChild(needleMaterial)
+    }
     // Siliconza
     const needleSiliconza = document.createElement("div")
     needleSiliconza.setAttribute("class", "needle-details")
@@ -556,24 +601,9 @@ class HomePage {
 
     needleDetailsDiv.appendChild(needleboreDepth)
 
-    // Needle Image
-    // const needleImgContainer = document.createElement("div")
-    // needleImgContainer.setAttribute("class", "needle-img-container")
-    // const needleImgTitle = document.createElement("h3")
-    // needleImgTitle.setAttribute("class", "needle-img-title")
-    // needleImgTitle.innerText = "Iconix Needle Image"
-    // const oneTwoNeedleImage = document.createElement("div")
-    // oneTwoNeedleImage.setAttribute("class", "needle-one-image")
-    // needleImgContainer.appendChild(needleImgTitle)
-    // needleImgContainer.appendChild(oneTwoNeedleImage)
-
     needlesDetailsContainer.appendChild(needleTitle)
     needlesDetailsContainer.appendChild(needleDetailsDiv)
     HomePage.root().appendChild(needlesDetailsContainer)
-  }
-
-  static render1_2NeedleData(filteredInserts) {
-    console.log(filteredInserts)
   }
 
   static iconixImage(selectedInserts, filteredInsertSelection) {
@@ -615,7 +645,6 @@ class HomePage {
 
   static renderInsertDetails(selectedInserts, selectedInsert) {
     // HomePage.filterForIconixInserts()
-    console.log(selectedInserts)
     let filteredInsertSelection = []
     if (selectedInserts.length > 1) {
       selectedInserts.map((insert) => {
@@ -644,13 +673,16 @@ class HomePage {
 
     // Measurement image insert
     selectedInserts.map((insert) => {
+      console.log(insert.implant.name)
       if (
         insert.implant.name.includes("ICONIX") &&
         insert.implant.id !== "3910-2" &&
         insert.implant.id !== "3910-4"
       ) {
+        console.log(insert.implant.name)
         HomePage.implantMeasurementImg()
       } else {
+        console.log(insert.implant.name)
         return
       }
     })

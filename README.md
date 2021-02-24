@@ -38,3 +38,7 @@
     * error: failed to push some refs to
     * The fix - apparently I didn't establish the master branch correctly 
         - 'git push heroku HEAD:master' - this fixed the issue
+
+# Note - 2/23/2021
+    * .zip file wouldn't properly load. It would load the HTMl, but it would not load the data (features). I think the javascript fetch request is not compatible with the Highspot, .zip file method
+        - Going to try and launch on Azure, and send the link over to the Highspot administrator (Annie Werner)
