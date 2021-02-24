@@ -251,3 +251,145 @@ input:focus{
     background-size: 320px;
 }
 
+/************************** Media Queries *****************************/
+
+/* Desktop */
+
+@media  (min-width: 1025px) and (max-width: 2000px)  {  
+    .implant-container {
+        min-width: 500px;
+      margin: 0 auto;
+    }
+
+    .input-div {
+        max-width: 400px;
+        margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    }
+
+    .input-field {
+        width: 375px;
+    }
+   
+    
+    .input-div i { 
+        left: 870px; 
+    
+    }
+
+
+  }
+
+/* Tablets */
+
+@media (min-width: 451px) and (max-width: 768px) {
+
+    .implant-container {
+        min-width: 500px;
+      margin: 0 auto;
+    }
+    .input-div {
+        max-width: 400px;
+        margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    }
+    .input-field {
+        width: 375px;
+    }
+   
+    .input-div i { 
+        left: 540px; 
+    }
+
+  
+   }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .implant-container {
+        min-width: 500px;
+      margin: 0 auto;
+    }
+    .input-div {
+        max-width: 400px;
+        margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    }
+    .input-field {
+        width: 375px;
+    }
+   
+    .input-div i { 
+        left: 680px; 
+    }
+
+      /* Insert Details */
+      .insert-details-div{
+        min-width: 500px;
+        margin: 0 auto;
+    }
+
+    .insert-details-text-div {
+        max-width: 490px;
+        margin: 16px auto;
+    }
+
+    .insert-details-div h3{
+        margin-left: 5%;
+    }
+   }
+
+
+/* Mobile */
+
+@media (min-width: 391px) and (max-width: 401px) {
+    .implant-container {
+        min-width: 310px;
+    }
+    .input-field {
+        width: 280px;
+    } 
+    .input-div i { 
+        left: 320px; 
+    }
+   }
+
+@media (min-width: 381px) and (max-width: 450px) {
+    .input-div {
+        max-width: 400px;
+        margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    }
+ 
+    .input-field {
+        width: 310px;
+    } 
+    .input-div i { 
+        left: 340px; 
+    }
+   }
+
+@media (min-width: 360px) and (max-width: 380px) {
+    .implant-container {
+        min-width: 310px;
+    }
+    .input-field {
+        width: 263px;
+    } 
+    .input-div i { 
+        left: 300px; 
+    }
+   }
+
+
+
+
+
+
+
+
+  

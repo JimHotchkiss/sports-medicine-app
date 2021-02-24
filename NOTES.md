@@ -17,14 +17,19 @@
                 [X] Fix ICONIX Needles - ICONIX 2 TT w/needles 
                     - Surgical Specialties PN   
                     - Material (the layout)
-        [] Trocar Image 
+        [X] Trocar Image 
             - Iconix Speed 
                 ~ 3910-500-931
                 ~ 3910-500-920
                 ~ 3910-500-922
                 ~ 3910-500-921
     - Media Queries 
-        [] Implants 
-            - Desktop
-            - Tablet
-            - Mobile
+        [X] Implants - Search/list page
+            # Note - Need to nest input div and implant container into same div
+            (x) Desktop
+            (x) Tablet
+            (x) Mobile
+        [ ] Implants - Show page
+            () Desktop
+            () Tablet
+            () Mobile
