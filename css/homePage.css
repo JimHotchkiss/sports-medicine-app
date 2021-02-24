@@ -240,3 +240,14 @@ input:focus{
     margin-bottom: 8px;
 }
 
+/****************** Trocar Image *********************/
+.trocar-img-div {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 90%;
+    height: 350px;
+    background: transparent url("../images/trocar_tip.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 320px;
+}
+

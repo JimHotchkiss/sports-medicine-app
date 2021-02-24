@@ -75,12 +75,14 @@ class Navbar {
         HomePage.renderSearchField()
         HomePage.renderProbes(probes)
         Search.bindProbeSearchEventListener()
+        HomePage.scrollToTop()
       } else {
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()
         HomePage.renderImplants(implants)
         Search.bindInsertSearchEventListener()
+        HomePage.scrollToTop()
       }
     })
   }

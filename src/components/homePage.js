@@ -622,6 +622,20 @@ class HomePage {
     })
   }
 
+  static trocarImage(selectedInserts) {
+    const insertUrlTextDiv = document.createElement("div")
+    insertUrlTextDiv.setAttribute("class", "insert-details-div")
+    const insertUrlDiv = document.createElement("div")
+    insertUrlDiv.setAttribute("class", "trocar-img-div")
+    // insertUrlDiv.setAttribute("id", "iconix2-img-div")
+    const insertUrlTitle = document.createElement("h3")
+    insertUrlTitle.setAttribute("class", "insert-details-title")
+    insertUrlTitle.innerText = "Trocar Measurements:"
+    insertUrlTextDiv.appendChild(insertUrlTitle)
+    insertUrlTextDiv.appendChild(insertUrlDiv)
+    HomePage.root().appendChild(insertUrlTextDiv)
+  }
+
   static filteredInsertSelection(selectedInserts, selectedInsert) {
     let filteredInsertSelection = []
     if (selectedInserts.length > 1) {
@@ -666,6 +680,15 @@ class HomePage {
     HomePage.scrollToTop()
     HomePage.implantName(filteredInsertSelection)
     HomePage.implantPn(filteredInsertSelection)
+    // Trocar image
+    if (
+      selectedInsert.id === "3910-500-931" ||
+      selectedInsert.id === "3910-500-920" ||
+      selectedInsert.id === "3910-500-922" ||
+      selectedInsert.id === "3910-500-921"
+    ) {
+      HomePage.trocarImage(selectedInserts)
+    }
     // Iconix 1 and 2 images
     HomePage.iconixImage(selectedInserts, filteredInsertSelection)
     // Needle data and image
