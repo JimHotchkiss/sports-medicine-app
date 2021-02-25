@@ -77,9 +77,10 @@ class Features {
           HomePage.renderProbes(probes)
           Search.bindProbeSearchEventListener()
         } else if (item.id === "shaver") {
+          const shavers = Store.getShavers()
           HomePage.renderSearchField()
-          Search.bindProbeSearchEventListener()
-          console.log("sup")
+          HomePage.renderShavers(shavers)
+          Search.bindShaverSearchEventListener()
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"

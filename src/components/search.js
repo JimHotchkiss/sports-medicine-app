@@ -17,7 +17,6 @@ class Search {
     const searchedProbes = userInput.target.value.toLowerCase()
     const probes = Store.getProbes()
     let filteredSearch = probes.filter((probe) => {
-      console.log(probe.probe.suction)
       return (
         probe.probe.name.toLowerCase().includes(searchedProbes) ||
         probe.probe.pn.toLowerCase().includes(searchedProbes)
@@ -25,6 +24,26 @@ class Search {
     })
     HomePage.clearProbeText()
     HomePage.renderProbes(filteredSearch)
+  }
+
+  static bindShaverSearchEventListener() {
+    const inputField = document.getElementById("input-field")
+    inputField.addEventListener("input", (userInput) => {
+      Search.filterShavers(userInput)
+    })
+  }
+
+  static filterShavers(userInput) {
+    const searchedShavers = userInput.target.value.toLowerCase()
+    const shavers = Store.getShavers()
+    let filteredSearch = shavers.filter((shaver) => {
+      return (
+        shaver.Name.toLowerCase().includes(searchedShavers) ||
+        shaver.PartNumber.toString().includes(searchedShavers)
+      )
+    })
+    HomePage.clearShaverText()
+    HomePage.renderShavers(filteredSearch)
   }
 
   static filterInserts(userInput) {

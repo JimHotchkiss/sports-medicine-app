@@ -46,7 +46,7 @@
             (X) Desktop
             (X) Tablet
             (X) Mobile
-        [X] Launch on Azure for development and testin purposes
+        [X] Launch on Azure for development and testing purposes
             - Note - See instruction below labeled 'Azure'
         [X] Probes - Search/list
             # Note - Need to nest input div and implant container into same div
@@ -60,7 +60,8 @@
         [X] Update Azure to reflect changes with the Probes feature
     - Shaver Feature 
         [X] Feature icon on Features page
-        [] List all shavers 
+        [X] List all shavers 
+        [X] Search by PN isn't working (had to convert number to string to get .includes() to work)
         [] Create searchable functionality 
 
 # Azure 

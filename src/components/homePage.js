@@ -33,6 +33,13 @@ class HomePage {
     }
   }
 
+  static clearShaverText() {
+    const shaverContainer = document.getElementById("shavers-container")
+    if (shaverContainer) {
+      shaverContainer.parentNode.removeChild(shaverContainer)
+    }
+  }
+
   static clearFeatureData() {
     const featureData = HomePage.root()
     featureData.innerHTML = ""
@@ -851,6 +858,30 @@ class HomePage {
     })
     root.appendChild(probesContainer)
     Probes.bindingProbesEventListener()
+  }
+
+  static renderShavers(shavers) {
+    const root = HomePage.root()
+    const shaversContainer = document.createElement("div")
+    shaversContainer.setAttribute("class", "shavers-container")
+    shaversContainer.setAttribute("id", "shavers-container")
+    shavers.map((shaver) => {
+      const shaverDiv = document.createElement("div")
+      shaverDiv.setAttribute("class", "shaver-div")
+      shaverDiv.setAttribute("id", shaver.PartNumber)
+      const shaverNameDiv = document.createElement("div")
+      shaverNameDiv.setAttribute("class", "shaver-name-div")
+      const shaverPnDiv = document.createElement("div")
+      shaverPnDiv.setAttribute("class", "shaver-pn-div")
+      shaverNameDiv.innerText = shaver.Name
+      shaverPnDiv.innerText = shaver.PartNumber
+      shaverDiv.appendChild(shaverNameDiv)
+      shaverDiv.appendChild(shaverPnDiv)
+      shaversContainer.appendChild(shaverDiv)
+    })
+    root.appendChild(shaversContainer)
+    console.log("shavers binding shavers listener")
+    Shavers.bindingShaversEventListener()
   }
 
   static renderImplants(inserts) {
