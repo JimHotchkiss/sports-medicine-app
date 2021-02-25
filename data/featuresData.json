@@ -3,7 +3,10 @@
         "id": "implant-specifications", "title": "Implant Specifications", "iconUrl": "../images/implants.png", "description": "Language that describes what this feature does or provides."
     },
     {
-        "id": "probe", "title": "Probe Specifications", "iconUrl": "../images/implants.png", "description": "Language that describes what this feature does or provides."
+        "id": "probe", "title": "Probe Specifications", "iconUrl": "../images/tennis.png", "description": "Language that describes what this feature does or provides."
+    },
+    {
+        "id": "shaver", "title": "Shaver Specifications", "iconUrl": "../images/soccer.png", "description": "Language that describes what this feature does or provides."
     },
     {
         "id": "complaint", "title": "File Complaint", "iconUrl": "../images/complaint.png", "description": "Submit the necessary information to file a complaint."

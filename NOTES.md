@@ -57,9 +57,9 @@
             (x) Desktop
             (x) Tablet
             (x) Mobile
-        [] Update Azure to reflect changes
+        [X] Update Azure to reflect changes with the Probes feature
     - Shaver Feature 
-        [] Feature icon on Features page
+        [X] Feature icon on Features page
         [] List all shavers 
         [] Create searchable functionality 
 

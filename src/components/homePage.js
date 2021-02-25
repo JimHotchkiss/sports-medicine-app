@@ -2,7 +2,6 @@ class HomePage {
   constructor() {
     Navbar.renderNavbar()
     this.features = new Features()
-    this.probes = new Probes()
   }
 
   static scrollToTop() {

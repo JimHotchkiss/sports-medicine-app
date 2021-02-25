@@ -54,4 +54,19 @@ class Store {
     }
     return needles
   }
+
+  // Shavers
+  static getShavers() {
+    let shavers
+    if (localStorage.getItem("shavers") === null) {
+      shavers = []
+    } else {
+      shavers = JSON.parse(localStorage.getItem("shavers"))
+    }
+    return shavers
+  }
+
+  static addShavers(shavers) {
+    localStorage.setItem("shavers", JSON.stringify(shavers))
+  }
 }

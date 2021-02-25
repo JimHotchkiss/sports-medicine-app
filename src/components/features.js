@@ -3,6 +3,8 @@ class Features {
     this.features = []
     this.featuresAdapter = new FeaturesAdapter()
     this.inplants = new Implants()
+    this.shavers = new Probes()
+    this.probes = new Shavers()
     this.retrieveFeatureData()
   }
 
@@ -74,6 +76,10 @@ class Features {
           HomePage.renderSearchField()
           HomePage.renderProbes(probes)
           Search.bindProbeSearchEventListener()
+        } else if (item.id === "shaver") {
+          HomePage.renderSearchField()
+          Search.bindProbeSearchEventListener()
+          console.log("sup")
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"
