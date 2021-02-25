@@ -251,7 +251,7 @@ input:focus{
     background-size: 320px;
 }
 
-/************************** Media Queries *****************************/
+/************************** Media Queries - Implants*****************************/
 
 /* Desktop */
 
@@ -443,9 +443,33 @@ input:focus{
     }
    }
 
+/*************************** Media Queries Probes *********************************/
 
 
+@media  (min-width: 1025px) and (max-width: 2000px)  {  
 
+
+  .probes-container {
+      min-width: 500px;
+      margin: 0 auto;
+  }
+
+  .input-div i {
+      left: 880px;
+
+  }
+
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .probes-container {
+        min-width: 500px;
+        margin: 0 auto;
+    }
+  }
+
+ 
 
 
 

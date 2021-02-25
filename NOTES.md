@@ -48,15 +48,16 @@
             (X) Mobile
         [X] Launch on Azure for development and testin purposes
             - Note - See instruction below labeled 'Azure'
-        [] Probes - Search/list
+        [X] Probes - Search/list
             # Note - Need to nest input div and implant container into same div
-            () Desktop
-            () Tablet
-            () Mobile
-        [ ] Probes - Show page
-            () Desktop
-            () Tablet
-            () Mobile
+            (x) Desktop
+            (x) Tablet
+            (x) Mobile
+        [X] Probes - Show page
+            (x) Desktop
+            (x) Tablet
+            (x) Mobile
+        [] Update Azure to reflect changes
     - Shaver Feature 
         [] Feature icon on Features page
         [] List all shavers 
@@ -87,6 +88,7 @@
             
 
 
+   
 
 
 
