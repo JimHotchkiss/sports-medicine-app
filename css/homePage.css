@@ -274,8 +274,37 @@ input:focus{
    
     
     .input-div i { 
-        left: 870px; 
+        left: 885px; 
     
+    }
+
+      /* Inster details */
+      .insert-details-text-div {
+        max-width: 500px;
+    }
+
+    .insert-details-div h3 {
+        margin-left: 32%;
+    }
+
+   .needle-details-div  {
+       max-width: 500px;
+   }
+
+    .insert-details-container h3 {
+        margin-left: 32%;
+    }
+
+    .insert-img-div {
+        max-width: 520px;
+    }
+
+    .measurement-img-div {
+        max-width: 520px;
+    }
+
+    .trocar-img-div {
+        max-width: 520px;
     }
 
 
@@ -301,6 +330,35 @@ input:focus{
    
     .input-div i { 
         left: 540px; 
+    }
+
+    /* Inster details */
+    .insert-details-text-div {
+        max-width: 500px;
+    }
+
+    .insert-details-div h3 {
+        margin-left: 16%;
+    }
+
+   .needle-details-div  {
+       max-width: 500px;
+   }
+
+    .insert-details-container h3 {
+        margin-left: 16%;
+    }
+
+    .insert-img-div {
+        max-width: 520px;
+    }
+
+    .measurement-img-div {
+        max-width: 520px;
+    }
+
+    .trocar-img-div {
+        max-width: 520px;
     }
 
   
