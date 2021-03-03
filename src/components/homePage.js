@@ -452,70 +452,71 @@ class HomePage {
     needlesDetailsContainer.setAttribute("class", "insert-details-container")
     const needleTitle = document.createElement("h3")
     needleTitle.setAttribute("class", "insert-details-title")
-    needleTitle.innerText = "ICONIX Needles"
-    // Name
+    needleTitle.innerText = "Needles Specifications"
     const needleDetailsDiv = document.createElement("div")
     needleDetailsDiv.setAttribute("class", "needle-details-div")
-    const needleName = document.createElement("div")
-    needleName.setAttribute("class", "needle-details")
-    needleName.innerText = `Name: ${needles.name}`
-    needleDetailsDiv.appendChild(needleName)
-    if (needles.pn === "105-208-062") {
-      const surgerySpecialtyPn = document.createElement("div")
-      surgerySpecialtyPn.setAttribute("class", "needle-details")
-      surgerySpecialtyPn.innerText = `Surgical Specialties PNs:`
-      needleDetailsDiv.appendChild(surgerySpecialtyPn)
-      needles.surgical_specialties_pn.map((pn, index) => {
-        if (index === 2) {
-          // Surgical specialties part number
-          const surgerySpecialtyPn = document.createElement("div")
-          surgerySpecialtyPn.setAttribute("class", "needle-details-text-last")
-          surgerySpecialtyPn.innerText = `${pn},`
-          needleDetailsDiv.appendChild(surgerySpecialtyPn)
-        } else {
-          // Surgical specialties part number
-          const surgerySpecialtyPn = document.createElement("div")
-          surgerySpecialtyPn.setAttribute("class", "needle-details-text")
-          surgerySpecialtyPn.innerText = `${pn},`
-          needleDetailsDiv.appendChild(surgerySpecialtyPn)
-        }
-      })
-      // Material
-      const needleMaterial = document.createElement("div")
-      needleMaterial.setAttribute("class", "needle-details")
-      needleMaterial.innerText = `Materials:`
-      needleDetailsDiv.appendChild(needleMaterial)
-      needles.material.map((each_material, index) => {
-        // Material
-        if (index === 2) {
-          const needleMaterial = document.createElement("div")
-          needleMaterial.setAttribute("class", "needle-details-text-last")
-          needleMaterial.innerText = `Material: ${each_material}`
-          needleDetailsDiv.appendChild(needleMaterial)
-        } else {
-          const needleMaterial = document.createElement("div")
-          needleMaterial.setAttribute("class", "needle-details-text")
-          needleMaterial.innerText = `Material: ${each_material}`
-          needleDetailsDiv.appendChild(needleMaterial)
-        }
-      })
-    } else {
-      // Surgical specialties part number
-      const surgerySpecialtyPn = document.createElement("div")
-      surgerySpecialtyPn.setAttribute("class", "needle-details")
-      surgerySpecialtyPn.innerText = `Surgical Specialties PN: ${needles.surgical_specialties_pn}`
-      needleDetailsDiv.appendChild(surgerySpecialtyPn)
-      // Material
-      const needleMaterial = document.createElement("div")
-      needleMaterial.setAttribute("class", "needle-details")
-      needleMaterial.innerText = `Material: ${needles.material}`
-      needleDetailsDiv.appendChild(needleMaterial)
-    }
+    // // Name
+    // needleDetailsDiv.setAttribute("class", "needle-details-div")
+    // const needleName = document.createElement("div")
+    // needleName.setAttribute("class", "needle-details")
+    // needleName.innerText = `Name: ${needles.name}`
+    // needleDetailsDiv.appendChild(needleName)
+    // if (needles.pn === "105-208-062") {
+    //   const surgerySpecialtyPn = document.createElement("div")
+    //   surgerySpecialtyPn.setAttribute("class", "needle-details")
+    //   surgerySpecialtyPn.innerText = `Surgical Specialties PNs:`
+    //   needleDetailsDiv.appendChild(surgerySpecialtyPn)
+    //   needles.surgical_specialties_pn.map((pn, index) => {
+    //     if (index === 2) {
+    //       // Surgical specialties part number
+    //       const surgerySpecialtyPn = document.createElement("div")
+    //       surgerySpecialtyPn.setAttribute("class", "needle-details-text-last")
+    //       surgerySpecialtyPn.innerText = `${pn},`
+    //       needleDetailsDiv.appendChild(surgerySpecialtyPn)
+    //     } else {
+    //       // Surgical specialties part number
+    //       const surgerySpecialtyPn = document.createElement("div")
+    //       surgerySpecialtyPn.setAttribute("class", "needle-details-text")
+    //       surgerySpecialtyPn.innerText = `${pn},`
+    //       needleDetailsDiv.appendChild(surgerySpecialtyPn)
+    //     }
+    //   })
+    //   // Material
+    //   const needleMaterial = document.createElement("div")
+    //   needleMaterial.setAttribute("class", "needle-details")
+    //   needleMaterial.innerText = `Materials:`
+    //   needleDetailsDiv.appendChild(needleMaterial)
+    //   needles.material.map((each_material, index) => {
+    //     // Material
+    //     if (index === 2) {
+    //       const needleMaterial = document.createElement("div")
+    //       needleMaterial.setAttribute("class", "needle-details-text-last")
+    //       needleMaterial.innerText = `Material: ${each_material}`
+    //       needleDetailsDiv.appendChild(needleMaterial)
+    //     } else {
+    //       const needleMaterial = document.createElement("div")
+    //       needleMaterial.setAttribute("class", "needle-details-text")
+    //       needleMaterial.innerText = `Material: ${each_material}`
+    //       needleDetailsDiv.appendChild(needleMaterial)
+    //     }
+    //   })
+    // } else {
+    //   // Surgical specialties part number
+    //   const surgerySpecialtyPn = document.createElement("div")
+    //   surgerySpecialtyPn.setAttribute("class", "needle-details")
+    //   surgerySpecialtyPn.innerText = `Surgical Specialties PN: ${needles.surgical_specialties_pn}`
+    //   needleDetailsDiv.appendChild(surgerySpecialtyPn)
+    //   // Material
+    //   const needleMaterial = document.createElement("div")
+    //   needleMaterial.setAttribute("class", "needle-details")
+    //   needleMaterial.innerText = `Material: ${needles.material}`
+    //   needleDetailsDiv.appendChild(needleMaterial)
+    // }
     // Siliconza
-    const needleSiliconza = document.createElement("div")
-    needleSiliconza.setAttribute("class", "needle-details")
-    needleSiliconza.innerText = `Siliconza: ${needles.siliconza}`
-    needleDetailsDiv.appendChild(needleSiliconza)
+    // const needleSiliconza = document.createElement("div")
+    // needleSiliconza.setAttribute("class", "needle-details")
+    // needleSiliconza.innerText = `Siliconza: ${needles.siliconza}`
+    // needleDetailsDiv.appendChild(needleSiliconza)
     // Point Style
     const needlePointStyle = document.createElement("div")
     needlePointStyle.setAttribute("class", "needle-details")
@@ -755,59 +756,59 @@ class HomePage {
     //
   }
 
-  static renderSuctionProbes(suctionProbes) {
-    const root = HomePage.root()
-    const probesTitleDiv = document.createElement("div")
-    probesTitleDiv.setAttribute("class", "probes-title-div")
-    probesTitleDiv.innerText = "Suction Probes:"
-    root.appendChild(probesTitleDiv)
-    const probesContainer = document.createElement("div")
-    probesContainer.setAttribute("class", "probes-container")
-    probesContainer.setAttribute("id", "probes-container")
-    suctionProbes.map((probe) => {
-      const probeDiv = document.createElement("div")
-      probeDiv.setAttribute("class", "probe-div")
-      probeDiv.setAttribute("id", probe.probe.pn)
-      const probeNameDiv = document.createElement("div")
-      probeNameDiv.setAttribute("class", "probe-name-div")
-      const probePnDiv = document.createElement("div")
-      probePnDiv.setAttribute("class", "probe-pn-div")
+  // static renderSuctionProbes(suctionProbes) {
+  //   const root = HomePage.root()
+  //   const probesTitleDiv = document.createElement("div")
+  //   probesTitleDiv.setAttribute("class", "probes-title-div")
+  //   probesTitleDiv.innerText = "Suction Probes:"
+  //   root.appendChild(probesTitleDiv)
+  //   const probesContainer = document.createElement("div")
+  //   probesContainer.setAttribute("class", "probes-container")
+  //   probesContainer.setAttribute("id", "probes-container")
+  //   suctionProbes.map((probe) => {
+  //     const probeDiv = document.createElement("div")
+  //     probeDiv.setAttribute("class", "probe-div")
+  //     probeDiv.setAttribute("id", probe.probe.pn)
+  //     const probeNameDiv = document.createElement("div")
+  //     probeNameDiv.setAttribute("class", "probe-name-div")
+  //     const probePnDiv = document.createElement("div")
+  //     probePnDiv.setAttribute("class", "probe-pn-div")
 
-      probeNameDiv.innerText = probe.probe.name
-      probePnDiv.innerText = probe.probe.pn
-      probeDiv.appendChild(probeNameDiv)
-      probeDiv.appendChild(probePnDiv)
-      probesContainer.appendChild(probeDiv)
-    })
-    root.appendChild(probesContainer)
-  }
+  //     probeNameDiv.innerText = probe.probe.name
+  //     probePnDiv.innerText = probe.probe.pn
+  //     probeDiv.appendChild(probeNameDiv)
+  //     probeDiv.appendChild(probePnDiv)
+  //     probesContainer.appendChild(probeDiv)
+  //   })
+  //   root.appendChild(probesContainer)
+  // }
 
-  static renderNonSuctionProbes(nonSuctionProbes) {
-    const root = HomePage.root()
-    const probesTitleDiv = document.createElement("div")
-    probesTitleDiv.setAttribute("class", "probes-title-div")
-    probesTitleDiv.innerText = "Non-suction Probes:"
-    root.appendChild(probesTitleDiv)
-    const probesContainer = document.createElement("div")
-    probesContainer.setAttribute("class", "probes-container")
-    probesContainer.setAttribute("id", "probes-container")
-    nonSuctionProbes.map((probe) => {
-      const probeDiv = document.createElement("div")
-      probeDiv.setAttribute("class", "probe-div")
-      probeDiv.setAttribute("id", probe.probe.pn)
-      const probeNameDiv = document.createElement("div")
-      probeNameDiv.setAttribute("class", "probe-name-div")
-      const probePnDiv = document.createElement("div")
-      probePnDiv.setAttribute("class", "probe-pn-div")
+  // static renderNonSuctionProbes(nonSuctionProbes) {
+  //   const root = HomePage.root()
+  //   const probesTitleDiv = document.createElement("div")
+  //   probesTitleDiv.setAttribute("class", "probes-title-div")
+  //   probesTitleDiv.innerText = "Non-suction Probes:"
+  //   root.appendChild(probesTitleDiv)
+  //   const probesContainer = document.createElement("div")
+  //   probesContainer.setAttribute("class", "probes-container")
+  //   probesContainer.setAttribute("id", "probes-container")
+  //   nonSuctionProbes.map((probe) => {
+  //     const probeDiv = document.createElement("div")
+  //     probeDiv.setAttribute("class", "probe-div")
+  //     probeDiv.setAttribute("id", probe.probe.pn)
+  //     const probeNameDiv = document.createElement("div")
+  //     probeNameDiv.setAttribute("class", "probe-name-div")
+  //     const probePnDiv = document.createElement("div")
+  //     probePnDiv.setAttribute("class", "probe-pn-div")
 
-      probeNameDiv.innerText = probe.probe.name
-      probePnDiv.innerText = probe.probe.pn
-      probeDiv.appendChild(probeNameDiv)
-      probeDiv.appendChild(probePnDiv)
-      probesContainer.appendChild(probeDiv)
-    })
-    root.appendChild(probesContainer)
-  }
+  //     probeNameDiv.innerText = probe.probe.name
+  //     probePnDiv.innerText = probe.probe.pn
+  //     probeDiv.appendChild(probeNameDiv)
+  //     probeDiv.appendChild(probePnDiv)
+  //     probesContainer.appendChild(probeDiv)
+  //   })
+  //   root.appendChild(probesContainer)
+  // }
 
   static renderSmallJointProbes(smallJointProbes) {
     const root = HomePage.root()
@@ -889,21 +890,62 @@ class HomePage {
     const implantContainer = document.createElement("div")
     implantContainer.setAttribute("class", "implant-container")
     implantContainer.setAttribute("id", "implant-container")
-    inserts.map((implant) => {
-      const implantDiv = document.createElement("div")
-      implantDiv.setAttribute("class", "implant-div")
-      implantDiv.setAttribute("id", implant.implant.pn)
-      implantDiv.setAttribute("data-index", implant.implant.id)
-      const implantNameDiv = document.createElement("div")
-      implantNameDiv.setAttribute("class", "implant-name-div")
-      const implantPnDiv = document.createElement("div")
-      implantPnDiv.setAttribute("class", "implant-pn-div")
 
-      implantNameDiv.innerText = implant.implant.name
-      implantPnDiv.innerText = implant.implant.pn
-      implantDiv.appendChild(implantNameDiv)
-      implantDiv.appendChild(implantPnDiv)
-      implantContainer.appendChild(implantDiv)
+    // Reusable Instrumentation
+    const reusableTitleDiv = document.createElement("div")
+    reusableTitleDiv.setAttribute("class", "reusable-title-div")
+    const reusableTitleText = document.createElement("h3")
+    reusableTitleText.setAttribute("class", "reusable-title-text")
+    reusableTitleText.innerText = "Reusable Instrumentation"
+    reusableTitleDiv.appendChild(reusableTitleText)
+
+    // // End Reusable
+    const endReusableDiv = document.createElement("div")
+    endReusableDiv.setAttribute("class", "end-reusable-div")
+    endReusableDiv.innerText = "End Reusable Instrumentation"
+
+    inserts.map((implant) => {
+      if (
+        implant.implant.pn === "3910-500-391" ||
+        implant.implant.pn === "3910-500-392" ||
+        implant.implant.pn === "3910-500-471" ||
+        implant.implant.pn === "3910-500-472"
+      ) {
+        // HomePage.renderReusableInstrumentation()
+        // Omega implant div
+        const implantDiv = document.createElement("div")
+        implantDiv.setAttribute("class", "implant-div")
+        implantDiv.setAttribute("id", implant.implant.pn)
+        implantDiv.setAttribute("data-index", implant.implant.id)
+        const implantNameDiv = document.createElement("div")
+        implantNameDiv.setAttribute("class", "implant-name-div")
+        const implantPnDiv = document.createElement("div")
+        implantPnDiv.setAttribute("class", "implant-pn-div")
+
+        implantNameDiv.innerText = implant.implant.name
+        implantPnDiv.innerText = implant.implant.pn
+        implantDiv.appendChild(implantNameDiv)
+        implantDiv.appendChild(implantPnDiv)
+        reusableTitleDiv.appendChild(implantDiv)
+        implantContainer.appendChild(reusableTitleDiv)
+        implantContainer.appendChild(endReusableDiv)
+        root.appendChild(implantContainer)
+      } else {
+        const implantDiv = document.createElement("div")
+        implantDiv.setAttribute("class", "implant-div")
+        implantDiv.setAttribute("id", implant.implant.pn)
+        implantDiv.setAttribute("data-index", implant.implant.id)
+        const implantNameDiv = document.createElement("div")
+        implantNameDiv.setAttribute("class", "implant-name-div")
+        const implantPnDiv = document.createElement("div")
+        implantPnDiv.setAttribute("class", "implant-pn-div")
+
+        implantNameDiv.innerText = implant.implant.name
+        implantPnDiv.innerText = implant.implant.pn
+        implantDiv.appendChild(implantNameDiv)
+        implantDiv.appendChild(implantPnDiv)
+        implantContainer.appendChild(implantDiv)
+      }
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()

@@ -70,24 +70,38 @@
             (x) Titanium Wedge Anchor, 6.5mm Double strand with #2 FF suture with needles - 3910-100-145 (corrected)
             (x) Titanium Wedge Anchor, 5.0mm Double strand with #2 FF suture 3910-100-035
             (x) Titanium Wedge Anchor, 5.0mm Double strand with #2 FF suture with needles - 3910-100-135 (corrected)
-        [] ICONIX Needles section - remove 
-            () Name 
-            () Surgircal Specialties 
-            () Material     
-            () Siliconza
-        [] ICONIX Needles - Change 
-            () "Tapper Cutting" to "Cutting
-            () "ICONIX Needles" to "Needles Specifications"
-        [] Typo - "ICONIX SPEEED" 
-        [] 3910-600-062 - Change title to "REELX STT 4.5mm"
-        [] 3910-600-060 - Change title to "REELX STT 5.5mm"
-        [] Match Omega PNs with PNs in brochure (see Calli's notes)
-        [] Omega - Drill Depth should be 23mm for all associate PNs (currently they're undefine)
-        [] Omega - Add "Reusable Instrumentation" for:
-            () Omega 3.9mm PNs
-            () Omega 4.75mm PNs
-        [] Titanium Wedge Anchor PNs - Length is missing
+        [X] ICONIX Needles section - remove 
+            (x) Name 
+            (x) Surgircal Specialties 
+            (x) Material     
+            (x) Siliconza
+        [X] ICONIX Needles - Change 
+            (x) "Tapper Cutting" to "Cutting
+            (x) "ICONIX Needles" to "Needles Specifications"
+        [X] Typo - "IONIX SPEED" to "ICONIX SPEED"
+        [X] 3910-600-062 - Change title to "REELX STT 4.5mm"
+        [X] 3910-600-060 - Change title to "REELX STT 5.5mm"
+        [X] Match Omega PNs with names in brochure (see Calli's notes)
+            (x) 3910500391
+            (x) 3910500392
+            (x) 3910500471
+            (x) 3910500472
+            (x) 3910500652
+            (x)  NOTE - 3910500653 and 234020117 are not in original implant database (email Calli)
+        [X] Omega - Drill Depth should be 23mm for all associate PNs (currently they're undefine)
+            * It was a type on the implant data. Fixed.
+        [X] Omega - Add "Reusable Instrumentation" for:
+            (x) Omega 3.9mm PNs - 3910-500-391, 3910-500-392
+            (x) Omega 4.75mm PNs - 3910-500-471, 3910-500-472
+        [X] Titanium Wedge Anchor PNs - Length is missing
         [X] Implant Icon Language - "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
+        [] Omega PNs 3910500653 and 234020117 are not part of the Implant database. Email sent to Calli on Wednesday requesting data
+        [X] NOTE - 'Reusable Instrumentation' title can leave the user thinking that other instruments, like PN -652, are reusable
+            (x) Possible fix - clearly, combine them together under one title
+        [] Update changes to Azure sportsmedtoolbox
+        
+
+
 
 
 
