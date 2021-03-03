@@ -104,7 +104,7 @@
             (x) Non-suction
             (x) Small Joint
         [] Needle Specification - Make the parameters bold
-        [] Omega PN 3910-500-653 add to database (use data from -652). We can ommit 234-020-117
+        [X] Omega PN 3910-500-653 add to database (use data from -652). We can ommit 234-020-117
 
 # Azure 
     - https://portal.azure.com/
