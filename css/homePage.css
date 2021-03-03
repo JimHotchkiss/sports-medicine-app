@@ -19,8 +19,6 @@
     color: #fff;
 }
 
-
-
 .implant-div {
     text-align: center;
     margin: 0 auto;
@@ -139,8 +137,17 @@ input:focus{
     padding-top: 0px;
 }
 
+.suction-title {
+    color: #fff;
+    margin-left: 40px;
+}
+
+#top-suction-div h3{
+    margin-top: 0;
+}
+
 .shavers-container {
-    padding-top: 0px;
+    padding-top: -20px;
 }
 
 .shaver-div {

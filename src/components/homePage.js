@@ -439,15 +439,10 @@ class HomePage {
       HomePage.renderNeedleData(needles)
     } else if (selectedInsert.id === "3910-500-222") {
       const needles = Store.getNeedles().needles[0]
-      console.log(needles)
       HomePage.renderNeedleData(needles)
     }
   }
-
-  // Try and consolidate this into on function, and just pass the function the correct data
-  // rename from render2_0NeedleData to renderNeedleData
   static renderNeedleData(needles) {
-    console.log(needles)
     const needlesDetailsContainer = document.createElement("div")
     needlesDetailsContainer.setAttribute("class", "insert-details-container")
     const needleTitle = document.createElement("h3")
@@ -703,16 +698,13 @@ class HomePage {
 
     // Measurement image insert
     selectedInserts.map((insert) => {
-      console.log(insert.implant.name)
       if (
         insert.implant.name.includes("ICONIX") &&
         insert.implant.id !== "3910-2" &&
         insert.implant.id !== "3910-4"
       ) {
-        console.log(insert.implant.name)
         HomePage.implantMeasurementImg()
       } else {
-        console.log(insert.implant.name)
         return
       }
     })
@@ -842,20 +834,75 @@ class HomePage {
     const probesContainer = document.createElement("div")
     probesContainer.setAttribute("class", "probes-container")
     probesContainer.setAttribute("id", "probes-container")
-    probes.map((probe) => {
-      const probeDiv = document.createElement("div")
-      probeDiv.setAttribute("class", "probe-div")
-      probeDiv.setAttribute("id", probe.probe.pn)
-      const probeNameDiv = document.createElement("div")
-      probeNameDiv.setAttribute("class", "probe-name-div")
-      const probePnDiv = document.createElement("div")
-      probePnDiv.setAttribute("class", "probe-pn-div")
+    const suctionDiv = document.createElement("div")
+    suctionDiv.setAttribute("class", "suction-div")
+    suctionDiv.setAttribute("id", "top-suction-div")
+    const suctionTitle = document.createElement("h3")
+    suctionTitle.setAttribute("class", "suction-title")
+    suctionTitle.innerText = "Suction Probes"
+    suctionDiv.appendChild(suctionTitle)
 
-      probeNameDiv.innerText = probe.probe.name
-      probePnDiv.innerText = probe.probe.pn
-      probeDiv.appendChild(probeNameDiv)
-      probeDiv.appendChild(probePnDiv)
-      probesContainer.appendChild(probeDiv)
+    const nonSuctionDiv = document.createElement("div")
+    nonSuctionDiv.setAttribute("class", "suction-div")
+    const nonSuctionTitle = document.createElement("h3")
+    nonSuctionTitle.setAttribute("class", "suction-title")
+    nonSuctionTitle.innerText = "Non-Suction Probes"
+    nonSuctionDiv.appendChild(nonSuctionTitle)
+
+    const smallJointDiv = document.createElement("div")
+    smallJointDiv.setAttribute("class", "suction-div")
+    const smallJointTitle = document.createElement("h3")
+    smallJointTitle.setAttribute("class", "suction-title")
+    smallJointTitle.innerText = "Small Joint Probes"
+    smallJointDiv.appendChild(smallJointTitle)
+    probes.map((probe) => {
+      if (probe.probe.suction) {
+        console.log(probe.probe.suction)
+        const probeDiv = document.createElement("div")
+        probeDiv.setAttribute("class", "probe-div")
+        probeDiv.setAttribute("id", probe.probe.pn)
+        const probeNameDiv = document.createElement("div")
+        probeNameDiv.setAttribute("class", "probe-name-div")
+        const probePnDiv = document.createElement("div")
+        probePnDiv.setAttribute("class", "probe-pn-div")
+
+        probeNameDiv.innerText = probe.probe.name
+        probePnDiv.innerText = probe.probe.pn
+        probeDiv.appendChild(probeNameDiv)
+        probeDiv.appendChild(probePnDiv)
+        suctionDiv.appendChild(probeDiv)
+        probesContainer.appendChild(suctionDiv)
+      } else if (probe.probe.suction === false) {
+        const probeDiv = document.createElement("div")
+        probeDiv.setAttribute("class", "probe-div")
+        probeDiv.setAttribute("id", probe.probe.pn)
+        const probeNameDiv = document.createElement("div")
+        probeNameDiv.setAttribute("class", "probe-name-div")
+        const probePnDiv = document.createElement("div")
+        probePnDiv.setAttribute("class", "probe-pn-div")
+
+        probeNameDiv.innerText = probe.probe.name
+        probePnDiv.innerText = probe.probe.pn
+        probeDiv.appendChild(probeNameDiv)
+        probeDiv.appendChild(probePnDiv)
+        nonSuctionDiv.appendChild(probeDiv)
+        probesContainer.appendChild(nonSuctionDiv)
+      } else {
+        const probeDiv = document.createElement("div")
+        probeDiv.setAttribute("class", "probe-div")
+        probeDiv.setAttribute("id", probe.probe.pn)
+        const probeNameDiv = document.createElement("div")
+        probeNameDiv.setAttribute("class", "probe-name-div")
+        const probePnDiv = document.createElement("div")
+        probePnDiv.setAttribute("class", "probe-pn-div")
+
+        probeNameDiv.innerText = probe.probe.name
+        probePnDiv.innerText = probe.probe.pn
+        probeDiv.appendChild(probeNameDiv)
+        probeDiv.appendChild(probePnDiv)
+        smallJointDiv.appendChild(probeDiv)
+        probesContainer.appendChild(smallJointDiv)
+      }
     })
     root.appendChild(probesContainer)
     Probes.bindingProbesEventListener()
@@ -881,7 +928,6 @@ class HomePage {
       shaversContainer.appendChild(shaverDiv)
     })
     root.appendChild(shaversContainer)
-    console.log("shavers binding shavers listener")
     Shavers.bindingShaversEventListener()
   }
 
@@ -902,7 +948,7 @@ class HomePage {
     // // End Reusable
     const endReusableDiv = document.createElement("div")
     endReusableDiv.setAttribute("class", "end-reusable-div")
-    endReusableDiv.innerText = "End Reusable Instrumentation"
+    endReusableDiv.innerText = "End of Reusable Instrumentation"
 
     inserts.map((implant) => {
       if (

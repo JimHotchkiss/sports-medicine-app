@@ -95,18 +95,16 @@
             (x) Omega 4.75mm PNs - 3910-500-471, 3910-500-472
         [X] Titanium Wedge Anchor PNs - Length is missing
         [X] Implant Icon Language - "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
-        [] Omega PNs 3910500653 and 234020117 are not part of the Implant database. Email sent to Calli on Wednesday requesting data
+        [X] Omega PNs 3910500653 and 234020117 are not part of the Implant database. Email sent to Calli on Wednesday requesting data
         [X] NOTE - 'Reusable Instrumentation' title can leave the user thinking that other instruments, like PN -652, are reusable
             (x) Possible fix - clearly, combine them together under one title
         [] Update changes to Azure sportsmedtoolbox
-        
-
-
-
-
-
-
-
+        [X] Probes - Include suction, non-suction and small-joint probes.
+            (x) Suction
+            (x) Non-suction
+            (x) Small Joint
+        [] Needle Specification - Make the parameters bold
+        [] Omega PN 3910-500-653 add to database (use data from -652). We can ommit 234-020-117
 
 # Azure 
     - https://portal.azure.com/

@@ -294,7 +294,7 @@
     "NOTES": "up to 2 #2 sutures, NO Xbraid TT\ncan use any 4.0mm drill\n1 full rotation = 10 mm\n*must complete 1 fullrotation. MAX 3 rotations"
 }},
 {"implant":{
-    "name": "Omega, 3.9mm PEED Knotless Anchor System, Single",
+    "name": "Omega, 3.9mm PEEK Knotless Anchor System, Single",
     "pn": "3910-500-391",
     "id":"3910-22",
     "img_url": "",
@@ -308,7 +308,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "Omega, 3.9mm PEED Knotless Anchor System, Double-Double",
+    "name": "Omega, 3.9mm PEEK Knotless Anchor System, Double-Double",
     "pn": "3910-500-392",
     "id":"3910-23",
     "img_url": "",
@@ -322,7 +322,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "Omega, 4.75mm PEED Knotless Anchor System, Single",
+    "name": "Omega, 4.75mm PEEK Knotless Anchor System, Single",
     "pn":"3910-500-471",
     "id":"3910-24",
     "img_url": "",
@@ -336,7 +336,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "Omega, 4.75mm PEED Knotless Anchor System, Double-Double",
+    "name": "Omega, 4.75mm PEEK Knotless Anchor System, Double-Double",
     "pn":"3910-500-472",
     "id":"3910-25",
     "img_url": "",
@@ -350,9 +350,23 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "Omega, 6.5mm PEED Knotless Anchor + Eyelet, Single",
+    "name": "Omega, 6.5mm PEEK Knotless Anchor + Eyelet, Single",
     "pn": "3910-500-652",
     "id":"3910-26",
+    "img_url": "",
+    "MATERIAL": "PEEK",
+    "IMPLANT_LENGTH": "14mm",
+    "IMPLANT_WIDTH": "6.5mm",
+    "POSITIVE_STOP": "n/a",
+    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
+    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Majordiameter - 3.9mm, Minor Diameter - 2.8mm",
+    "PULL_OUT_STRENGTH": "?",
+    "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
+}},
+{"implant":{
+    "name": "Omega, 6.5mm PEEK Knotless Anchor, Single",
+    "pn": "3910-500-653",
+    "id":"3910-26a",
     "img_url": "",
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "14mm",

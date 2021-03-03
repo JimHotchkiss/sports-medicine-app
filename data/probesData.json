@@ -68,7 +68,7 @@
         {
            "name": "Aardvark",
            "pn": "0279251101",
-           "suction": true,
+           "suction": null,
            "small_joint":true,
            "length": "135 mm",
            "outer_diameter": "2.5 mm",
@@ -211,7 +211,7 @@
         {
            "name": "Micro-Claw",
            "pn": "0279250101",
-           "suction": false,
+           "suction": null,
            "small_joint":true,
            "length": "135 mm",
            "outer_diameter": "2.5 mm",
@@ -224,7 +224,7 @@
         {
            "name": "Micro-Brush",
            "pn": "0279250201",
-           "suction": false,
+           "suction": null,
            "small_joint":true,
            "length": "135 mm",
            "outer_diameter": "2.5 mm",
