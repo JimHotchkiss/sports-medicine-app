@@ -34,7 +34,6 @@
             () Tablet
             () Mobile
 
-
 # 2/25/2021
      - Media Queries 
         [X] Implants - Search/list page
@@ -61,8 +60,39 @@
     - Shaver Feature 
         [X] Feature icon on Features page
         [X] List all shavers 
-        [X] Search by PN isn't working (had to convert number to string to get .includes() to work)
-        [] Create searchable functionality 
+        [X] Create searchable functionality 
+            (x) Search by PN isn't working (had to convert number to string to get .includes() to work)
+
+# 3/3/2021
+    - Implants - address Calli's feedback
+        [X] PN 3910-100-045 - four different implants with samd PN
+            (x) Titanium Wedge Anchor, 6.5mm Double strand with #2 FF suture - 3910-100-045
+            (x) Titanium Wedge Anchor, 6.5mm Double strand with #2 FF suture with needles - 3910-100-145 (corrected)
+            (x) Titanium Wedge Anchor, 5.0mm Double strand with #2 FF suture 3910-100-035
+            (x) Titanium Wedge Anchor, 5.0mm Double strand with #2 FF suture with needles - 3910-100-135 (corrected)
+        [] ICONIX Needles section - remove 
+            () Name 
+            () Surgircal Specialties 
+            () Material     
+            () Siliconza
+        [] ICONIX Needles - Change 
+            () "Tapper Cutting" to "Cutting
+            () "ICONIX Needles" to "Needles Specifications"
+        [] Typo - "ICONIX SPEEED" 
+        [] 3910-600-062 - Change title to "REELX STT 4.5mm"
+        [] 3910-600-060 - Change title to "REELX STT 5.5mm"
+        [] Match Omega PNs with PNs in brochure (see Calli's notes)
+        [] Omega - Drill Depth should be 23mm for all associate PNs (currently they're undefine)
+        [] Omega - Add "Reusable Instrumentation" for:
+            () Omega 3.9mm PNs
+            () Omega 4.75mm PNs
+        [] Titanium Wedge Anchor PNs - Length is missing
+        [X] Implant Icon Language - "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
+
+
+
+
+
 
 # Azure 
     - https://portal.azure.com/
