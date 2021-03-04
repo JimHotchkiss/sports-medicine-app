@@ -98,12 +98,12 @@
         [X] Omega PNs 3910500653 and 234020117 are not part of the Implant database. Email sent to Calli on Wednesday requesting data
         [X] NOTE - 'Reusable Instrumentation' title can leave the user thinking that other instruments, like PN -652, are reusable
             (x) Possible fix - clearly, combine them together under one title
-        [] Update changes to Azure sportsmedtoolbox
+        [X] Update changes to Azure sportsmedtoolbox
         [X] Probes - Include suction, non-suction and small-joint probes.
             (x) Suction
             (x) Non-suction
             (x) Small Joint
-        [] Needle Specification - Make the parameters bold
+        [X] Needle Specification - Make the parameters bold
         [X] Omega PN 3910-500-653 add to database (use data from -652). We can ommit 234-020-117
 
 # 3/4/2021
@@ -131,6 +131,9 @@
         (x) Clear Probe details 
         (x) Re-render search field
         (x) Hide backbutton
+
+# 3/5/2021
+    [] Console Simulator - what would it take to build and launch through Azure?
       
 
 # Azure 
