@@ -107,9 +107,30 @@
         [X] Omega PN 3910-500-653 add to database (use data from -652). We can ommit 234-020-117
 
 # 3/4/2021
-      [] Update changes to Azure sportsmedtoolbox
+      [X] Update changes to Azure sportsmedtoolbox
+        (x) Email Calli and Team 
+            - Made suggested changes and fixes
+            - Changed the Probes feature language
+            - Probes - added suction, non-suction and small-joint sections
+            - Graphic - Convert images 
+            - Colaterial material needed for launch
       [X] Needle Specification - Make the parameters bold
       [] Shavers - Eventlistener 
+        (x) Clear shaver text
+        (x) Clear search field 
+        (x) Probes - fix probes data (replaced integers with string representation of numbers)
+        () Render Probe details
+            - Oscillate max
+            - Oscillate default
+            - High speed default
+            - High speed max 
+            - Low speed default
+            - Low speed max
+            - Speed step incrument
+      [] Backbutton 
+        () Clear Probe details 
+        (x) Re-render search field
+        (x) Hide backbutton
       
 
 # Azure 

@@ -38,10 +38,10 @@ class Navbar {
     navbar.appendChild(homeDiv)
     root.appendChild(navbar)
   }
-  static showBackBtn() {
+  static showBackBtn(selectedItem) {
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
-    Navbar.bindBackBtnEventListener()
+    Navbar.bindBackBtnEventListener(selectedItem)
   }
 
   static hideBackBtn() {
@@ -49,43 +49,38 @@ class Navbar {
     navbarBackBtn.classList.remove("navbar-back-btn-show")
   }
 
-  static determineProduct() {
-    const implants = Implants.getImplantsFromStore()
-    const productIndex = root.children[1].dataset.index
-    let implantProduct = false
-    implants.map((implant) => {
-      if (implant.implant.id === productIndex) {
-        implantProduct = true
-      } else if (implant.implant.name === productIndex) {
-        return implantProduct
-      }
-    })
-    return implantProduct
-  }
-
-  static bindBackBtnEventListener() {
-    const implant = Navbar.determineProduct()
+  static bindBackBtnEventListener(selectedItem) {
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.addEventListener("click", () => {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
-      if (implant === false) {
-        HomePage.clearImplantDetails()
-        Navbar.hideBackBtn()
-        HomePage.renderSearchField()
-        HomePage.renderProbes(probes)
-        Search.bindProbeSearchEventListener()
-        HomePage.scrollToTop()
-      } else {
+      const shavers = Shavers.getShaversFromStore()
+      if (selectedItem[0].implant) {
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()
         HomePage.renderImplants(implants)
         Search.bindInsertSearchEventListener()
         HomePage.scrollToTop()
+      } else if (selectedItem[0].probe) {
+        HomePage.clearImplantDetails()
+        Navbar.hideBackBtn()
+        HomePage.renderSearchField()
+        HomePage.renderProbes(probes)
+        Search.bindProbeSearchEventListener()
+        HomePage.scrollToTop()
+      } else if (selectedItem[0].PartNumber) {
+        HomePage.clearShaverDetails()
+        Navbar.hideBackBtn()
+        HomePage.renderSearchField()
+        HomePage.renderShavers(shavers)
+        Search.bindShaverSearchEventListener()
+        HomePage.scrollToTop()
       }
     })
   }
+
+  static clearShaverDetails() {}
 
   static updateTitle(item, features) {
     const navbarTitleDiv = document.getElementsByClassName("title-div")

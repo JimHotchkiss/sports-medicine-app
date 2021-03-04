@@ -1,6 +1,6 @@
 [
     {
-        "PartNumber": 485840000.0,
+        "PartNumber": "485840000",
         "DataFile": "",
         "Name": "4.0 XL DMND BUR",
         "Rev": "1",
@@ -34,7 +34,7 @@
         "SoftwareRev": "Y"
     },
     {
-        "PartNumber": 485860000.0,
+        "PartNumber": "485860000",
         "DataFile": "",
         "Name": "5.5 XL DMND BUR",
         "Rev": "1",
@@ -213,7 +213,7 @@
         "MinHardRev": "17",
         "ModeEnable": "251",
         "ScreenType": "4",
-        "SpeedStepIncr": 300.0,
+        "SpeedStepIncr": "300",
         "HighSpeedMax": "6000",
         "HighSpeedDefault": "10",
         "LowSpeedMax": "6000",

@@ -10,14 +10,18 @@ class Shavers {
     })
   }
 
+  static getShaversFromStore() {
+    return Store.getShavers()
+  }
+
   static bindingShaversEventListener() {
     const shaverDivs = document.getElementsByClassName("shaver-div")
     for (let item of shaverDivs) {
       item.addEventListener("click", () => {
-        const selectedProbe = item
-        // HomePage.clearProbeText()
-        // Search.clearSearchField()
-        // HomePage.getProbeDetails(selectedProbe)
+        const selectedShaver = item
+        HomePage.clearShaverText()
+        Search.clearSearchField()
+        HomePage.getShaverDetails(selectedShaver)
       })
     }
   }

@@ -40,6 +40,17 @@ class HomePage {
     }
   }
 
+  static clearShaverDetails() {
+    const root = HomePage.root().children
+    Array.from(root).forEach(function (element) {
+      if (element.id !== "navbar") {
+        if (element) {
+          element.parentNode.removeChild(element)
+        }
+      }
+    })
+  }
+
   static clearFeatureData() {
     const featureData = HomePage.root()
     featureData.innerHTML = ""
@@ -65,7 +76,65 @@ class HomePage {
       }
     })
     HomePage.renderInsertDetails(selectedInserts, selectedInsert)
-    Navbar.showBackBtn()
+    Navbar.showBackBtn(selectedInserts)
+  }
+
+  static getShaverDetails(selectedShaver) {
+    const shavers = Store.getShavers()
+    const selectedShavers = []
+    shavers.map((shaver) => {
+      if (shaver.PartNumber === selectedShaver.id) {
+        return selectedShavers.push(shaver)
+      }
+    })
+    HomePage.renderShaverDetails(selectedShavers, selectedShaver)
+    Navbar.showBackBtn(selectedShavers)
+  }
+
+  static renderShaverDetails(selectedShavers, selectedShaver) {
+    HomePage.scrollToTop()
+    console.log(selectedShavers)
+    HomePage.shaverName(selectedShavers)
+    HomePage.shaverPn(selectedShavers)
+  }
+
+  static shaverName(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Name"
+      insertNameText.innerText = shaver.Name
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static shaverPn(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Part Number"
+      insertNameText.innerText = shaver.PartNumber
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
   }
 
   static getProbeDetails(selectedProbe) {
@@ -77,7 +146,7 @@ class HomePage {
       }
     })
     HomePage.renderProbeDetails(selectedProbes)
-    Navbar.showBackBtn()
+    Navbar.showBackBtn(selectedProbes)
   }
 
   static probeName(selectedProbes) {
@@ -447,7 +516,7 @@ class HomePage {
     needlesDetailsContainer.setAttribute("class", "insert-details-container")
     const needleTitle = document.createElement("h3")
     needleTitle.setAttribute("class", "insert-details-title")
-    needleTitle.innerText = "Needles Specifications"
+    needleTitle.innerText = "Needle Specifications"
     const needleDetailsDiv = document.createElement("div")
     needleDetailsDiv.setAttribute("class", "needle-details-div")
     // // Name
