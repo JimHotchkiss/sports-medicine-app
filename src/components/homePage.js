@@ -515,12 +515,25 @@ class HomePage {
     // Point Style
     const needlePointStyle = document.createElement("div")
     needlePointStyle.setAttribute("class", "needle-details")
-    needlePointStyle.innerText = `Point Style: ${needles.point_style}`
+    needlePointStyle.innerText = `Point Style`
+    // Point style
+    const pointStyle = document.createElement("div")
+    pointStyle.setAttribute("class", "wire-diameter")
+    console.log(needles.point_style)
+    pointStyle.innerText = needles.point_style
+    needlePointStyle.appendChild(pointStyle)
     needleDetailsDiv.appendChild(needlePointStyle)
     // Circle
     const needleCircle = document.createElement("div")
     needleCircle.setAttribute("class", "needle-details")
-    needleCircle.innerText = `Circle: ${needles.circle}`
+    needleCircle.innerText = `Circle`
+    needleDetailsDiv.appendChild(needleCircle)
+    // Circle
+    const circle = document.createElement("div")
+    circle.setAttribute("class", "wire-diameter")
+    console.log(needles.point_style)
+    circle.innerText = needles.circle
+    needleCircle.appendChild(circle)
     needleDetailsDiv.appendChild(needleCircle)
     // Wire Diamter
     const needleWireDiameter = document.createElement("div")

@@ -253,11 +253,11 @@ input:focus{
 
 .needle-details {
     padding: 8px 0px;
+    font-weight: 900;
 }
 
-.parameter-element {
-    font-size: 16px;
-    font-weight: 900;
+.wire-diameter {
+    font-weight: 100;
 }
 
 .insert-details-container h3{

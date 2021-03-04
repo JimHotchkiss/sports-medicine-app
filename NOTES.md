@@ -106,6 +106,12 @@
         [] Needle Specification - Make the parameters bold
         [X] Omega PN 3910-500-653 add to database (use data from -652). We can ommit 234-020-117
 
+# 3/4/2021
+      [] Update changes to Azure sportsmedtoolbox
+      [X] Needle Specification - Make the parameters bold
+      [] Shavers - Eventlistener 
+      
+
 # Azure 
     - https://portal.azure.com/
     - Easiest way to host a single-page web application is to load the file to a storage account 
