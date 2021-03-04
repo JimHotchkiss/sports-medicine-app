@@ -115,20 +115,20 @@
             - Graphic - Convert images 
             - Colaterial material needed for launch
       [X] Needle Specification - Make the parameters bold
-      [] Shavers - Eventlistener 
+      [X] Shavers - Eventlistener 
         (x) Clear shaver text
         (x) Clear search field 
         (x) Probes - fix probes data (replaced integers with string representation of numbers)
-        () Render Probe details
-            - Oscillate max
-            - Oscillate default
-            - High speed default
-            - High speed max 
-            - Low speed default
-            - Low speed max
-            - Speed step incrument
-      [] Backbutton 
-        () Clear Probe details 
+        (x) Render Probe details
+            (x) Oscillate max
+            (x) Oscillate default
+            (x) High speed default
+            (x) High speed max 
+            (x) Low speed default
+            (x) Low speed max
+            (x) Speed step incrument
+      [X] Backbutton 
+        (x) Clear Probe details 
         (x) Re-render search field
         (x) Hide backbutton
       

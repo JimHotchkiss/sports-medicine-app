@@ -96,6 +96,148 @@ class HomePage {
     console.log(selectedShavers)
     HomePage.shaverName(selectedShavers)
     HomePage.shaverPn(selectedShavers)
+    HomePage.shaverOscDefault(selectedShavers)
+    HomePage.shaverOscMax(selectedShavers)
+    HomePage.shaverHighSpeedDefault(selectedShavers)
+    HomePage.shaverHighSpeedMax(selectedShavers)
+    HomePage.shaverLowSpeedDefault(selectedShavers)
+    HomePage.shaverLowSpeedMax(selectedShavers)
+    HomePage.shaverSpeedStepIncr(selectedShavers)
+  }
+
+  static shaverSpeedStepIncr(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Speed Step Incrument"
+      insertNameText.innerText = shaver.SpeedStepIncr
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  SpeedStepIncr
+
+  static shaverLowSpeedMax(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Low Speed Maximum"
+      insertNameText.innerText = `${shaver.LowSpeedMax} rpms`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static shaverLowSpeedDefault(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Low Speed Default"
+      insertNameText.innerText = shaver.LowSpeedDefault
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static shaverHighSpeedMax(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "High Speed Maximum"
+      insertNameText.innerText = `${shaver.HighSpeedMax} rpms`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static shaverHighSpeedDefault(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "High Speed Default"
+      insertNameText.innerText = shaver.HighSpeedDefault
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static shaverOscDefault(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Oscillation Default"
+      insertNameText.innerText = shaver.OscillateDefault
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
+  }
+
+  static shaverOscMax(selectedShavers) {
+    selectedShavers.map((shaver) => {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "insert-details-div")
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameTitle.innerText = "Oscillation Maximum"
+      insertNameText.innerText = `${shaver.OscillateMax} rpms`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      HomePage.root().appendChild(insertNameDiv)
+    })
   }
 
   static shaverName(selectedShavers) {
