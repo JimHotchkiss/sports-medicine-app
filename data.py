@@ -5,4 +5,4 @@ import excel2json
 excel2json.convert_from_file("file-name")
 
 
-df = pd.read_excel("shaver-data.xlsx")
+df = pd.read_excel("error-data.xlsx")

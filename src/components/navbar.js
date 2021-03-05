@@ -12,23 +12,14 @@ class Navbar {
     navbar.setAttribute("id", "navbar")
 
     // back btn
-    const navbarBackBtn = document.createElement("div")
-    navbarBackBtn.setAttribute("class", "navbar-back-btn")
-    navbarBackBtn.setAttribute("id", "navbar-back-btn")
-    navbar.appendChild(navbarBackBtn)
-    const imgTitleDiv = document.createElement("div")
-    imgTitleDiv.setAttribute("class", "img-title-div")
-    imgTitleDiv.setAttribute("id", "img-title-div")
-    const imgDiv = document.createElement("div")
-    imgDiv.setAttribute("class", "img-div")
-    imgDiv.setAttribute("id", "img-div")
-    const titleDiv = document.createElement("div")
-    titleDiv.setAttribute("class", "title-div")
-    const homeDiv = document.createElement("div")
-    homeDiv.setAttribute("class", "home-div")
-    homeDiv.setAttribute("id", "home-div")
-    const spanDiv = document.createElement("div")
-    spanDiv.setAttribute("class", "span-div")
+    const backBtn = Navbar.renderBackBtn()
+    navbar.appendChild(backBtn)
+    const imgTitleDiv = Navbar.renderImgTitleDiv()
+    const imgDiv = Navbar.renderImgDiv()
+    const titleDiv = Navbar.renderTitleDiv()
+    const homeDiv = Navbar.renderHomeDiv()
+    const spanDiv = Navbar.renderSpanDiv()
+
     titleDiv.innerText = "Sports"
     spanDiv.innerText = "Med"
     imgTitleDiv.appendChild(imgDiv)
@@ -37,6 +28,46 @@ class Navbar {
     navbar.appendChild(imgTitleDiv)
     navbar.appendChild(homeDiv)
     root.appendChild(navbar)
+  }
+
+  static renderSpanDiv() {
+    const spanDiv = document.createElement("div")
+    spanDiv.setAttribute("class", "span-div")
+    return spanDiv
+  }
+
+  static renderHomeDiv() {
+    const homeDiv = document.createElement("div")
+    homeDiv.setAttribute("class", "home-div")
+    homeDiv.setAttribute("id", "home-div")
+    return homeDiv
+  }
+
+  static renderTitleDiv() {
+    const titleDiv = document.createElement("div")
+    titleDiv.setAttribute("class", "title-div")
+    return titleDiv
+  }
+
+  static renderImgDiv() {
+    const imgDiv = document.createElement("div")
+    imgDiv.setAttribute("class", "img-div")
+    imgDiv.setAttribute("id", "img-div")
+    return imgDiv
+  }
+
+  static renderImgTitleDiv() {
+    const imgTitleDiv = document.createElement("div")
+    imgTitleDiv.setAttribute("class", "img-title-div")
+    imgTitleDiv.setAttribute("id", "img-title-div")
+    return imgTitleDiv
+  }
+
+  static renderBackBtn() {
+    const navbarBackBtn = document.createElement("div")
+    navbarBackBtn.setAttribute("class", "navbar-back-btn")
+    navbarBackBtn.setAttribute("id", "navbar-back-btn")
+    return navbarBackBtn
   }
   static showBackBtn(selectedItem) {
     const navbarBackBtn = document.getElementById("navbar-back-btn")
@@ -80,8 +111,6 @@ class Navbar {
     })
   }
 
-  static clearShaverDetails() {}
-
   static updateTitle(item, features) {
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
@@ -89,11 +118,15 @@ class Navbar {
     features.map((feature) => {
       if (feature.id === item.id) {
         const splitFeatureTitle = feature.title.split(" ")
-        if (feature.id === "complaint") {
+        if (feature.id === "errors") {
+          navbarTitleDiv[0].innerText = splitFeatureTitle[0]
+          spanDiv[0].innerText = `${splitFeatureTitle[1]}s`
+          imgDiv.classList.add("img-div-hide")
+        } else {
+          navbarTitleDiv[0].innerText = splitFeatureTitle[0]
+          spanDiv[0].innerText = splitFeatureTitle[1]
+          imgDiv.classList.add("img-div-hide")
         }
-        navbarTitleDiv[0].innerText = splitFeatureTitle[0]
-        spanDiv[0].innerText = splitFeatureTitle[1]
-        imgDiv.classList.add("img-div-hide")
       }
     })
   }

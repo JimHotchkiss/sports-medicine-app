@@ -3,10 +3,13 @@
         "id": "implant-specifications", "title": "Implant Specifications", "iconUrl": "../images/implants.png", "description": "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
     },
     {
-        "id": "probe", "title": "Probe Specifications", "iconUrl": "../images/tennis.png", "description": "Sports Medicine probe specifications including length, outer diameter, coag, cut default and cut max."
+        "id": "probe", "title": "Arthro Specifications", "iconUrl": "../images/tennis.png", "description": "Sports Medicine probe specifications including length, outer diameter, coag, cut default and cut max."
     },
     {
         "id": "shaver", "title": "Shaver Specifications", "iconUrl": "../images/soccer.png", "description": "Language that describes what this feature does or provides."
+    },
+    {
+        "id": "errors", "title": "XF2 Error Codes", "iconUrl": "../images/error.png", "description": "Search by error codes to find the details of each error code."
     },
     {
         "id": "complaint", "title": "File Complaint", "iconUrl": "../images/complaint.png", "description": "Submit the necessary information to file a complaint."

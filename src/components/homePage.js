@@ -124,8 +124,6 @@ class HomePage {
     })
   }
 
-  SpeedStepIncr
-
   static shaverLowSpeedMax(selectedShavers) {
     selectedShavers.map((shaver) => {
       const insertNameDiv = document.createElement("div")

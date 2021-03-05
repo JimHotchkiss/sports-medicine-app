@@ -29,10 +29,10 @@
             (x) Desktop
             (x) Tablet
             (x) Mobile
-        [ ] Implants - Show page
-            () Desktop
-            () Tablet
-            () Mobile
+        [X] Implants - Show page
+            (x) Desktop
+            (x) Tablet
+            (x) Mobile
 
 # 2/25/2021
      - Media Queries 
@@ -133,8 +133,33 @@
         (x) Hide backbutton
 
 # 3/5/2021
-    [] Console Simulator - what would it take to build and launch through Azure?
-      
+    [X] Console Simulator (HUB) - what would it take to build the HUB UI and launch through Azure?
+        * A lot of work to build out the entire HUB UI
+    [] Sport Med Toolbox - XF2 error codes  
+        (x) Import error data 
+            * data.py 
+                - import pandas as pd
+                  import excel2json
+                    * excel2json will take any file you put in and create a json file.
+                        excel2json.convert_from_file("file-name")
+                        df = pd.read_excel("error-data.xlsx")
+                    * > python3 data.py - creates a json file
+         () Clean up data 
+            (x) Correct Error Id
+            () Shorten 'Error Id' to 'id'
+            () Replace 'Troubleshoot Possible Production Errors' with 'troubleshoot'
+         (x) Title fix in Navbar - Xf2Errors
+    [X] Aaron's suggested fixes and improvements 
+        (x) 'Arthro Specifications' will replace Probes Specifications     
+            - Aarons's ideas for future features
+                 (1) Arthro Specifications 
+                 (2) Arthro Money and Default Settings and 
+                 (3) Arthro Troubleshooting
+    [] Email Annie file URL, by EOB on Monday
+    [] Create two URLs through Azure
+        () Production
+        () Development
+
 
 # Azure 
     - https://portal.azure.com/

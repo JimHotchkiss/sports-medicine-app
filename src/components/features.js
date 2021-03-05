@@ -5,6 +5,7 @@ class Features {
     this.inplants = new Implants()
     this.shavers = new Probes()
     this.probes = new Shavers()
+    this.xf2Errors = new Xf2Errors()
     this.retrieveFeatureData()
   }
 
@@ -81,6 +82,8 @@ class Features {
           HomePage.renderSearchField()
           HomePage.renderShavers(shavers)
           Search.bindShaverSearchEventListener()
+        } else if (item.id === "errors") {
+          console.log("sup, yo")
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"
