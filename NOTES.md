@@ -190,8 +190,15 @@
     [] Create two URLs through Azure
         () Production
         () Development
-    [] Azure DevOps - Building app withing CI
+    [] Default Button feature - Hand piece and foot pedal
+    [] Azure DevOps 
 
+# 3/11/2021
+    [] Create two URLs through Azure
+        () Production
+        () Development
+    [] Default Button feature - Hand piece and foot pedal
+    [] Azure DevOps 
 # NOTE - Visual Studio - Select all occurances of match
     * Cmd + Shift + L
 
