@@ -1,592 +1,582 @@
 [
     {
-        "Error ID": "A1",
-        "Description ": "Vessel Seal no vessel detected",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "A1",
+        "Description": "Vessel Seal no vessel detected",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "A2",
-        "Description ": "Vessel Seal incomplete seal",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "A2",
+        "Description": "Vessel Seal incomplete seal",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "A3",
-        "Description ": "Vessel Seal incomplete seal due to user interruption",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "A3",
+        "Description": "Vessel Seal incomplete seal due to user interruption",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "A4",
-        "Description ": "MC Board communication timeout fault",
-        "Troubleshoot Possible Production Errors": "Reseat MC Board\nReplace Motor Control Board"
+        "id": "A4",
+        "Description": "MC Board communication timeout fault",
+        "troubleshooting": "Reseat MC Board\nReplace Motor Control Board"
     },
     {
-        "Error ID": "A5",
-        "Description ": "MC Board divide by zero fault",
-        "Troubleshoot Possible Production Errors": "Reseat MC Board\nReplace Motor Control Board"
+        "id": "A5",
+        "Description": "MC Board divide by zero fault",
+        "troubleshooting": "Reseat MC Board\nReplace Motor Control Board"
     },
     {
-        "Error ID": "A6",
-        "Description ": "RF Board communication timeout fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF) Board"
+        "id": "A6",
+        "Description": "RF Board communication timeout fault",
+        "troubleshooting": "Replace Power (RF) Board"
     },
     {
-        "Error ID": "A7",
-        "Description ": "RF Board RF over current fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF)Board"
+        "id": "A7",
+        "Description": "RF Board RF over current fault",
+        "troubleshooting": "Replace Power (RF)Board"
     },
     {
-        "Error ID": "A8",
-        "Description ": "RF Board RF over current fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF)Board"
+        "id": "A8",
+        "Description": "RF Board RF over current fault",
+        "troubleshooting": "Replace Power (RF)Board"
     },
     {
-        "Error ID": "A9",
-        "Description ": "RF Board motor overcurrent fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF)Board"
+        "id": "A9",
+        "Description": "RF Board motor overcurrent fault",
+        "troubleshooting": "Replace Power (RF)Board"
     },
     {
-        "Error ID": "A10",
-        "Description ": "RF Board motor overvoltage fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF)Board"
+        "id": "A10",
+        "Description": "RF Board motor overvoltage fault",
+        "troubleshooting": "Replace Power (RF)Board"
     },
     {
-        "Error ID": "A11",
-        "Description ": "Power (RF) Board over temperature fault",
-        "Troubleshoot Possible Production Errors": "Verify fan operation\nReseat heat sinks\nRemove CrossFire2 unit from poorly ventilated areas                                             (e.g. tower with other consoles on top of CrossFire2)\nReplace Power (RF) Board\n"
+        "id": "A11",
+        "Description": "Power (RF) Board over temperature fault",
+        "troubleshooting": "Verify fan operation\nReseat heat sinks\nRemove CrossFire2 unit from poorly ventilated areas                                             (e.g. tower with other consoles on top of CrossFire2)\nReplace Power (RF) Board\n"
     },
     {
-        "Error ID": "A12",
-        "Description ": "RF Board watchdog fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF)Board"
+        "id": "A12",
+        "Description": "RF Board watchdog fault",
+        "troubleshooting": "Replace Power (RF)Board"
     },
     {
-        "Error ID": "A13",
-        "Description ": "RF Board watchdog fault",
-        "Troubleshoot Possible Production Errors": "Replace Power (RF)Board"
+        "id": "A13",
+        "Description": "RF Board watchdog fault",
+        "troubleshooting": "Replace Power (RF)Board"
     },
     {
-        "Error ID": "A14",
-        "Description ": "MC Board uninitialized fault",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board"
+        "id": "A14",
+        "Description": "MC Board uninitialized fault",
+        "troubleshooting": "Replace Motor Control Board"
     },
     {
-        "Error ID": "A15",
-        "Description ": "MC Board power supply voltage monitor fault",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board"
+        "id": "A15",
+        "Description": "MC Board power supply voltage monitor fault",
+        "troubleshooting": "Replace Motor Control Board"
     },
     {
-        "Error ID": "A16",
-        "Description ": "MC Board invalid port fault",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board"
+        "id": "A16",
+        "Description": "MC Board invalid port fault",
+        "troubleshooting": "Replace Motor Control Board"
     },
     {
-        "Error ID": "A17",
-        "Description ": "Serfas probe activation timeout",
-        "Troubleshoot Possible Production Errors": "Try a known good Serfas probe\nReplace Power (RF) Board\nReplace Receptacle Board\n"
+        "id": "A17",
+        "Description": "Serfas probe activation timeout",
+        "troubleshooting": "Try a known good Serfas probe\nReplace Power (RF) Board\nReplace Receptacle Board\n"
     },
     {
-        "Error ID": "A18",
-        "Description ": "XF probe activation timeout",
-        "Troubleshoot Possible Production Errors": "Try a known good Serfas probe\nReplace Power (RF) Board\nReplace Receptacle Board\n"
+        "id": "A18",
+        "Description": "XF probe activation timeout",
+        "troubleshooting": "Try a known good Serfas probe\nReplace Power (RF) Board\nReplace Receptacle Board\n"
     },
     {
-        "Error ID": "E1",
-        "Description ": "SFB Connect Error",
-        "Troubleshoot Possible Production Errors": "Verify SFB connections\nUse a known good cable\nUse a known good SFB device (pump/SDC/etc)\nReplace Motor Control Board\n"
+        "id": "E1",
+        "Description": "SFB Connect Error",
+        "troubleshooting": "Verify SFB connections\nUse a known good cable\nUse a known good SFB device (pump/SDC/etc)\nReplace Motor Control Board\n"
     },
     {
-        "Error ID": "E2",
-        "Description ": "MC Board FPGA Initialization lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E2",
+        "Description": "MC Board FPGA Initialization lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E3",
-        "Description ": "MC Board FPGA Programming lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E3",
+        "Description": "MC Board FPGA Programming lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E4",
-        "Description ": "MC Board FPGA address test lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E4",
+        "Description": "MC Board FPGA address test lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E5",
-        "Description ": "MC Board FPGA data test lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E5",
+        "Description": "MC Board FPGA data test lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E6",
-        "Description ": "MC Board Hbridge test lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E6",
+        "Description": "MC Board Hbridge test lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E7",
-        "Description ": "MC Board Motor Mux Status Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E7",
+        "Description": "MC Board Motor Mux Status Test Lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E8",
-        "Description ": "MC Board Relay Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E8",
+        "Description": "MC Board Relay Test Lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E9",
-        "Description ": "MC Board M Sense Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E9",
+        "Description": "MC Board M Sense Test Lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E10",
-        "Description ": "MC Board Power Supply Current Monitor Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E10",
+        "Description": "MC Board Power Supply Current Monitor Lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E11",
-        "Description ": "MC Board Current Sense Offset Calibration Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E11",
+        "Description": "MC Board Current Sense Offset Calibration Lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E12",
-        "Description ": "MC Board Power Supply Current Sense Offset Calibration Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E12",
+        "Description": "MC Board Power Supply Current Sense Offset Calibration Lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E13",
-        "Description ": "MC Board BEMF Offset Cal Lockdown",
-        "Troubleshoot Possible Production Errors": "Recalibrate Motor Control Board\nReplace Motor Control Board\n"
+        "id": "E13",
+        "Description": "MC Board BEMF Offset Cal Lockdown",
+        "troubleshooting": "Recalibrate Motor Control Board\nReplace Motor Control Board\n"
     },
     {
-        "Error ID": "E14",
-        "Description ": "MC Board no communication error",
-        "Troubleshoot Possible Production Errors": "Verify MC Board ribbon cable connections\nVerify workmanship on MC Board ribbon cable connectors\nReplace MC Board\n"
+        "id": "E14",
+        "Description": "MC Board no communication error",
+        "troubleshooting": "Verify MC Board ribbon cable connections\nVerify workmanship on MC Board ribbon cable connectors\nReplace MC Board\n"
     },
     {
-        "Error ID": "E15",
-        "Description ": "MC Board boot error",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E15",
+        "Description": "MC Board boot error",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E16",
-        "Description ": "MC Board Software upgrade error, upgrade failed",
-        "Troubleshoot Possible Production Errors": "Retry upgrade\nVerify binary upgrade file\nReplace MC Board\n"
+        "id": "E16",
+        "Description": "MC Board Software upgrade error, upgrade failed",
+        "troubleshooting": "Retry upgrade\nVerify binary upgrade file\nReplace MC Board\n"
     },
     {
-        "Error ID": "E17",
-        "Description ": "RF Board power supply lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E17",
+        "Description": "RF Board power supply lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E18",
-        "Description ": "N/A",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "E18",
+        "Description": "N/A",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "E19",
-        "Description ": "N/A",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "E19",
+        "Description": "N/A",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "E20",
-        "Description ": "RF Board oscillator lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E20",
+        "Description": "RF Board oscillator lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E21",
-        "Description ": "N/A",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "E21",
+        "Description": "N/A",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "E22",
-        "Description ": "N/A",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "E22",
+        "Description": "N/A",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "E23",
-        "Description ": "RF Board software wrong path lockdown",
-        "Troubleshoot Possible Production Errors": "Reprogram RF (Power) Board\nReplace RF (Power) Board\n"
+        "id": "E23",
+        "Description": "RF Board software wrong path lockdown",
+        "troubleshooting": "Reprogram RF (Power) Board\nReplace RF (Power) Board\n"
     },
     {
-        "Error ID": "E24",
-        "Description ": "RF Board Software No Resource Available Lockdown",
-        "Troubleshoot Possible Production Errors": "Reprogram RF (Power) Board\nReplace RF (Power) Board\n"
+        "id": "E24",
+        "Description": "RF Board Software No Resource Available Lockdown",
+        "troubleshooting": "Reprogram RF (Power) Board\nReplace RF (Power) Board\n"
     },
     {
-        "Error ID": "E25",
-        "Description ": "RF Board Hardware ADC Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E25",
+        "Description": "RF Board Hardware ADC Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E26",
-        "Description ": "RF Board I2C Failure Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E26",
+        "Description": "RF Board I2C Failure Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E27",
-        "Description ": "RF Board RMS output level test failure lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E27",
+        "Description": "RF Board RMS output level test failure lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E28",
-        "Description ": "RF Board Self Test Calibration Table Invalid Lockdown",
-        "Troubleshoot Possible Production Errors": "Reprogram RF (Power) Board\nReplace RF (Power) Board\n"
+        "id": "E28",
+        "Description": "RF Board Self Test Calibration Table Invalid Lockdown",
+        "troubleshooting": "Reprogram RF (Power) Board\nReplace RF (Power) Board\n"
     },
     {
-        "Error ID": "E29",
-        "Description ": "RF Board Self Test A/D Converter Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E29",
+        "Description": "RF Board Self Test A/D Converter Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E30",
-        "Description ": "RF Board Self Test RF Voltage Feedback in Range Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E30",
+        "Description": "RF Board Self Test RF Voltage Feedback in Range Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E31",
-        "Description ": "RF Board Self Test RF Over Voltage Trip Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E31",
+        "Description": "RF Board Self Test RF Over Voltage Trip Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E32",
-        "Description ": "RF Board Self Test RF Current Feedback In Range Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E32",
+        "Description": "RF Board Self Test RF Current Feedback In Range Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E33",
-        "Description ": "RF Board Self Test RF Over Current Trip Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E33",
+        "Description": "RF Board Self Test RF Over Current Trip Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E34",
-        "Description ": "RF Board Self Test RF Power Feedback in Range Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E34",
+        "Description": "RF Board Self Test RF Power Feedback in Range Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E35",
-        "Description ": "RF Board Self Test RF Over Power Trip Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E35",
+        "Description": "RF Board Self Test RF Over Power Trip Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E36",
-        "Description ": "RF Board Self Test RF Impedance Trip Test Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E36",
+        "Description": "RF Board Self Test RF Impedance Trip Test Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E37",
-        "Description ": "RF Board Over Voltage Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E37",
+        "Description": "RF Board Over Voltage Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E38",
-        "Description ": "RF Board Low Line Voltage Lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E38",
+        "Description": "RF Board Low Line Voltage Lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E39",
-        "Description ": "RF Board RF supply failed self test",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E39",
+        "Description": "RF Board RF supply failed self test",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E40",
-        "Description ": "RF Board motor supply failed self test",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E40",
+        "Description": "RF Board motor supply failed self test",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E41",
-        "Description ": "RF Board turn on motor supply failure",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E41",
+        "Description": "RF Board turn on motor supply failure",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E42",
-        "Description ": "RF Board communication failure",
-        "Troubleshoot Possible Production Errors": "Verify RF (Power) Board ribbon cable connections\nVerify workmanship on RF (Power) Board ribbon cable connectors\nReplace RF (Power) Board\n"
+        "id": "E42",
+        "Description": "RF Board communication failure",
+        "troubleshooting": "Verify RF (Power) Board ribbon cable connections\nVerify workmanship on RF (Power) Board ribbon cable connectors\nReplace RF (Power) Board\n"
     },
     {
-        "Error ID": "E43",
-        "Description ": "RF Board boot error",
-        "Troubleshoot Possible Production Errors": "Verify ribbon cable connections\nReplace RF (Power) Board\n"
+        "id": "E43",
+        "Description": "RF Board boot error",
+        "troubleshooting": "Verify ribbon cable connections\nReplace RF (Power) Board\n"
     },
     {
-        "Error ID": "E44",
-        "Description ": "RF Board Software upgrade error, upgrade failed",
-        "Troubleshoot Possible Production Errors": "Reprogram RF Board\nVerify upgrade binary file\nReplace RF (Power) Board\n"
+        "id": "E44",
+        "Description": "RF Board Software upgrade error, upgrade failed",
+        "troubleshooting": "Reprogram RF Board\nVerify upgrade binary file\nReplace RF (Power) Board\n"
     },
     {
-        "Error ID": "E45",
-        "Description ": "NVRAM SMC communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E45",
+        "Description": "NVRAM SMC communication error",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E46",
-        "Description ": "RFID SMC communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E46",
+        "Description": "RFID SMC communication error",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E47",
-        "Description ": "RFID micro upgrade failed",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E47",
+        "Description": "RFID micro upgrade failed",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E48",
-        "Description ": "NVRAM micro upgrade failed",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E48",
+        "Description": "NVRAM micro upgrade failed",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E49",
-        "Description ": "NVRAM SMC boot error",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E49",
+        "Description": "NVRAM SMC boot error",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E50",
-        "Description ": "RFID SMC boot error",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E50",
+        "Description": "RFID SMC boot error",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E51",
-        "Description ": "Handpiece SMC communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E51",
+        "Description": "Handpiece SMC communication error",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E52",
-        "Description ": "Footswitch SMC communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good footswitch\nVerify Receptacle Board connection ribbon cables\nVerify footswitch connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E52",
+        "Description": "Footswitch SMC communication error",
+        "troubleshooting": "Use a known good footswitch\nVerify Receptacle Board connection ribbon cables\nVerify footswitch connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E53",
-        "Description ": "Serfas probe SMC communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good Serfas probe\nVerify Receptacle Board connection ribbon cables\nVerify Serfas probe connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E53",
+        "Description": "Serfas probe SMC communication error",
+        "troubleshooting": "Use a known good Serfas probe\nVerify Receptacle Board connection ribbon cables\nVerify Serfas probe connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E54",
-        "Description ": "Serfas probe SMC boot error",
-        "Troubleshoot Possible Production Errors": "Use a known good Serfas probe\nVerify Receptacle Board connection ribbon cables\nVerify Serfas probe connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E54",
+        "Description": "Serfas probe SMC boot error",
+        "troubleshooting": "Use a known good Serfas probe\nVerify Receptacle Board connection ribbon cables\nVerify Serfas probe connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E55",
-        "Description ": "Handpiece SMC boot error",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E55",
+        "Description": "Handpiece SMC boot error",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E56",
-        "Description ": "Footswitch SMC boot error",
-        "Troubleshoot Possible Production Errors": "Use a known good footswitch\nVerify Receptacle Board connection ribbon cables\nVerify footswitch connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E56",
+        "Description": "Footswitch SMC boot error",
+        "troubleshooting": "Use a known good footswitch\nVerify Receptacle Board connection ribbon cables\nVerify footswitch connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E57",
-        "Description ": "FS micro upgrade failed",
-        "Troubleshoot Possible Production Errors": "Use a known good footswitch\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify footswitch connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E57",
+        "Description": "FS micro upgrade failed",
+        "troubleshooting": "Use a known good footswitch\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify footswitch connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E58",
-        "Description ": "HP micro upgrade failed",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece and disposable\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E58",
+        "Description": "HP micro upgrade failed",
+        "troubleshooting": "Use a known good handpiece and disposable\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify handpiece connection\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E59",
-        "Description ": "Serfas micro upgrade failed",
-        "Troubleshoot Possible Production Errors": "Use a known good Serfas probe\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify footswitch Serfas probe\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
+        "id": "E59",
+        "Description": "Serfas micro upgrade failed",
+        "troubleshooting": "Use a known good Serfas probe\nVerify binary upgrade file\nVerify Receptacle Board connection ribbon cables\nVerify footswitch Serfas probe\nVerify workmanship on receptacle board ribbon cable connectors\nReplace receptacle board\n"
     },
     {
-        "Error ID": "E60",
-        "Description ": "Software upgrade error, no upgrade file present on USB",
-        "Troubleshoot Possible Production Errors": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
+        "id": "E60",
+        "Description": "Software upgrade error, no upgrade file present on USB",
+        "troubleshooting": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
     },
     {
-        "Error ID": "E61",
-        "Description ": "Software upgrade error, file errors",
-        "Troubleshoot Possible Production Errors": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
+        "id": "E61",
+        "Description": "Software upgrade error, file errors",
+        "troubleshooting": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
     },
     {
-        "Error ID": "E62",
-        "Description ": "Software upgrade error, App and CRC error",
-        "Troubleshoot Possible Production Errors": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
+        "id": "E62",
+        "Description": "Software upgrade error, App and CRC error",
+        "troubleshooting": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
     },
     {
-        "Error ID": "E63",
-        "Description ": "Software upgrade error, not enough disk space for error",
-        "Troubleshoot Possible Production Errors": "Back up and delete any upgrade files in the console\nBack up and delete log files in the console\nVerify binary upgrade file\n"
+        "id": "E63",
+        "Description": "Software upgrade error, not enough disk space for error",
+        "troubleshooting": "Back up and delete any upgrade files in the console\nBack up and delete log files in the console\nVerify binary upgrade file\n"
     },
     {
-        "Error ID": "E64",
-        "Description ": "Software upgrade error, upgrade failed",
-        "Troubleshoot Possible Production Errors": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
+        "id": "E64",
+        "Description": "Software upgrade error, upgrade failed",
+        "troubleshooting": "Verify binary upgrade file\nUse a known good USB drive\nVerify internal connection of USB hardware\nReplace USB control hardware\n"
     },
     {
-        "Error ID": "E65",
-        "Description ": "Unknown MC board lockdown",
-        "Troubleshoot Possible Production Errors": "Replace Motor Control Board\n"
+        "id": "E65",
+        "Description": "Unknown MC board lockdown",
+        "troubleshooting": "Replace Motor Control Board\n"
     },
     {
-        "Error ID": "E66",
-        "Description ": "Unknown MC board lockdown",
-        "Troubleshoot Possible Production Errors": "Replace RF (Power) Board\n"
+        "id": "E66",
+        "Description": "Unknown MC board lockdown",
+        "troubleshooting": "Replace RF (Power) Board\n"
     },
     {
-        "Error ID": "E67",
-        "Description ": "Disposable Expired",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board                                                                Replace Front board battery/front board"
+        "id": "E67",
+        "Description": "Disposable Expired",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board                                                                Replace Front board battery/front board"
     },
     {
-        "Error ID": "P1",
-        "Description ": "Handpiece disposable not recognized",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P1",
+        "Description": "Handpiece disposable not recognized",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P2",
-        "Description ": "Unknown disposable",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P2",
+        "Description": "Unknown disposable",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P3",
-        "Description ": "RFID communication Time out",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P3",
+        "Description": "RFID communication Time out",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P4",
-        "Description ": "Handpiece disposable expired",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board                                                                Replace Front board battery/front board"
+        "id": "P4",
+        "Description": "Handpiece disposable expired",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board                                                                Replace Front board battery/front board"
     },
     {
-        "Error ID": "P5",
-        "Description ": "Handpiece disposable not compatible",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P5",
+        "Description": "Handpiece disposable not compatible",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P6",
-        "Description ": "RFID Usage Expired Set by user pref file setting",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board                                                                       Use a known good preference file                                                 Replace Front board battery/front board"
+        "id": "P6",
+        "Description": "RFID Usage Expired Set by user pref file setting",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board                                                                       Use a known good preference file                                                 Replace Front board battery/front board"
     },
     {
-        "Error ID": "P7",
-        "Description ": "Invalid Footswitch NVR",
-        "Troubleshoot Possible Production Errors": "Use a known good footswitch                                                        Replace receptacle board"
+        "id": "P7",
+        "Description": "Invalid Footswitch NVR",
+        "troubleshooting": "Use a known good footswitch                                                        Replace receptacle board"
     },
     {
-        "Error ID": "P8",
-        "Description ": "Unknown FS NVR",
-        "Troubleshoot Possible Production Errors": "Use a known good footswitch                                                        Replace receptacle board"
+        "id": "P8",
+        "Description": "Unknown FS NVR",
+        "troubleshooting": "Use a known good footswitch                                                        Replace receptacle board"
     },
     {
-        "Error ID": "P9",
-        "Description ": "Serfas probe not recognized",
-        "Troubleshoot Possible Production Errors": "Use a known good SERFAS probe                                                  Replace Receptacle Board"
+        "id": "P9",
+        "Description": "Serfas probe not recognized",
+        "troubleshooting": "Use a known good SERFAS probe                                                  Replace Receptacle Board"
     },
     {
-        "Error ID": "P10",
-        "Description ": "Serfas probe usage time exceeded",
-        "Troubleshoot Possible Production Errors": "Use a known good SERFAS probe                                                  Replace Receptacle Board                                                              Replace Front board battery/front board"
+        "id": "P10",
+        "Description": "Serfas probe usage time exceeded",
+        "troubleshooting": "Use a known good SERFAS probe                                                  Replace Receptacle Board                                                              Replace Front board battery/front board"
     },
     {
-        "Error ID": "P11",
-        "Description ": "Serfas NVR communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good SERFAS probe                                                  Replace Receptacle Board"
+        "id": "P11",
+        "Description": "Serfas NVR communication error",
+        "troubleshooting": "Use a known good SERFAS probe                                                  Replace Receptacle Board"
     },
     {
-        "Error ID": "P12",
-        "Description ": "Footswitch NVR communication error",
-        "Troubleshoot Possible Production Errors": "Use a known good footswitch                                                         Replace receptacle board"
+        "id": "P12",
+        "Description": "Footswitch NVR communication error",
+        "troubleshooting": "Use a known good footswitch                                                         Replace receptacle board"
     },
     {
-        "Error ID": "P13",
-        "Description ": "Invalid Serfas NVR mask",
-        "Troubleshoot Possible Production Errors": "Use a known good SERFAS probe                                                     Replace Receptacle Board"
+        "id": "P13",
+        "Description": "Invalid Serfas NVR mask",
+        "troubleshooting": "Use a known good SERFAS probe                                                     Replace Receptacle Board"
     },
     {
-        "Error ID": "P14",
-        "Description ": "Unknown Serfas NVR mask",
-        "Troubleshoot Possible Production Errors": "Use a known good SERFAS probe                                                 Replace Receptacle Board"
+        "id": "P14",
+        "Description": "Unknown Serfas NVR mask",
+        "troubleshooting": "Use a known good SERFAS probe                                                 Replace Receptacle Board"
     },
     {
-        "Error ID": "P15",
-        "Description ": "Serfas probe expired",
-        "Troubleshoot Possible Production Errors": "Use a known good SERFAS probe\nVerify Receptacle Board connection\nVerify probe connection\nReplace receptacle board\nReplace Front board battery/front board"
+        "id": "P15",
+        "Description": "Serfas probe expired",
+        "troubleshooting": "Use a known good SERFAS probe\nVerify Receptacle Board connection\nVerify probe connection\nReplace receptacle board\nReplace Front board battery/front board"
     },
     {
-        "Error ID": "P16",
-        "Description ": "Vessel sealing handpiece expired",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "P16",
+        "Description": "Vessel sealing handpiece expired",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "P17",
-        "Description ": "Invalid Handpiece NVR",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P17",
+        "Description": "Invalid Handpiece NVR",
+        "troubleshooting": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P18",
-        "Description ": "Unknown Handpiece NVR",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P18",
+        "Description": "Unknown Handpiece NVR",
+        "troubleshooting": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P19",
-        "Description ": "HP Communication timeout",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P19",
+        "Description": "HP Communication timeout",
+        "troubleshooting": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P20",
-        "Description ": "Handpiece over temperature",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection                                                             Allow handpiece to cool down\nReplace receptacle board"
+        "id": "P20",
+        "Description": "Handpiece over temperature",
+        "troubleshooting": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection                                                             Allow handpiece to cool down\nReplace receptacle board"
     },
     {
-        "Error ID": "P21",
-        "Description ": "Handpiece reference voltage out of bounds",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P21",
+        "Description": "Handpiece reference voltage out of bounds",
+        "troubleshooting": "Use a known good handpiece/disposable\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P22",
-        "Description ": "Handpiece reference current out of bounds",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P22",
+        "Description": "Handpiece reference current out of bounds",
+        "troubleshooting": "Use a known good handpiece\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "P23",
-        "Description ": "Handpiece stalled",
-        "Troubleshoot Possible Production Errors": "Use a known good handpiece/disposable                                       Verify that handpiece is free of obstruction\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
+        "id": "P23",
+        "Description": "Handpiece stalled",
+        "troubleshooting": "Use a known good handpiece/disposable                                       Verify that handpiece is free of obstruction\nVerify Receptacle Board connection\nVerify Handpiece connection\nReplace receptacle board"
     },
     {
-        "Error ID": "W1",
-        "Description ": "Handpiece disposable expired warning",
-        "Troubleshoot Possible Production Errors": "Verify the disposable timestamp using another console          Replace receptacle board\nCheck the real time clock using a serial terminal\nCheck main board battery voltage\nReplace battery or board"
+        "id": "W1",
+        "Description": "Handpiece disposable expired warning",
+        "troubleshooting": "Verify the disposable timestamp using another console          Replace receptacle board\nCheck the real time clock using a serial terminal\nCheck main board battery voltage\nReplace battery or board"
     },
     {
-        "Error ID": "W2",
-        "Description ": "Invalid preference file",
-        "Troubleshoot Possible Production Errors": "Use a known good preference file                                                        Use the same preference file on a known good console\nReplace front board\nReplace MC Board"
+        "id": "W2",
+        "Description": "Invalid preference file",
+        "troubleshooting": "Use a known good preference file                                                        Use the same preference file on a known good console\nReplace front board\nReplace MC Board"
     },
     {
-        "Error ID": "W3",
-        "Description ": "Memory allocation error loading preference file",
-        "Troubleshoot Possible Production Errors": "Use a known good preference file                                                       Use the same preference file on a known good console \nReplace front board\nReplace MC Board"
+        "id": "W3",
+        "Description": "Memory allocation error loading preference file",
+        "troubleshooting": "Use a known good preference file                                                       Use the same preference file on a known good console \nReplace front board\nReplace MC Board"
     },
     {
-        "Error ID": "W4",
-        "Description ": "Preference file not found",
-        "Troubleshoot Possible Production Errors": "Use a known good preference file                                                        Use the same preference file on a known good console\nReplace front board\nReplace MC Board"
+        "id": "W4",
+        "Description": "Preference file not found",
+        "troubleshooting": "Use a known good preference file                                                        Use the same preference file on a known good console\nReplace front board\nReplace MC Board"
     },
     {
-        "Error ID": "W5",
-        "Description ": "USB Inserted while console is in use",
-        "Troubleshoot Possible Production Errors": "Remove USB drive                                                                              Remove SERFAS probe and shaver                                                Remove MC board"
+        "id": "W5",
+        "Description": "USB Inserted while console is in use",
+        "troubleshooting": "Remove USB drive                                                                              Remove SERFAS probe and shaver                                                Remove MC board"
     },
     {
-        "Error ID": "W6",
-        "Description ": "Over temperature warning",
-        "Troubleshoot Possible Production Errors": "Check internal fan operation                                                            Reseat heat sinks                                                                            Remove console from any poorly ventilated locations (e.g. on a tower with other devices on top)"
+        "id": "W6",
+        "Description": "Over temperature warning",
+        "troubleshooting": "Check internal fan operation                                                            Reseat heat sinks                                                                            Remove console from any poorly ventilated locations (e.g. on a tower with other devices on top)"
     },
     {
-        "Error ID": "W7",
-        "Description ": "No HP while VS in use",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
+        "id": "W7",
+        "Description": "No HP while VS in use",
+        "troubleshooting": "Not available in CrossFire2"
     },
     {
-        "Error ID": "W8",
-        "Description ": "No VS while HP in use",
-        "Troubleshoot Possible Production Errors": "Not available in CrossFire2"
-    },
-    {
-        "Error ID": "NONE",
-        "Description ": "Console does not respond to footswitch",
-        "Troubleshoot Possible Production Errors": "Power Board hardware issue related to the 5V reference supply for the footswitch                                                                                 Replace Power Board"
-    },
-    {
-        "Error ID": "NONE",
-        "Description ": "Bootloader version on front board not up to date",
-        "Troubleshoot Possible Production Errors": "Refer to MAP10621 in Agile for instructions on how to program the latest version bootloader onto the front board"
+        "id": "W8",
+        "Description": "No VS while HP in use",
+        "troubleshooting": "Not available in CrossFire2"
     }
 ]

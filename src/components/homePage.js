@@ -26,6 +26,13 @@ class HomePage {
     }
   }
 
+  static clearXf2ErrorText() {
+    const errorsContainer = document.getElementById("shavers-container")
+    if (errorsContainer) {
+      errorsContainer.parentNode.removeChild(errorsContainer)
+    }
+  }
+
   static clearProbeText() {
     const probeContainer = document.getElementById("probes-container")
     if (probeContainer) {
@@ -67,6 +74,17 @@ class HomePage {
     })
   }
 
+  static clearErrorDetails() {
+    const root = HomePage.root().children
+    Array.from(root).forEach(function (element) {
+      if (element.id !== "navbar") {
+        if (element) {
+          element.parentNode.removeChild(element)
+        }
+      }
+    })
+  }
+
   static getImplantDetails(selectedInsert) {
     const inserts = Store.getInserts()
     const selectedInserts = []
@@ -77,6 +95,25 @@ class HomePage {
     })
     HomePage.renderInsertDetails(selectedInserts, selectedInsert)
     Navbar.showBackBtn(selectedInserts)
+  }
+
+  static getErrorDetails(selectedError) {
+    const errors = Store.getXf2Errors()
+    const selectedErrors = []
+    errors.map((error) => {
+      if (error.id === selectedError.id) {
+        return selectedErrors.push(error)
+      }
+    })
+    HomePage.renderErrorDetails(selectedErrors, selectedError)
+    Navbar.showBackBtn(selectedErrors)
+  }
+
+  static renderErrorDetails(selectedErrors, selectedError) {
+    HomePage.scrollToTop()
+    HomePage.errorId(selectedErrors)
+    HomePage.errorDescription(selectedErrors)
+    HomePage.errorTroubleShooting(selectedErrors)
   }
 
   static getShaverDetails(selectedShaver) {
@@ -93,7 +130,6 @@ class HomePage {
 
   static renderShaverDetails(selectedShavers, selectedShaver) {
     HomePage.scrollToTop()
-    console.log(selectedShavers)
     HomePage.shaverName(selectedShavers)
     HomePage.shaverPn(selectedShavers)
     HomePage.shaverOscDefault(selectedShavers)
@@ -103,6 +139,69 @@ class HomePage {
     HomePage.shaverLowSpeedDefault(selectedShavers)
     HomePage.shaverLowSpeedMax(selectedShavers)
     HomePage.shaverSpeedStepIncr(selectedShavers)
+  }
+
+  static errorId(selectedErrors) {
+    selectedErrors.map((error) => {
+      const errorIdDiv = document.createElement("div")
+      errorIdDiv.setAttribute("class", "insert-details-div")
+      errorIdDiv.setAttribute("id", "insert-name-div")
+      const errorIdTitle = document.createElement("h3")
+      errorIdTitle.setAttribute("class", "insert-details-title")
+      const errorIdTextDiv = document.createElement("div")
+      errorIdTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorIdText = document.createElement("p")
+      errorIdText.setAttribute("class", "insert-details-text")
+      errorIdTitle.innerText = "Error Code"
+      errorIdText.innerText = error.id
+      errorIdTextDiv.appendChild(errorIdText)
+      errorIdDiv.appendChild(errorIdTitle)
+      errorIdDiv.appendChild(errorIdTextDiv)
+      HomePage.root().appendChild(errorIdDiv)
+    })
+  }
+
+  static errorDescription(selectedErrors) {
+    selectedErrors.map((error) => {
+      const errorDescriptionDiv = document.createElement("div")
+      errorDescriptionDiv.setAttribute("class", "insert-details-div")
+      const errorDescriptionTitle = document.createElement("h3")
+      errorDescriptionTitle.setAttribute("class", "insert-details-title")
+      const errorDescriptionTextDiv = document.createElement("div")
+      errorDescriptionTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorDescriptionText = document.createElement("p")
+      errorDescriptionText.setAttribute("class", "insert-details-text")
+      errorDescriptionTitle.innerText = "Description"
+      console.log(error.Description)
+      errorDescriptionText.innerText = error.Description
+      errorDescriptionTextDiv.appendChild(errorDescriptionText)
+      errorDescriptionDiv.appendChild(errorDescriptionTitle)
+      errorDescriptionDiv.appendChild(errorDescriptionTextDiv)
+      HomePage.root().appendChild(errorDescriptionDiv)
+    })
+  }
+
+  static errorTroubleShooting(selectedErrors) {
+    selectedErrors.map((error) => {
+      const errorTroubleShootingDiv = document.createElement("div")
+      errorTroubleShootingDiv.setAttribute("class", "insert-details-div")
+      const errorTroubleShootingTitle = document.createElement("h3")
+      errorTroubleShootingTitle.setAttribute("class", "insert-details-title")
+      const errorTroubleShootingTextDiv = document.createElement("div")
+      errorTroubleShootingTextDiv.setAttribute(
+        "class",
+        "insert-details-text-div"
+      )
+      const errorTroubleShootingText = document.createElement("p")
+      errorTroubleShootingText.setAttribute("class", "insert-details-text")
+      errorTroubleShootingTitle.innerText = "Troubleshoot"
+      console.log(error.Description)
+      errorTroubleShootingText.innerText = error.troubleshooting
+      errorTroubleShootingTextDiv.appendChild(errorTroubleShootingText)
+      errorTroubleShootingDiv.appendChild(errorTroubleShootingTitle)
+      errorTroubleShootingDiv.appendChild(errorTroubleShootingTextDiv)
+      HomePage.root().appendChild(errorTroubleShootingDiv)
+    })
   }
 
   static shaverSpeedStepIncr(selectedShavers) {
@@ -953,6 +1052,21 @@ class HomePage {
     HomePage.root().appendChild(insertUrlTextDiv)
   }
 
+  static renderErrorsSearchField() {
+    const inputDiv = document.createElement("div")
+    inputDiv.setAttribute("class", "input-div")
+    inputDiv.setAttribute("id", "input-div")
+    inputDiv.innerHTML = '<i class="fas fa-search"></i>'
+    const inputTag = document.createElement("input")
+    inputTag.setAttribute("class", "input-field")
+    inputTag.setAttribute("type", "text")
+    inputTag.setAttribute("id", "input-field")
+    inputTag.setAttribute("name", "input-field")
+    inputTag.setAttribute("placeholder", "Search by error code")
+    inputDiv.appendChild(inputTag)
+    root.appendChild(inputDiv)
+  }
+
   static renderSearchField() {
     // Search feature
     const inputDiv = document.createElement("div")
@@ -1131,7 +1245,6 @@ class HomePage {
   }
 
   static renderShavers(shavers) {
-    const root = HomePage.root()
     const shaversContainer = document.createElement("div")
     shaversContainer.setAttribute("class", "shavers-container")
     shaversContainer.setAttribute("id", "shavers-container")
@@ -1149,8 +1262,26 @@ class HomePage {
       shaverDiv.appendChild(shaverPnDiv)
       shaversContainer.appendChild(shaverDiv)
     })
-    root.appendChild(shaversContainer)
+    HomePage.root().appendChild(shaversContainer)
     Shavers.bindingShaversEventListener()
+  }
+
+  static renderXf2Errors(errors) {
+    const errorsContainer = document.createElement("div")
+    errorsContainer.setAttribute("class", "shavers-container")
+    errorsContainer.setAttribute("id", "shavers-container")
+    errors.map((error) => {
+      const errorDiv = document.createElement("div")
+      errorDiv.setAttribute("class", "shaver-div")
+      errorDiv.setAttribute("id", error.id)
+      const errorDescriptionDiv = document.createElement("div")
+      errorDescriptionDiv.setAttribute("class", "shaver-name-div")
+      errorDescriptionDiv.innerText = error.id
+      errorDiv.appendChild(errorDescriptionDiv)
+      errorsContainer.appendChild(errorDiv)
+    })
+    HomePage.root().appendChild(errorsContainer)
+    Xf2Errors.bindingErrorsEventListener()
   }
 
   static renderImplants(inserts) {

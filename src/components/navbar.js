@@ -86,6 +86,7 @@ class Navbar {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
       const shavers = Shavers.getShaversFromStore()
+      const errors = Xf2Errors.getXf2ErrorsFromStore()
       if (selectedItem[0].implant) {
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
@@ -106,6 +107,13 @@ class Navbar {
         HomePage.renderSearchField()
         HomePage.renderShavers(shavers)
         Search.bindShaverSearchEventListener()
+        HomePage.scrollToTop()
+      } else if (selectedItem[0].id) {
+        HomePage.clearErrorDetails()
+        Navbar.hideBackBtn()
+        HomePage.renderSearchField()
+        HomePage.renderXf2Errors(errors)
+        Search.bindErrorSearchEventListener()
         HomePage.scrollToTop()
       }
     })

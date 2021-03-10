@@ -160,6 +160,40 @@
         () Production
         () Development
 
+# 3/10/2021
+    [X] Sport Med Toolbox - XF2 error codes  
+        (x) Import error data 
+            * data.py 
+                - import pandas as pd
+                  import excel2json
+                    * excel2json will take any file you put in and create a json file.
+                        excel2json.convert_from_file("file-name")
+                        df = pd.read_excel("error-data.xlsx")
+                    * > python3 data.py - creates a json file
+         (x) Clean up data 
+            (x) Correct Error Id
+            (x) Shorten 'Error Id' to 'id'
+            (x) Replace 'Troubleshoot Possible Production Errors' with 'troubleshoot'
+         (x) Title fix in Navbar - Xf2Errors
+    [X] Commit xf2 errors to local storage
+        (x) GetXf2Errors()
+        (x) AddXf2Erros()
+    [X] Render error messages to the DOM
+        (x) RenderXf2Errors() method
+        (x) Build proper search 
+        (x) BindingErrorsEventListener() method
+        (x) Render error details 
+        (x) Assure proper back button functionality
+        (x) Fix id=NONE
+    [X] Email Annie file URL, by EOB on Monday
+        (x) Emailed Annie update - will wait for Calli's feedback before updating code and URL
+    [] Create two URLs through Azure
+        () Production
+        () Development
+    [] Azure DevOps - Building app withing CI
+
+# NOTE - Visual Studio - Select all occurances of match
+    * Cmd + Shift + L
 
 # Azure 
     - https://portal.azure.com/

@@ -83,7 +83,10 @@ class Features {
           HomePage.renderShavers(shavers)
           Search.bindShaverSearchEventListener()
         } else if (item.id === "errors") {
-          console.log("sup, yo")
+          const errors = Store.getXf2Errors()
+          HomePage.renderErrorsSearchField()
+          HomePage.renderXf2Errors(errors)
+          Search.bindErrorSearchEventListener()
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"

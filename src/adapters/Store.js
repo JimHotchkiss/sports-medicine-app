@@ -69,4 +69,19 @@ class Store {
   static addShavers(shavers) {
     localStorage.setItem("shavers", JSON.stringify(shavers))
   }
+
+  // XF2 Errors
+  static getXf2Errors() {
+    let errors
+    if (localStorage.getItem("xf2-errors") === null) {
+      errors = []
+    } else {
+      errors = JSON.parse(localStorage.getItem("xf2-errors"))
+    }
+    return errors
+  }
+
+  static addXf2Errors(errors) {
+    localStorage.setItem("xf2-errors", JSON.stringify(errors))
+  }
 }

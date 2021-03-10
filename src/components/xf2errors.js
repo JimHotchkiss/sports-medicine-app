@@ -6,7 +6,23 @@ class Xf2Errors {
 
   fetchXf2ErrorsSpecifications() {
     this.xf2ErrorsAdapter.fetchXf2ErrorsData().then((data) => {
-      console.log(data)
+      Store.addXf2Errors(data)
     })
+  }
+
+  static getXf2ErrorsFromStore() {
+    return Store.getXf2Errors()
+  }
+
+  static bindingErrorsEventListener() {
+    const errorDivs = document.getElementsByClassName("shaver-div")
+    for (let item of errorDivs) {
+      item.addEventListener("click", () => {
+        const selectedError = item
+        HomePage.clearXf2ErrorText()
+        Search.clearSearchField()
+        HomePage.getErrorDetails(selectedError)
+      })
+    }
   }
 }
