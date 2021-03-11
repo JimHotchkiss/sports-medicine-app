@@ -48,3 +48,18 @@
     {
         "id": "shaver", "title": "Shaver Specifications", "iconUrl": "../images/soccer.png", "description": "Language that describes what this feature does or provides."
     },
+
+# Note - Default settings data
+{"default_settings":[
+    {"handpiece":[
+        {"button1": 
+            [{"default1": {"function": "Oscillate", "options": "One Touch"}}, {"default2": {"function": "Activate/Deactivate", "options": "None"}}, {"default3": {"function": "Oscillate", "options": "One Touch"}}
+            ]
+        },
+        {"button2": 
+            [{"default1": {"function": "Forward", "options": "One Touch"}}, {"default2": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}}, {"default3": {"function": "Jog", "options": "-"}} ]}, 
+        {"button3": 
+            [{"default1": {"function": "Reverse", "options": "One Touch"}}, {"default2": {"function": "Forward/Reverse", "options": "-"}}, {"default3": {"function": "Forward", "options": "One Touch"}}]}
+        ]
+    }]
+}

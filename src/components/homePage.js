@@ -195,7 +195,6 @@ class HomePage {
       const errorTroubleShootingText = document.createElement("p")
       errorTroubleShootingText.setAttribute("class", "insert-details-text")
       errorTroubleShootingTitle.innerText = "Troubleshoot"
-      console.log(error.Description)
       errorTroubleShootingText.innerText = error.troubleshooting
       errorTroubleShootingTextDiv.appendChild(errorTroubleShootingText)
       errorTroubleShootingDiv.appendChild(errorTroubleShootingTitle)
@@ -1193,7 +1192,6 @@ class HomePage {
     smallJointDiv.appendChild(smallJointTitle)
     probes.map((probe) => {
       if (probe.probe.suction) {
-        console.log(probe.probe.suction)
         const probeDiv = document.createElement("div")
         probeDiv.setAttribute("class", "probe-div")
         probeDiv.setAttribute("id", probe.probe.pn)

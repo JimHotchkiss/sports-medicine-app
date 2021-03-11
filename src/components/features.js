@@ -6,6 +6,7 @@ class Features {
     this.shavers = new Probes()
     this.probes = new Shavers()
     this.xf2Errors = new Xf2Errors()
+    this.defaultSettings = new DefaultSettings()
     this.retrieveFeatureData()
   }
 
@@ -87,6 +88,8 @@ class Features {
           HomePage.renderErrorsSearchField()
           HomePage.renderXf2Errors(errors)
           Search.bindErrorSearchEventListener()
+        } else if (item.id === "default") {
+          HomePage.renderErrorsSearchField()
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"
