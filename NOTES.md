@@ -194,6 +194,10 @@
     [] Azure DevOps 
 
 # 3/11/2021
+    [] Xf2 errors - media query 
+        () Error code conatiner max-width desktop
+        () Scroll to top when errors page loads
+    [] Default Button feature - Hand piece and foot pedal
     [] Create two URLs through Azure
         () Production
         () Development

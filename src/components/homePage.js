@@ -1280,6 +1280,7 @@ class HomePage {
       errorDiv.appendChild(errorDescriptionDiv)
       errorsContainer.appendChild(errorDiv)
     })
+    HomePage.scrollToTop()
     HomePage.root().appendChild(errorsContainer)
     Xf2Errors.bindingErrorsEventListener()
   }
