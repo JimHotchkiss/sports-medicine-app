@@ -220,6 +220,36 @@
             () Production
             () Development
     [] Azure DevOps 
+
+# 3/11/2021
+    [] Default Button feature - Hand piece and foot pedal
+        () Onclick, render Default settings feature
+        () Build default database - this will minimize how much we have to rely on the images (poor quality)
+            (x) Hand piece 
+                - Initial data structure
+                    (x) Test fetch
+            (x) Foot pedal
+                - Initial data structure
+                    (x) Test fetch
+            (x) RF wand
+                - Initial data structure
+                    (x) Test fetch
+            () LCD screen
+                - Initial data structure
+                    (x) Test fetch
+    [] Create two URLs through Azure
+        - Note - 3/12/2021
+            * Production will include 'Implant', 'Arthro Specification' and 'Complaint'
+            * Development will include 'Implant', 'Arthro Specifications', 'Complaint', 'Shaver Specification' and 'Xf2 Error'
+                # Not present in developemnt - 'Arthro Default Settings'
+            () Production
+            () Development
+    [] Azure DevOps 
+
+# Go Live Checklist 
+    [] Images - purchase or create
+
+
 # NOTE - Visual Studio - Select all occurances of match
     * Cmd + Shift + L
 
