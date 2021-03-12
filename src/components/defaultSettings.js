@@ -6,30 +6,27 @@ class DefaultSettings {
 
   fetchDefaultSettings() {
     this.defaultAdapter.fetchDefaultSettingsData().then((data) => {
-      data.default_settings.map((item) => {
-        console.log(item.handpiece)
-      })
-      //   Store.addProbes(data)
+      for (let item in data) {
+        for (let i = 0; i < data[item].length; i++) {
+          // Footpedal
+          if (data[item][i].footpedal) {
+            data[item][i].footpedal.map((piece) => {
+              if (piece.shaver) {
+                // console.log(piece.shaver)
+              } else {
+                // console.log(piece.rf)
+              }
+            })
+            // Handpiece
+          } else if (data[item][i].handpiece) {
+            let handpiece = data[item][i]
+            console.log(handpiece)
+            // for (let button in handpiece) {
+            //   console.log(handpiece[button].default1)
+            // }
+          }
+        }
+      }
     })
   }
-
-  // static getSuctionProbesFromStore() {
-  //   return Store.getSuctionProbes()
-  // }
-
-  // static getProbesFromStore() {
-  //   return Store.getProbes()
-  // }
-
-  // static bindingProbesEventListener() {
-  //   const probeDivs = document.getElementsByClassName("probe-div")
-  //   for (let item of probeDivs) {
-  //     item.addEventListener("click", () => {
-  //       const selectedProbe = item
-  //       HomePage.clearProbeText()
-  //       Search.clearSearchField()
-  //       HomePage.getProbeDetails(selectedProbe)
-  //     })
-  //   }
-  // }
 }

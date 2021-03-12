@@ -63,3 +63,12 @@
         ]
     }]
 }
+
+# Note - default settings database - footpedal
+ {"footpedal":{
+        "button1": {"default1": {"function": "Jog", "options": "-"}, "default2": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}, "default3": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}}}, 
+        "button2": {"default1": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default2": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default3": {"function": "Select Handpiece", "options": "RF or Shaver"}},
+        "button3":{"default1": {"function": "Select Direction", "options": "Forward or Reverse"}, "default2": {"function": "Select Speed", "options": "High or Low"}, "default3": {"function": "Select Speed", "options": "High or Low"}},
+        "buttonA":{"default1": {"function": "Oscillate", "options": "Fixed"}, "default2": {"function": "Ocsillate/Reverse", "options": "Variable"}, "default3": {"function": "Ocsillate/Reverse", "options": "Fixed"}},
+        "buttonB":{"default1": {"function": "Forward/Reverse", "options": "Variable"}, "default2": {"function": "Ocsillate/Forward", "options": "Variable"}, "default3": {"function": "Ocsillate/Reverse", "options": "Fixed"}}
+    },

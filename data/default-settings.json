@@ -1,14 +1,36 @@
 {"default_settings":[
     {"handpiece":{
         "button1": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}, 
-        "button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}},"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}
+        "button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}},"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}
+        }
     },
-    {"footpedal":{
-        "button1": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}, 
-        "button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}},"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}
+    {"footpedal":[{
+        "shaver":[
+            {"button1": {"default1": {"function": "Jog", "options": "-"}, "default2": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}, "default3": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}}}, 
+            {"button2": {"default1": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default2": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default3": {"function": "Select Handpiece", "options": "RF or Shaver"}}},
+            {"button3":{"default1": {"function": "Select Direction", "options": "Forward or Reverse"}, "default2": {"function": "Select Speed", "options": "High or Low"}, "default3": {"function": "Select Speed", "options": "High or Low"}}},
+            {"buttonA":{"default1": {"function": "Oscillate", "options": "Fixed"}, "default2": {"function": "Ocsillate/Reverse", "options": "Variable"}, "default3": {"function": "Ocsillate/Reverse", "options": "Fixed"}}},
+            {"buttonB":{"default1": {"function": "Forward/Reverse", "options": "Variable"}, "default2": {"function": "Ocsillate/Forward", "options": "Variable"}, "default3": {"function": "Ocsillate/Reverse", "options": "Fixed"}}
+            }
+        ]},{
+        "rf":[
+            {"button1": {"default1": {"function": "Decrease Cut Level", "options": "Select Handpiece"}, "default2": {"function": "Decrease Cut Level", "options": "Select Handpiece"}, "default3": {"function": "Decrease Cut Level", "options": "Select Handpiece"}}}, 
+            {"button2": {"default1": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default2": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default3": {"function": "Select Handpiece", "options": "RF or Shaver"}}},
+            {"button3":{"default1": {"function": "Increase Cut Level", "options": ""}, "default2": {"function": "Increase Cut Level", "options": ""}, "default3": {"function": "Increase Cut Level", "options": ""}}},
+            {"buttonA":{"default1": {"function": "CUT", "options": "CUT"}, "default2": {"function": "CUT", "options": "CUT"}, "default3": {"function": "CUT", "options": "CUT"}}},
+            {"buttonB":{"default1": {"function": "Coag", "options": "Coag"}, "default2": {"function": "Coag", "options": "Coag"}, "default3": {"function": "Coag", "options": "Coag"}}
+            }
+            ]
+        }
+        
+        ]
     },
     {"rfWand": {
-        "button1":{"description":"Adjust CUT power level (single press) or activate/deactive Force Modulation (press and hold for a few seconds)"}}},
+        "button1":{"description":"Adjust CUT power level (single press) or activate/deactive Force Modulation (press and hold for a few seconds)"},
+        "button2":{"description":"Activate CUT"},
+        "button3":{"description":"Activate COAG"}
+    }
+    },
     {"lcdScreen": {}}
     ]
 }
