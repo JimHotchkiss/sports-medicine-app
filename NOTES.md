@@ -247,7 +247,7 @@
     [] Azure DevOps 
 
 # 3/17/2021
-    [] Calli's fixes and corrections 
+    [X] Calli's fixes and corrections 
         (x) Iconix 1 with Needles (3910-500-412), 'Note' section: add end parentheses
         (x) Remove the title "Reusable Instrumentation" and "End of Reusable Instrumentation" words on the home screen.  When I said to include "Reusable instrumentation" I meant to include an image of the actual instruments within the actual part number, similar to how you included the images within the Iconix part numbers.
             (X) Omega 3.9mm - include 'Reusable Instrumentation' image
@@ -267,8 +267,8 @@
         (x) 3910-200-081, 082 and 083: On these part numbers, please add "5.5mm" after "ANCHOR"
         (x) 3910-200-084, 085 and 086: On these part numbers, please add "6.5mm" after "ANCHOR"
         (x) 3910-400-050 and 055: For these part numbers, add "5.5" after "Anchor"
-        () 3910-400-060 and 065: For these part numbers, add "6.5" after "Anchor"
-        () Make sure that for all "Postive Stops" you are referencing what is in Column E, not H.  There are 2 columns that say "Positive Stop?" and we need the content to pull from Column E, instead of H.
+        (x) 3910-400-060 and 065: For these part numbers, add "6.5" after "Anchor"
+        (x) Make sure that for all "Postive Stops" you are referencing what is in Column E, not H.  There are 2 columns that say "Positive Stop?" and we need the content to pull from Column E, instead of H.
             - 13 through 36 in the Excel spread sheet
     [] Default Button feature - Hand piece and foot pedal
         () Onclick, render Default settings feature
@@ -295,6 +295,34 @@
                 # Not present in developemnt - 'Arthro Default Settings'
             () Production
             () Development
+    [] Azure DevOps 
+
+# 3/18/2021 
+    [] Create two URLs through Azure
+        - Note - 3/12/2021
+            * Production will include 'Implant', 'Arthro Specification' and 'Complaint'
+            * Development will include 'Implant', 'Arthro Specifications', 'Complaint', 'Shaver Specification' and 'Xf2 Error'
+                # Not present in developemnt - 'Arthro Default Settings'
+            () Production
+            () Development
+    [] Default Button feature - Hand piece and foot pedal
+        () Onclick, render Default settings feature
+        () Build default database - this will minimize how much we have to rely on the images (poor quality)
+            (x) Hand piece 
+                - Initial data structure
+                    (x) Test fetch
+            (x) Foot pedal - Shaver
+                - Initial data structure
+                    (x) Test fetch
+            (x) RF wand
+                - Initial data structure
+                    (x) Test fetch
+            () Foot pedal - RF Wand
+                - Initial data structure
+                    () Test fetch
+            () LCD screen
+                - Initial data structure
+                    (x) Test fetch
     [] Azure DevOps 
 
 # Go Live Checklist 
