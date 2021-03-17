@@ -84,4 +84,51 @@ class Store {
   static addXf2Errors(errors) {
     localStorage.setItem("xf2-errors", JSON.stringify(errors))
   }
+
+  // Arthro Default settings
+  // Footpedal
+  static getShaverFootpedalDefaults() {
+    let defaultSettings
+    if (localStorage.getItem("shaver-footpedal-defaults") === null) {
+      defaultSettings = []
+    } else {
+      defaultSettings = JSON.parse(
+        localStorage.getItem("shaver-footpedal-defaults")
+      )
+    }
+    return defaultSettings
+  }
+
+  static addShaverFootpedalDefaults(defaults) {
+    localStorage.setItem("shaver-footpedal-defaults", JSON.stringify(defaults))
+  }
+
+  // Shaver
+  static addShaverDefaults(shaverDefaults) {
+    localStorage.setItem("shaver-defaults", JSON.stringify(shaverDefaults))
+  }
+
+  static getShaverDefaults() {
+    let defaultSettings
+    if (localStorage.getItem("shaver-defaults") === null) {
+      defaultSettings = []
+    } else {
+      defaultSettings = JSON.parse(localStorage.getItem("shaver-defaults"))
+    }
+    return defaultSettings
+  }
+
+  static addRfFootpedalDefaults(rf) {
+    localStorage.setItem("rf-defaults", JSON.stringify(rf))
+  }
+
+  static getRfFootpedalDefaults() {
+    let defaultSettings
+    if (localStorage.getItem("rf-defaults") === null) {
+      defaultSettings = []
+    } else {
+      defaultSettings = JSON.parse(localStorage.getItem("rf-defaults"))
+    }
+    return defaultSettings
+  }
 }

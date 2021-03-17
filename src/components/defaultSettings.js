@@ -8,22 +8,26 @@ class DefaultSettings {
     this.defaultAdapter.fetchDefaultSettingsData().then((data) => {
       for (let item in data) {
         for (let i = 0; i < data[item].length; i++) {
+          console.log(data[item][i])
           // Footpedal
           if (data[item][i].footpedal) {
             data[item][i].footpedal.map((piece) => {
               if (piece.shaver) {
-                // console.log(piece.shaver)
+                // Shaver
+                const shaver = piece.shaver
+                Store.addShaverFootpedalDefaults(shaver)
               } else {
-                // console.log(piece.rf)
+                // RF
+                const rf = piece.rf
+                Store.addRfFootpedalDefaults(rf)
               }
             })
             // Handpiece
-          } else if (data[item][i].handpiece) {
-            let handpiece = data[item][i]
-            console.log(handpiece)
-            // for (let button in handpiece) {
-            //   console.log(handpiece[button].default1)
-            // }
+          } else if (data[item][i].shaver) {
+            let shaverDefaults = data[item][i].shaver
+            Store.addShaverDefaults(shaverDefaults)
+          } else if (data[item][i].rfWand) {
+            console.log(data[item][i])
           }
         }
       }

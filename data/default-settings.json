@@ -1,10 +1,10 @@
 {"default_settings":[
-    {"handpiece":{
-        "button1": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}, 
-        "button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}},"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}
-        }
-    },
-    {"footpedal":[{
+    {"shaver":[
+            {"button1": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}, 
+            {"button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}},
+            {"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}
+        ]},
+        {"footpedal":[{
         "shaver":[
             {"button1": {"default1": {"function": "Jog", "options": "-"}, "default2": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}, "default3": {"function": "Select Mode", "options": "Oscillate or Forward/Reverse"}}}, 
             {"button2": {"default1": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default2": {"function": "Select Handpiece", "options": "RF or Shaver"}, "default3": {"function": "Select Handpiece", "options": "RF or Shaver"}}},

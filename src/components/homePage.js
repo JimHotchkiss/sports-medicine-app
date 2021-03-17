@@ -172,7 +172,6 @@ class HomePage {
       const errorDescriptionText = document.createElement("p")
       errorDescriptionText.setAttribute("class", "insert-details-text")
       errorDescriptionTitle.innerText = "Description"
-      console.log(error.Description)
       errorDescriptionText.innerText = error.Description
       errorDescriptionTextDiv.appendChild(errorDescriptionText)
       errorDescriptionDiv.appendChild(errorDescriptionTitle)
@@ -1018,12 +1017,23 @@ class HomePage {
 
     // Measurement image insert
     selectedInserts.map((insert) => {
+      const reuableInsert = insert.implant.pn
       if (
         insert.implant.name.includes("ICONIX") &&
         insert.implant.id !== "3910-2" &&
         insert.implant.id !== "3910-4"
       ) {
         HomePage.implantMeasurementImg()
+      } else if (
+        insert.implant.pn === "3910-500-391" ||
+        insert.implant.pn === "3910-500-392"
+      ) {
+        HomePage.implantReusableImage3_9(reuableInsert)
+      } else if (
+        insert.implant.pn === "3910-500-471" ||
+        insert.implant.pn === "3910-500-472"
+      ) {
+        HomePage.implantReusableImage4_7(reuableInsert)
       } else {
         return
       }
@@ -1035,6 +1045,36 @@ class HomePage {
     HomePage.implantDrillWidth(filteredInsertSelection)
     HomePage.implantNotes(filteredInsertSelection)
     HomePage.implantPositiveStop(filteredInsertSelection)
+  }
+
+  static implantReusableImage3_9(reusableInsert) {
+    console.log(reusableInsert)
+    const insertUrlTextDiv = document.createElement("div")
+    insertUrlTextDiv.setAttribute("class", "insert-details-div")
+    const insertUrlDiv = document.createElement("div")
+    insertUrlDiv.setAttribute("class", "reusable3_9-img-div")
+    // insertUrlDiv.setAttribute("id", "iconix2-img-div")
+    const insertUrlTitle = document.createElement("h3")
+    insertUrlTitle.setAttribute("class", "insert-details-title")
+    insertUrlTitle.innerText = "Reusable Instrumentation:"
+    insertUrlTextDiv.appendChild(insertUrlTitle)
+    insertUrlTextDiv.appendChild(insertUrlDiv)
+    HomePage.root().appendChild(insertUrlTextDiv)
+  }
+
+  static implantReusableImage4_7(reusableInsert) {
+    console.log(reusableInsert)
+    const insertUrlTextDiv = document.createElement("div")
+    insertUrlTextDiv.setAttribute("class", "insert-details-div")
+    const insertUrlDiv = document.createElement("div")
+    insertUrlDiv.setAttribute("class", "reusable4_7-img-div")
+    // insertUrlDiv.setAttribute("id", "iconix2-img-div")
+    const insertUrlTitle = document.createElement("h3")
+    insertUrlTitle.setAttribute("class", "insert-details-title")
+    insertUrlTitle.innerText = "Reusable Instrumentation:"
+    insertUrlTextDiv.appendChild(insertUrlTitle)
+    insertUrlTextDiv.appendChild(insertUrlDiv)
+    HomePage.root().appendChild(insertUrlTextDiv)
   }
 
   static implantMeasurementImg() {
@@ -1290,62 +1330,58 @@ class HomePage {
     implantContainer.setAttribute("id", "implant-container")
 
     // Reusable Instrumentation
-    const reusableTitleDiv = document.createElement("div")
-    reusableTitleDiv.setAttribute("class", "reusable-title-div")
-    const reusableTitleText = document.createElement("h3")
-    reusableTitleText.setAttribute("class", "reusable-title-text")
-    reusableTitleText.innerText = "Reusable Instrumentation"
-    reusableTitleDiv.appendChild(reusableTitleText)
+    // const reusableTitleDiv = document.createElement("div")
+    // reusableTitleDiv.setAttribute("class", "reusable-title-div")
+    // const reusableTitleText = document.createElement("h3")
+    // reusableTitleText.setAttribute("class", "reusable-title-text")
+    // reusableTitleText.innerText = "Reusable Instrumentation"
+    // reusableTitleDiv.appendChild(reusableTitleText)
 
     // // End Reusable
-    const endReusableDiv = document.createElement("div")
-    endReusableDiv.setAttribute("class", "end-reusable-div")
-    endReusableDiv.innerText = "End of Reusable Instrumentation"
+    // const endReusableDiv = document.createElement("div")
+    // endReusableDiv.setAttribute("class", "end-reusable-div")
+    // endReusableDiv.innerText = "End of Reusable Instrumentation"
 
     inserts.map((implant) => {
-      if (
-        implant.implant.pn === "3910-500-391" ||
-        implant.implant.pn === "3910-500-392" ||
-        implant.implant.pn === "3910-500-471" ||
-        implant.implant.pn === "3910-500-472"
-      ) {
-        // HomePage.renderReusableInstrumentation()
-        // Omega implant div
-        const implantDiv = document.createElement("div")
-        implantDiv.setAttribute("class", "implant-div")
-        implantDiv.setAttribute("id", implant.implant.pn)
-        implantDiv.setAttribute("data-index", implant.implant.id)
-        const implantNameDiv = document.createElement("div")
-        implantNameDiv.setAttribute("class", "implant-name-div")
-        const implantPnDiv = document.createElement("div")
-        implantPnDiv.setAttribute("class", "implant-pn-div")
+      const implantDiv = document.createElement("div")
+      implantDiv.setAttribute("class", "implant-div")
+      implantDiv.setAttribute("id", implant.implant.pn)
+      implantDiv.setAttribute("data-index", implant.implant.id)
+      const implantNameDiv = document.createElement("div")
+      implantNameDiv.setAttribute("class", "implant-name-div")
+      const implantPnDiv = document.createElement("div")
+      implantPnDiv.setAttribute("class", "implant-pn-div")
 
-        implantNameDiv.innerText = implant.implant.name
-        implantPnDiv.innerText = implant.implant.pn
-        implantDiv.appendChild(implantNameDiv)
-        implantDiv.appendChild(implantPnDiv)
-        reusableTitleDiv.appendChild(implantDiv)
-        implantContainer.appendChild(reusableTitleDiv)
-        implantContainer.appendChild(endReusableDiv)
-        root.appendChild(implantContainer)
-      } else {
-        const implantDiv = document.createElement("div")
-        implantDiv.setAttribute("class", "implant-div")
-        implantDiv.setAttribute("id", implant.implant.pn)
-        implantDiv.setAttribute("data-index", implant.implant.id)
-        const implantNameDiv = document.createElement("div")
-        implantNameDiv.setAttribute("class", "implant-name-div")
-        const implantPnDiv = document.createElement("div")
-        implantPnDiv.setAttribute("class", "implant-pn-div")
-
-        implantNameDiv.innerText = implant.implant.name
-        implantPnDiv.innerText = implant.implant.pn
-        implantDiv.appendChild(implantNameDiv)
-        implantDiv.appendChild(implantPnDiv)
-        implantContainer.appendChild(implantDiv)
-      }
+      implantNameDiv.innerText = implant.implant.name
+      implantPnDiv.innerText = implant.implant.pn
+      implantDiv.appendChild(implantNameDiv)
+      implantDiv.appendChild(implantPnDiv)
+      implantContainer.appendChild(implantDiv)
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
+  }
+
+  // Arthro Default Settings
+  static renderArthroDefaults() {
+    const shaverFootpedalDefaults = Store.getShaverFootpedalDefaults()
+    const rfFootpedalDefaultSettings = Store.getRfFootpedalDefaults()
+    const shaverDefaultSettings = Store.getShaverDefaults()
+
+    HomePage.renderShaverDefaults(shaverDefaultSettings)
+    HomePage.renderShaverFootPedalDefaults(shaverFootpedalDefaults)
+    HomePage.renderRfFootpedalDefaults(rfFootpedalDefaultSettings)
+  }
+
+  static renderShaverDefaults(shaverDefaultSettings) {
+    console.log(shaverDefaultSettings)
+  }
+
+  static renderShaverFootPedalDefaults(shaverFootpedalDefaults) {
+    console.log(shaverFootpedalDefaults)
+  }
+
+  static renderRfFootpedalDefaults(rfFootpedalDefaultSettings) {
+    console.log(rfFootpedalDefaultSettings)
   }
 }

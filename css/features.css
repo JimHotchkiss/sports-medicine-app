@@ -39,19 +39,19 @@
 }
 
 #implant-specifications-img-url {
-    background: transparent url(../images/lacrosse.png) 0% 0% no-repeat padding-box;
-    background-size: 50px;
+    background: transparent url(../images/basketball.svg) 0% 0% no-repeat padding-box;
+    background-size: 40px;
 }
 
 #probe-img-url {
-    background: transparent url(../images/tennis.png) 0% 0% no-repeat padding-box;
-    background-size: 40px;
+    background: transparent url(../images/tennis.svg) 0% 0% no-repeat padding-box;
+    background-size: 35px;
     height: 75px;
 }
 
 #shaver-img-url {
-    background: transparent url(../images/soccer.png) 0% 0% no-repeat padding-box;
-    background-size: 50px;
+    background: transparent url(../images/lacrosse.svg) 0% 0% no-repeat padding-box;
+    background-size: 40px;
 }
 
 #errors-img-url {

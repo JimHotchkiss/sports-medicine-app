@@ -24,7 +24,7 @@
     "IMPLANT_DRILL_DEPTH": "3910-500-412 (drill sold in kit with implant): 17mm (tip to hard stop)",
     "IMPLANT_DRILL_WIDTH": "1.4mm",
     "PULL_OUT_STRENGTH": "",
-    "NOTES": "1 strand #2 Force Fiber (Taper cutting Needle Radius .345"
+    "NOTES": "1 strand #2 Force Fiber (Taper cutting Needle Radius .345)"
 }},
 {"implant": {
     "name": "ICONIX 1 TT",
@@ -203,7 +203,7 @@
     "MATERIAL": "PEEK",
     "IMPLANT_LENGTH": "12mm",
     "IMPLANT_WIDTH": "2.3mm Distal Tip \n2.5mm Distal Barb \n3.8 Proximal Barb",
-    "POSITIVE_STOP": "yes",
+    "POSITIVE_STOP": "laser lines come together",
     "IMPLANT_DRILL_DEPTH": "17mm\n(DHF 02049)",
     "IMPLANT_DRILL_WIDTH": "2.4mm",
     "PULL_OUT_STRENGTH": "?",
@@ -299,11 +299,11 @@
     "id":"3910-22",
     "img_url": "",
     "MATERIAL": "PEEK",
-    "IMPLANT_LENGTH": "12.5MM",
+    "IMPLANT_LENGTH": "12.5mm",
     "IMPLANT_WIDTH": "3.9mm",
     "POSITIVE\n STOP": "n/a",
-    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
-    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Majordiameter - 3.9mm, Minor Diameter - 2.8mm",
+    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 20mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
+    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Major diameter - 3.9mm, Minor Diameter - 2.8mm",
     "PULL OUT STRENGTH": "?",
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
@@ -313,11 +313,11 @@
     "id":"3910-23",
     "img_url": "",
     "MATERIAL": "PEEK",
-    "IMPLANT_LENGTH": "12.5MM",
+    "IMPLANT_LENGTH": "12.5mm",
     "IMPLANT_WIDTH": "3.9mm",
     "POSITIVE_STOP": "n/a",
-    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
-    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Majordiameter - 3.9mm, Minor Diameter - 2.8mm",
+    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 20mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
+    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Major diameter - 3.9mm, Minor Diameter - 2.8mm",
     "PULL_OUT_STRENGTH": "?",
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
@@ -330,8 +330,8 @@
     "IMPLANT_LENGTH": "14mm",
     "IMPLANT_WIDTH": "4.75mm",
     "POSITIVE_STOP": "n/a",
-    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
-    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Majordiameter - 3.9mm, Minor Diameter - 2.8mm",
+    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-473): 20mm (drill flutes to laserline)\nAwl (3910-500-475): 20mm\nTap (3910-500-474): 18mm",
+    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-473): 3.4mm\nAwl (3910-500-475): 3.6mm\nTap (3910-500-474): Major diameter - 4.75mm, Minor Diameter - 3.5mm",
     "PULL_OUT_STRENGTH": "?",
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
@@ -344,8 +344,8 @@
     "IMPLANT_LENGTH": "14mm",
     "IMPLANT_WIDTH": "4.75mm",
     "POSITIVE_STOP": "n/a",
-    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
-    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Majordiameter - 3.9mm, Minor Diameter - 2.8mm",
+    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-473): 20mm (drill flutes to laserline)\nAwl (3910-500-475): 20mm\nTap (3910-500-474): 18mm",
+    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-473): 3.4mm\nAwl (3910-500-475): 3.6mm\nTap (3910-500-474): Major diameter - 4.75mm, Minor Diameter - 3.5mm",
     "PULL_OUT_STRENGTH": "?",
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
@@ -358,8 +358,8 @@
     "IMPLANT_LENGTH": "14mm",
     "IMPLANT_WIDTH": "6.5mm",
     "POSITIVE_STOP": "n/a",
-    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-393): 28mm (drill flutes to laserline)\nAwl (3910-500-395): 20mm\nTap(3910-500-394): 16mm",
-    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-393): 2.85mm\nAwl (3910-500-395): 2.85mm\nTap (3910-500-394): Majordiameter - 3.9mm, Minor Diameter - 2.8mm",
+    "IMPLANT_DRILL_DEPTH": "Drill (3910-500-473): 20mm (drill flutes to laserline)\nAwl (3910-500-475): 20mm\nTap (3910-500-474): 18mm",
+    "IMPLANT_DRILL_WIDTH": "Drill (3910-500-473): 3.4mm\nAwl (3910-500-475): 3.6mm\nTap (3910-500-474): Major diameter - 4.75mm, Minor Diameter - 3.5mm",
     "PULL_OUT_STRENGTH": "?",
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
@@ -378,7 +378,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 4.5mm - 2 suture \n without needles",
     "pn": "3910-200-080",
     "id":"3910-27",
     "img_url": "",
@@ -392,7 +392,7 @@
     "NOTES": "when using tap in normal/soft bone: beginning of depth marker is flush with the cortex; in hard bone: endof the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n with needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 5.5mm - 2 suture \n with needles",
     "pn": "3910-200-082",
     "id":"3910-27",
     "img_url": "",
@@ -406,7 +406,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 5.5mm - 2 suture \n without needles",
     "pn": "3910-200-081",
     "id":"3910-29",
     "img_url": "",
@@ -420,7 +420,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 3 suture \n without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 5.5mm - 3 suture \n without needles",
     "pn": "3910-200-083",
     "id":"3910-30",
     "img_url": "",
@@ -434,7 +434,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n with needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 6.5mm - 2 suture \n with needles",
     "pn":"3910-200-085",
     "id":"3910-31",
     "img_url": "",
@@ -448,7 +448,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 2 suture \n without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 6.5mm - 2 suture \n without needles",
     "pn":"3910-200-084",
     "id":"3910-32",
     "img_url": "",
@@ -462,7 +462,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
-    "name": "BIOSTEON INTRALINE ANCHOR - 3 suture \n without needles",
+    "name": "BIOSTEON INTRALINE ANCHOR 6.5mm - 3 suture \n without needles",
     "pn":"3910-200-086",
     "id":"3910-33",
     "img_url": "",
@@ -686,8 +686,8 @@
     "NOTES": "one strand #2 force fiber\n wedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
-    "name": "TITANIUM INTRALINE ANCHOR",
-    "pn":"3910-400- 050",
+    "name": "TITANIUM INTRALINE ANCHOR 5.5mm",
+    "pn":"3910-400-050",
     "id":"3910-49",
     "img_url": "",
     "MATERIAL": "Titanium",
@@ -700,7 +700,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
-    "name": "TITANIUM INTRALINE ANCHOR with needles",
+    "name": "TITANIUM INTRALINE ANCHOR 5.5mm with needles",
     "pn":"3910-400-055",
     "id":"3910-50",
     "img_url": "",
@@ -714,7 +714,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
-    "name": "TITANIUM INTRALINE ANCHOR",
+    "name": "TITANIUM INTRALINE ANCHOR 6.5mm",
     "pn":"3910-400-060",
     "id":"3910-51",
     "img_url": "",
@@ -728,7 +728,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
-    "name": "TITANIUM INTRALINE ANCHOR with needles",
+    "name": "TITANIUM INTRALINE ANCHOR 6.5mm with needles",
     "pn":"3910-400-065",
     "id":"3910-52",
     "img_url": "",

@@ -89,7 +89,7 @@ class Features {
           HomePage.renderXf2Errors(errors)
           Search.bindErrorSearchEventListener()
         } else if (item.id === "default") {
-          HomePage.renderErrorsSearchField()
+          HomePage.renderArthroDefaults()
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"

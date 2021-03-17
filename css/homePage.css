@@ -312,6 +312,27 @@ input:focus{
     background-size: 320px;
 }
 
+/********* Reusable Image ********/
+.reusable3_9-img-div {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    max-width: 90%;
+    height: 820px;
+    background: transparent url("../images/reusable3_9.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 300px;
+} 
+
+.reusable4_7-img-div {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 90%;
+    height: 820px;
+    background: transparent url("../images/reusable4_7.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 300px;
+} 
+
 /************************** Media Queries - Implants*****************************/
 
 /* Desktop */

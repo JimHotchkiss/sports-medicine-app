@@ -72,3 +72,9 @@
         "buttonA":{"default1": {"function": "Oscillate", "options": "Fixed"}, "default2": {"function": "Ocsillate/Reverse", "options": "Variable"}, "default3": {"function": "Ocsillate/Reverse", "options": "Fixed"}},
         "buttonB":{"default1": {"function": "Forward/Reverse", "options": "Variable"}, "default2": {"function": "Ocsillate/Forward", "options": "Variable"}, "default3": {"function": "Ocsillate/Reverse", "options": "Fixed"}}
     },
+
+
+    {
+        "button1": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}, 
+        "button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}},"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}
+        }
