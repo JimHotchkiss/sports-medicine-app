@@ -154,6 +154,7 @@ class Navbar {
         if (navbar) {
           navbar.parentNode.removeChild(navbar)
         }
+        HomePage.scrollToTop()
         HomePage.clearFeatureData()
         new HomePage()
       })

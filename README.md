@@ -78,3 +78,9 @@
         "button1": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}}}, 
         "button2": {"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}},"button3":{"default1": {"function": "Oscillate", "options": "One Touch"}, "default2": {"function": "Activate/Deactivate", "options": "None"}, "default3": {"function": "Oscillate", "options": "One Touch"}
         }
+
+# Arthro Default Settings - featuresData.json
+        
+    {
+        "id": "default", "title": "Arthro Default Settings", "iconUrl": "../images/error.png", "description": "Default settings for hand pieces and foot pedals."
+    },

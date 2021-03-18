@@ -1301,6 +1301,7 @@ class HomePage {
       shaversContainer.appendChild(shaverDiv)
     })
     HomePage.root().appendChild(shaversContainer)
+    HomePage.scrollToTop()
     Shavers.bindingShaversEventListener()
   }
 

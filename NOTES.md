@@ -305,6 +305,8 @@
                 # Not present in developemnt - 'Arthro Default Settings'
             () Production
             () Development
+                * 3/18/2021 - Update link for director of Sports Med R&D
+                    () 'Remove' Arthro Default Settings
     [] Default Button feature - Hand piece and foot pedal
         () Onclick, render Default settings feature
         () Build default database - this will minimize how much we have to rely on the images (poor quality)
@@ -327,6 +329,8 @@
 
 # Go Live Checklist 
     [X] Images - purchase or create
+    [] Shaver Specifications langauage 
+        - I made changes, but need to be okayed by the Team
 
 
 # NOTE - Visual Studio - Select all occurances of match
