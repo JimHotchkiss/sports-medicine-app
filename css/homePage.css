@@ -333,6 +333,21 @@ input:focus{
     background-size: 300px;
 } 
 
+/**************** Default Settings *************************/
+#shaver-default-details-div {
+    margin-top: 85px;
+}
+
+.shaver-img-div {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 70%;
+    height: 215px;
+    background: transparent url("../images/handpiece.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 350px;
+}
+
 /************************** Media Queries - Implants*****************************/
 
 /* Desktop */

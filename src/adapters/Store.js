@@ -118,16 +118,32 @@ class Store {
     return defaultSettings
   }
 
-  static addRfFootpedalDefaults(rf) {
-    localStorage.setItem("rf-defaults", JSON.stringify(rf))
+  // RF Wand
+  static getRfDefaults() {
+    let defaultSettings
+    if (localStorage.getItem("rfWand-defaults") === null) {
+      defaultSettings = []
+    } else {
+      defaultSettings = JSON.parse(localStorage.getItem("rfWand-defaults"))
+    }
+    return defaultSettings
+  }
+
+  static addRfDefaults(rfDefaults) {
+    localStorage.setItem("rfWand-defaults", JSON.stringify(rfDefaults))
+  }
+
+  // RF Footpedal
+  static addRfFootpedalDefaults(rfFootpedal) {
+    localStorage.setItem("rfFootpedal-defaults", JSON.stringify(rfFootpedal))
   }
 
   static getRfFootpedalDefaults() {
     let defaultSettings
-    if (localStorage.getItem("rf-defaults") === null) {
+    if (localStorage.getItem("rfFootpedal-defaults") === null) {
       defaultSettings = []
     } else {
-      defaultSettings = JSON.parse(localStorage.getItem("rf-defaults"))
+      defaultSettings = JSON.parse(localStorage.getItem("rfFootpedal-defaults"))
     }
     return defaultSettings
   }

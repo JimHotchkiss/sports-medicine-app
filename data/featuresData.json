@@ -9,6 +9,9 @@
         "id": "shaver", "title": "Shaver Specifications", "iconUrl": "../images/soccer.png", "description": "Sports Medicine shaver specifications including maximum, minimum and default RPMs."
     },
     {
+        "id": "default", "title": "Arthro Default Settings", "iconUrl": "../images/error.png", "description": "Default settings for hand pieces and foot pedals."
+    },
+    {
         "id": "errors", "title": "XF2 Error Codes", "iconUrl": "../images/error.png", "description": "Search by error codes to find the details of each error code."
     },
     {

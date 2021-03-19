@@ -618,7 +618,7 @@ class HomePage {
       insertDrillWidthTextDiv.setAttribute("class", "insert-details-text-div")
       const insertDrillWidthText = document.createElement("p")
       insertDrillWidthText.setAttribute("class", "insert-details-text")
-      insertDrillWidthTitle.innerText = "Drill Width"
+      insertDrillWidthTitle.innerText = "Drill Diameter"
       insertDrillWidthText.innerText = insert.implant.IMPLANT_DRILL_WIDTH
       insertDrillWidthTextDiv.appendChild(insertDrillWidthText)
       insertDrillWidthDiv.appendChild(insertDrillWidthTitle)
@@ -656,7 +656,7 @@ class HomePage {
       insertWidthTextDiv.setAttribute("class", "insert-details-text-div")
       const insertWidthText = document.createElement("p")
       insertWidthText.setAttribute("class", "insert-details-text")
-      insertWidthTitle.innerText = "Width"
+      insertWidthTitle.innerText = "Diameter"
       insertWidthText.innerText = insert.implant.IMPLANT_WIDTH
       insertWidthTextDiv.appendChild(insertWidthText)
       insertWidthDiv.appendChild(insertWidthTitle)
@@ -1368,18 +1368,40 @@ class HomePage {
     const shaverFootpedalDefaults = Store.getShaverFootpedalDefaults()
     const rfFootpedalDefaultSettings = Store.getRfFootpedalDefaults()
     const shaverDefaultSettings = Store.getShaverDefaults()
+    const rfDefaultSettings = Store.getRfDefaults()
 
     HomePage.renderShaverDefaults(shaverDefaultSettings)
     HomePage.renderShaverFootPedalDefaults(shaverFootpedalDefaults)
+    HomePage.renderRfDefaults(rfDefaultSettings)
     HomePage.renderRfFootpedalDefaults(rfFootpedalDefaultSettings)
   }
 
   static renderShaverDefaults(shaverDefaultSettings) {
+    HomePage.renderShaverDefaultsTitle()
     console.log(shaverDefaultSettings)
+  }
+
+  static renderShaverDefaultsTitle() {
+    const shaverUrlTextDiv = document.createElement("div")
+    shaverUrlTextDiv.setAttribute("class", "insert-details-div")
+    shaverUrlTextDiv.setAttribute("id", "shaver-default-details-div")
+    const shaverUrlDiv = document.createElement("div")
+    shaverUrlDiv.setAttribute("class", "shaver-img-div")
+    // insertUrlDiv.setAttribute("id", "iconix2-img-div")
+    const shaverDefaultTitle = document.createElement("h3")
+    shaverDefaultTitle.setAttribute("class", "insert-details-title")
+    shaverDefaultTitle.innerText = "Shaver Defaults:"
+    shaverUrlTextDiv.appendChild(shaverDefaultTitle)
+    shaverUrlTextDiv.appendChild(shaverUrlDiv)
+    HomePage.root().appendChild(shaverUrlTextDiv)
   }
 
   static renderShaverFootPedalDefaults(shaverFootpedalDefaults) {
     console.log(shaverFootpedalDefaults)
+  }
+
+  static renderRfDefaults(rfDefaultSettings) {
+    console.log(rfDefaultSettings)
   }
 
   static renderRfFootpedalDefaults(rfFootpedalDefaultSettings) {

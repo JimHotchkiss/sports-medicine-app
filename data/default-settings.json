@@ -25,12 +25,11 @@
         
         ]
     },
-    {"rfWand": {
-        "button1":{"description":"Adjust CUT power level (single press) or activate/deactive Force Modulation (press and hold for a few seconds)"},
-        "button2":{"description":"Activate CUT"},
-        "button3":{"description":"Activate COAG"}
-    }
-    },
+    {"rfWand": [
+        {"button1":{"description":"Adjust CUT power level (single press) or activate/deactive Force Modulation (press and hold for a few seconds)"}},
+        {"button2":{"description":"Activate CUT"}},
+        {"button3":{"description":"Activate COAG"}}
+    ]},
     {"lcdScreen": {}}
     ]
 }
