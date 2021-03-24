@@ -352,7 +352,92 @@ input:focus{
 
 /* Desktop */
 
-@media  (min-width: 1025px) and (max-width: 2000px)  {  
+@media  (min-width: 1201px) and (max-width: 2000px)  {  
+    .implant-container {
+        min-width: 500px;
+      margin: 0 auto;
+    }
+
+    .input-div {
+        max-width: 400px;
+        margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    }
+
+    .input-field {
+        width: 375px;
+    }
+   
+    
+    .input-div i { 
+        left: 885px; 
+    
+    }
+
+      /* Inster details */
+      .insert-details-text-div {
+          /* max-width: 500px; */
+          max-width: 375px;
+    }
+
+    #iconix1-img-div {
+        margin: 0 auto;
+        max-width: 375px;
+    }
+
+    .trocar-img-div {
+        max-width: 375px;
+    }
+
+    .insert-details-div h3 {
+        margin-left: 36.5%;
+    }
+
+   .needle-details-div  {
+       max-width: 375px;
+   }
+
+    .insert-details-container h3 {
+        margin-left: 32%;
+    }
+
+    .insert-img-div {
+        max-width: 520px;
+    }
+
+    .measurement-img-div {
+        max-width: 375px;
+    }
+
+
+
+    /* Probes */
+    .probes-container {
+        min-width: 500px;
+        margin: 0 auto;
+    }
+  
+    .input-div i {
+        left: 880px;
+  
+    }
+
+    /* Shavers and Errors*/
+    .shavers-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .shaver-div {
+        min-width: 400px;
+    }
+
+
+
+  }
+
+@media  (min-width: 1025px) and (max-width: 1200px)  {  
     .implant-container {
         min-width: 500px;
       margin: 0 auto;

@@ -374,6 +374,53 @@
             () Default settings
     [] Azure DevOps
 
+# 3/24/2021
+    [] Meeting with Calli and Annie
+        () Ready for QA
+            () Implant Specifications
+                () Media queries - big screens
+            () Arthro Specifications 
+                () Media queries - big screens
+            () Shaver Specifications
+                () Media queries - big screens
+## Note: See CORRECTIONS.md
+    [] Create two URLs through Azure
+            - Note - 3/12/2021
+                * Production will include 'Implant', 'Arthro Specification' and 'Complaint'
+                * Development will include 'Implant', 'Arthro Specifications', 'Complaint', 'Shaver     Specification' and 'Xf2 Error'
+                    # Not present in developemnt - 'Arthro Default Settings'
+                () Production
+                (x) Development
+                    * 3/18/2021 - Update link for director of Sports Med R&D
+                        (x) 'Remove' Arthro Default Settings
+        [] Default Button feature - Hand piece and foot pedal
+    # Note - We could render the different options, shaver, shave footpedal, rf, rf footpedal, lcd screen. This could reduce the clutter, and confusion, on the final screen that renders the default settings. 
+         * However, it also creates another choice and step for the user.
+            () Onclick, render Default settings feature
+            () Build default database - this will minimize how much we have to rely on the images (poor quality)
+                (x) Hand piece 
+                 - Initial data structure
+                        (x) Test fetch
+                (x) Foot pedal - Shaver
+                 - Initial data structure
+                        (x) Test fetch
+                (x) RF wand
+                    - Initial data structure
+                        (x) Test fetch
+                () Foot pedal - RF Wand
+                    - Initial data structure
+                        () Test fetch
+                () LCD screen
+                    - Initial data structure
+                        (x) Test fetch
+            () Render Shaver handpiece 
+                () Title
+                () Image 
+                () Default settings
+        [] Azure DevOps
+
+ 
+
 # Go Live Checklist 
     [X] Images - purchase or create
     [] Shaver Specifications langauage 
