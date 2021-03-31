@@ -62,7 +62,7 @@
 }
 
 #iconix2-img-div {
-    margin: 0 auto;
+    margin-left: 36.5%;
     margin-bottom: 20px;
     width: 90%;
     height: 200px;
@@ -399,7 +399,7 @@ input:focus{
    }
 
     .insert-details-container h3 {
-        margin-left: 32%;
+        margin-left: 36.5%;
     }
 
     .insert-img-div {
@@ -471,6 +471,10 @@ input:focus{
         max-width: 375px;
     }
 
+    #iconix2-img-div {
+        margin-left: 31%;
+    }
+
     .trocar-img-div {
         max-width: 375px;
     }
@@ -523,6 +527,12 @@ input:focus{
   }
 
 /* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #iconix2-img-div {
+        margin: auto;
+    }
+}
+
 
 @media (min-width: 451px) and (max-width: 768px) {
 
@@ -542,6 +552,10 @@ input:focus{
    
     .input-div i { 
         left: 540px; 
+    }
+
+    #iconix2-img-div {
+        margin: auto;
     }
 
     /* Inster details */
@@ -608,6 +622,11 @@ input:focus{
         margin: 0 auto;
     }
 
+    .insert-details-container{
+        min-width: 500px;
+        margin: 0 auto;
+    }
+
     .insert-details-text-div {
         max-width: 490px;
         margin: 16px auto;
@@ -639,6 +658,10 @@ input:focus{
     .input-div i { 
         left: 320px; 
     }
+
+    #iconix2-img-div {
+       margin: auto;
+    }
    }
 
 @media (min-width: 381px) and (max-width: 450px) {
@@ -648,6 +671,10 @@ input:focus{
     margin-top: 80px;
     margin-bottom: 16px;
     }
+
+    #iconix2-img-div {
+        margin: auto;
+     }
  
     .input-field {
         width: 310px;
@@ -670,19 +697,6 @@ input:focus{
    }
 
 /*************************** Media Queries Probes *********************************/
-
-
-@media  (min-width: 1025px) and (max-width: 2000px)  {  
-
-
- 
-
-
-  }
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-   
-  }
 
  
 

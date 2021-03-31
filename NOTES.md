@@ -419,7 +419,10 @@
                 () Default settings
         [] Azure DevOps
 
- 
+ # 3/31/2021
+    [X] Media Queries Corrections
+        (x) Implants - Needles div
+        (x) Iconix 2 image
 
 # Go Live Checklist 
     [X] Images - purchase or create
