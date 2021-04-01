@@ -1,0 +1,219 @@
+[
+    {
+        "id": "E1",
+        "Description": "The software application upgrade has failed. Restart the upgrade process.",
+        "troubleshooting": "Repeat the software upgrade according to the instructions in the “Adjusting the Volume, Brightness, and Language, and Upgrading Software” section in this manual.",
+        "type": "Lockdown",
+        "cause": "The software application has failed."
+    },
+    {
+        "id": "E2",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal software malfunction.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E3",
+        "Description": "Internal hardware malfunction. Reboot or return to Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Touchscreen controller device failure.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E4",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Backlight controller device failure",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E5",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal software malfunction.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E6",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal software malfunction.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E7",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Pressure transducer is out of calibration, or pressure sensor malfunction has occurred. E8 Pressure transd",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E8",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Pressure transducer overpressure.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E9",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Inflow motor is defective.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E10",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Outflow motor is defective.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E11",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal hardware communication error.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E12",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal hardware communication error.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E13",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal hardware communication error.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E14",
+        "Description": "Internal software malfunction. Reboot or return to  Stryker for service.",
+        "type": "Lockdown",
+        "cause": "Internal hardware communication error.",
+        "troubleshooting": "Reboot the system. If problem persists,contact your Stryker representative."
+    },
+    {
+        "id": "E15",
+        "Description": "Scope/Cannula Error: Check to ensure the correct scope/cannula hardware is selected.",
+        "type": "Fault",
+        "cause": "Instrument recognition error",
+        "troubleshooting": "Check the inflow tubing from the bags to the joint and ensure that the hardware is properly attached. Open any closed clamps or stopcocks. Repeat the priming step"
+    },
+    {
+        "id": "E16",
+        "Description": "Inflow Cassette Error: Check to ensure the Inflow Cassette is inserted correctly.",
+        "type": "Fault",
+        "cause": "Cassette detection error",
+        "troubleshooting": "Remove and reinsert the cassette until it clicks into place. If the problem persists, replace the cassette. If the problem persists, contact your Stryker representative."
+    },
+    {
+        "id": "E17",
+        "Description": "Inflow Cassette will expire in two hours.",
+        "type": "Caution",
+        "cause": "Inflow Cassette about to expire (two hours left before expiration).",
+        "troubleshooting": "Replace the cassette"
+    },
+    {
+        "id": "E18",
+        "Description": "Outflow Cassette will expire in two hours.",
+        "type": "Caution",
+        "cause": "Outflow Cassette about to expire (two hours left before expiration).",
+        "troubleshooting": "Replace the cassette"
+    },
+    {
+        "id": "E19",
+        "Description": "Inflow Cassette has expired.",
+        "type": "Fault",
+        "cause": "Inflow Cassette is expired.",
+        "troubleshooting": "Replace the cassette"
+    },
+    {
+        "id": "E20",
+        "Description": "Outflow Cassette has expired.",
+        "type": "Fault",
+        "cause": "Outflow Cassette is expired.",
+        "troubleshooting": "Replace the cassette"
+    },
+    {
+        "id": "E21",
+        "Description": "CrossFire Connection Error: Check the connection to the CrossFire.",
+        "type": "Fault",
+        "cause": "The connection to the CrossFire console is lost.",
+        "troubleshooting": "Ensure that the console is properly connected to the pump. Follow the instructions in the “Setup and Device Configuration” section in this manual. Remove the SFB cable and reconnect it to the pump. Reboot the system. If the problem persists, contact your Stryker representative or return the console for repair"
+    },
+    {
+        "id": "E22",
+        "Description": "Resection Device Error: Check the power connection to the compatible resection device.",
+        "type": "Fault",
+        "cause": "The connection to the compatible resection console is lost.",
+        "troubleshooting": "Ensure that the console is properly connected to the pump. Follow the instructions in the “Setup and Device Configuration” section in this manual. Reboot the system. If the problem persists, contact your Stryker representative or return the console for repair"
+    },
+    {
+        "id": "E23",
+        "Description": "Inflow Cassette is invalid.",
+        "type": "Fault",
+        "cause": "The Inflow Cassette is detected, but the RFID data in the cassette are not valid.",
+        "troubleshooting": "Remove and reinsert the cassette until it clicks into place. If the problem persists, replace the cassette"
+    },
+    {
+        "id": "E24",
+        "Description": "Outflow Cassette is invalid.",
+        "type": "Fault",
+        "cause": "The Outflow Cassette is detected, but the RFID data in the cassette are not valid.",
+        "troubleshooting": "Remove and reinsert the cassette until it clicks into place. If the problem persists, replace the cassette"
+    },
+    {
+        "id": "E25",
+        "Description": "There was an error loading the CrossFlow profile. The file may be corrupt or invalid. ",
+        "type": "Fault",
+        "cause": "The surgeon profile is invalid or has been corrupted during file transfer.",
+        "troubleshooting": "Ensure that the surgeon profile is for the correct console. If it is correct, resend the surgeon profile from the Customizer, or generate a new surgeon profile."
+    },
+    {
+        "id": "E26",
+        "Description": "There was an error sending the profile to the CrossFire console.",
+        "type": "Fault",
+        "cause": "There is a communication problem between the CrossFlow and CrossFire systems.",
+        "troubleshooting": "Resend the surgeon profile file. If the problem persists, reboot both systems, and resend the surgeon profile again. If the problem persists, contact your Stryker representative."
+    },
+    {
+        "id": "E27",
+        "Description": "There was an error selecting the profile on the CrossFire console.",
+        "type": "Fault",
+        "cause": "There is a communication problem between the CrossFlow and CrossFire systems.",
+        "troubleshooting": "Resend the surgeon profile file. If the problem persists, reboot both systems, and resend the surgeon profile again. If the problem persists, contact your Stryker representative."
+    },
+    {
+        "id": "E28",
+        "Description": "Maximum number of calibration records reached.",
+        "type": "Fault",
+        "cause": "The maximum number of calibration records has been reached.",
+        "troubleshooting": "If the problem persists, contact your Stryker representative"
+    },
+    {
+        "id": "E29",
+        "Description": "Calibration error",
+        "type": "Fault",
+        "cause": "The hardware",
+        "troubleshooting": "Check the hardware setup. Restart the calibration procedure. If the problem persists, contact your Stryker representative."
+    },
+    {
+        "id": "E30",
+        "Description": "CORE Connection Error: Check the connection to CORE ",
+        "type": "Fault",
+        "cause": "The connection to the CORE console is lost.",
+        "troubleshooting": "Ensure that the console is properly connected to the pump. Follow the instructions in the “Setup and Device Configuration” section in this manual. Remove the SFB cable and reconnect it to the pump. Reboot the system. If the problem persists, contact your Stryker representative or return the console for repair."
+    },
+    {
+        "id": "E31",
+        "Description": "CORE Software version not compatible with CrossFlow. ",
+        "type": "Fault",
+        "cause": "The current version of software is not compatible with CrossFlow",
+        "troubleshooting": "If the problem persists, contact your Stryker representative"
+    }
+]
