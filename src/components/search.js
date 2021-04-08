@@ -6,6 +6,8 @@ class Search {
     })
   }
 
+  static bindCrossflowErrorSearchEventListener() {}
+
   static bindInsertSearchEventListener() {
     const inputField = document.getElementById("input-field")
     inputField.addEventListener("input", (userInput) => {

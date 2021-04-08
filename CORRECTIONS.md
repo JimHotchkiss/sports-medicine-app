@@ -11,10 +11,10 @@
             (x) Distal Barb - 2.8mm
             (x) Proximal Barb - 3.0mm
 [] Stryker Azure 
-    () File structure
-        () Create folder in stryker-dev named azure
-        () Then create two folders named Production and Development
-    () Launch Production
-        () Load Sports Med app into Azure 
-        () Create URL
+    (x) File structure
+        (x) Create folder in stryker-dev named azure
+        (x) Then create two folders named Production and Development
+    (x) Launch Production
+        (x) Load Sports Med app into Azure 
+        (x) Create URL
     () Launch Development

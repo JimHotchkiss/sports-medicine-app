@@ -456,7 +456,18 @@
             - Once you open the '$web' folder, you can start uploading your files to it by clicking the 'Upload' button
             - Once all your files are uploaded, you can test your app by going to 'Static website', and pasting the URL, found under 'Primary endpoint' into a browser.
             
-
+# 4/7/2021 
+    * Change XF2 errors for Crossflow errors
+        - The XF2 errors are not very helpful to the users in the field
+    [] XflowErrors
+        (x) Create xflowData 
+        (x) Create xflow in featureData 
+        (x) Create xflowErrors component
+            (x) When xFlowErrors loads, in the constructor, call xflowErrorsAdapter
+        (x) Create xflowErrorsAdapter
+        (x) Fetch data 
+        (x) Link newly create javascript files to HTML
+        () Create Store entry for xflowErrors
 
    
 

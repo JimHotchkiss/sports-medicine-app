@@ -314,9 +314,9 @@ input:focus{
 
 /********* Reusable Image ********/
 .reusable3_9-img-div {
-    margin: 0 auto;
     margin-bottom: 16px;
-    max-width: 90%;
+    margin: 0 auto;
+    max-width: 380px;
     height: 820px;
     background: transparent url("../images/reusable3_9.png") 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -324,9 +324,9 @@ input:focus{
 } 
 
 .reusable4_7-img-div {
-    margin: 0 auto;
     margin-bottom: 16px;
-    width: 90%;
+    margin: 0 auto;
+    max-width: 380px;
     height: 820px;
     background: transparent url("../images/reusable4_7.png") 0% 0% no-repeat padding-box;
     opacity: 1;

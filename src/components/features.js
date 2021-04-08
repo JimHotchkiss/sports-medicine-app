@@ -6,6 +6,7 @@ class Features {
     this.shavers = new Probes()
     this.probes = new Shavers()
     this.xf2Errors = new Xf2Errors()
+    this.xflowErrors = new XflowErrors()
     this.defaultSettings = new DefaultSettings()
     this.retrieveFeatureData()
   }
@@ -64,6 +65,7 @@ class Features {
   bindFeatureEventListener() {
     const featureDivs = document.getElementsByClassName("feature-div")
     for (let item of featureDivs) {
+      console.log(item.id)
       item.addEventListener("click", () => {
         HomePage.clearFeaturesText()
         Navbar.updateTitle(item, this.features)
@@ -90,6 +92,8 @@ class Features {
           Search.bindErrorSearchEventListener()
         } else if (item.id === "default") {
           HomePage.renderArthroDefaults()
+        } else if (item.id === "crossflow-errors") {
+          Search.bindCrossflowErrorSearchEventListener()
         } else {
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"
