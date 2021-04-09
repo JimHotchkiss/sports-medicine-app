@@ -26,7 +26,7 @@ class HomePage {
     }
   }
 
-  static clearXf2ErrorText() {
+  static clearErrorText() {
     const errorsContainer = document.getElementById("shavers-container")
     if (errorsContainer) {
       errorsContainer.parentNode.removeChild(errorsContainer)
@@ -106,6 +106,19 @@ class HomePage {
       }
     })
     HomePage.renderErrorDetails(selectedErrors, selectedError)
+    Navbar.showBackBtn(selectedErrors)
+  }
+
+  static getXflowErrorDetails(selectedError) {
+    const errors = Store.getXflowErrors()
+    const selectedErrors = []
+    errors.map((error) => {
+      if (error.id === selectedError.id) {
+        return selectedErrors.push(error)
+      }
+    })
+    console.log(selectedErrors)
+    // HomePage.renderErrorDetails(selectedErrors, selectedError)
     Navbar.showBackBtn(selectedErrors)
   }
 
@@ -1324,24 +1337,30 @@ class HomePage {
     Xf2Errors.bindingErrorsEventListener()
   }
 
+  static renderXflowErrors(errors) {
+    const errorsContainer = document.createElement("div")
+    errorsContainer.setAttribute("class", "shavers-container")
+    errorsContainer.setAttribute("id", "shavers-container")
+    errors.map((error) => {
+      const errorDiv = document.createElement("div")
+      errorDiv.setAttribute("class", "shaver-div")
+      errorDiv.setAttribute("id", error.id)
+      const errorDescriptionDiv = document.createElement("div")
+      errorDescriptionDiv.setAttribute("class", "shaver-name-div")
+      errorDescriptionDiv.innerText = error.id
+      errorDiv.appendChild(errorDescriptionDiv)
+      errorsContainer.appendChild(errorDiv)
+    })
+    HomePage.scrollToTop()
+    HomePage.root().appendChild(errorsContainer)
+    XflowErrors.bindingXflowErrorsEventListener()
+  }
+
   static renderImplants(inserts) {
     const root = HomePage.root()
     const implantContainer = document.createElement("div")
     implantContainer.setAttribute("class", "implant-container")
     implantContainer.setAttribute("id", "implant-container")
-
-    // Reusable Instrumentation
-    // const reusableTitleDiv = document.createElement("div")
-    // reusableTitleDiv.setAttribute("class", "reusable-title-div")
-    // const reusableTitleText = document.createElement("h3")
-    // reusableTitleText.setAttribute("class", "reusable-title-text")
-    // reusableTitleText.innerText = "Reusable Instrumentation"
-    // reusableTitleDiv.appendChild(reusableTitleText)
-
-    // // End Reusable
-    // const endReusableDiv = document.createElement("div")
-    // endReusableDiv.setAttribute("class", "end-reusable-div")
-    // endReusableDiv.innerText = "End of Reusable Instrumentation"
 
     inserts.map((implant) => {
       const implantDiv = document.createElement("div")

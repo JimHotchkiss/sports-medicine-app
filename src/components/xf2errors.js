@@ -19,7 +19,7 @@ class Xf2Errors {
     for (let item of errorDivs) {
       item.addEventListener("click", () => {
         const selectedError = item
-        HomePage.clearXf2ErrorText()
+        HomePage.clearErrorText()
         Search.clearSearchField()
         HomePage.getErrorDetails(selectedError)
       })

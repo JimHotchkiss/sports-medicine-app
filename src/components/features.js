@@ -93,6 +93,9 @@ class Features {
         } else if (item.id === "default") {
           HomePage.renderArthroDefaults()
         } else if (item.id === "crossflow-errors") {
+          const errors = Store.getXflowErrors()
+          HomePage.renderErrorsSearchField()
+          HomePage.renderXflowErrors(errors)
           Search.bindCrossflowErrorSearchEventListener()
         } else {
           window.open(

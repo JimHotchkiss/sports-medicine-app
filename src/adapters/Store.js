@@ -70,6 +70,21 @@ class Store {
     localStorage.setItem("shavers", JSON.stringify(shavers))
   }
 
+  // Xflow Errors
+  static getXflowErrors() {
+    let errors
+    if (localStorage.getItem("xflow-errors") === null) {
+      errors = []
+    } else {
+      errors = JSON.parse(localStorage.getItem("xflow-errors"))
+    }
+    return errors
+  }
+
+  static addXflowErrors(errors) {
+    localStorage.setItem("xflow-errors", JSON.stringify(errors))
+  }
+
   // XF2 Errors
   static getXf2Errors() {
     let errors

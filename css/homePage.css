@@ -160,6 +160,10 @@ input:focus{
     transition: 0.3ms;
 }
 
+.shaver-div:hover {
+   cursor:pointer;
+}
+
 .shaver-name-div {
     font-weight: 900;
     padding: 8px 16px;

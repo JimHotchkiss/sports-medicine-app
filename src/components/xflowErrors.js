@@ -6,12 +6,12 @@ class XflowErrors {
 
   fetchXflowErrorsSpecifications() {
     this.xflowErrorsAdapter.fetchXflowErrorsData().then((data) => {
-      console.log(data)
+      Store.addXflowErrors(data)
     })
   }
 
   static getXflowErrorsFromStore() {
-    //   return Store.getXf2Errors()
+    return Store.getXflowErrors()
   }
 
   static bindingXflowErrorsEventListener() {
@@ -19,9 +19,10 @@ class XflowErrors {
     for (let item of errorDivs) {
       item.addEventListener("click", () => {
         const selectedError = item
-        //   HomePage.clearXf2ErrorText()
-        //   Search.clearSearchField()
-        //   HomePage.getErrorDetails(selectedError)
+        HomePage.clearErrorText()
+        Search.clearSearchField()
+        console.log(selectedError.id)
+        HomePage.getXflowErrorDetails(selectedError)
       })
     }
   }

@@ -6,7 +6,32 @@ class Search {
     })
   }
 
-  static bindCrossflowErrorSearchEventListener() {}
+  static bindCrossflowErrorSearchEventListener() {
+    const inputField = document.getElementById("input-field")
+    inputField.addEventListener("input", (userInput) => {
+      Search.filterXflowErrors(userInput)
+    })
+  }
+
+  static filterErrors(userInput) {
+    const searchedErrors = userInput.target.value.toLowerCase()
+    const errors = Store.getXf2Errors()
+    let filteredSearch = errors.filter((error) => {
+      return error.id.toLowerCase().includes(searchedErrors)
+    })
+    HomePage.clearErrorText()
+    HomePage.renderXf2Errors(filteredSearch)
+  }
+
+  static filterXflowErrors(userInput) {
+    const searchedErrors = userInput.target.value.toLowerCase()
+    const errors = Store.getXflowErrors()
+    let filteredSearch = errors.filter((error) => {
+      return error.id.toLowerCase().includes(searchedErrors)
+    })
+    HomePage.clearErrorText()
+    HomePage.renderXflowErrors(filteredSearch)
+  }
 
   static bindInsertSearchEventListener() {
     const inputField = document.getElementById("input-field")
@@ -53,16 +78,6 @@ class Search {
     })
     HomePage.clearShaverText()
     HomePage.renderShavers(filteredSearch)
-  }
-
-  static filterErrors(userInput) {
-    const searchedErrors = userInput.target.value.toLowerCase()
-    const errors = Store.getXf2Errors()
-    let filteredSearch = errors.filter((error) => {
-      return error.id.toLowerCase().includes(searchedErrors)
-    })
-    HomePage.clearXf2ErrorText()
-    HomePage.renderXf2Errors(filteredSearch)
   }
 
   static filterInserts(userInput) {

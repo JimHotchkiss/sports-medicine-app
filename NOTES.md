@@ -468,6 +468,32 @@
         (x) Fetch data 
         (x) Link newly create javascript files to HTML
         () Create Store entry for xflowErrors
+            () getXflowErrors()
+            () addXflowErrors()
+        () Render error list 
+        () Enable search functionality
+        () Render error message  
+            () Description
+            () type
+            () cause
+            () troubleshooting
+    [] Xf2Errors - IFU version
+        () Update xf2errors.js
+    [X] Add :hover to Shaver div
+# 4/9/2021
+(x) Create Store entry for xflowErrors
+            (x) getXflowErrors()
+            (x) addXflowErrors()
+        (x) Render error list 
+        (x) Enable search functionality
+        () Render error message  
+            () Description
+            () type
+            () cause
+            () troubleshooting
+    [] Xf2Errors - IFU version
+        () Update xf2errors.js
+    [X] Add :hover to Shaver div
 
    
 
