@@ -117,8 +117,7 @@ class HomePage {
         return selectedErrors.push(error)
       }
     })
-    console.log(selectedErrors)
-    // HomePage.renderErrorDetails(selectedErrors, selectedError)
+    HomePage.renderErrorDetails(selectedErrors, selectedError)
     Navbar.showBackBtn(selectedErrors)
   }
 
@@ -159,6 +158,10 @@ class HomePage {
       const errorIdDiv = document.createElement("div")
       errorIdDiv.setAttribute("class", "insert-details-div")
       errorIdDiv.setAttribute("id", "insert-name-div")
+      if (error.type) {
+        errorIdDiv.setAttribute("data-name", `${error.id}-xflow`)
+      }
+      errorIdDiv.setAttribute("data-name", `${error.id}-xf2`)
       const errorIdTitle = document.createElement("h3")
       errorIdTitle.setAttribute("class", "insert-details-title")
       const errorIdTextDiv = document.createElement("div")

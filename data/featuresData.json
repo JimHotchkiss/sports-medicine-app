@@ -15,6 +15,9 @@
         "id": "crossflow-errors", "title": "Crossflow Error Codes", "iconUrl": "../images/error.png", "description": "Search by error codes to find the details of each error code."
     },
     {
+        "id": "crossfire-errors", "title": "Xf2 Error Codes", "iconUrl": "../images/error.png", "description": "Search by error codes to find the details of each error code."
+    },
+    {
         "id": "complaint", "title": "File Complaint", "iconUrl": "../images/complaint.png", "description": "Submit the necessary information to file a complaint."
     }
  ]

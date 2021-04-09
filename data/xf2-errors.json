@@ -568,15 +568,5 @@
         "id": "W6",
         "Description": "Over temperature warning",
         "troubleshooting": "Check internal fan operation                                                            Reseat heat sinks                                                                            Remove console from any poorly ventilated locations (e.g. on a tower with other devices on top)"
-    },
-    {
-        "id": "W7",
-        "Description": "No HP while VS in use",
-        "troubleshooting": "Not available in CrossFire2"
-    },
-    {
-        "id": "W8",
-        "Description": "No VS while HP in use",
-        "troubleshooting": "Not available in CrossFire2"
     }
 ]

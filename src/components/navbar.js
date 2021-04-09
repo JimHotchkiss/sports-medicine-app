@@ -86,7 +86,8 @@ class Navbar {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
       const shavers = Shavers.getShaversFromStore()
-      const errors = Xf2Errors.getXf2ErrorsFromStore()
+      const xf2Errors = Xf2Errors.getXf2ErrorsFromStore()
+      const xflowErrors = XflowErrors.getXflowErrorsFromStore()
       if (selectedItem[0].implant) {
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
@@ -108,11 +109,19 @@ class Navbar {
         HomePage.renderShavers(shavers)
         Search.bindShaverSearchEventListener()
         HomePage.scrollToTop()
+      } else if (selectedItem[0].type) {
+        console.log(selectedItem[0])
+        HomePage.clearErrorDetails()
+        Navbar.hideBackBtn()
+        HomePage.renderSearchField()
+        HomePage.renderXflowErrors(xflowErrors)
+        Search.bindErrorSearchEventListener()
+        HomePage.scrollToTop()
       } else if (selectedItem[0].id) {
         HomePage.clearErrorDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()
-        HomePage.renderXf2Errors(errors)
+        HomePage.renderXf2Errors(xf2Errors)
         Search.bindErrorSearchEventListener()
         HomePage.scrollToTop()
       }

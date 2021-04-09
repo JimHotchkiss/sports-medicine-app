@@ -481,19 +481,27 @@
         () Update xf2errors.js
     [X] Add :hover to Shaver div
 # 4/9/2021
-(x) Create Store entry for xflowErrors
-            (x) getXflowErrors()
-            (x) addXflowErrors()
+    (x) Create Store entry for xflowErrors
+                (x) getXflowErrors()
+                (x) addXflowErrors()
         (x) Render error list 
-        (x) Enable search functionality
-        () Render error message  
-            () Description
-            () type
-            () cause
-            () troubleshooting
-    [] Xf2Errors - IFU version
-        () Update xf2errors.js
-    [X] Add :hover to Shaver div
+            (x) Enable search functionality
+            (x) Render error message 
+                (x) id 
+                (x) Description
+                (-) type
+                (-) cause
+                (x) troubleshooting
+        (x) Back button functionality
+[] Xf2Errors - IFU version
+    () Update xf2errors.js
+        () Remove 'W' error messages that do not pertain to Crossfire2
+            () w7
+            () w8
+        () Add 'Category'
+        () Add 'Solution'
+    () Troubleshooting from the IFU - could be a 'general troubleshooting' option on the list of error codes.
+[X] Add :hover to Shaver div
 
    
 

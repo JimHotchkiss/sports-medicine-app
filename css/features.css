@@ -66,6 +66,12 @@
     padding-right: 16px; 
 }
 
+#crossfire-errors-img-url {
+    background: transparent url(../images/error.png) 0% 0% no-repeat padding-box;
+    background-size: 60px;
+    padding-right: 16px; 
+}
+
 #default-img-url {
     width: 60px;
     height: 65px;

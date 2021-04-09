@@ -85,7 +85,7 @@ class Features {
           HomePage.renderSearchField()
           HomePage.renderShavers(shavers)
           Search.bindShaverSearchEventListener()
-        } else if (item.id === "errors") {
+        } else if (item.id === "crossfire-errors") {
           const errors = Store.getXf2Errors()
           HomePage.renderErrorsSearchField()
           HomePage.renderXf2Errors(errors)
