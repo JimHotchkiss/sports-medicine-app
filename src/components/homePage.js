@@ -122,10 +122,33 @@ class HomePage {
   }
 
   static renderErrorDetails(selectedErrors, selectedError) {
+    console.log(selectedErrors)
     HomePage.scrollToTop()
     HomePage.errorId(selectedErrors)
+    HomePage.errorCategory(selectedErrors)
+    HomePage.errorSolution(selectedErrors)
     HomePage.errorDescription(selectedErrors)
-    HomePage.errorTroubleShooting(selectedErrors)
+  }
+
+  static errorSolution(selectedErrors) {
+    console.log(selectedErrors)
+    selectedErrors.map((error) => {
+      console.log(error.Solution)
+      const errorSolutionDiv = document.createElement("div")
+      errorSolutionDiv.setAttribute("class", "insert-details-div")
+      const errorSolutionTitle = document.createElement("h3")
+      errorSolutionTitle.setAttribute("class", "insert-details-title")
+      const errorSolutionTextDiv = document.createElement("div")
+      errorSolutionTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorSolutionText = document.createElement("p")
+      errorSolutionText.setAttribute("class", "insert-details-text")
+      errorSolutionTitle.innerText = "Solution"
+      errorSolutionText.innerText = error.Solution
+      errorSolutionTextDiv.appendChild(errorSolutionText)
+      errorSolutionDiv.appendChild(errorSolutionTitle)
+      errorSolutionDiv.appendChild(errorSolutionTextDiv)
+      HomePage.root().appendChild(errorSolutionDiv)
+    })
   }
 
   static getShaverDetails(selectedShaver) {
@@ -179,42 +202,39 @@ class HomePage {
 
   static errorDescription(selectedErrors) {
     selectedErrors.map((error) => {
-      const errorDescriptionDiv = document.createElement("div")
-      errorDescriptionDiv.setAttribute("class", "insert-details-div")
-      const errorDescriptionTitle = document.createElement("h3")
-      errorDescriptionTitle.setAttribute("class", "insert-details-title")
-      const errorDescriptionTextDiv = document.createElement("div")
-      errorDescriptionTextDiv.setAttribute("class", "insert-details-text-div")
-      const errorDescriptionText = document.createElement("p")
-      errorDescriptionText.setAttribute("class", "insert-details-text")
-      errorDescriptionTitle.innerText = "Description"
-      errorDescriptionText.innerText = error.Description
-      errorDescriptionTextDiv.appendChild(errorDescriptionText)
-      errorDescriptionDiv.appendChild(errorDescriptionTitle)
-      errorDescriptionDiv.appendChild(errorDescriptionTextDiv)
-      HomePage.root().appendChild(errorDescriptionDiv)
+      const errorSolutionDiv = document.createElement("div")
+      errorSolutionDiv.setAttribute("class", "insert-details-div")
+      const errorSolutionTitle = document.createElement("h3")
+      errorSolutionTitle.setAttribute("class", "insert-details-title")
+      const errorSolutionTextDiv = document.createElement("div")
+      errorSolutionTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorSolutionText = document.createElement("p")
+      errorSolutionText.setAttribute("class", "insert-details-text")
+      errorSolutionTitle.innerText = "Description"
+      errorSolutionText.innerText = error.Description
+      errorSolutionTextDiv.appendChild(errorSolutionText)
+      errorSolutionDiv.appendChild(errorSolutionTitle)
+      errorSolutionDiv.appendChild(errorSolutionTextDiv)
+      HomePage.root().appendChild(errorSolutionDiv)
     })
   }
 
-  static errorTroubleShooting(selectedErrors) {
+  static errorCategory(selectedErrors) {
     selectedErrors.map((error) => {
-      const errorTroubleShootingDiv = document.createElement("div")
-      errorTroubleShootingDiv.setAttribute("class", "insert-details-div")
-      const errorTroubleShootingTitle = document.createElement("h3")
-      errorTroubleShootingTitle.setAttribute("class", "insert-details-title")
-      const errorTroubleShootingTextDiv = document.createElement("div")
-      errorTroubleShootingTextDiv.setAttribute(
-        "class",
-        "insert-details-text-div"
-      )
-      const errorTroubleShootingText = document.createElement("p")
-      errorTroubleShootingText.setAttribute("class", "insert-details-text")
-      errorTroubleShootingTitle.innerText = "Troubleshoot"
-      errorTroubleShootingText.innerText = error.troubleshooting
-      errorTroubleShootingTextDiv.appendChild(errorTroubleShootingText)
-      errorTroubleShootingDiv.appendChild(errorTroubleShootingTitle)
-      errorTroubleShootingDiv.appendChild(errorTroubleShootingTextDiv)
-      HomePage.root().appendChild(errorTroubleShootingDiv)
+      const errorCategoryDiv = document.createElement("div")
+      errorCategoryDiv.setAttribute("class", "insert-details-div")
+      const errorCategoryTitle = document.createElement("h3")
+      errorCategoryTitle.setAttribute("class", "insert-details-title")
+      const errorCategoryTextDiv = document.createElement("div")
+      errorCategoryTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorCategoryText = document.createElement("p")
+      errorCategoryText.setAttribute("class", "insert-details-text")
+      errorCategoryTitle.innerText = "Category"
+      errorCategoryText.innerText = error.Category
+      errorCategoryTextDiv.appendChild(errorCategoryText)
+      errorCategoryDiv.appendChild(errorCategoryTitle)
+      errorCategoryDiv.appendChild(errorCategoryTextDiv)
+      HomePage.root().appendChild(errorCategoryDiv)
     })
   }
 
@@ -1329,10 +1349,10 @@ class HomePage {
       const errorDiv = document.createElement("div")
       errorDiv.setAttribute("class", "shaver-div")
       errorDiv.setAttribute("id", error.id)
-      const errorDescriptionDiv = document.createElement("div")
-      errorDescriptionDiv.setAttribute("class", "shaver-name-div")
-      errorDescriptionDiv.innerText = error.id
-      errorDiv.appendChild(errorDescriptionDiv)
+      const errorSolutionDiv = document.createElement("div")
+      errorSolutionDiv.setAttribute("class", "shaver-name-div")
+      errorSolutionDiv.innerText = error.id
+      errorDiv.appendChild(errorSolutionDiv)
       errorsContainer.appendChild(errorDiv)
     })
     HomePage.scrollToTop()
@@ -1348,10 +1368,10 @@ class HomePage {
       const errorDiv = document.createElement("div")
       errorDiv.setAttribute("class", "shaver-div")
       errorDiv.setAttribute("id", error.id)
-      const errorDescriptionDiv = document.createElement("div")
-      errorDescriptionDiv.setAttribute("class", "shaver-name-div")
-      errorDescriptionDiv.innerText = error.id
-      errorDiv.appendChild(errorDescriptionDiv)
+      const errorSolutionDiv = document.createElement("div")
+      errorSolutionDiv.setAttribute("class", "shaver-name-div")
+      errorSolutionDiv.innerText = error.id
+      errorDiv.appendChild(errorSolutionDiv)
       errorsContainer.appendChild(errorDiv)
     })
     HomePage.scrollToTop()

@@ -65,7 +65,6 @@ class Features {
   bindFeatureEventListener() {
     const featureDivs = document.getElementsByClassName("feature-div")
     for (let item of featureDivs) {
-      console.log(item.id)
       item.addEventListener("click", () => {
         HomePage.clearFeaturesText()
         Navbar.updateTitle(item, this.features)

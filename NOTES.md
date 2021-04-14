@@ -503,6 +503,17 @@
     () Troubleshooting from the IFU - could be a 'general troubleshooting' option on the list of error codes.
 [X] Add :hover to Shaver div
 
+# 4/14/2021
+[] Xf2Errors - IFU version
+    () Update xf2errors.js
+        () Remove 'W' error messages that do not pertain to Crossfire2
+            (x) w7
+            (x) w8
+        () Add 'Category'
+        () Add 'Solution'
+    () Troubleshooting from the IFU - could be a 'general troubleshooting' option on the list of error codes.
+
+
    
 
 
