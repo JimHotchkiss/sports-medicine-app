@@ -34,8 +34,13 @@
 }
 
 #complaint-img-url {
-    background: transparent url(../images/complaint3.png) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/) 0% 0% no-repeat padding-box;
     background-size: 50px;
+}
+
+#capital-img-url {
+    background: transparent url(../images/weight_lifter.svg) 0% 0% no-repeat padding-box;
+    background-size: 40px;
 }
 
 #implant-specifications-img-url {

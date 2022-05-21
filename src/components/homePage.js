@@ -123,17 +123,85 @@ class HomePage {
 
   static renderErrorDetails(selectedErrors, selectedError) {
     console.log(selectedErrors)
-    HomePage.scrollToTop()
-    HomePage.errorId(selectedErrors)
-    HomePage.errorCategory(selectedErrors)
-    HomePage.errorSolution(selectedErrors)
-    HomePage.errorDescription(selectedErrors)
+    if (selectedErrors[0].type) {
+      console.log("Crossflow")
+      HomePage.scrollToTop()
+      HomePage.errorId(selectedErrors)
+      HomePage.errorDescription(selectedErrors)
+      HomePage.errorTroubleshooting(selectedErrors)
+      HomePage.errorType(selectedErrors)
+      HomePage.errorCause(selectedErrors)
+    } else {
+      HomePage.scrollToTop()
+      HomePage.errorId(selectedErrors)
+      HomePage.errorCategory(selectedErrors)
+      HomePage.errorSolution(selectedErrors)
+      HomePage.errorDescription(selectedErrors)
+    }
+  }
+
+  static errorTroubleshooting(selectedErrors) {
+    selectedErrors.map((error) => {
+      const errorTroubleshootingDiv = document.createElement("div")
+      errorTroubleshootingDiv.setAttribute("class", "insert-details-div")
+      const errorTroubleshootingTitle = document.createElement("h3")
+      errorTroubleshootingTitle.setAttribute("class", "insert-details-title")
+      const errorTroubleshootingTextDiv = document.createElement("div")
+      errorTroubleshootingTextDiv.setAttribute(
+        "class",
+        "insert-details-text-div"
+      )
+      const errorTroubleshootingText = document.createElement("p")
+      errorTroubleshootingText.setAttribute("class", "insert-details-text")
+      errorTroubleshootingTitle.innerText = "Troubleshooting"
+      errorTroubleshootingText.innerText = error.troubleshooting
+      errorTroubleshootingTextDiv.appendChild(errorTroubleshootingText)
+      errorTroubleshootingDiv.appendChild(errorTroubleshootingTitle)
+      errorTroubleshootingDiv.appendChild(errorTroubleshootingTextDiv)
+      HomePage.root().appendChild(errorTroubleshootingDiv)
+    })
+  }
+
+  static errorType(selectedErrors) {
+    selectedErrors.map((error) => {
+      const errorTypeDiv = document.createElement("div")
+      errorTypeDiv.setAttribute("class", "insert-details-div")
+      const errorTypeTitle = document.createElement("h3")
+      errorTypeTitle.setAttribute("class", "insert-details-title")
+      const errorTypeTextDiv = document.createElement("div")
+      errorTypeTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorTypeText = document.createElement("p")
+      errorTypeText.setAttribute("class", "insert-details-text")
+      errorTypeTitle.innerText = "Type"
+      errorTypeText.innerText = error.type
+      errorTypeTextDiv.appendChild(errorTypeText)
+      errorTypeDiv.appendChild(errorTypeTitle)
+      errorTypeDiv.appendChild(errorTypeTextDiv)
+      HomePage.root().appendChild(errorTypeDiv)
+    })
+  }
+
+  static errorCause(selectedErrors) {
+    selectedErrors.map((error) => {
+      const errorCauseDiv = document.createElement("div")
+      errorCauseDiv.setAttribute("class", "insert-details-div")
+      const errorCauseTitle = document.createElement("h3")
+      errorCauseTitle.setAttribute("class", "insert-details-title")
+      const errorCauseTextDiv = document.createElement("div")
+      errorCauseTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorCauseText = document.createElement("p")
+      errorCauseText.setAttribute("class", "insert-details-text")
+      errorCauseTitle.innerText = "Cause"
+      errorCauseText.innerText = error.cause
+      errorCauseTextDiv.appendChild(errorCauseText)
+      errorCauseDiv.appendChild(errorCauseTitle)
+      errorCauseDiv.appendChild(errorCauseTextDiv)
+      HomePage.root().appendChild(errorCauseDiv)
+    })
   }
 
   static errorSolution(selectedErrors) {
-    console.log(selectedErrors)
     selectedErrors.map((error) => {
-      console.log(error.Solution)
       const errorSolutionDiv = document.createElement("div")
       errorSolutionDiv.setAttribute("class", "insert-details-div")
       const errorSolutionTitle = document.createElement("h3")
@@ -202,20 +270,20 @@ class HomePage {
 
   static errorDescription(selectedErrors) {
     selectedErrors.map((error) => {
-      const errorSolutionDiv = document.createElement("div")
-      errorSolutionDiv.setAttribute("class", "insert-details-div")
-      const errorSolutionTitle = document.createElement("h3")
-      errorSolutionTitle.setAttribute("class", "insert-details-title")
-      const errorSolutionTextDiv = document.createElement("div")
-      errorSolutionTextDiv.setAttribute("class", "insert-details-text-div")
-      const errorSolutionText = document.createElement("p")
-      errorSolutionText.setAttribute("class", "insert-details-text")
-      errorSolutionTitle.innerText = "Description"
-      errorSolutionText.innerText = error.Description
-      errorSolutionTextDiv.appendChild(errorSolutionText)
-      errorSolutionDiv.appendChild(errorSolutionTitle)
-      errorSolutionDiv.appendChild(errorSolutionTextDiv)
-      HomePage.root().appendChild(errorSolutionDiv)
+      const errorTypeDiv = document.createElement("div")
+      errorTypeDiv.setAttribute("class", "insert-details-div")
+      const errorTypeTitle = document.createElement("h3")
+      errorTypeTitle.setAttribute("class", "insert-details-title")
+      const errorTypeTextDiv = document.createElement("div")
+      errorTypeTextDiv.setAttribute("class", "insert-details-text-div")
+      const errorTypeText = document.createElement("p")
+      errorTypeText.setAttribute("class", "insert-details-text")
+      errorTypeTitle.innerText = "Description"
+      errorTypeText.innerText = error.Description
+      errorTypeTextDiv.appendChild(errorTypeText)
+      errorTypeDiv.appendChild(errorTypeTitle)
+      errorTypeDiv.appendChild(errorTypeTextDiv)
+      HomePage.root().appendChild(errorTypeDiv)
     })
   }
 
@@ -1349,10 +1417,10 @@ class HomePage {
       const errorDiv = document.createElement("div")
       errorDiv.setAttribute("class", "shaver-div")
       errorDiv.setAttribute("id", error.id)
-      const errorSolutionDiv = document.createElement("div")
-      errorSolutionDiv.setAttribute("class", "shaver-name-div")
-      errorSolutionDiv.innerText = error.id
-      errorDiv.appendChild(errorSolutionDiv)
+      const errorTypeDiv = document.createElement("div")
+      errorTypeDiv.setAttribute("class", "shaver-name-div")
+      errorTypeDiv.innerText = error.id
+      errorDiv.appendChild(errorTypeDiv)
       errorsContainer.appendChild(errorDiv)
     })
     HomePage.scrollToTop()
@@ -1368,10 +1436,10 @@ class HomePage {
       const errorDiv = document.createElement("div")
       errorDiv.setAttribute("class", "shaver-div")
       errorDiv.setAttribute("id", error.id)
-      const errorSolutionDiv = document.createElement("div")
-      errorSolutionDiv.setAttribute("class", "shaver-name-div")
-      errorSolutionDiv.innerText = error.id
-      errorDiv.appendChild(errorSolutionDiv)
+      const errorTypeDiv = document.createElement("div")
+      errorTypeDiv.setAttribute("class", "shaver-name-div")
+      errorTypeDiv.innerText = error.id
+      errorDiv.appendChild(errorTypeDiv)
       errorsContainer.appendChild(errorDiv)
     })
     HomePage.scrollToTop()

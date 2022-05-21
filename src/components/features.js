@@ -91,7 +91,10 @@ class Features {
           Search.bindErrorSearchEventListener()
         } else if (item.id === "default") {
           HomePage.renderArthroDefaults()
-        } else if (item.id === "crossflow-errors") {
+        } else if (item.id === "capital") {
+          // Place Holder for capital feature
+          alert('capital')
+        }  else if (item.id === "crossflow-errors") {
           const errors = Store.getXflowErrors()
           HomePage.renderErrorsSearchField()
           HomePage.renderXflowErrors(errors)
