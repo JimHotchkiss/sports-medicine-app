@@ -1448,6 +1448,7 @@ class HomePage {
   }
 
   static renderImplants(inserts) {
+    console.log(inserts)
     const root = HomePage.root()
     const implantContainer = document.createElement("div")
     implantContainer.setAttribute("class", "implant-container")
@@ -1471,6 +1472,7 @@ class HomePage {
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
+    // ImplantFamilies.bindingInplantFamiliesEventListener()
   }
 
   // Arthro Default Settings

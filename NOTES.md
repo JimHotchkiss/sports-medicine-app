@@ -527,6 +527,12 @@
 
 
     () Update Azure
+# 22-May-22
+[] Correct Implant to Inplant
+[] Create Implant Families
+    (x) Create 3 placeholders (Calli - For family specifics)
+    ( ) create implantFamiliesAdapter
+    ( ) Render the family placeholders
 
 
 

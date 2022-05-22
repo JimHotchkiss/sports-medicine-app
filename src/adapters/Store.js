@@ -13,6 +13,22 @@ class Store {
     localStorage.setItem("inserts", JSON.stringify(fetchedInserts))
   }
 
+  // Implant Families
+  static addImplantFamilies(fetchedImplantFamilies) {
+    localStorage.setItem("implant families", JSON.stringify(fetchedImplantFamilies))
+  }
+
+  static getImplantFamilies() {
+    let implantFamilies
+    if (localStorage.getItem("implant families") === null) {
+      implantFamilies = []
+    } else {
+      implantFamilies = JSON.parse(localStorage.getItem("implant families"))
+    }
+    return implantFamilies
+  }
+
+
   static getProbes() {
     let probes
     if (localStorage.getItem("probes") === null) {

@@ -129,6 +129,7 @@ class Navbar {
   }
 
   static updateTitle(item, features) {
+    console.log(item,features)
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")

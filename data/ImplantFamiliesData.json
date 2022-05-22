@@ -1,0 +1,12 @@
+{"implant_families":[
+    {
+        "id": "placeholderOne", "title": "Placeholder One", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "placeholderTwo", "title": "Placeholder Two", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "placeholderThree", "title": "Placeholder Three", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    }
+ ]
+}

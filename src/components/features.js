@@ -2,7 +2,8 @@ class Features {
   constructor() {
     this.features = []
     this.featuresAdapter = new FeaturesAdapter()
-    this.inplants = new Implants()
+    // this.inplants = new Implants()
+    this.implantFamilies = new ImplantFamilies()
     this.shavers = new Probes()
     this.probes = new Shavers()
     this.xf2Errors = new Xf2Errors()
@@ -66,10 +67,15 @@ class Features {
     const featureDivs = document.getElementsByClassName("feature-div")
     for (let item of featureDivs) {
       item.addEventListener("click", () => {
+        console.log(item)
         HomePage.clearFeaturesText()
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
         if (item.id === "implant-specifications") {
+          // Get ImplantFamilies
+          // const implantFamilies = Store.getImplantFamilies()
+          // Call renderImplantFamilies
+          // HomePage.renderImplantFamilies()
           const inserts = Store.getInserts()
           HomePage.renderSearchField()
           HomePage.renderImplants(inserts)
