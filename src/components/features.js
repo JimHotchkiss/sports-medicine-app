@@ -67,19 +67,19 @@ class Features {
     const featureDivs = document.getElementsByClassName("feature-div")
     for (let item of featureDivs) {
       item.addEventListener("click", () => {
-        console.log(item)
         HomePage.clearFeaturesText()
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
-        if (item.id === "implant-specifications") {
+        if (item.id === "implant-families") {
+          // return console.log('implant families')
           // Get ImplantFamilies
-          // const implantFamilies = Store.getImplantFamilies()
+          const implantFamilies = Store.getImplantFamilies()
           // Call renderImplantFamilies
-          // HomePage.renderImplantFamilies()
-          const inserts = Store.getInserts()
-          HomePage.renderSearchField()
-          HomePage.renderImplants(inserts)
-          Search.bindInsertSearchEventListener()
+          HomePage.renderImplantFamilies(implantFamilies)
+          // const inserts = Store.getInserts()
+          // HomePage.renderSearchField()
+          // HomePage.renderImplants(inserts)
+          // Search.bindInsertSearchEventListener()
         } else if (item.id === "probe") {
           const probes = Store.getProbes()
           HomePage.renderSearchField()
@@ -106,6 +106,7 @@ class Features {
           HomePage.renderXflowErrors(errors)
           Search.bindCrossflowErrorSearchEventListener()
         } else {
+          console.log('else')
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"
           )

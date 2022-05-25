@@ -1447,8 +1447,39 @@ class HomePage {
     XflowErrors.bindingXflowErrorsEventListener()
   }
 
+  static renderImplantFamilies(implantFamilies) {
+    console.log(implantFamilies.implant_families)
+    implantFamilies.implant_families.map((implantFamily) => {
+      console.log(implantFamily)
+    })
+  
+    // const root = HomePage.root()
+    // const implantFamiliesContainer = document.createElement("div")
+    // implantFamiliesContainer.setAttribute("class", "implant-families-container")
+    // implantFamiliesContainer.setAttribute("id", "implant-families-container")
+
+    // implantFamilies.map((implantFamily) => {
+    //   const implantFamilyDiv = document.createElement("div")
+    //   implantFamilyDiv.setAttribute("class", "implant-family-div")
+    //   implantFamilyDiv.setAttribute("id", implant.implant.pn)
+    //   implantFamilyDiv.setAttribute("data-index", implant.implant.id)
+    //   const implantFamilyNameDiv = document.createElement("div")
+    //   implantNameDiv.setAttribute("class", "implant-family-name-div")
+    //   const implantFamilyPnDiv = document.createElement("div")
+    //   implantFamilyPnDiv.setAttribute("class", "implant-family-pn-div")
+
+    //   implantFamilyNameDiv.innerText = implant.implant.name
+    //   implantFamilyPnDiv.innerText = implant.implant.pn
+    //   implantFamilyDiv.appendChild(implantNameDiv)
+    //   implantFamilyDiv.appendChild(implantPnDiv)
+    //   implantFamiliesContainer.appendChild(implantDiv)
+    // })
+    // root.appendChild(implantContainer)
+    // Implants.bindingImplantsEventListener()
+    // ImplantFamilies.bindingInplantFamiliesEventListener()
+  }
+
   static renderImplants(inserts) {
-    console.log(inserts)
     const root = HomePage.root()
     const implantContainer = document.createElement("div")
     implantContainer.setAttribute("class", "implant-container")

@@ -3,7 +3,7 @@
         "id": "capital", "title": "Capital Products", "iconUrl": "../images/weight_lifter.png", "description": "Slog sweep over cow corner line break win lose or draw striker football, half time goaltender forward pack baseball goa"
     },
     {
-        "id": "implant-specifications", "title": "Implant Specifications", "iconUrl": "../images/implants.png", "description": "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
+        "id": "implant-families", "title": "Implant Families", "iconUrl": "../images/implants.png", "description": "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
     },
     {
         "id": "probe", "title": "Arthro Specifications", "iconUrl": "../images/tennis.png", "description": "Sports Medicine probe specifications including length, outer diameter, coag, cut default and cut max."

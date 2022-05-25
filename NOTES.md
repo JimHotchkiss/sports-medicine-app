@@ -528,11 +528,15 @@
 
     () Update Azure
 # 22-May-22
-[] Correct Implant to Inplant
 [] Create Implant Families
     (x) Create 3 placeholders (Calli - For family specifics)
-    ( ) create implantFamiliesAdapter
+    (x) create implantFamiliesAdapter
     ( ) Render the family placeholders
+    ( ) In the featuresData file, I changed the insert-specifications to insert-families. 
+        ( ) Get specific language from Calli for this description 
+    ( ) Build a generic renderFeature for implantSpecifications and implantFamilies
+# Note: insert-specification data:         "id": "implant-specifications", "title": "Implant Specifications", "iconUrl": "../images/implants.png", "description": "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
+
 
 
 

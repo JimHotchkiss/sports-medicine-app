@@ -43,10 +43,15 @@
     background-size: 40px;
 }
 
-#implant-specifications-img-url {
+#implant-families-img-url {
     background: transparent url(../images/basketball.svg) 0% 0% no-repeat padding-box;
     background-size: 40px;
 }
+
+/* #implant-specifications-img-url {
+    background: transparent url(../images/basketball.svg) 0% 0% no-repeat padding-box;
+    background-size: 40px;
+} */
 
 #probe-img-url {
     background: transparent url(../images/tennis.svg) 0% 0% no-repeat padding-box;
