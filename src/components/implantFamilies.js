@@ -11,14 +11,15 @@ class ImplantFamilies {
         })
       }
 
-      static bindingImplantsFamiliesEventListener() {
-        const implantDivs = document.getElementsByClassName("implant-div")
-        for (let item of implantDivs) {
+      static bindingInplantFamiliesEventListener() {
+        const implantFamilyDivs = document.getElementsByClassName("implant-family-div")
+        for (let item of implantFamilyDivs) {
           item.addEventListener("click", () => {
-            const selectedInsert = item
-            HomePage.clearImplantText()
-            Search.clearSearchField()
-            HomePage.getImplantDetails(selectedInsert)
+            const inserts = Store.getInserts()
+            HomePage.renderSearchField()
+            Search.bindInsertSearchEventListener()
+            HomePage.clearImplantFamliesText()
+            HomePage.renderImplants(inserts)
           })
         }
       }

@@ -2,6 +2,77 @@
     padding-top: 0px;
 }
 
+/***************** Implant Families  ********************/
+
+.implant-families-container {
+    max-width: 500px;
+    margin: 80px auto;
+}
+
+.implant-family-div {
+    text-align: center;
+    margin: 0 auto;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.implant-family-div:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+.implant-family-name-image-div {
+    display: flex;
+}
+
+.implant-family-name-div {
+    font-weight: 900;
+    font-size: 22px;
+    color: #262626;
+    padding-top: 16px;
+    width: 65%;
+}
+
+.implant-family-image-div {
+    width: 60px;
+    height: 60px;
+    background-size: 50px;
+}
+
+#implant-family-placeholderOne-image-div {
+    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+}
+
+#implant-family-placeholderTwo-image-div {
+    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+}
+
+#implant-family-placeholderThree-image-div {
+    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+}
+
+#implant-family-placeholderFour-image-div {
+    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+}
+
+.implant-family-description-div {
+    max-width: 90%;
+    padding: 16px 8px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 16px 8px;
+    color: #262626;
+}
+
+/*********************************************************/
+
 .reusable-title-text {
     margin: 0px;
     padding: 0px;
@@ -26,7 +97,7 @@
     max-width: 80%;
     background: #ffb600;
     border-radius: 5px;
-    transition: 0..3ms;
+    transition: 0.3ms;
    
 }
 

@@ -19,6 +19,14 @@ class HomePage {
     }
   }
 
+  static clearImplantFamliesText() {
+    const implantFamiliesContainer = document.getElementById("implant-families-container")
+    if (implantFamiliesContainer) {
+      implantFamiliesContainer.parentNode.removeChild(implantFamiliesContainer)
+    }
+
+  }
+
   static clearImplantText() {
     const implantContainer = document.getElementById("implant-container")
     if (implantContainer) {
@@ -1447,36 +1455,39 @@ class HomePage {
     XflowErrors.bindingXflowErrorsEventListener()
   }
 
-  static renderImplantFamilies(implantFamilies) {
-    console.log(implantFamilies.implant_families)
-    implantFamilies.implant_families.map((implantFamily) => {
-      console.log(implantFamily)
+
+
+  static renderImplantFamilies(implantFamiles) {
+    const root = HomePage.root()
+    const implantFamiliesContainer = document.createElement('div')
+    implantFamiliesContainer.setAttribute("class", "implant-families-container")
+    implantFamiliesContainer.setAttribute("id", "implant-families-container")
+
+    implantFamiles['implant_families'].map((family) => {
+      const implantFamiliesDiv = document.createElement("div")
+      implantFamiliesDiv.setAttribute("class", "implant-family-div")
+      implantFamiliesDiv.setAttribute("id", family.id)
+      implantFamiliesDiv.setAttribute("data-index", family.id)
+      const implantFamilyNameImageDiv = document.createElement('div')
+      implantFamilyNameImageDiv.setAttribute('class', 'implant-family-name-image-div')
+      const implantFamilyNameDiv = document.createElement("div")
+      implantFamilyNameDiv.setAttribute("class", "implant-family-name-div")
+      const implantFamilyImageDiv = document.createElement('div')
+      implantFamilyImageDiv.setAttribute('class', 'implant-family-image-div')
+      implantFamilyImageDiv.setAttribute('id', `implant-family-${family.id}-image-div`)
+      const implantFamilyDescriptionDiv = document.createElement("div")
+      implantFamilyDescriptionDiv.setAttribute("class", "implant-family-description-div")
+      implantFamilyNameDiv.innerText = family.name
+      implantFamilyDescriptionDiv.innerText = family.description
+      implantFamilyNameImageDiv.appendChild(implantFamilyImageDiv)
+      implantFamilyNameImageDiv.appendChild(implantFamilyNameDiv)
+      implantFamiliesDiv.appendChild(implantFamilyNameImageDiv)
+      implantFamiliesDiv.appendChild(implantFamilyDescriptionDiv)
+      implantFamiliesContainer.appendChild(implantFamiliesDiv)
     })
-  
-    // const root = HomePage.root()
-    // const implantFamiliesContainer = document.createElement("div")
-    // implantFamiliesContainer.setAttribute("class", "implant-families-container")
-    // implantFamiliesContainer.setAttribute("id", "implant-families-container")
-
-    // implantFamilies.map((implantFamily) => {
-    //   const implantFamilyDiv = document.createElement("div")
-    //   implantFamilyDiv.setAttribute("class", "implant-family-div")
-    //   implantFamilyDiv.setAttribute("id", implant.implant.pn)
-    //   implantFamilyDiv.setAttribute("data-index", implant.implant.id)
-    //   const implantFamilyNameDiv = document.createElement("div")
-    //   implantNameDiv.setAttribute("class", "implant-family-name-div")
-    //   const implantFamilyPnDiv = document.createElement("div")
-    //   implantFamilyPnDiv.setAttribute("class", "implant-family-pn-div")
-
-    //   implantFamilyNameDiv.innerText = implant.implant.name
-    //   implantFamilyPnDiv.innerText = implant.implant.pn
-    //   implantFamilyDiv.appendChild(implantNameDiv)
-    //   implantFamilyDiv.appendChild(implantPnDiv)
-    //   implantFamiliesContainer.appendChild(implantDiv)
-    // })
-    // root.appendChild(implantContainer)
+    root.appendChild(implantFamiliesContainer)
     // Implants.bindingImplantsEventListener()
-    // ImplantFamilies.bindingInplantFamiliesEventListener()
+    ImplantFamilies.bindingInplantFamiliesEventListener()
   }
 
   static renderImplants(inserts) {
@@ -1503,7 +1514,6 @@ class HomePage {
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
-    // ImplantFamilies.bindingInplantFamiliesEventListener()
   }
 
   // Arthro Default Settings

@@ -531,11 +531,15 @@
 [] Create Implant Families
     (x) Create 3 placeholders (Calli - For family specifics)
     (x) create implantFamiliesAdapter
-    ( ) Render the family placeholders
-    ( ) In the featuresData file, I changed the insert-specifications to insert-families. 
+    (x) Render the family placeholders
+    (x) In the featuresData file, I changed the insert-specifications to insert-families. 
         ( ) Get specific language from Calli for this description 
     ( ) Build a generic renderFeature for implantSpecifications and implantFamilies
 # Note: insert-specification data:         "id": "implant-specifications", "title": "Implant Specifications", "iconUrl": "../images/implants.png", "description": "Sports Medicine anchor specifications including, material, length, width, drill depth, and drill width"
+
+# Note: 30-May-22 - Built the basic implant family functionality: renders the dummy data (get real data from Calli), binded event handler to the implant family button, clears family text, and renders the implants data (this will be specific to the implant family data provided by Calli)
+    * The Navbar Titile does NOT update, when specific family is clicked
+    
 
 
 

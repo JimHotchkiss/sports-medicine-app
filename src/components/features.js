@@ -71,15 +71,19 @@ class Features {
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
         if (item.id === "implant-families") {
-          // return console.log('implant families')
           // Get ImplantFamilies
           const implantFamilies = Store.getImplantFamilies()
           // Call renderImplantFamilies
           HomePage.renderImplantFamilies(implantFamilies)
           // const inserts = Store.getInserts()
           // HomePage.renderSearchField()
-          // HomePage.renderImplants(inserts)
+          // HomePage.renderImplants(implantFamilies)
           // Search.bindInsertSearchEventListener()
+        } else if (item.id === "implant") {
+          const inserts = Store.getInserts()
+          HomePage.renderSearchField()
+          HomePage.renderImplants(implantFamilies)
+          Search.bindInsertSearchEventListener()
         } else if (item.id === "probe") {
           const probes = Store.getProbes()
           HomePage.renderSearchField()
