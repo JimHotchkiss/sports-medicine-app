@@ -1455,39 +1455,46 @@ class HomePage {
     XflowErrors.bindingXflowErrorsEventListener()
   }
 
-
-
-  static renderImplantFamilies(implantFamiles) {
+  static renderImplantFamilies(implant) {
     const root = HomePage.root()
     const implantFamiliesContainer = document.createElement('div')
     implantFamiliesContainer.setAttribute("class", "implant-families-container")
     implantFamiliesContainer.setAttribute("id", "implant-families-container")
-
-    implantFamiles['implant_families'].map((family) => {
+    console.log(implant)
+    
       const implantFamiliesDiv = document.createElement("div")
       implantFamiliesDiv.setAttribute("class", "implant-family-div")
-      implantFamiliesDiv.setAttribute("id", family.id)
-      implantFamiliesDiv.setAttribute("data-index", family.id)
+      implantFamiliesDiv.setAttribute("id", implant.implant.id)
+      implantFamiliesDiv.setAttribute("data-index", implant.implant.id)
       const implantFamilyNameImageDiv = document.createElement('div')
       implantFamilyNameImageDiv.setAttribute('class', 'implant-family-name-image-div')
       const implantFamilyNameDiv = document.createElement("div")
       implantFamilyNameDiv.setAttribute("class", "implant-family-name-div")
       const implantFamilyImageDiv = document.createElement('div')
       implantFamilyImageDiv.setAttribute('class', 'implant-family-image-div')
-      implantFamilyImageDiv.setAttribute('id', `implant-family-${family.id}-image-div`)
+      implantFamilyImageDiv.setAttribute('id', `implant-family-${implant.implant.id}-image-div`)
       const implantFamilyDescriptionDiv = document.createElement("div")
       implantFamilyDescriptionDiv.setAttribute("class", "implant-family-description-div")
-      implantFamilyNameDiv.innerText = family.name
-      implantFamilyDescriptionDiv.innerText = family.description
+      implantFamilyNameDiv.innerText = implant.implant.name
+      implantFamilyDescriptionDiv.innerText = implant.implant.description
       implantFamilyNameImageDiv.appendChild(implantFamilyImageDiv)
       implantFamilyNameImageDiv.appendChild(implantFamilyNameDiv)
       implantFamiliesDiv.appendChild(implantFamilyNameImageDiv)
       implantFamiliesDiv.appendChild(implantFamilyDescriptionDiv)
       implantFamiliesContainer.appendChild(implantFamiliesDiv)
-    })
+   
     root.appendChild(implantFamiliesContainer)
-    // Implants.bindingImplantsEventListener()
     ImplantFamilies.bindingInplantFamiliesEventListener()
+  }
+
+  static sortImplantFamilies(implants) {
+    implants.map(implant => {
+      if (implant.implant.name.includes("ICONIX SPEED")) {
+        HomePage.renderImplantFamilies(implant)
+      } else if (implant.implant.name.includes("ICONIX")) {
+        HomePage.renderImplantFamilies(implant)
+      }
+    })
   }
 
   static renderImplants(inserts) {

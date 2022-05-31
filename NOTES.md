@@ -540,7 +540,19 @@
 # Note: 30-May-22 - Built the basic implant family functionality: renders the dummy data (get real data from Calli), binded event handler to the implant family button, clears family text, and renders the implants data (this will be specific to the implant family data provided by Calli)
     * The Navbar Titile does NOT update, when specific family is clicked
     
-
+# Implant Families
+Iconix
+Iconix Speed
+Cinchlock
+NanoTack
+ReelX
+Omega
+Biosteon Intraline
+PEEK Zip
+PEEK Intraline
+Twinloop
+Titanium Intraline
+Titanium Wedge Anchor
 
 
 

@@ -2,7 +2,7 @@ class Features {
   constructor() {
     this.features = []
     this.featuresAdapter = new FeaturesAdapter()
-    // this.inplants = new Implants()
+    this.inplants = new Implants()
     this.implantFamilies = new ImplantFamilies()
     this.shavers = new Probes()
     this.probes = new Shavers()
@@ -71,10 +71,11 @@ class Features {
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
         if (item.id === "implant-families") {
+          const implants = Store.getInserts()
           // Get ImplantFamilies
           const implantFamilies = Store.getImplantFamilies()
           // Call renderImplantFamilies
-          HomePage.renderImplantFamilies(implantFamilies)
+          HomePage.sortImplantFamilies(implants)
           // const inserts = Store.getInserts()
           // HomePage.renderSearchField()
           // HomePage.renderImplants(implantFamilies)
