@@ -45,22 +45,49 @@
     background-size: 50px;
 }
 
-#implant-family-placeholderOne-image-div {
-    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+#implant-family-iconix-image-div {
+    background: transparent url("../images/shotput.svg") 0% 0% no-repeat padding-box;
 }
 
-#implant-family-placeholderTwo-image-div {
-    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+#implant-family-iconix_speed-image-div {
+    margin-top: 8px;
+    height: 50px;
+    background-size: 40px;
+    background: transparent url("../images/swimming.svg") 0% 0% no-repeat padding-box;
 }
 
-#implant-family-placeholderThree-image-div {
-    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+#implant-family-cinchlock-image-div {
+    background: transparent url("../images/tennis.svg") 0% 0% no-repeat padding-box;
 }
 
-#implant-family-placeholderFour-image-div {
-    background: transparent url("../images/placeholder.svg") 0% 0% no-repeat padding-box;
+#implant-family-nanotack-image-div {
+    background: transparent url("../images/weight_lifter.svg") 0% 0% no-repeat padding-box;
 }
 
+#implant-family-reelx-image-div {
+    background: transparent url("../images/football.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-omega-image-div {
+    background: transparent url("../images/handball.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-peekintraline-image-div {
+    background: transparent url("../images/yoga.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-twinloop-image-div {
+    background: transparent url("../images/jumprope.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-titaniumintraline-image-div {
+    background: transparent url("../images/racketball.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-biosteonintraline-image-div {
+    background: transparent url("../images/kicker.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-peekzip-image-div {
+    background: transparent url("../images/stretch.svg") 0% 0% no-repeat padding-box;
+}
+#implant-family-titaniumwedgeanchor-image-div {
+    background: transparent url("../images/soccer.svg") 0% 0% no-repeat padding-box;
+}
 .implant-family-description-div {
     max-width: 90%;
     padding: 16px 8px;

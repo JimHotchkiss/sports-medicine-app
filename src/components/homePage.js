@@ -1473,14 +1473,14 @@ class HomePage {
       const implantFamilyImageDiv = document.createElement('div')
       implantFamilyImageDiv.setAttribute('class', 'implant-family-image-div')
       implantFamilyImageDiv.setAttribute('id', `implant-family-${family.id}-image-div`)
-      const implantFamilyDescriptionDiv = document.createElement("div")
-      implantFamilyDescriptionDiv.setAttribute("class", "implant-family-description-div")
+      // const implantFamilyDescriptionDiv = document.createElement("div")
+      // implantFamilyDescriptionDiv.setAttribute("class", "implant-family-description-div")
       implantFamilyNameDiv.innerText = family.name
-      implantFamilyDescriptionDiv.innerText = family.description
+      // implantFamilyDescriptionDiv.innerText = family.description
       implantFamilyNameImageDiv.appendChild(implantFamilyImageDiv)
       implantFamilyNameImageDiv.appendChild(implantFamilyNameDiv)
       implantFamiliesDiv.appendChild(implantFamilyNameImageDiv)
-      implantFamiliesDiv.appendChild(implantFamilyDescriptionDiv)
+      // implantFamiliesDiv.appendChild(implantFamilyDescriptionDiv)
       implantFamiliesContainer.appendChild(implantFamiliesDiv)
    
       root.appendChild(implantFamiliesContainer)
