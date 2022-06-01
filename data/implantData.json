@@ -1,4 +1,5 @@
 [{"implant": {
+    "family": "Iconix",
     "name": "ICONIX 1",
     "pn": "3910-500-512",
     "id":"3910-1",
@@ -13,6 +14,7 @@
     "NOTES": "1 strand #2 Force Fiber"
 }},
 {"implant": {
+    "family": "Iconix",
     "name": "ICONIX 1 \nwith Needles",
     "pn": "3910-500-412",
     "id":"3910-2",
@@ -27,6 +29,7 @@
     "NOTES": "1 strand #2 Force Fiber (Taper cutting Needle Radius .345)"
 }},
 {"implant": {
+    "family": "Iconix",
     "name": "ICONIX 1 TT",
     "pn": "3910-500-312",
     "id":"3910-3",
@@ -41,6 +44,7 @@
     "NOTES": "1.2mm XBRAID TT"
 }},
 {"implant":{
+    "family": "Iconix",
     "name": "ICONIX 1 TT \n with Needles",
     "pn": "3910-500-212",
     "id":"3910-4",
@@ -55,6 +59,7 @@
     "NOTES": "1.2mm Xbraid TT (Taper Cutting Needle Radius .345)"
 }},
 {"implant":{
+    "family": "Iconix",
     "name": "ICONIX 2",
     "pn": "3910-500-522",
     "id":"3910-5",
@@ -69,6 +74,7 @@
     "NOTES": "2 strands #2 Force Fiber"
 }},
 {"implant":{
+    "family": "Iconix",
     "name": "ICONIX 2 \n with needles",
     "pn": "3910-500-422",
     "id":"3910-6",
@@ -83,6 +89,7 @@
     "NOTES": "2 strands #2 Force Fiber (Drill depth 20mm Taper Cutting Needle Radius .345)"
 }},
 {"implant":{
+    "family": "Iconix",
         "name": "ICONIX 2 TT",
         "pn": "3910-500-322",
         "id":"3910-7",
@@ -97,6 +104,7 @@
         "NOTES": "2.0mm XBRAID TT"
 }},
 {"implant": {
+    "family": "Iconix",
         "name": "ICONIX 2 TT \n with needles",
         "pn": "3910-500-222",
         "id":"3910-8",
@@ -112,6 +120,7 @@
     }
     },
     {"implant":{
+        "family": "Iconix",
         "name": "ICONIX 3",
         "pn": "3910-500-532",
         "id":"3910-9",
@@ -126,6 +135,7 @@
         "NOTES": "3 strands #2 Force Fiber"
 }},
 {"implant":{
+    "family": "Iconix",
         "name": "ICONIX 25",
         "pn": "3910-500-525",
         "id":"3910-10",
@@ -140,6 +150,7 @@
         "NOTES": "2 strands #5 Force Fiber"
 }},
 {"implant":{
+    "family": "Iconix Speed",
         "name": "ICONIX SPEED Triple Loaded 1.2 mm Xbraid TT",
         "pn": "3910-500-931",
         "id":"3910-11",
@@ -154,6 +165,7 @@
         "NOTES": "self punching, the start of the thick laser line is 21mm (min depth). The end of the thick laser line is 26mm. Each line after is 1mm more (up to 30mm)."
 }},
 {"implant":{
+    "family": "Iconix Speed",
     "name": "ICONIX SPEED Double Loaded 2.0mm Xbraid TT",
     "pn": "3910-500-920",
     "id":"3910-12",
@@ -168,6 +180,7 @@
     "NOTES": "self punching, the start of the thick laser line is 21mm (min depth). The end of the thick laser line is 26mm. Each line after is 1mm more (up to 30mm)."
 }},
 {"implant":{
+    "family": "Iconix Speed",
     "name": "ICONIX SPEED Double Loaded #2 Force Fiber",
     "pn": "3910-500-922",
     "id":"3910-13",
@@ -182,6 +195,7 @@
     "NOTES": "self punching, the start of the thick laser line is 21mm (min depth). The end of the thick laser line is 26mm. Each line after is 1mm more (up to 30mm)."
 }},
 {"implant":{
+    "family": "Iconix Speed",
     "name": "ICONIX SPEED Combo 1.2mm & 2.0mm Xbraid TT",
     "pn": "3910-500-921",
     "id":"3910-14",
@@ -196,6 +210,7 @@
     "NOTES": "self punching, the start of the thick laser line is 21mm (min depth). The end of the thick laser line is 26mm. Each line after is 1mm more (up to 30mm)."
 }},
 {"implant": {
+    "family": "Cinchlock",
     "name": "CINCHLOCK FLEX",
     "pn": "CAT02643",
     "id":"3910-15",
@@ -210,6 +225,7 @@
     "NOTES": "#1 Suture (packaged with the anchor) or can be loaded w/ 1.2mm  tape"
 }},
 {"implant": {
+    "family": "Cinchlock",
     "name": "CINCHLOCK SS",
     "pn": "CAT02462",
     "id":"3910-16",
@@ -224,6 +240,7 @@
     "NOTES": "#1 Suture (packaged with the anchor) or can be loaded w/ 1.2mm  tape"
 }},
 {"implant":{
+    "family": "NanoTack",
     "name": "NANOTACK",
     "pn": "CAT01386",
     "id":"3910-17",
@@ -238,6 +255,7 @@
     "NOTES": "Preloaded with #1 Suture"
 }},
 {"implant":{
+    "family": "NanoTack",
     "name": "NANOTACK FLEX",
     "pn": "CAT01858",
     "id":"3910-18",
@@ -252,6 +270,7 @@
     "NOTES": "Preloaded with #1 Suture"
 }},
 {"implant":{
+    "family": "NanoTack",
     "name": "NANOTACK TT",
     "pn": "CAT02969",
     "id":"3910-19",
@@ -266,6 +285,7 @@
     "NOTES": "Preloaded with 1.2mm XBRAID TT"
 }},
 {"implant":{
+    "family": "ReelX",
     "name": "REELX STT 4.5mm",
     "pn": "3910-600-062",
     "id":"3910-20",
@@ -280,6 +300,7 @@
     "NOTES": "up to 4 tails of #2 suture or 2 tails of 2.0mm Xbraid TT\n can use any 3.25mm drill\n1 full rotation =10mm\n*must complete 1 full rotation. MAX 3 rotations"
 }},
 {"implant":{
+    "family": "ReelX",
     "name": "REELX STT 5.5mm",
     "pn": "3910-600-060",
     "id":"3910-21",
@@ -294,6 +315,7 @@
     "NOTES": "up to 2 #2 sutures, NO Xbraid TT\ncan use any 4.0mm drill\n1 full rotation = 10 mm\n*must complete 1 fullrotation. MAX 3 rotations"
 }},
 {"implant":{
+    "family": "Omega",
     "name": "Omega, 3.9mm PEEK Knotless Anchor System, Single",
     "pn": "3910-500-391",
     "id":"3910-22",
@@ -308,6 +330,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
+    "family": "Omega",
     "name": "Omega, 3.9mm PEEK Knotless Anchor System, Double-Double",
     "pn": "3910-500-392",
     "id":"3910-23",
@@ -322,6 +345,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
+    "family": "Omega",
     "name": "Omega, 4.75mm PEEK Knotless Anchor System, Single",
     "pn":"3910-500-471",
     "id":"3910-24",
@@ -336,6 +360,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
+    "family": "Omega",
     "name": "Omega, 4.75mm PEEK Knotless Anchor System, Double-Double",
     "pn":"3910-500-472",
     "id":"3910-25",
@@ -350,6 +375,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
+    "family": "Omega",
     "name": "Omega, 6.5mm PEEK Knotless Anchor + Eyelet, Single",
     "pn": "3910-500-652",
     "id":"3910-26",
@@ -364,6 +390,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
+    "family": "Omega",
     "name": "Omega, 6.5mm PEEK Knotless Anchor, Single",
     "pn": "3910-500-653",
     "id":"3910-26a",
@@ -378,6 +405,7 @@
     "NOTES": "max: 4 #2 sutures, 5 1.2mm sutures, or 3 2.0mm tape"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 4.5mm - 2 suture \n without needles",
     "pn": "3910-200-080",
     "id":"3910-27",
@@ -392,6 +420,7 @@
     "NOTES": "when using tap in normal/soft bone: beginning of depth marker is flush with the cortex; in hard bone: endof the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 5.5mm - 2 suture \n with needles",
     "pn": "3910-200-082",
     "id":"3910-27",
@@ -406,6 +435,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 5.5mm - 2 suture \n without needles",
     "pn": "3910-200-081",
     "id":"3910-29",
@@ -420,6 +450,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 5.5mm - 3 suture \n without needles",
     "pn": "3910-200-083",
     "id":"3910-30",
@@ -434,6 +465,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 6.5mm - 2 suture \n with needles",
     "pn":"3910-200-085",
     "id":"3910-31",
@@ -448,6 +480,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 6.5mm - 2 suture \n without needles",
     "pn":"3910-200-084",
     "id":"3910-32",
@@ -462,6 +495,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Biosteon Intraline",
     "name": "BIOSTEON INTRALINE ANCHOR 6.5mm - 3 suture \n without needles",
     "pn":"3910-200-086",
     "id":"3910-33",
@@ -476,6 +510,7 @@
     "NOTES": "when using tap:\nin normal/soft bone: beginning of depth marker is flush with the cortex\nin hard bone:end of the depth marker is flush with the cortex"
 }},
 {"implant":{
+    "family": "Iconix",
     "name": "KNOTILUS ANCHOR",
     "pn": "3910-500-100",
     "id":"3910-34",
@@ -490,6 +525,7 @@
     "NOTES": "implant loop: (25mm) 3910-500-107"
 }},
 {"implant":{
+    "family": "PEEK Zip",
     "name": "PEEK ZIP, 5.5mm",
     "pn": "3910-200-035",
     "id":"3910-35",
@@ -504,6 +540,7 @@
     "NOTES": "2 #2 Force Fiber, fully cannulated"
 }},
 {"implant":{
+    "family": "PEEK Zip",
     "name": "PEEK ZIP, 5.5mm \n with needles ",
     "pn": "3910-200-030",
     "id":"3910-36",
@@ -518,6 +555,7 @@
     "NOTES": "2 #2 Force Fiber, fully cannulated"
 }},
 {"implant":{
+    "family": "PEEK Zip",
     "name": "PEEK ZIP, 6.5mm",
     "pn":"3910-200-075",
     "id":"3910-37",
@@ -532,6 +570,7 @@
     "NOTES": "2 #2 Force Fiber, fully cannulated"
 }},
 {"implant":{
+    "family": "PEEK Zip",
     "name": "PEEK ZIP, 6.5mm with needles",
     "pn":"3910-200-070",
     "id":"3910-38",
@@ -546,6 +585,7 @@
     "NOTES": "2 #2 Force Fiber, fully cannulated"
 }},
 {"implant":{
+    "family": "PEEK Intraline",
     "name": "PEEK INTRALINE ANCHOR, 5.5mm",
     "pn":"3910-400-010",
     "id":"3910-39",
@@ -560,6 +600,7 @@
     "NOTES": "fully threaded, 2 #2 Force Fiber, suture eyelet"
 }},
 {"implant":{
+    "family": "PEEK Intraline",
     "name": "PEEK INTRALINE ANCHOR, 5.5mm \n with needles",
     "pn":"3910-400-015",
     "id":"3910-40",
@@ -574,6 +615,7 @@
     "NOTES": "fully threaded, 2 #2 Force Fiber, suture eyelet"
 }},
 {"implant":{
+    "family": "PEEK Intraline",
     "name": "PEEK INTRALINE ANCHOR, 6.5mm",
     "pn":"3910-400-020",
     "id":"3910-41",
@@ -588,6 +630,7 @@
     "NOTES": "fully threaded, 2 #2 Force Fiber, suture eyelet"
 }},
 {"implant":{
+    "family": "PEEK Intraline",
     "name": "PEEK INTRALINE ANCHOR, 6.5mm \n with needles",
     "pn":"3910-400-025",
     "id":"3910-42",
@@ -602,6 +645,7 @@
     "NOTES": "fully threaded, 2 #2 Force Fiber, suture eyelet"
 }},
 {"implant":{
+    "family": "Twinloop",
     "name": "TWINLOOP - 1 No. 2 force fiber",
     "pn": "3910-400-035",
     "id":"3910-43",
@@ -616,6 +660,7 @@
     "NOTES": "one strand #2 force fiber \nwedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
+    "family": "Twinloop",
     "name": "TWINLOOP - SE 1 No. 2 force fiber",
     "pn": "3910-400-135",
     "id":"3910-44",
@@ -630,6 +675,7 @@
     "NOTES": "one strand #2 force fiber \nwedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
+    "family": "Twinloop",
     "name": "TWINLOOP - SE 2 No. 2 forcefiber",
     "pn": "3910-400-235",
     "id":"3910-45",
@@ -644,6 +690,7 @@
     "NOTES": "one strand #2 force fiber \nwedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
+    "family": "Twinloop",
     "name": "TWINLOOP FLEX - single strand",
     "pn":"3910-405-638",
     "id":"3910-46",
@@ -658,6 +705,7 @@
     "NOTES": "one strand #2 force fiber\n wedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
+    "family": "Twinloop",
     "name": "TWINLOOP FLEX - double strand",
     "pn":"3910-405-838",
     "id":"3910-47",
@@ -672,6 +720,7 @@
     "NOTES": "one strand #2 force fiber\n wedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
+    "family": "Twinloop",
     "name": "TWINLOOP FLEX - SE single strand",
     "pn":"3910-405-738",
     "id":"3910-48",
@@ -686,6 +735,7 @@
     "NOTES": "one strand #2 force fiber\n wedge design of 2.4 mm to 2.9mm"
 }},
 {"implant":{
+    "family": "Titanium Intraline",
     "name": "TITANIUM INTRALINE ANCHOR 5.5mm",
     "pn":"3910-400-050",
     "id":"3910-49",
@@ -700,6 +750,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
+    "family": "Titanium Intraline",
     "name": "TITANIUM INTRALINE ANCHOR 5.5mm with needles",
     "pn":"3910-400-055",
     "id":"3910-50",
@@ -714,6 +765,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
+    "family": "Titanium Intraline",
     "name": "TITANIUM INTRALINE ANCHOR 6.5mm",
     "pn":"3910-400-060",
     "id":"3910-51",
@@ -728,6 +780,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
+    "family": "Titanium Intraline",
     "name": "TITANIUM INTRALINE ANCHOR 6.5mm with needles",
     "pn":"3910-400-065",
     "id":"3910-52",
@@ -742,6 +795,7 @@
     "NOTES": "2 force fibers\nfully threaded, fully cannulated"
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand with #2 braided polyester suture\n two independent sutures",
     "pn":"3910-100-040",
     "id":"3910-53",
@@ -756,6 +810,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand with #2 FF suture",
     "pn":"3910-100-045",
     "id":"3910-54",
@@ -770,6 +825,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 6.5mm\nDouble strand #2 sutures\n with needles",
     "pn":"3910-100-145",
     "id":"3910-55",
@@ -784,6 +840,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 braided polyester suture",
     "pn":"3910-100-020",
     "id":"3910-56",
@@ -798,6 +855,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 braided polyester suture\n two independent sutures",
     "pn":"3910-100-030",
     "id":"3910-57",
@@ -812,6 +870,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 FF suture",
     "pn":"3910-100-035",
     "id":"3910-58",
@@ -826,6 +885,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 5.0mm\nDouble strand with #2 FF suture\n with needles",
     "pn":"3910-100-135",
     "id":"3910-59",
@@ -840,6 +900,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 braided polyester suture",
     "pn":"3910-100-010",
     "id":"3910-60",
@@ -854,6 +915,7 @@
     "NOTES": ""
 }},
 {"implant":{
+    "family": "Titanium Wedge Anchor",
     "name": "TITANIUM WEDGE ANCHOR, 3.0mm\nSingle strand w/ #2 FF",
     "pn":"3910-100-015",
     "id":"3910-61",

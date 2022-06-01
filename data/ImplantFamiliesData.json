@@ -1,15 +1,39 @@
 {"implant_families":[
     {
-        "id": "placeholderOne", "name": "Placeholder One", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+        "id": "iconix", "name": "Iconix", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
     },
     {
-        "id": "placeholderTwo", "name": "Placeholder Two", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+        "id": "iconix_speed", "name": "Iconix Speed", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
     },
     {
-        "id": "placeholderThree", "name": "Placeholder Three", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+        "id": "cinchlock", "name": "Cinchlock", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
     },
     {
-        "id": "placeholderFour", "name": "Placeholder Four", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+        "id": "nanotack", "name": "NanoTack", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "reelx", "name": "ReelX", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "omega", "name": "Omega", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "biosteonintraline", "name": "Biosteon Intraline", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "peekzip", "name": "PEEK Zip", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "peekintraline", "name": "PEEK Intraline", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "twinloop", "name": "Twinloop", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "titaniumintraline", "name": "Titanium Intraline", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
+        "id": "titaniumwedgeanchor", "name": "Titanium Wedge Anchor", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
     }
  ]
 }

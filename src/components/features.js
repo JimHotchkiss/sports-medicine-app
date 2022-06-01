@@ -71,14 +71,12 @@ class Features {
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
         if (item.id === "implant-families") {
-          const implants = Store.getInserts()
-          // Get ImplantFamilies
+          // const implants = Store.getInserts()
           const implantFamilies = Store.getImplantFamilies()
-          // Call renderImplantFamilies
-          HomePage.sortImplantFamilies(implants)
+          HomePage.renderImplantFamilies(implantFamilies)
+          // Features.sortImplantFamilies(implants)
           // const inserts = Store.getInserts()
           // HomePage.renderSearchField()
-          // HomePage.renderImplants(implantFamilies)
           // Search.bindInsertSearchEventListener()
         } else if (item.id === "implant") {
           const inserts = Store.getInserts()
@@ -122,5 +120,16 @@ class Features {
         }
       })
     }
+  }
+  static sortImplantFamilies(implants) {
+    implants.map(implant => {
+      if (implant.implant.name.includes("ICONIX SPEED")) {
+        HomePage.renderImplantFamilies(implant)
+      } else if (implant.implant.name.includes("ICONIX")) {
+        HomePage.renderImplantFamilies(implant)
+      } else if (implant.implant.name.includes('Cinchlock')) {
+        HomePage.renderImplantFamilies(implant)
+      }
+    })
   }
 }
