@@ -16,6 +16,7 @@ class ImplantFamilies {
         for (let item of implantFamilyDivs) {
           item.addEventListener("click", () => {
             Navbar.updateTitle(item, this.features)
+            Search.clearSearchField()
             let selectedFamily = item.dataset.family
             ImplantFamilies.selectedImplantFamily(selectedFamily)
           })
