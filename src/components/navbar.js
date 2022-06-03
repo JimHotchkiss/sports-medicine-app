@@ -132,20 +132,20 @@ class Navbar {
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")
-    features.map((feature) => {
-      if (feature.id === item.id) {
-        const splitFeatureTitle = feature.title.split(" ")
-        if (feature.id === "errors") {
-          navbarTitleDiv[0].innerText = splitFeatureTitle[0]
-          spanDiv[0].innerText = `${splitFeatureTitle[1]}s`
-          imgDiv.classList.add("img-div-hide")
-        } else {
-          navbarTitleDiv[0].innerText = splitFeatureTitle[0]
-          spanDiv[0].innerText = splitFeatureTitle[1]
-          imgDiv.classList.add("img-div-hide")
-        }
-      }
-    })
+    // features.map((feature) => {
+    //   if (feature.id === item.id) {
+    //     const splitFeatureTitle = feature.title.split(" ")
+    //     if (feature.id === "errors") {
+    //       navbarTitleDiv[0].innerText = splitFeatureTitle[0]
+    //       spanDiv[0].innerText = `${splitFeatureTitle[1]}s`
+    //       imgDiv.classList.add("img-div-hide")
+    //     } else {
+    //       navbarTitleDiv[0].innerText = splitFeatureTitle[0]
+    //       spanDiv[0].innerText = splitFeatureTitle[1]
+    //       imgDiv.classList.add("img-div-hide")
+    //     }
+    //   }
+    // })
   }
 
   static showHomeIcon() {

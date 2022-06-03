@@ -130,9 +130,7 @@ class HomePage {
   }
 
   static renderErrorDetails(selectedErrors, selectedError) {
-    console.log(selectedErrors)
     if (selectedErrors[0].type) {
-      console.log("Crossflow")
       HomePage.scrollToTop()
       HomePage.errorId(selectedErrors)
       HomePage.errorDescription(selectedErrors)
@@ -937,7 +935,6 @@ class HomePage {
     // Point style
     const pointStyle = document.createElement("div")
     pointStyle.setAttribute("class", "wire-diameter")
-    console.log(needles.point_style)
     pointStyle.innerText = needles.point_style
     needlePointStyle.appendChild(pointStyle)
     needleDetailsDiv.appendChild(needlePointStyle)
@@ -949,7 +946,6 @@ class HomePage {
     // Circle
     const circle = document.createElement("div")
     circle.setAttribute("class", "wire-diameter")
-    console.log(needles.point_style)
     circle.innerText = needles.circle
     needleCircle.appendChild(circle)
     needleDetailsDiv.appendChild(needleCircle)
@@ -1160,7 +1156,6 @@ class HomePage {
   }
 
   static implantReusableImage3_9(reusableInsert) {
-    console.log(reusableInsert)
     const insertUrlTextDiv = document.createElement("div")
     insertUrlTextDiv.setAttribute("class", "insert-details-div")
     const insertUrlDiv = document.createElement("div")
@@ -1175,7 +1170,6 @@ class HomePage {
   }
 
   static implantReusableImage4_7(reusableInsert) {
-    console.log(reusableInsert)
     const insertUrlTextDiv = document.createElement("div")
     insertUrlTextDiv.setAttribute("class", "insert-details-div")
     const insertUrlDiv = document.createElement("div")
@@ -1465,28 +1459,15 @@ class HomePage {
       const implantFamiliesDiv = document.createElement("div")
       implantFamiliesDiv.setAttribute("class", "implant-family-div")
       implantFamiliesDiv.setAttribute("id", family.id)
-      implantFamiliesDiv.setAttribute("data-index", family.id)
-      const implantFamilyNameImageDiv = document.createElement('div')
-      implantFamilyNameImageDiv.setAttribute('class', 'implant-family-name-image-div')
+      implantFamiliesDiv.setAttribute("data-family", family.name)
       const implantFamilyNameDiv = document.createElement("div")
       implantFamilyNameDiv.setAttribute("class", "implant-family-name-div")
-      const implantFamilyImageDiv = document.createElement('div')
-      implantFamilyImageDiv.setAttribute('class', 'implant-family-image-div')
-      implantFamilyImageDiv.setAttribute('id', `implant-family-${family.id}-image-div`)
-      // const implantFamilyDescriptionDiv = document.createElement("div")
-      // implantFamilyDescriptionDiv.setAttribute("class", "implant-family-description-div")
       implantFamilyNameDiv.innerText = family.name
-      // implantFamilyDescriptionDiv.innerText = family.description
-      implantFamilyNameImageDiv.appendChild(implantFamilyImageDiv)
-      implantFamilyNameImageDiv.appendChild(implantFamilyNameDiv)
-      implantFamiliesDiv.appendChild(implantFamilyNameImageDiv)
-      // implantFamiliesDiv.appendChild(implantFamilyDescriptionDiv)
+      implantFamiliesDiv.appendChild(implantFamilyNameDiv)
       implantFamiliesContainer.appendChild(implantFamiliesDiv)
-   
       root.appendChild(implantFamiliesContainer)
-      ImplantFamilies.bindingInplantFamiliesEventListener()
     })
-    
+    ImplantFamilies.bindingInplantFamiliesEventListener()
   }
 
   static renderImplants(inserts) {
@@ -1530,7 +1511,6 @@ class HomePage {
 
   static renderShaverDefaults(shaverDefaultSettings) {
     HomePage.renderShaverDefaultsTitle()
-    console.log(shaverDefaultSettings)
   }
 
   static renderShaverDefaultsTitle() {
@@ -1549,14 +1529,14 @@ class HomePage {
   }
 
   static renderShaverFootPedalDefaults(shaverFootpedalDefaults) {
-    console.log(shaverFootpedalDefaults)
+    // console.log(shaverFootpedalDefaults)
   }
 
   static renderRfDefaults(rfDefaultSettings) {
-    console.log(rfDefaultSettings)
+    // console.log(rfDefaultSettings)
   }
 
   static renderRfFootpedalDefaults(rfFootpedalDefaultSettings) {
-    console.log(rfFootpedalDefaultSettings)
+    // console.log(rfFootpedalDefaultSettings)
   }
 }

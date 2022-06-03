@@ -71,13 +71,8 @@ class Features {
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
         if (item.id === "implant-families") {
-          // const implants = Store.getInserts()
           const implantFamilies = Store.getImplantFamilies()
           HomePage.renderImplantFamilies(implantFamilies)
-          // Features.sortImplantFamilies(implants)
-          // const inserts = Store.getInserts()
-          // HomePage.renderSearchField()
-          // Search.bindInsertSearchEventListener()
         } else if (item.id === "implant") {
           const inserts = Store.getInserts()
           HomePage.renderSearchField()
@@ -109,7 +104,6 @@ class Features {
           HomePage.renderXflowErrors(errors)
           Search.bindCrossflowErrorSearchEventListener()
         } else {
-          console.log('else')
           window.open(
             "https://www.stryker.com/productexperience/Legal/Agreement"
           )
@@ -120,16 +114,5 @@ class Features {
         }
       })
     }
-  }
-  static sortImplantFamilies(implants) {
-    implants.map(implant => {
-      if (implant.implant.name.includes("ICONIX SPEED")) {
-        HomePage.renderImplantFamilies(implant)
-      } else if (implant.implant.name.includes("ICONIX")) {
-        HomePage.renderImplantFamilies(implant)
-      } else if (implant.implant.name.includes('Cinchlock')) {
-        HomePage.renderImplantFamilies(implant)
-      }
-    })
   }
 }

@@ -35,67 +35,8 @@
     font-weight: 900;
     font-size: 22px;
     color: #262626;
-    padding-top: 16px;
-    width: 65%;
-}
-
-.implant-family-image-div {
-    width: 50px;
-    height: 50px;
-    background-size: 40px;
-}
-
-#implant-family-iconix-image-div {
-    background: transparent url("../images/shotput.svg") 0% 0% no-repeat padding-box;
-}
-
-#implant-family-iconix_speed-image-div {
-    margin-top: 8px;
-    height: 50px;
-    background-size: 40px;
-    background: transparent url("../images/swimming.svg") 0% 0% no-repeat padding-box;
-}
-
-#implant-family-cinchlock-image-div {
-    background: transparent url("../images/tennis.svg") 0% 0% no-repeat padding-box;
-}
-
-#implant-family-nanotack-image-div {
-    background: transparent url("../images/weight_lifter.svg") 0% 0% no-repeat padding-box;
-}
-
-#implant-family-reelx-image-div {
-    background: transparent url("../images/football.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-omega-image-div {
-    background: transparent url("../images/handball.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-peekintraline-image-div {
-    background: transparent url("../images/yoga.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-twinloop-image-div {
-    background: transparent url("../images/jumprope.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-titaniumintraline-image-div {
-    background: transparent url("../images/racketball.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-biosteonintraline-image-div {
-    background: transparent url("../images/kicker.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-peekzip-image-div {
-    background: transparent url("../images/stretch.svg") 0% 0% no-repeat padding-box;
-}
-#implant-family-titaniumwedgeanchor-image-div {
-    background: transparent url("../images/soccer.svg") 0% 0% no-repeat padding-box;
-}
-.implant-family-description-div {
-    max-width: 90%;
-    padding: 16px 8px;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 16px 8px;
-    color: #262626;
+    padding: 8px;
+    text-align: center;
 }
 
 /*********************************************************/
