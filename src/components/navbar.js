@@ -81,14 +81,22 @@ class Navbar {
   }
 
   static bindBackBtnEventListener(selectedItem) {
+    console.log(selectedItem)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
+    const implantFamilies = Store.getImplantFamilies()
     navbarBackBtn.addEventListener("click", () => {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
       const shavers = Shavers.getShaversFromStore()
       const xf2Errors = Xf2Errors.getXf2ErrorsFromStore()
       const xflowErrors = XflowErrors.getXflowErrorsFromStore()
-      if (selectedItem[0].implant) {
+      if (selectedItem == undefined) {
+        HomePage.clearImplantText()
+        HomePage.clearImplantFamliesText()
+        Search.clearSearchField()
+        HomePage.renderImplantFamilies(implantFamilies)
+      }
+      else if (selectedItem[0].implant) {
         HomePage.clearImplantDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()

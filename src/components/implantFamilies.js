@@ -25,6 +25,7 @@ class ImplantFamilies {
 
       static selectedImplantFamily(selectedFamily) {
         console.log('selected Family', selectedFamily)
+        const implantFamilies = Store.getImplantFamilies()
         const inserts = Store.getInserts()
         const selectedFamilyImplantsArray = []
         inserts.map(insert => {
@@ -35,6 +36,7 @@ class ImplantFamilies {
         HomePage.renderSearchField()
         Search.bindInsertSearchEventListener()
         HomePage.clearImplantFamliesText()
+        Navbar.showBackBtn()
         HomePage.renderImplants(selectedFamilyImplantsArray)
       }
 }

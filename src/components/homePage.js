@@ -1450,6 +1450,7 @@ class HomePage {
   }
 
   static renderImplantFamilies(implantFamiles) {
+    const implantFamilies = Store.getImplantFamilies()
     const root = HomePage.root()
     const implantFamiliesContainer = document.createElement('div')
     implantFamiliesContainer.setAttribute("class", "implant-families-container")

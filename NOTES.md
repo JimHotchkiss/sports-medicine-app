@@ -554,6 +554,9 @@ Twinloop
 Titanium Intraline
 Titanium Wedge Anchor
 
+
+[X] Need to align Implant Family data with implant data
+[ ] Need to clear search bar when Implant is selected
 [ ] NOTE: I believe a single implant has been omitted. Double check
 
 
