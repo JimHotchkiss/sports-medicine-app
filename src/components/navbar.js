@@ -81,7 +81,6 @@ class Navbar {
   }
 
   static bindBackBtnEventListener(selectedItem) {
-    console.log(selectedItem)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     const implantFamilies = Store.getImplantFamilies()
     navbarBackBtn.addEventListener("click", () => {
@@ -93,15 +92,16 @@ class Navbar {
       if (selectedItem == undefined) {
         HomePage.clearImplantText()
         HomePage.clearImplantFamliesText()
+        Navbar.updateTitle()
+        Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
       }
       else if (selectedItem[0].implant) {
+        const selectedImpantFamily = selectedItem[0].implant.family
         HomePage.clearImplantDetails()
-        Navbar.hideBackBtn()
-        HomePage.renderSearchField()
-        HomePage.renderImplants(implants)
-        Search.bindInsertSearchEventListener()
+        Search.clearSearchField()
+        ImplantFamilies.selectedImplantFamily(selectedImpantFamily)
         HomePage.scrollToTop()
       } else if (selectedItem[0].probe) {
         HomePage.clearImplantDetails()
@@ -155,6 +155,12 @@ class Navbar {
           }
         }
       })
+    } else if (item == undefined) {
+      navbarTitleDiv[0].innerText = 'Implant'
+      spanDiv[0].innerText = 'Families'
+    } else {
+      navbarTitleDiv[0].innerText = item
+      spanDiv[0].innerText = 'Family'
     }
   }
 

@@ -4,6 +4,7 @@ class Features {
     this.featuresAdapter = new FeaturesAdapter()
     this.inplants = new Implants()
     this.implantFamilies = new ImplantFamilies()
+    this.capitalProducts = new CapitalProducts()
     this.shavers = new Probes()
     this.probes = new Shavers()
     this.xf2Errors = new Xf2Errors()
@@ -96,8 +97,8 @@ class Features {
         } else if (item.id === "default") {
           HomePage.renderArthroDefaults()
         } else if (item.id === "capital") {
-          // Place Holder for capital feature
-          alert('capital')
+          const capitalProducts = Store.getCapitalProducts()
+          HomePage.renderCapitalProducts(capitalProducts)
         }  else if (item.id === "crossflow-errors") {
           const errors = Store.getXflowErrors()
           HomePage.renderErrorsSearchField()

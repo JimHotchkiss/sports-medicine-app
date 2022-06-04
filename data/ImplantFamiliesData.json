@@ -21,6 +21,9 @@
         "id": "biosteonintraline", "name": "Biosteon Intraline", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
     },
     {
+        "id": "knotilusanchor", "name": "Knotilus Anchor", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+    },
+    {
         "id": "peekzip", "name": "PEEK Zip", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
     },
     {

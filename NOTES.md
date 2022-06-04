@@ -556,8 +556,13 @@ Titanium Wedge Anchor
 
 
 [X] Need to align Implant Family data with implant data
-[ ] Need to clear search bar when Implant is selected
-[ ] NOTE: I believe a single implant has been omitted. Double check
+[X] Need to clear search bar when Implant is selected
+[X] Back btn - returns user to Implant Family
+[X] NOTE: I believe a single implant has been omitted. Double check
+    * Knotilus Anchor
+
+# Capital Products
+    * Adapatable Beach Chair
 
 
 

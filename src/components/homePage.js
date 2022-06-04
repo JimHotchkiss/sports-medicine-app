@@ -1449,8 +1449,31 @@ class HomePage {
     XflowErrors.bindingXflowErrorsEventListener()
   }
 
+  static renderCapitalProducts(capitalProducts) {
+    const root = HomePage.root()
+    const capitalProductsContainer = document.createElement('div')
+    capitalProductsContainer.setAttribute("class", "capital-product-container")
+    capitalProductsContainer.setAttribute("id", "capital-product-container")
+
+    capitalProducts.capital_products.map(product => {
+      console.log(product.title)
+      const capitalProductDiv = document.createElement("div")
+      capitalProductDiv.setAttribute("class", "capital-product-div")
+      capitalProductDiv.setAttribute("id", product.pn)
+      capitalProductDiv.setAttribute("data-capital", product.pn)
+      const capitalProductTitleDiv = document.createElement("div")
+      capitalProductTitleDiv.setAttribute("class", "capital-product-title-div")
+      capitalProductTitleDiv.innerText = product.title
+      capitalProductDiv.appendChild(capitalProductTitleDiv)
+      capitalProductsContainer.appendChild(capitalProductDiv)
+      root.appendChild(capitalProductsContainer)
+    })
+    // ImplantFamilies.bindingInplantFamiliesEventListener()
+    
+
+  }
+
   static renderImplantFamilies(implantFamiles) {
-    const implantFamilies = Store.getImplantFamilies()
     const root = HomePage.root()
     const implantFamiliesContainer = document.createElement('div')
     implantFamiliesContainer.setAttribute("class", "implant-families-container")

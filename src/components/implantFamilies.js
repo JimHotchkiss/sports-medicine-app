@@ -33,6 +33,7 @@ class ImplantFamilies {
             selectedFamilyImplantsArray.push(insert)
           }
         })
+        Navbar.updateTitle(selectedFamily)
         HomePage.renderSearchField()
         Search.bindInsertSearchEventListener()
         HomePage.clearImplantFamliesText()

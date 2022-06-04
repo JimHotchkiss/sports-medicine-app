@@ -2,6 +2,38 @@
     padding-top: 0px;
 }
 
+/***************** Capital Products *********************/
+.capital-product-container {
+    max-width: 500px;
+    margin: 80px auto;
+}
+
+.capital-product-div {
+    text-align: center;
+    margin: 0 auto;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.capital-product-div:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+.capital-product-title-div {
+    font-weight: 900;
+    font-size: 22px;
+    color: #262626;
+    padding: 8px;
+    text-align: center;
+}
+
 /***************** Implant Families  ********************/
 
 .implant-families-container {
@@ -27,9 +59,6 @@
     transition: 0.3s;
 }
 
-.implant-family-name-image-div {
-    display: flex;
-}
 
 .implant-family-name-div {
     font-weight: 900;
