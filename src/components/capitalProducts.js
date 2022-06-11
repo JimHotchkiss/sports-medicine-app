@@ -10,4 +10,18 @@ class CapitalProducts {
           Store.addCapitalProducts(data)
         })
       }
+
+      static bindingCapitalProductsEventListener() {
+        const capitalProductsDivs = document.getElementsByClassName("capital-product-div")
+        for (let item of capitalProductsDivs) {
+          item.addEventListener("click", () => {
+            const selectedCapitalProduct = item
+            Navbar.updateTitle(item)
+            HomePage.clearCapitalProductsText()
+            HomePage.getCapitalProductsDetails(selectedCapitalProduct)
+          })
+        }
+      }
+
+
     }

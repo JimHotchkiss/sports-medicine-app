@@ -158,6 +158,11 @@ class Navbar {
     } else if (item == undefined) {
       navbarTitleDiv[0].innerText = 'Implant'
       spanDiv[0].innerText = 'Families'
+    } else if (item.classList.contains("capital-product-div")) {
+      let text = item.dataset.capital
+      const textArray = text.split(" ")
+      navbarTitleDiv[0].innerText = textArray[0] + " " + textArray[1]
+      spanDiv[0].innerText = textArray[2]
     } else {
       navbarTitleDiv[0].innerText = item
       spanDiv[0].innerText = 'Family'

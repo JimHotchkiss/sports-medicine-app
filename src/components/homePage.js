@@ -27,6 +27,14 @@ class HomePage {
 
   }
 
+  static clearCapitalProductsText() {
+    const capitalProductsContainer = document.getElementById("capital-products-container")
+    if (capitalProductsContainer) {
+      capitalProductsContainer.parentNode.removeChild(capitalProductsContainer)
+    }
+
+  }
+
   static clearImplantText() {
     const implantContainer = document.getElementById("implant-container")
     if (implantContainer) {
@@ -93,7 +101,19 @@ class HomePage {
     })
   }
 
+  static getCapitalProductsDetails(selectedCapitalProduct) {
+    const capitalProducts = Store.getCapitalProducts()
+    const selectedCapitalProducts = []
+    capitalProducts.capital_products.map(capital_product => {
+      if (capital_product.title === selectedCapitalProduct.dataset.capital) {
+        return selectedCapitalProducts.push(capital_product)
+      }
+    })
+    HomePage.renderCapitalProductDetails(selectedCapitalProducts)
+  }
+
   static getImplantDetails(selectedInsert) {
+    console.log(selectedInsert)
     const inserts = Store.getInserts()
     const selectedInserts = []
     inserts.map((insert) => {
@@ -1086,6 +1106,10 @@ class HomePage {
     }
   }
 
+  static renderCapitalProductDetails(selectedCapitalProducts) {
+    console.log(selectedCapitalProducts)
+  }
+
   static renderInsertDetails(selectedInserts, selectedInsert) {
     // HomePage.filterForIconixInserts()
     let filteredInsertSelection = []
@@ -1452,15 +1476,15 @@ class HomePage {
   static renderCapitalProducts(capitalProducts) {
     const root = HomePage.root()
     const capitalProductsContainer = document.createElement('div')
-    capitalProductsContainer.setAttribute("class", "capital-product-container")
-    capitalProductsContainer.setAttribute("id", "capital-product-container")
+    capitalProductsContainer.setAttribute("class", "capital-products-container")
+    capitalProductsContainer.setAttribute("id", "capital-products-container")
 
     capitalProducts.capital_products.map(product => {
-      console.log(product.title)
       const capitalProductDiv = document.createElement("div")
       capitalProductDiv.setAttribute("class", "capital-product-div")
       capitalProductDiv.setAttribute("id", product.pn)
-      capitalProductDiv.setAttribute("data-capital", product.pn)
+      capitalProductDiv.setAttribute("data-capital", product.title)
+      capitalProductDiv.setAttribute("data-featureId", product.feature_id)
       const capitalProductTitleDiv = document.createElement("div")
       capitalProductTitleDiv.setAttribute("class", "capital-product-title-div")
       capitalProductTitleDiv.innerText = product.title
@@ -1468,7 +1492,7 @@ class HomePage {
       capitalProductsContainer.appendChild(capitalProductDiv)
       root.appendChild(capitalProductsContainer)
     })
-    // ImplantFamilies.bindingInplantFamiliesEventListener()
+    CapitalProducts.bindingCapitalProductsEventListener()
     
 
   }
@@ -1536,6 +1560,8 @@ class HomePage {
   static renderShaverDefaults(shaverDefaultSettings) {
     HomePage.renderShaverDefaultsTitle()
   }
+
+
 
   static renderShaverDefaultsTitle() {
     const shaverUrlTextDiv = document.createElement("div")

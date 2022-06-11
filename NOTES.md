@@ -563,6 +563,9 @@ Titanium Wedge Anchor
 
 # Capital Products
     * Adapatable Beach Chair
+[] Send Calli an email requesting Adaptable Beach Chair image (high resolution)
+
+[ ] Issue: UpdateTitle running into bug with 'item' undefined 
 
 
 
