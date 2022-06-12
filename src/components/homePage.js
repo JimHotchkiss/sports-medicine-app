@@ -1499,7 +1499,6 @@ class HomePage {
   }
 
   static renderImplantFamilies(implantFamiles) {
-    console.log(implantFamiles)
     const root = HomePage.root()
     const implantFamiliesContainer = document.createElement('div')
     implantFamiliesContainer.setAttribute("class", "implant-families-container")
@@ -1518,7 +1517,7 @@ class HomePage {
       implantFamiliesContainer.appendChild(implantFamiliesDiv)
       root.appendChild(implantFamiliesContainer)
     })
-    ImplantFamilies.bindingInplantFamiliesEventListener()
+    ImplantFamilies.bindingImplantFamiliesEventListener()
   }
 
   static renderImplants(inserts) {
@@ -1528,7 +1527,7 @@ class HomePage {
     implantContainer.setAttribute("id", "implant-container")
 
     inserts.map((implant) => {
-      // console.log(implant)
+      console.log(implant)
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
       implantDiv.setAttribute("id", implant.implant.pn)

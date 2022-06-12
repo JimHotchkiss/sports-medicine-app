@@ -567,6 +567,8 @@ Titanium Wedge Anchor
 
 [ ] Issue: UpdateTitle running into bug with 'item' undefined 
 
+* For every binding function, a 'location' is store in localstorage and updated with each back-button click
+
 
 
    

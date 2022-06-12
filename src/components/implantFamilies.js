@@ -11,10 +11,12 @@ class ImplantFamilies {
         })
       }
 
-      static bindingInplantFamiliesEventListener() {
+      static bindingImplantFamiliesEventListener() {
         const implantFamilyDivs = document.getElementsByClassName("implant-family-div")
         for (let item of implantFamilyDivs) {
           item.addEventListener("click", () => {
+            const userSelection = item.dataset.family
+            Store.setUserSelection(userSelection)
             Navbar.updateTitle(item, this.features)
             Search.clearSearchField()
             let selectedFamily = item.dataset.family

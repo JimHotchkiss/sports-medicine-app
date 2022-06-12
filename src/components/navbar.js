@@ -70,10 +70,9 @@ class Navbar {
     return navbarBackBtn
   }
   static showBackBtn(selectedItem) {
-    console.log(selectedItem)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
-    Navbar.bindBackBtnEventListener(selectedItem)
+    Navbar.bindBackBtnEventListener()
   }
 
   static hideBackBtn() {
@@ -82,6 +81,8 @@ class Navbar {
   }
 
   static bindBackBtnEventListener(selectedItem) {
+    const userSelection = Store.getUserSelection()
+    console.log(userSelection)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     // const implantFamilies = Store.getImplantFamilies()
     navbarBackBtn.addEventListener("click", () => {
@@ -93,10 +94,9 @@ class Navbar {
       const implantFamilies = ImplantFamilies.getImplantFamiliesFromStore()
       console.log(selectedItem)
       if (selectedItem == undefined) {
-        console.log(implantFamilies)
         HomePage.clearImplantText()
         HomePage.clearImplantFamliesText()
-        Navbar.updateTitle(selectedItem)
+        Navbar.updateTitle(userSelection)
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
@@ -142,6 +142,8 @@ class Navbar {
   }
 
   static updateTitle(item, features) {
+    const userSelection = Store.getUserSelection()
+    console.log(userSelection)
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")

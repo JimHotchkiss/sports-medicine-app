@@ -13,6 +13,15 @@ class Store {
     localStorage.setItem("inserts", JSON.stringify(fetchedInserts))
   }
 
+  // Set User Selections
+  static setUserSelection(userSelection) {
+    localStorage.setItem("user_selection", userSelection)
+  }
+
+  static getUserSelection(){
+    return localStorage.getItem("user_selection")
+  }
+
   // Capital Products addCapitalProducts
   static addCapitalProducts(fetchedCapitalProducts) {
     localStorage.setItem("capital products", JSON.stringify(fetchedCapitalProducts))
