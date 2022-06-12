@@ -1527,7 +1527,6 @@ class HomePage {
     implantContainer.setAttribute("id", "implant-container")
 
     inserts.map((implant) => {
-      console.log(implant)
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
       implantDiv.setAttribute("id", implant.implant.pn)
@@ -1546,6 +1545,7 @@ class HomePage {
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
+    // Store.assignLocation('family')
   }
 
   // Arthro Default Settings

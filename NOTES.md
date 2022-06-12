@@ -568,8 +568,12 @@ Titanium Wedge Anchor
 [ ] Issue: UpdateTitle running into bug with 'item' undefined 
 
 * For every binding function, a 'location' is store in localstorage and updated with each back-button click
-
-
+    * Example - Implant Familiex
+        1.  Implant Families
+        2.  Cinchlock Families
+        3.  Cinchlock Details
+    * Note: Using Localstorage doesn't seem to be working. When you update localstorage, it changes the state of the page.
+        * Read some articles on javascript and back button strategies
 
    
 

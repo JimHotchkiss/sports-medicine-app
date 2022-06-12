@@ -82,68 +82,86 @@ class Navbar {
 
   static bindBackBtnEventListener(selectedItem) {
     const userSelection = Store.getUserSelection()
-    console.log(userSelection)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     // const implantFamilies = Store.getImplantFamilies()
     navbarBackBtn.addEventListener("click", () => {
+      const userLocation = Store.getUserLocation()
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
       const shavers = Shavers.getShaversFromStore()
       const xf2Errors = Xf2Errors.getXf2ErrorsFromStore()
       const xflowErrors = XflowErrors.getXflowErrorsFromStore()
       const implantFamilies = ImplantFamilies.getImplantFamiliesFromStore()
-      console.log(selectedItem)
-      if (selectedItem == undefined) {
+      if (userLocation == 'family') {
         HomePage.clearImplantText()
         HomePage.clearImplantFamliesText()
-        Navbar.updateTitle(userSelection)
-        Navbar.hideBackBtn()
+        Navbar.updateImplantFamiliesTitle()
         Search.clearSearchField()
+        Navbar.hideBackBtn()
         HomePage.renderImplantFamilies(implantFamilies)
+      } else if (userLocation == 'details') {
+          HomePage.clearImplantDetails()
+          ImplantFamilies.selectedImplantFamily(userSelection)
       }
-      else if (selectedItem[0].implant) {
-        const selectedImpantFamily = selectedItem[0].implant.family
-        HomePage.clearImplantDetails()
-        Search.clearSearchField()
-        ImplantFamilies.selectedImplantFamily(selectedImpantFamily)
-        HomePage.scrollToTop()
-      } else if (selectedItem[0].probe) {
-        HomePage.clearImplantDetails()
-        Navbar.hideBackBtn()
-        HomePage.renderSearchField()
-        HomePage.renderProbes(probes)
-        Search.bindProbeSearchEventListener()
-        HomePage.scrollToTop()
-      } else if (selectedItem[0].PartNumber) {
-        HomePage.clearShaverDetails()
-        Navbar.hideBackBtn()
-        HomePage.renderSearchField()
-        HomePage.renderShavers(shavers)
-        Search.bindShaverSearchEventListener()
-        HomePage.scrollToTop()
-      } else if (selectedItem[0].type) {
-        HomePage.clearErrorDetails()
-        Navbar.hideBackBtn()
-        HomePage.renderSearchField()
-        HomePage.renderXflowErrors(xflowErrors)
-        Search.bindErrorSearchEventListener()
-        HomePage.scrollToTop()
-      } else if (selectedItem[0].id) {
-        HomePage.clearErrorDetails()
-        Navbar.hideBackBtn()
-        HomePage.renderSearchField()
-        HomePage.renderXf2Errors(xf2Errors)
-        Search.bindErrorSearchEventListener()
-        HomePage.scrollToTop()
-      } else {
+      // if (selectedItem == undefined) {
+      //   HomePage.clearImplantText()
+      //   HomePage.clearImplantFamliesText()
+      //   Navbar.updateTitle(userSelection)
+      //   Navbar.hideBackBtn()
+      //   Search.clearSearchField()
+      //   HomePage.renderImplantFamilies(implantFamilies)
+      // }
+      // else if (selectedItem[0].implant) {
+      //   const selectedImpantFamily = selectedItem[0].implant.family
+      //   HomePage.clearImplantDetails()
+      //   Search.clearSearchField()
+      //   ImplantFamilies.selectedImplantFamily(selectedImpantFamily)
+      //   HomePage.scrollToTop()
+      // } else if (selectedItem[0].probe) {
+      //   HomePage.clearImplantDetails()
+      //   Navbar.hideBackBtn()
+      //   HomePage.renderSearchField()
+      //   HomePage.renderProbes(probes)
+      //   Search.bindProbeSearchEventListener()
+      //   HomePage.scrollToTop()
+      // } else if (selectedItem[0].PartNumber) {
+      //   HomePage.clearShaverDetails()
+      //   Navbar.hideBackBtn()
+      //   HomePage.renderSearchField()
+      //   HomePage.renderShavers(shavers)
+      //   Search.bindShaverSearchEventListener()
+      //   HomePage.scrollToTop()
+      // } else if (selectedItem[0].type) {
+      //   HomePage.clearErrorDetails()
+      //   Navbar.hideBackBtn()
+      //   HomePage.renderSearchField()
+      //   HomePage.renderXflowErrors(xflowErrors)
+      //   Search.bindErrorSearchEventListener()
+      //   HomePage.scrollToTop()
+      // } else if (selectedItem[0].id) {
+      //   HomePage.clearErrorDetails()
+      //   Navbar.hideBackBtn()
+      //   HomePage.renderSearchField()
+      //   HomePage.renderXf2Errors(xf2Errors)
+      //   Search.bindErrorSearchEventListener()
+      //   HomePage.scrollToTop()
+      // } else {
 
-      }
+      // }
     })
+  }
+
+  // Update Implant Families Title
+  static updateImplantFamiliesTitle(){
+    const navbarTitleDiv = document.getElementsByClassName("title-div")
+    const spanDiv = document.getElementsByClassName("span-div")
+    const imgDiv = document.getElementById("img-div")
+    navbarTitleDiv[0].innerText = "Implant"
+    spanDiv[0].innerText = "Families"
   }
 
   static updateTitle(item, features) {
     const userSelection = Store.getUserSelection()
-    console.log(userSelection)
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")

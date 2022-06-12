@@ -26,6 +26,7 @@ class Implants {
     const implantDivs = document.getElementsByClassName("implant-div")
     for (let item of implantDivs) {
       item.addEventListener("click", () => {
+        Store.assignLocation('details')
         const selectedInsert = item
         HomePage.clearImplantText()
         Search.clearSearchField()

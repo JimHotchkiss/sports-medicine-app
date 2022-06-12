@@ -9,6 +9,16 @@ class Store {
     return inserts
   }
 
+  // Assign Location
+  static assignLocation(userLocation) {
+    localStorage.setItem('location', `${userLocation}`)
+  }
+
+  // Get Location
+  static getUserLocation() {
+    return localStorage.getItem('location')
+  }
+
   static addInserts(fetchedInserts) {
     localStorage.setItem("inserts", JSON.stringify(fetchedInserts))
   }
