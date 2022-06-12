@@ -23,8 +23,11 @@ class ImplantFamilies {
         }
       }
 
+      static getImplantFamiliesFromStore() {
+        return Store.getImplantFamilies()
+      }
+
       static selectedImplantFamily(selectedFamily) {
-        console.log('selected Family', selectedFamily)
         const implantFamilies = Store.getImplantFamilies()
         const inserts = Store.getInserts()
         const selectedFamilyImplantsArray = []

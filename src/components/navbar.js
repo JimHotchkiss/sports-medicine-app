@@ -70,6 +70,7 @@ class Navbar {
     return navbarBackBtn
   }
   static showBackBtn(selectedItem) {
+    console.log(selectedItem)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
     Navbar.bindBackBtnEventListener(selectedItem)
@@ -82,17 +83,20 @@ class Navbar {
 
   static bindBackBtnEventListener(selectedItem) {
     const navbarBackBtn = document.getElementById("navbar-back-btn")
-    const implantFamilies = Store.getImplantFamilies()
+    // const implantFamilies = Store.getImplantFamilies()
     navbarBackBtn.addEventListener("click", () => {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
       const shavers = Shavers.getShaversFromStore()
       const xf2Errors = Xf2Errors.getXf2ErrorsFromStore()
       const xflowErrors = XflowErrors.getXflowErrorsFromStore()
+      const implantFamilies = ImplantFamilies.getImplantFamiliesFromStore()
+      console.log(selectedItem)
       if (selectedItem == undefined) {
+        console.log(implantFamilies)
         HomePage.clearImplantText()
         HomePage.clearImplantFamliesText()
-        Navbar.updateTitle()
+        Navbar.updateTitle(selectedItem)
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
@@ -118,7 +122,6 @@ class Navbar {
         Search.bindShaverSearchEventListener()
         HomePage.scrollToTop()
       } else if (selectedItem[0].type) {
-        console.log(selectedItem[0])
         HomePage.clearErrorDetails()
         Navbar.hideBackBtn()
         HomePage.renderSearchField()
@@ -132,6 +135,8 @@ class Navbar {
         HomePage.renderXf2Errors(xf2Errors)
         Search.bindErrorSearchEventListener()
         HomePage.scrollToTop()
+      } else {
+
       }
     })
   }
@@ -140,6 +145,7 @@ class Navbar {
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")
+    // This updates the Navbar for the features
     if (features !== undefined) {
       features.map((feature) => {
         if (feature.id === item.id) {
@@ -149,23 +155,28 @@ class Navbar {
             spanDiv[0].innerText = `${splitFeatureTitle[1]}s`
             imgDiv.classList.add("img-div-hide")
           } else {
+            // This is where the feature is being populated
             navbarTitleDiv[0].innerText = splitFeatureTitle[0]
             spanDiv[0].innerText = splitFeatureTitle[1]
             imgDiv.classList.add("img-div-hide")
           }
         }
       })
-    } else if (item == undefined) {
-      navbarTitleDiv[0].innerText = 'Implant'
-      spanDiv[0].innerText = 'Families'
-    } else if (item.classList.contains("capital-product-div")) {
-      let text = item.dataset.capital
-      const textArray = text.split(" ")
-      navbarTitleDiv[0].innerText = textArray[0] + " " + textArray[1]
-      spanDiv[0].innerText = textArray[2]
+    } else if (item !== undefined) {
+      if (item.dataset) {
+        let text = item.dataset.navbar
+        const textArray = text.split(" ")
+        if (textArray.length > 1) {
+          navbarTitleDiv[0].innerText = textArray[0]
+          spanDiv[0].innerText = textArray[1]
+        } else {
+          navbarTitleDiv[0].innerText = textArray[0]
+        }
+        
+      }
     } else {
-      navbarTitleDiv[0].innerText = item
-      spanDiv[0].innerText = 'Family'
+      navbarTitleDiv[0].innerText = "Implant"
+          spanDiv[0].innerText = "Families"
     }
   }
 

@@ -1484,6 +1484,7 @@ class HomePage {
       capitalProductDiv.setAttribute("class", "capital-product-div")
       capitalProductDiv.setAttribute("id", product.pn)
       capitalProductDiv.setAttribute("data-capital", product.title)
+      capitalProductDiv.setAttribute("data-navbar", product.title)
       capitalProductDiv.setAttribute("data-featureId", product.feature_id)
       const capitalProductTitleDiv = document.createElement("div")
       capitalProductTitleDiv.setAttribute("class", "capital-product-title-div")
@@ -1498,6 +1499,7 @@ class HomePage {
   }
 
   static renderImplantFamilies(implantFamiles) {
+    console.log(implantFamiles)
     const root = HomePage.root()
     const implantFamiliesContainer = document.createElement('div')
     implantFamiliesContainer.setAttribute("class", "implant-families-container")
@@ -1508,6 +1510,7 @@ class HomePage {
       implantFamiliesDiv.setAttribute("class", "implant-family-div")
       implantFamiliesDiv.setAttribute("id", family.id)
       implantFamiliesDiv.setAttribute("data-family", family.name)
+      implantFamiliesDiv.setAttribute("data-navbar", family.name)
       const implantFamilyNameDiv = document.createElement("div")
       implantFamilyNameDiv.setAttribute("class", "implant-family-name-div")
       implantFamilyNameDiv.innerText = family.name
@@ -1525,10 +1528,12 @@ class HomePage {
     implantContainer.setAttribute("id", "implant-container")
 
     inserts.map((implant) => {
+      // console.log(implant)
       const implantDiv = document.createElement("div")
       implantDiv.setAttribute("class", "implant-div")
       implantDiv.setAttribute("id", implant.implant.pn)
       implantDiv.setAttribute("data-index", implant.implant.id)
+      implantDiv.setAttribute("data-navbar", implant.implant.family)
       const implantNameDiv = document.createElement("div")
       implantNameDiv.setAttribute("class", "implant-name-div")
       const implantPnDiv = document.createElement("div")
