@@ -1,6 +1,6 @@
 class App {
   constructor() {
-    // localStorage.clear()
+    localStorage.clear()
     this.homePage = new HomePage()
   }
 }

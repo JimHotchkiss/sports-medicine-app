@@ -21,7 +21,6 @@ class XflowErrors {
         const selectedError = item
         HomePage.clearErrorText()
         Search.clearSearchField()
-        console.log(selectedError.id)
         HomePage.getXflowErrorDetails(selectedError)
       })
     }

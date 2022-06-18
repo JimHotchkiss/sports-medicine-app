@@ -16,10 +16,8 @@ class ImplantFamilies {
         for (let item of implantFamilyDivs) {
           item.addEventListener("click", () => {
             const userSelection = item.dataset.family
-            const userLocation = 'family'
-            Store.assignLocation(userLocation)
             Store.setUserSelection(userSelection)
-            Navbar.updateTitle(item, this.features)
+            Navbar.updateTitle(item)
             Search.clearSearchField()
             let selectedFamily = item.dataset.family
             ImplantFamilies.selectedImplantFamily(selectedFamily)
@@ -40,7 +38,7 @@ class ImplantFamilies {
             selectedFamilyImplantsArray.push(insert)
           }
         })
-        Navbar.updateTitle(selectedFamily)
+        HomePage.clearImplantDetails()
         HomePage.renderSearchField()
         Search.bindInsertSearchEventListener()
         HomePage.clearImplantFamliesText()

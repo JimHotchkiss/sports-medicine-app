@@ -113,7 +113,6 @@ class HomePage {
   }
 
   static getImplantDetails(selectedInsert) {
-    console.log(selectedInsert)
     const inserts = Store.getInserts()
     const selectedInserts = []
     inserts.map((insert) => {
@@ -1107,7 +1106,7 @@ class HomePage {
   }
 
   static renderCapitalProductDetails(selectedCapitalProducts) {
-    console.log(selectedCapitalProducts)
+    // console.log(selectedCapitalProducts)
   }
 
   static renderInsertDetails(selectedInserts, selectedInsert) {
@@ -1545,7 +1544,6 @@ class HomePage {
     })
     root.appendChild(implantContainer)
     Implants.bindingImplantsEventListener()
-    // Store.assignLocation('family')
   }
 
   // Arthro Default Settings
