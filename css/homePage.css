@@ -28,10 +28,45 @@
 
 .capital-product-title-div {
     font-weight: 900;
-    font-size: 22px;
+    font-size: 16px;
     color: #262626;
     padding: 8px;
     text-align: center;
+}
+
+.capital-product-pn-div {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+    padding-bottom: 8px;
+    color: #272727;
+    transition: 0.3s;
+}
+
+/* Insert List Details Text */
+
+.insert-list-details-text-div {
+    background: #ffb600;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    width: 90%;
+    padding: 12px 8px;
+    border-radius: 5px;
+}
+
+.insert-list-details-div {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.insert-list-details-div h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 16px;
+    margin-bottom: 12px;
+}
+.insert-list-details-div p {
+    color: #262626;
+    margin-top: 12px;
 }
 
 /***************** Implant Families  ********************/

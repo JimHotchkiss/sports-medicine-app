@@ -92,16 +92,19 @@ class Navbar {
       const xf2Errors = Xf2Errors.getXf2ErrorsFromStore()
       const xflowErrors = XflowErrors.getXflowErrorsFromStore()
       const implantFamilies = ImplantFamilies.getImplantFamiliesFromStore()
-      if (selectedItem == undefined) {
-        console.log('here', userSelection)
+      const capitalProducts = CapitalProducts.getCapitalProductsFromStore()
+       if (selectedItem[0].feature_id == 'capital') {
+        HomePage.clearImplantDetails()
+        HomePage.renderCapitalProducts(capitalProducts)
+        Navbar.updateTitle("Capital Products")
+       } else if (selectedItem == undefined) {
         HomePage.clearImplantDetails()
         HomePage.clearImplantFamliesText()
         // Navbar.updateImplantFamiliesTitle(userSelection)
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
-      }
-      else if (selectedItem[0].implant) {
+      } else if (selectedItem[0].implant) {
         const selectedImpantFamily = selectedItem[0].implant.family
         HomePage.clearImplantDetails()
         Search.clearSearchField()
@@ -158,9 +161,8 @@ class Navbar {
   }
 
   static updateTitle(item, features) {
-    // console.log('updateTitle', item)
+    console.log(item, features)
     const userSelection = Store.getUserSelection()
-    // console.log(userSelection)
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")
