@@ -8,7 +8,6 @@ class DefaultSettings {
     this.defaultAdapter.fetchDefaultSettingsData().then((data) => {
       for (let item in data) {
         for (let i = 0; i < data[item].length; i++) {
-          // console.log(data[item][i])
           // Footpedal
           if (data[item][i].footpedal) {
             data[item][i].footpedal.map((piece) => {
@@ -25,7 +24,6 @@ class DefaultSettings {
             // Handpiece
           } else if (data[item][i].shaver) {
             let shaverDefaults = data[item][i].shaver
-            // console.log(shaverDefaults)
             Store.addShaverDefaults(shaverDefaults)
           } else if (data[item][i].rfWand) {
             // RF Wand

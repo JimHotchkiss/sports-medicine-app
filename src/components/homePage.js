@@ -109,7 +109,26 @@ class HomePage {
         return selectedCapitalProducts.push(capital_product)
       }
     })
-    HomePage.renderCapitalProductDetails(selectedCapitalProducts)
+    // I'll need to leverage an if state for the different Capital products
+    HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
+  }
+
+  // Adaptable Beach Chair Details 
+  static renderAdaptableBeachChairDetails(selectedCapitalProducts) {
+    HomePage.scrollToTop()
+    console.log(selectedCapitalProducts)
+    // HomePage.ABClName(selectedCapitalProducts)
+    // HomePage.ABCPn(selectedCapitalProducts)
+    // HomePage.ABCDescription(selectedCapitalProducts)
+    // HomePage.ABCChairWeight(selectedCapitalProducts)
+    // HomePage.ABCPatientWeightLimit(selectedCapitalProducts)
+    // HomePage.ABCPatientHeightRange(selectedCapitalProducts)
+    // HomePage.ABCBenefitsForAnesthesia(selectedCapitalProducts)
+    // HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts)
+    // HomePage.ABCBenefitsForStaff(selectedCapitalProducts)
+    // HomePage.ABCBenefitsForPatients(selectedCapitalProducts)
+    // HomePage.ABCDisposables(selectedCapitalProducts)
+    // HomePage.ABCBReplacementParts(selectedCapitalProducts)
   }
 
   static getImplantDetails(selectedInsert) {
@@ -1105,9 +1124,7 @@ class HomePage {
     }
   }
 
-  static renderCapitalProductDetails(selectedCapitalProducts) {
-    // console.log(selectedCapitalProducts)
-  }
+
 
   static renderInsertDetails(selectedInserts, selectedInsert) {
     // HomePage.filterForIconixInserts()

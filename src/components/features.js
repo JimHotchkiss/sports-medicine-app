@@ -35,7 +35,6 @@ class Features {
     featureContainer.setAttribute("class", "features-container")
     featureContainer.setAttribute("id", "features-container")
     return this.features.map((feature) => {
-      // console.log(feature)
       // Feature div
       const featureDiv = document.createElement("div")
       featureDiv.setAttribute("class", "feature-div")
@@ -75,7 +74,8 @@ class Features {
         Navbar.updateTitle(item, this.features)
         Navbar.showHomeIcon()
         if (item.id === "implant-families") {
-          userSelection = "Implant Families"
+          console.log('implant families')
+          userSelection = "Implants"
           const implantFamilies = Store.getImplantFamilies()
           HomePage.renderImplantFamilies(implantFamilies)
           Store.setUserSelection(userSelection)

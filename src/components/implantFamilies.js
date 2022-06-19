@@ -14,10 +14,10 @@ class ImplantFamilies {
       static bindingImplantFamiliesEventListener() {
         const implantFamilyDivs = document.getElementsByClassName("implant-family-div")
         for (let item of implantFamilyDivs) {
-          item.addEventListener("click", () => {
+          item.addEventListener("click", () => { 
             const userSelection = item.dataset.family
             Store.setUserSelection(userSelection)
-            Navbar.updateTitle(item)
+            // Navbar.updateTitle(item)
             Search.clearSearchField()
             let selectedFamily = item.dataset.family
             ImplantFamilies.selectedImplantFamily(selectedFamily)

@@ -96,7 +96,7 @@ class Navbar {
         console.log('here', userSelection)
         HomePage.clearImplantDetails()
         HomePage.clearImplantFamliesText()
-        Navbar.updateImplantFamiliesTitle(userSelection)
+        // Navbar.updateImplantFamiliesTitle(userSelection)
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
