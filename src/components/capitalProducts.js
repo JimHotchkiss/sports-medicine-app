@@ -20,8 +20,7 @@ class CapitalProducts {
         for (let item of capitalProductsDivs) {
           item.addEventListener("click", () => {
             const selectedCapitalProduct = item
-            console.log(selectedCapitalProduct)
-            Navbar.updateTitle(item)
+            Navbar.updateTitle("Capital Products")
             HomePage.clearCapitalProductsText()
             HomePage.getCapitalProductsDetails(selectedCapitalProduct)
           })

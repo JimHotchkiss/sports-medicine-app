@@ -93,18 +93,19 @@ class Navbar {
       const xflowErrors = XflowErrors.getXflowErrorsFromStore()
       const implantFamilies = ImplantFamilies.getImplantFamiliesFromStore()
       const capitalProducts = CapitalProducts.getCapitalProductsFromStore()
-       if (selectedItem[0].feature_id == 'capital') {
-        HomePage.clearImplantDetails()
-        HomePage.renderCapitalProducts(capitalProducts)
-        Navbar.updateTitle("Capital Products")
-       } else if (selectedItem == undefined) {
+      if (selectedItem == undefined) {
         HomePage.clearImplantDetails()
         HomePage.clearImplantFamliesText()
         // Navbar.updateImplantFamiliesTitle(userSelection)
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
-      } else if (selectedItem[0].implant) {
+      } else if (selectedItem[0].feature_id == 'capital') {
+        HomePage.clearImplantDetails()
+        HomePage.renderCapitalProducts(capitalProducts)
+        Navbar.updateTitle("Capital Products")
+        Navbar.hideBackBtn()
+       } else if (selectedItem[0].implant) {
         const selectedImpantFamily = selectedItem[0].implant.family
         HomePage.clearImplantDetails()
         Search.clearSearchField()
