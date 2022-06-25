@@ -162,7 +162,6 @@ class Navbar {
   }
 
   static updateTitle(item, features) {
-    console.log(item, features)
     const userSelection = Store.getUserSelection()
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")

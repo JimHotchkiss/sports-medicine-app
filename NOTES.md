@@ -562,8 +562,7 @@ Titanium Wedge Anchor
     * Knotilus Anchor
 
 # Capital Products
-    * Adapatable Beach Chair
-[] Send Calli an email requesting Adaptable Beach Chair image (high resolution)
+    * Adapatable Beach Chair 
 
 [ ] Issue: UpdateTitle running into bug with 'item' undefined 
 
@@ -574,6 +573,13 @@ Titanium Wedge Anchor
         3.  Cinchlock Details
     * Note: Using Localstorage doesn't seem to be working. When you update localstorage, it changes the state of the page.
         * Read some articles on javascript and back button strategies
+    * Alphavent
+[] Send Calli an email requesting Adaptable Beach Chair image (high resolution)
+[] Ask Calli about 'Suture System' for description, instead of PN
+[] Alphavent sutures data
+    (x) 4.75mm
+    () 5.5mm
+    () 6.5mm 
 
    
 

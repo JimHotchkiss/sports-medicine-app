@@ -109,9 +109,51 @@ class HomePage {
         return selectedCapitalProducts.push(capital_product)
       }
     })
-    // I'll need to leverage an if state for the different Capital products
-    HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
+   if (selectedCapitalProducts[0].title == "Alphavent") {
+      HomePage.renderAlphaventProducts(selectedCapitalProducts)
+   } else {
+      HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
+   }
     Navbar.showBackBtn(selectedCapitalProducts)
+  }
+
+  // Alphavent 
+  static renderAlphaventProducts(selectedCapitalProducts) {
+    const alphavent_products = selectedCapitalProducts[0].alphavent_products
+    const alphavent_products_container = document.createElement('div')
+    alphavent_products_container.setAttribute("class", "features-container")
+    alphavent_products_container.setAttribute("id", "features-container")
+    const root = HomePage.root()
+    alphavent_products.map(product => {
+      // Alphavent Product Div
+      const alphavent_product_div = document.createElement("div")
+      alphavent_product_div.setAttribute("class", "feature-div")
+      alphavent_product_div.setAttribute("id", product.name)
+      alphavent_product_div.setAttribute("data", product.name)
+       // Image and Title div
+       const alphaventImgTitleDiv = document.createElement("div")
+       alphaventImgTitleDiv.setAttribute("class", "feature-img-title-div")
+       // Image div
+       const imgDiv = document.createElement("div")
+       imgDiv.setAttribute("class", "feature-img-div")
+       imgDiv.setAttribute("id", `${product.id}-img-url`)
+       alphaventImgTitleDiv.appendChild(imgDiv)
+       //Title div
+       const titleDiv = document.createElement("div")
+       titleDiv.setAttribute("class", "feature-title-div")
+       titleDiv.innerText = product.name
+       alphaventImgTitleDiv.appendChild(titleDiv)
+       // Description div
+      //  const descriptionDiv = document.createElement("div")
+      //  descriptionDiv.setAttribute("class", "feature-description-div")
+      //  descriptionDiv.innerText = product.size
+ 
+       alphavent_product_div.appendChild(alphaventImgTitleDiv)
+      //  alphavent_product_div.appendChild(descriptionDiv)
+       alphavent_products_container.appendChild(alphavent_product_div)
+       root.appendChild(alphavent_products_container)
+
+    })
   }
 
   // Adaptable Beach Chair Details 
@@ -1758,6 +1800,7 @@ class HomePage {
   }
 
   static renderCapitalProducts(capitalProducts) {
+    console.log(capitalProducts)
     const root = HomePage.root()
     const capitalProductsContainer = document.createElement('div')
     capitalProductsContainer.setAttribute("class", "capital-products-container")
