@@ -103,7 +103,7 @@ class Features {
         } else if (item.id === "crossfire-errors") {
           userSelection = "Crossfire Errors"
           const errors = Store.getXf2Errors()
-          HomePage.renderErrorsSearchField()
+          HomePage.renderSearchField()
           HomePage.renderXf2Errors(errors)
           Search.bindErrorSearchEventListener()
           Store.setUserSelection(userSelection)
@@ -119,7 +119,7 @@ class Features {
         }  else if (item.id === "crossflow-errors") {
           userSelection = "Crossflow Errors"
           const errors = Store.getXflowErrors()
-          HomePage.renderErrorsSearchField()
+          HomePage.renderSearchField()
           HomePage.renderXflowErrors(errors)
           Search.bindCrossflowErrorSearchEventListener()
           Store.setUserSelection(userSelection)

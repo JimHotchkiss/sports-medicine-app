@@ -8,7 +8,7 @@ class Navbar {
       }
     }
     const navbar = document.createElement("div")
-    navbar.setAttribute("class", "navbar")
+    navbar.setAttribute("class", "navbar-wrapper")
     navbar.setAttribute("id", "navbar")
 
     // back btn

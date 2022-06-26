@@ -47,14 +47,14 @@
 
 .insert-list-details-text-div {
     background: #ffb600;
-    margin: 0 auto;
     margin-bottom: 24px;
-    width: 90%;
     padding: 12px 8px;
     border-radius: 5px;
 }
 
 .insert-list-details-div {
+    /* max-width: 500px;
+    margin: auto; */
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -739,7 +739,7 @@ input:focus{
     }
 
       /* Insert Details */
-      .insert-details-div{
+      /* .insert-details-div{
         min-width: 500px;
         margin: 0 auto;
     }
@@ -762,7 +762,7 @@ input:focus{
 
     .insert-details-div h3{
         margin-left: 5%;
-    }
+    } */
        /* Probes */
    .probes-container {
     min-width: 500px;

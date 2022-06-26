@@ -1,0 +1,61 @@
+.content-wrapper {
+    max-width: 500px;
+    margin: 84px auto;
+}
+
+.content-div {
+    text-align: center;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.content-div:hover {
+    cursor: pointer;
+}
+
+.content-title-div {
+    margin: 8px 0 8px 0;
+    font-weight: 700;
+}
+
+.content-description-div {
+    margin-bottom: 8px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.section-title {
+    color: #fff;
+}
+
+/******* Search Bar Feature **********/
+.search-container {
+    margin: 84px auto;
+    min-width: 375px;
+    max-width: 375px;
+    text-align: center;
+    margin-bottom: -75px;
+}
+
+input:focus{
+    outline: none;
+}
+
+/* .search-container i {
+    position: absolute; 
+    left: 856px; 
+    top: 100px; 
+    color: #262626;
+} */
+
+.input-field{
+    padding: 12px;
+    width:74%;
+    text-align:left;
+    border-radius: 5px;
+}
