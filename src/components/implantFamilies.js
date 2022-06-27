@@ -12,7 +12,7 @@ class ImplantFamilies {
       }
 
       static bindingImplantFamiliesEventListener() {
-        const implantFamilyDivs = document.getElementsByClassName("implant-family-div")
+        const implantFamilyDivs = document.getElementsByClassName("content-div")
         for (let item of implantFamilyDivs) {
           item.addEventListener("click", () => { 
             const userSelection = item.dataset.family

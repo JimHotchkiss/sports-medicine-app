@@ -23,7 +23,7 @@ class Implants {
   }
 
   static bindingImplantsEventListener() {
-    const implantDivs = document.getElementsByClassName("implant-div")
+    const implantDivs = document.getElementsByClassName("content-div")
     for (let item of implantDivs) {
       item.addEventListener("click", () => {
         const selectedInsert = item

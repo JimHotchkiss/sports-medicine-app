@@ -121,13 +121,13 @@ class HomePage {
     static renderAlphaventProducts(selectedCapitalProducts) {
       const alphavent_products = selectedCapitalProducts[0].alphavent_products
       const alphavent_products_container = document.createElement('div')
-      alphavent_products_container.setAttribute("class", "features-container")
+      alphavent_products_container.setAttribute("class", "content-wrapper")
       alphavent_products_container.setAttribute("id", "features-container")
       const root = HomePage.root()
       alphavent_products.map(product => {
         // Alphavent Product Div
         const alphavent_product_div = document.createElement("div")
-        alphavent_product_div.setAttribute("class", "feature-div")
+        alphavent_product_div.setAttribute("class", "content-div")
         alphavent_product_div.setAttribute("id", product.name)
         alphavent_product_div.setAttribute("data", product.name)
          // Image and Title div
@@ -140,7 +140,7 @@ class HomePage {
          alphaventImgTitleDiv.appendChild(imgDiv)
          //Title div
          const titleDiv = document.createElement("div")
-         titleDiv.setAttribute("class", "feature-title-div")
+         titleDiv.setAttribute("class", "content-title-div")
          titleDiv.innerText = product.name
          alphaventImgTitleDiv.appendChild(titleDiv)
          // Description div
@@ -158,45 +158,48 @@ class HomePage {
   
     // Adaptable Beach Chair Details 
     static renderAdaptableBeachChairDetails(selectedCapitalProducts) {
+      const contentWrapper = document.createElement('div')
+      contentWrapper.setAttribute('class', 'content-wrapper')
       HomePage.scrollToTop()
-      HomePage.ProductName(selectedCapitalProducts)
-      HomePage.ProductPn(selectedCapitalProducts)
-      HomePage.ProductDescription(selectedCapitalProducts)
-      HomePage.ABCChairWeight(selectedCapitalProducts)
-      HomePage.ABCPatientWeightLimit(selectedCapitalProducts)
-      HomePage.ABCPatientHeightRange(selectedCapitalProducts)
-      HomePage.ABCBenefitsForAnesthesia(selectedCapitalProducts)
-      HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts)
-      HomePage.ABCBenefitsForStaff(selectedCapitalProducts)
-      HomePage.ABCBenefitsForPatients(selectedCapitalProducts)
-      HomePage.ABCDisposable(selectedCapitalProducts)
-      HomePage.ABCDisposables(selectedCapitalProducts)
-      HomePage.ABCBReplacementParts(selectedCapitalProducts)
+      HomePage.ProductName(selectedCapitalProducts, contentWrapper)
+      HomePage.ProductPn(selectedCapitalProducts, contentWrapper)
+      HomePage.ProductDescription(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCChairWeight(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCPatientWeightLimit(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCPatientHeightRange(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForAnesthesia(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForStaff(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForPatients(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCDisposable(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCDisposables(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBReplacementParts(selectedCapitalProducts, contentWrapper)
     }
   
     // Product Name
-    static ProductName(selectedCapitalProduct) {
+    static ProductName(selectedCapitalProduct, contentWrapper) {
       const insertNameDiv = document.createElement("div")
-      insertNameDiv.setAttribute("class", "insert-details-div")
+      insertNameDiv.setAttribute("class", "content-details-div")
       insertNameDiv.setAttribute("id", "insert-name-div")
       const insertNameTitle = document.createElement("h3")
       insertNameTitle.setAttribute("class", "insert-details-title")
       const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+      insertNameTextDiv.setAttribute("class", "product-name-div")
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "insert-details-text")
+      insertNameText.setAttribute("class", "product-name-text")
       insertNameTitle.innerText = "Name"
       insertNameText.innerText = selectedCapitalProduct[0].title
       insertNameTextDiv.appendChild(insertNameText)
       insertNameDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTextDiv)
-      HomePage.root().appendChild(insertNameDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // Product PN
-    static ProductPn(selectedCapitalProduct) {
+    static ProductPn(selectedCapitalProduct, contentWrapper) {
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -208,13 +211,14 @@ class HomePage {
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // Product Description 
-    static ProductDescription(selectedCapitalProduct) {
+    static ProductDescription(selectedCapitalProduct, contentWrapper) {
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -226,13 +230,14 @@ class HomePage {
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Chair Weight
-    static ABCChairWeight(selectedCapitalProduct){
+    static ABCChairWeight(selectedCapitalProduct, contentWrapper){
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -244,13 +249,14 @@ class HomePage {
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Patient Weight Limit
-    static ABCPatientWeightLimit(selectedCapitalProduct) {
+    static ABCPatientWeightLimit(selectedCapitalProduct, contentWrapper) {
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -262,13 +268,14 @@ class HomePage {
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Height Range 
-    static ABCPatientHeightRange(selectedCapitalProduct) {
+    static ABCPatientHeightRange(selectedCapitalProduct, contentWrapper) {
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -280,14 +287,15 @@ class HomePage {
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Benefits for Anethesia 
-    static ABCBenefitsForAnesthesia(selectedCapitalProduct) {
+    static ABCBenefitsForAnesthesia(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_anesthesia
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-list-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -301,14 +309,15 @@ class HomePage {
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // Benefits for Surgeons 
-    static ABCBenefitsForSurgeons(selectedCapitalProduct) {
+    static ABCBenefitsForSurgeons(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_surgeon
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -322,15 +331,16 @@ class HomePage {
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
   
     }
   
     // Benefits for Staff 
-    static ABCBenefitsForStaff(selectedCapitalProduct) {
+    static ABCBenefitsForStaff(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_staff
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -344,14 +354,15 @@ class HomePage {
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // Benefits for Patients
-    static ABCBenefitsForPatients(selectedCapitalProduct) {
+    static ABCBenefitsForPatients(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_patient
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -365,14 +376,15 @@ class HomePage {
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Disposable
-    static ABCDisposable(selectedCapitalProduct){
+    static ABCDisposable(selectedCapitalProduct, contentWrapper){
       const benefitArray = selectedCapitalProduct[0].disposable
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -386,14 +398,15 @@ class HomePage {
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Disposables 
-    static ABCDisposables(selectedCapitalProduct) {
+    static ABCDisposables(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].disposables
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -404,21 +417,22 @@ class HomePage {
         const insertDescriptionText = document.createElement("p")
         insertPnText.setAttribute("class", "insert-list-details-text")
         insertDescriptionText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. PN: ${benefit.pn}`
-        insertDescriptionText.innerText = benefit.description
-        insertPnTextDiv.appendChild(insertPnText)
+        insertPnText.innerText = `PN: ${benefit.pn}`
+        insertDescriptionText.innerText = `${index + 1}. ${benefit.description}`
         insertPnTextDiv.appendChild(insertDescriptionText)
+        insertPnTextDiv.appendChild(insertPnText)
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Replacement Parts 
-    static ABCBReplacementParts(selectedCapitalProducts) {
+    static ABCBReplacementParts(selectedCapitalProducts, contentWrapper) {
       const benefitArray = selectedCapitalProducts[0].replacement_parts
       const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "insert-list-details-div")
+      insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
       insertPnTitle.setAttribute("class", "insert-details-title")
       const insertPnTextDiv = document.createElement("div")
@@ -429,14 +443,15 @@ class HomePage {
         const insertDescriptionText = document.createElement("p")
         insertPnText.setAttribute("class", "insert-list-details-text")
         insertDescriptionText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. PN: ${benefit.pn}`
-        insertDescriptionText.innerText = benefit.description
-        insertPnTextDiv.appendChild(insertPnText)
+        insertPnText.innerText = `PN: ${benefit.pn}`
+        insertDescriptionText.innerText = `${index + 1}. ${benefit.description}`
         insertPnTextDiv.appendChild(insertDescriptionText)
+        insertPnTextDiv.appendChild(insertPnText)
       })
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
-      HomePage.root().appendChild(insertPnDiv)
+      contentWrapper.appendChild(insertPnDiv)
+      HomePage.root().appendChild(contentWrapper)
   
     }
     
@@ -801,7 +816,7 @@ class HomePage {
         const insertNameTitle = document.createElement("h3")
         insertNameTitle.setAttribute("class", "insert-details-title")
         const insertNameTextDiv = document.createElement("div")
-        insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+        insertNameTextDiv.setAttribute("class", "name-div")
         const insertNameText = document.createElement("p")
         insertNameText.setAttribute("class", "insert-details-text")
         insertNameTitle.innerText = "Name"
@@ -852,7 +867,7 @@ class HomePage {
         const insertNameTitle = document.createElement("h3")
         insertNameTitle.setAttribute("class", "insert-details-title")
         const insertNameTextDiv = document.createElement("div")
-        insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+        insertNameTextDiv.setAttribute("class", "name-div")
         const insertNameText = document.createElement("p")
         insertNameText.setAttribute("class", "insert-details-text")
         insertNameTitle.innerText = "Name"
@@ -989,31 +1004,33 @@ class HomePage {
       HomePage.probeCutMax(selectedProbes)
     }
   
-    static implantName(selectedInserts) {
+    static implantName(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertNameDiv = document.createElement("div")
-        insertNameDiv.setAttribute("class", "insert-details-div")
+        insertNameDiv.setAttribute("class", "implant-details-div")
         insertNameDiv.setAttribute("data-index", insert.implant.id)
         insertNameDiv.setAttribute("id", "insert-name-div")
         const insertNameTitle = document.createElement("h3")
         insertNameTitle.setAttribute("class", "insert-details-title")
         const insertNameTextDiv = document.createElement("div")
-        insertNameTextDiv.setAttribute("class", "insert-details-text-div")
+        insertNameTextDiv.setAttribute("class", "name-div")
         const insertNameText = document.createElement("p")
         insertNameText.setAttribute("class", "insert-details-text")
         insertNameTitle.innerText = "Name"
+        console.log(insert.implant.name)
         insertNameText.innerText = insert.implant.name
         insertNameTextDiv.appendChild(insertNameText)
         insertNameDiv.appendChild(insertNameTitle)
         insertNameDiv.appendChild(insertNameTextDiv)
-        HomePage.root().appendChild(insertNameDiv)
+        contentWrapper.appendChild(insertNameDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantPn(selectedInserts) {
+    static implantPn(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -1025,14 +1042,15 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantMaterial(selectedInserts) {
+    static implantMaterial(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertMaterialDiv = document.createElement("div")
-        insertMaterialDiv.setAttribute("class", "insert-details-div")
+        insertMaterialDiv.setAttribute("class", "content-details-div")
         const insertMaterialTitle = document.createElement("h3")
         insertMaterialTitle.setAttribute("class", "insert-details-title")
         const insertMaterialTextDiv = document.createElement("div")
@@ -1044,14 +1062,15 @@ class HomePage {
         insertMaterialTextDiv.appendChild(insertMaterialText)
         insertMaterialDiv.appendChild(insertMaterialTitle)
         insertMaterialDiv.appendChild(insertMaterialTextDiv)
-        HomePage.root().appendChild(insertMaterialDiv)
+        contentWrapper.appendChild(insertMaterialDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantDrillDepth(selectedInserts) {
+    static implantDrillDepth(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertDrillDepthDiv = document.createElement("div")
-        insertDrillDepthDiv.setAttribute("class", "insert-details-div")
+        insertDrillDepthDiv.setAttribute("class", "content-details-div")
         const insertDrillDepthTitle = document.createElement("h3")
         insertDrillDepthTitle.setAttribute("class", "insert-details-title")
         const insertDrillDepthTextDiv = document.createElement("div")
@@ -1063,13 +1082,14 @@ class HomePage {
         insertDrillDepthTextDiv.appendChild(insertDrillDepthText)
         insertDrillDepthDiv.appendChild(insertDrillDepthTitle)
         insertDrillDepthDiv.appendChild(insertDrillDepthTextDiv)
-        HomePage.root().appendChild(insertDrillDepthDiv)
+        contentWrapper.appendChild(insertDrillDepthDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
-    static implantDrillWidth(selectedInserts) {
+    static implantDrillWidth(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertDrillWidthDiv = document.createElement("div")
-        insertDrillWidthDiv.setAttribute("class", "insert-details-div")
+        insertDrillWidthDiv.setAttribute("class", "content-details-div")
         const insertDrillWidthTitle = document.createElement("h3")
         insertDrillWidthTitle.setAttribute("class", "insert-details-title")
         const insertDrillWidthTextDiv = document.createElement("div")
@@ -1081,14 +1101,15 @@ class HomePage {
         insertDrillWidthTextDiv.appendChild(insertDrillWidthText)
         insertDrillWidthDiv.appendChild(insertDrillWidthTitle)
         insertDrillWidthDiv.appendChild(insertDrillWidthTextDiv)
-        HomePage.root().appendChild(insertDrillWidthDiv)
+        contentWrapper.appendChild(insertDrillWidthDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantLength(selectedInserts) {
+    static implantLength(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertLengthDiv = document.createElement("div")
-        insertLengthDiv.setAttribute("class", "insert-details-div")
+        insertLengthDiv.setAttribute("class", "content-details-div")
         const insertLengthTitle = document.createElement("h3")
         insertLengthTitle.setAttribute("class", "insert-details-title")
         const insertLengthTextDiv = document.createElement("div")
@@ -1100,14 +1121,15 @@ class HomePage {
         insertLengthTextDiv.appendChild(insertLengthText)
         insertLengthDiv.appendChild(insertLengthTitle)
         insertLengthDiv.appendChild(insertLengthTextDiv)
-        HomePage.root().appendChild(insertLengthDiv)
+        contentWrapper.appendChild(insertLengthDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantWidth(selectedInserts) {
+    static implantWidth(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertWidthDiv = document.createElement("div")
-        insertWidthDiv.setAttribute("class", "insert-details-div")
+        insertWidthDiv.setAttribute("class", "content-details-div")
         const insertWidthTitle = document.createElement("h3")
         insertWidthTitle.setAttribute("class", "insert-details-title")
         const insertWidthTextDiv = document.createElement("div")
@@ -1119,14 +1141,15 @@ class HomePage {
         insertWidthTextDiv.appendChild(insertWidthText)
         insertWidthDiv.appendChild(insertWidthTitle)
         insertWidthDiv.appendChild(insertWidthTextDiv)
-        HomePage.root().appendChild(insertWidthDiv)
+        contentWrapper.appendChild(insertWidthDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantNotes(selectedInserts) {
+    static implantNotes(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertNotesDiv = document.createElement("div")
-        insertNotesDiv.setAttribute("class", "insert-details-div")
+        insertNotesDiv.setAttribute("class", "content-details-div")
         const insertNotesTitle = document.createElement("h3")
         insertNotesTitle.setAttribute("class", "insert-details-title")
         const insertNotesTextDiv = document.createElement("div")
@@ -1138,14 +1161,15 @@ class HomePage {
         insertNotesTextDiv.appendChild(insertNotesText)
         insertNotesDiv.appendChild(insertNotesTitle)
         insertNotesDiv.appendChild(insertNotesTextDiv)
-        HomePage.root().appendChild(insertNotesDiv)
+        contentWrapper.appendChild(insertNotesDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantPositiveStop(selectedInserts) {
+    static implantPositiveStop(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertPositiveStopDiv = document.createElement("div")
-        insertPositiveStopDiv.setAttribute("class", "insert-details-div")
+        insertPositiveStopDiv.setAttribute("class", "content-details-div")
         const insertPositiveStopTitle = document.createElement("h3")
         insertPositiveStopTitle.setAttribute("class", "insert-details-title")
         const insertPositiveStopTextDiv = document.createElement("div")
@@ -1157,14 +1181,15 @@ class HomePage {
         insertPositiveStopTextDiv.appendChild(insertPositiveStopText)
         insertPositiveStopDiv.appendChild(insertPositiveStopTitle)
         insertPositiveStopDiv.appendChild(insertPositiveStopTextDiv)
-        HomePage.root().appendChild(insertPositiveStopDiv)
+        contentWrapper.appendChild(insertPositiveStopDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantIconixOneImage(filteredInsertSelection) {
       filteredInsertSelection.map(() => {
         const insertUrlTextDiv = document.createElement("div")
-        insertUrlTextDiv.setAttribute("class", "insert-details-div")
+        insertUrlTextDiv.setAttribute("class", "content-details-div")
         const insertUrlDiv = document.createElement("div")
         insertUrlDiv.setAttribute("class", "insert-img-div")
         insertUrlDiv.setAttribute("id", "iconix1-img-div")
@@ -1180,7 +1205,7 @@ class HomePage {
     static implantIconixTwoImage(filteredInsertSelection) {
       filteredInsertSelection.map(() => {
         const insertUrlTextDiv = document.createElement("div")
-        insertUrlTextDiv.setAttribute("class", "insert-details-div")
+        insertUrlTextDiv.setAttribute("class", "content-details-div")
         const insertUrlDiv = document.createElement("div")
         insertUrlDiv.setAttribute("class", "insert-img-div")
         insertUrlDiv.setAttribute("id", "iconix2-img-div")
@@ -1193,20 +1218,20 @@ class HomePage {
       })
     }
   
-    static filterNeedleData(selectedInsert) {
+    static filterNeedleData(selectedInsert, contentWrapper) {
       if (
         selectedInsert.id === "3910-500-412" ||
         selectedInsert.id === "3910-500-212" ||
         selectedInsert.id === "3910-500-422"
       ) {
         const needles = Store.getNeedles().needles[1]
-        HomePage.renderNeedleData(needles)
+        HomePage.renderNeedleData(needles, contentWrapper)
       } else if (selectedInsert.id === "3910-500-222") {
         const needles = Store.getNeedles().needles[0]
-        HomePage.renderNeedleData(needles)
+        HomePage.renderNeedleData(needles, contentWrapper)
       }
     }
-    static renderNeedleData(needles) {
+    static renderNeedleData(needles, contentWrapper) {
       const needlesDetailsContainer = document.createElement("div")
       needlesDetailsContainer.setAttribute("class", "insert-details-container")
       const needleTitle = document.createElement("h3")
@@ -1214,68 +1239,6 @@ class HomePage {
       needleTitle.innerText = "Needle Specifications"
       const needleDetailsDiv = document.createElement("div")
       needleDetailsDiv.setAttribute("class", "needle-details-div")
-      // // Name
-      // needleDetailsDiv.setAttribute("class", "needle-details-div")
-      // const needleName = document.createElement("div")
-      // needleName.setAttribute("class", "needle-details")
-      // needleName.innerText = `Name: ${needles.name}`
-      // needleDetailsDiv.appendChild(needleName)
-      // if (needles.pn === "105-208-062") {
-      //   const surgerySpecialtyPn = document.createElement("div")
-      //   surgerySpecialtyPn.setAttribute("class", "needle-details")
-      //   surgerySpecialtyPn.innerText = `Surgical Specialties PNs:`
-      //   needleDetailsDiv.appendChild(surgerySpecialtyPn)
-      //   needles.surgical_specialties_pn.map((pn, index) => {
-      //     if (index === 2) {
-      //       // Surgical specialties part number
-      //       const surgerySpecialtyPn = document.createElement("div")
-      //       surgerySpecialtyPn.setAttribute("class", "needle-details-text-last")
-      //       surgerySpecialtyPn.innerText = `${pn},`
-      //       needleDetailsDiv.appendChild(surgerySpecialtyPn)
-      //     } else {
-      //       // Surgical specialties part number
-      //       const surgerySpecialtyPn = document.createElement("div")
-      //       surgerySpecialtyPn.setAttribute("class", "needle-details-text")
-      //       surgerySpecialtyPn.innerText = `${pn},`
-      //       needleDetailsDiv.appendChild(surgerySpecialtyPn)
-      //     }
-      //   })
-      //   // Material
-      //   const needleMaterial = document.createElement("div")
-      //   needleMaterial.setAttribute("class", "needle-details")
-      //   needleMaterial.innerText = `Materials:`
-      //   needleDetailsDiv.appendChild(needleMaterial)
-      //   needles.material.map((each_material, index) => {
-      //     // Material
-      //     if (index === 2) {
-      //       const needleMaterial = document.createElement("div")
-      //       needleMaterial.setAttribute("class", "needle-details-text-last")
-      //       needleMaterial.innerText = `Material: ${each_material}`
-      //       needleDetailsDiv.appendChild(needleMaterial)
-      //     } else {
-      //       const needleMaterial = document.createElement("div")
-      //       needleMaterial.setAttribute("class", "needle-details-text")
-      //       needleMaterial.innerText = `Material: ${each_material}`
-      //       needleDetailsDiv.appendChild(needleMaterial)
-      //     }
-      //   })
-      // } else {
-      //   // Surgical specialties part number
-      //   const surgerySpecialtyPn = document.createElement("div")
-      //   surgerySpecialtyPn.setAttribute("class", "needle-details")
-      //   surgerySpecialtyPn.innerText = `Surgical Specialties PN: ${needles.surgical_specialties_pn}`
-      //   needleDetailsDiv.appendChild(surgerySpecialtyPn)
-      //   // Material
-      //   const needleMaterial = document.createElement("div")
-      //   needleMaterial.setAttribute("class", "needle-details")
-      //   needleMaterial.innerText = `Material: ${needles.material}`
-      //   needleDetailsDiv.appendChild(needleMaterial)
-      // }
-      // Siliconza
-      // const needleSiliconza = document.createElement("div")
-      // needleSiliconza.setAttribute("class", "needle-details")
-      // needleSiliconza.innerText = `Siliconza: ${needles.siliconza}`
-      // needleDetailsDiv.appendChild(needleSiliconza)
       // Point Style
       const needlePointStyle = document.createElement("div")
       needlePointStyle.setAttribute("class", "needle-details")
@@ -1380,7 +1343,8 @@ class HomePage {
   
       needlesDetailsContainer.appendChild(needleTitle)
       needlesDetailsContainer.appendChild(needleDetailsDiv)
-      HomePage.root().appendChild(needlesDetailsContainer)
+      contentWrapper.appendChild(needlesDetailsContainer)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     static iconixImage(selectedInserts, filteredInsertSelection) {
@@ -1437,6 +1401,8 @@ class HomePage {
   
   
     static renderInsertDetails(selectedInserts, selectedInsert) {
+      const contentWrapper = document.createElement('div')
+      contentWrapper.setAttribute('class', 'content-wrapper')
       // HomePage.filterForIconixInserts()
       let filteredInsertSelection = []
       if (selectedInserts.length > 1) {
@@ -1457,8 +1423,8 @@ class HomePage {
         filteredInsertSelection = selectedInserts
       }
       HomePage.scrollToTop()
-      HomePage.implantName(filteredInsertSelection)
-      HomePage.implantPn(filteredInsertSelection)
+      HomePage.implantName(filteredInsertSelection, contentWrapper)
+      HomePage.implantPn(filteredInsertSelection, contentWrapper)
       // Trocar image
       if (
         selectedInsert.id === "3910-500-931" ||
@@ -1471,7 +1437,7 @@ class HomePage {
       // Iconix 1 and 2 images
       HomePage.iconixImage(selectedInserts, filteredInsertSelection)
       // Needle data and image
-      HomePage.filterNeedleData(selectedInsert)
+      HomePage.filterNeedleData(selectedInsert, contentWrapper)
   
       // Measurement image insert
       selectedInserts.map((insert) => {
@@ -1481,31 +1447,31 @@ class HomePage {
           insert.implant.id !== "3910-2" &&
           insert.implant.id !== "3910-4"
         ) {
-          HomePage.implantMeasurementImg()
+          HomePage.implantMeasurementImg(contentWrapper)
         } else if (
           insert.implant.pn === "3910-500-391" ||
           insert.implant.pn === "3910-500-392"
         ) {
-          HomePage.implantReusableImage3_9(reuableInsert)
+          HomePage.implantReusableImage3_9(reuableInsert, contentWrapper)
         } else if (
           insert.implant.pn === "3910-500-471" ||
           insert.implant.pn === "3910-500-472"
         ) {
-          HomePage.implantReusableImage4_7(reuableInsert)
+          HomePage.implantReusableImage4_7(reuableInsert, contentWrapper)
         } else {
           return
         }
       })
-      HomePage.implantMaterial(filteredInsertSelection)
-      HomePage.implantLength(filteredInsertSelection)
-      HomePage.implantWidth(filteredInsertSelection)
-      HomePage.implantDrillDepth(filteredInsertSelection)
-      HomePage.implantDrillWidth(filteredInsertSelection)
-      HomePage.implantNotes(filteredInsertSelection)
-      HomePage.implantPositiveStop(filteredInsertSelection)
+      HomePage.implantMaterial(filteredInsertSelection, contentWrapper)
+      HomePage.implantLength(filteredInsertSelection, contentWrapper)
+      HomePage.implantWidth(filteredInsertSelection, contentWrapper)
+      HomePage.implantDrillDepth(filteredInsertSelection, contentWrapper)
+      HomePage.implantDrillWidth(filteredInsertSelection, contentWrapper)
+      HomePage.implantNotes(filteredInsertSelection, contentWrapper)
+      HomePage.implantPositiveStop(filteredInsertSelection, contentWrapper)
     }
   
-    static implantReusableImage3_9(reusableInsert) {
+    static implantReusableImage3_9(reusableInsert, contentWrapper) {
       const insertUrlTextDiv = document.createElement("div")
       insertUrlTextDiv.setAttribute("class", "insert-details-div")
       const insertUrlDiv = document.createElement("div")
@@ -1516,10 +1482,11 @@ class HomePage {
       insertUrlTitle.innerText = "Reusable Instrumentation:"
       insertUrlTextDiv.appendChild(insertUrlTitle)
       insertUrlTextDiv.appendChild(insertUrlDiv)
-      HomePage.root().appendChild(insertUrlTextDiv)
+      contentWrapper.appendChild(insertUrlTextDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
-    static implantReusableImage4_7(reusableInsert) {
+    static implantReusableImage4_7(reusableInsert, contentWrapper) {
       const insertUrlTextDiv = document.createElement("div")
       insertUrlTextDiv.setAttribute("class", "insert-details-div")
       const insertUrlDiv = document.createElement("div")
@@ -1530,10 +1497,11 @@ class HomePage {
       insertUrlTitle.innerText = "Reusable Instrumentation:"
       insertUrlTextDiv.appendChild(insertUrlTitle)
       insertUrlTextDiv.appendChild(insertUrlDiv)
-      HomePage.root().appendChild(insertUrlTextDiv)
+      contentWrapper.appendChild(insertUrlTextDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
-    static implantMeasurementImg() {
+    static implantMeasurementImg(contentWrapper) {
       const insertUrlTextDiv = document.createElement("div")
       insertUrlTextDiv.setAttribute("class", "insert-details-div")
       const insertUrlDiv = document.createElement("div")
@@ -1544,23 +1512,9 @@ class HomePage {
       insertUrlTitle.innerText = "ICONIX Measurements"
       insertUrlTextDiv.appendChild(insertUrlTitle)
       insertUrlTextDiv.appendChild(insertUrlDiv)
-      HomePage.root().appendChild(insertUrlTextDiv)
+      contentWrapper.appendChild(insertUrlTextDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
-  
-    // static renderErrorsSearchField() {
-    //   const inputDiv = document.createElement("div")
-    //   inputDiv.setAttribute("class", "search-container")
-    //   inputDiv.setAttribute("id", "input-div")
-    // //   inputDiv.innerHTML = '<i class="fas fa-search"></i>'
-    //   const inputTag = document.createElement("input")
-    //   inputTag.setAttribute("class", "input-field")
-    //   inputTag.setAttribute("type", "text")
-    //   inputTag.setAttribute("id", "input-field")
-    //   inputTag.setAttribute("name", "input-field")
-    //   inputTag.setAttribute("placeholder", "Search by error code")
-    //   inputDiv.appendChild(inputTag)
-    //   root.appendChild(inputDiv)
-    // }
   
     static renderSearchField() {
       // Search feature
@@ -1578,60 +1532,6 @@ class HomePage {
       root.appendChild(inputDiv)
       //
     }
-  
-    // static renderSuctionProbes(suctionProbes) {
-    //   const root = HomePage.root()
-    //   const probesTitleDiv = document.createElement("div")
-    //   probesTitleDiv.setAttribute("class", "probes-title-div")
-    //   probesTitleDiv.innerText = "Suction Probes:"
-    //   root.appendChild(probesTitleDiv)
-    //   const probesContainer = document.createElement("div")
-    //   probesContainer.setAttribute("class", "probes-container")
-    //   probesContainer.setAttribute("id", "probes-container")
-    //   suctionProbes.map((probe) => {
-    //     const probeDiv = document.createElement("div")
-    //     probeDiv.setAttribute("class", "probe-div")
-    //     probeDiv.setAttribute("id", probe.probe.pn)
-    //     const probeNameDiv = document.createElement("div")
-    //     probeNameDiv.setAttribute("class", "probe-name-div")
-    //     const probePnDiv = document.createElement("div")
-    //     probePnDiv.setAttribute("class", "probe-pn-div")
-  
-    //     probeNameDiv.innerText = probe.probe.name
-    //     probePnDiv.innerText = probe.probe.pn
-    //     probeDiv.appendChild(probeNameDiv)
-    //     probeDiv.appendChild(probePnDiv)
-    //     probesContainer.appendChild(probeDiv)
-    //   })
-    //   root.appendChild(probesContainer)
-    // }
-  
-    // static renderNonSuctionProbes(nonSuctionProbes) {
-    //   const root = HomePage.root()
-    //   const probesTitleDiv = document.createElement("div")
-    //   probesTitleDiv.setAttribute("class", "probes-title-div")
-    //   probesTitleDiv.innerText = "Non-suction Probes:"
-    //   root.appendChild(probesTitleDiv)
-    //   const probesContainer = document.createElement("div")
-    //   probesContainer.setAttribute("class", "probes-container")
-    //   probesContainer.setAttribute("id", "probes-container")
-    //   nonSuctionProbes.map((probe) => {
-    //     const probeDiv = document.createElement("div")
-    //     probeDiv.setAttribute("class", "probe-div")
-    //     probeDiv.setAttribute("id", probe.probe.pn)
-    //     const probeNameDiv = document.createElement("div")
-    //     probeNameDiv.setAttribute("class", "probe-name-div")
-    //     const probePnDiv = document.createElement("div")
-    //     probePnDiv.setAttribute("class", "probe-pn-div")
-  
-    //     probeNameDiv.innerText = probe.probe.name
-    //     probePnDiv.innerText = probe.probe.pn
-    //     probeDiv.appendChild(probeNameDiv)
-    //     probeDiv.appendChild(probePnDiv)
-    //     probesContainer.appendChild(probeDiv)
-    //   })
-    //   root.appendChild(probesContainer)
-    // }
   
     static renderSmallJointProbes(smallJointProbes) {
       const root = HomePage.root()
@@ -1800,7 +1700,6 @@ class HomePage {
     }
   
     static renderCapitalProducts(capitalProducts) {
-      console.log(capitalProducts)
       const root = HomePage.root()
       const capitalProductsContainer = document.createElement('div')
       capitalProductsContainer.setAttribute("class", "content-wrapper")
@@ -1854,19 +1753,19 @@ class HomePage {
     static renderImplants(inserts) {
       const root = HomePage.root()
       const implantContainer = document.createElement("div")
-      implantContainer.setAttribute("class", "implant-container")
+      implantContainer.setAttribute("class", "content-wrapper")
       implantContainer.setAttribute("id", "implant-container")
   
       inserts.map((implant) => {
         const implantDiv = document.createElement("div")
-        implantDiv.setAttribute("class", "implant-div")
+        implantDiv.setAttribute("class", "content-div")
         implantDiv.setAttribute("id", implant.implant.pn)
         implantDiv.setAttribute("data-index", implant.implant.id)
         implantDiv.setAttribute("data-navbar", implant.implant.family)
         const implantNameDiv = document.createElement("div")
-        implantNameDiv.setAttribute("class", "implant-name-div")
+        implantNameDiv.setAttribute("class", "name-div")
         const implantPnDiv = document.createElement("div")
-        implantPnDiv.setAttribute("class", "implant-pn-div")
+        implantPnDiv.setAttribute("class", "pn-div")
   
         implantNameDiv.innerText = implant.implant.name
         implantPnDiv.innerText = implant.implant.pn

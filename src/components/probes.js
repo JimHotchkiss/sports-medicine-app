@@ -19,7 +19,7 @@ class Probes {
   }
 
   static bindingProbesEventListener() {
-    const probeDivs = document.getElementsByClassName("probe-div")
+    const probeDivs = document.getElementsByClassName("content-div")
     for (let item of probeDivs) {
       item.addEventListener("click", () => {
         const selectedProbe = item

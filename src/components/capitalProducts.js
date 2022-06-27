@@ -16,7 +16,7 @@ class CapitalProducts {
       }
 
       static bindingCapitalProductsEventListener() {
-        const capitalProductsDivs = document.getElementsByClassName("capital-product-div")
+        const capitalProductsDivs = document.getElementsByClassName("content-div")
         for (let item of capitalProductsDivs) {
           item.addEventListener("click", () => {
             const selectedCapitalProduct = item

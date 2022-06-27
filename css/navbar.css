@@ -15,7 +15,7 @@
     margin-top: 20px;
     width: 20px;
     height: 30px;
-    background: green url("../images/back.png") 0% 0% no-repeat padding-box;
+    background: transparent url("../images/back.png") 0% 0% no-repeat padding-box;
     opacity: 1;
     background-size: 25px;
 }

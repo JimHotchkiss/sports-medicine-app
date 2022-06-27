@@ -14,6 +14,24 @@
     transition: 0.3ms;
 }
 
+.content-details-div {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.content-details-div:hover {
+    cursor: pointer;
+}
+
+.content-details-div div {
+    font-style: italic;
+}
+
 .content-div:hover {
     cursor: pointer;
 }
@@ -31,6 +49,40 @@
 
 .section-title {
     color: #fff;
+}
+
+/****** Capital Products *******/
+
+
+/****** Implant Divs *******/
+
+.implant-family-content-div {
+    text-align: center;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.name-div {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.name-div p {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.pn-div {
+    font-style: italic;
+}
+
+.implant-details-content-div {
+
 }
 
 /******* Search Bar Feature **********/
