@@ -1007,7 +1007,7 @@ class HomePage {
     static implantName(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
         const insertNameDiv = document.createElement("div")
-        insertNameDiv.setAttribute("class", "implant-details-div")
+        insertNameDiv.setAttribute("class", "content-details-div")
         insertNameDiv.setAttribute("data-index", insert.implant.id)
         insertNameDiv.setAttribute("id", "insert-name-div")
         const insertNameTitle = document.createElement("h3")
@@ -1019,8 +1019,8 @@ class HomePage {
         insertNameTitle.innerText = "Name"
         console.log(insert.implant.name)
         insertNameText.innerText = insert.implant.name
+        insertNameTextDiv.appendChild(insertNameTitle)
         insertNameTextDiv.appendChild(insertNameText)
-        insertNameDiv.appendChild(insertNameTitle)
         insertNameDiv.appendChild(insertNameTextDiv)
         contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)

@@ -82,6 +82,7 @@ class Navbar {
   }
 
   static bindBackBtnEventListener(selectedItem) {
+    console.log(selectedItem)
     const userSelection = Store.getUserSelection()
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     // const implantFamilies = Store.getImplantFamilies()
@@ -140,7 +141,10 @@ class Navbar {
         Search.bindErrorSearchEventListener()
         HomePage.scrollToTop()
       } else {
-        console.log('navbar back btn event listener')
+        HomePage.clearImplantDetails()
+        HomePage.renderCapitalProducts(capitalProducts)
+        Navbar.updateTitle("Capital Products")
+        Navbar.hideBackBtn()
       }
     })
   }
