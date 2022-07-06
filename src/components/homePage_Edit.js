@@ -1186,7 +1186,7 @@ class HomePage {
       })
     }
   
-    static implantIconixOneImage(filteredInsertSelection) {
+    static implantIconixOneImage(filteredInsertSelection, contentWrapper) {
       filteredInsertSelection.map(() => {
         const insertUrlTextDiv = document.createElement("div")
         insertUrlTextDiv.setAttribute("class", "content-details-div")
@@ -1198,11 +1198,12 @@ class HomePage {
         insertUrlTitle.innerText = "ICONIX 1 - Drill Image"
         insertUrlTextDiv.appendChild(insertUrlTitle)
         insertUrlTextDiv.appendChild(insertUrlDiv)
-        HomePage.root().appendChild(insertUrlTextDiv)
+        contentWrapper.appendChild(insertUrlTextDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static implantIconixTwoImage(filteredInsertSelection) {
+    static implantIconixTwoImage(filteredInsertSelection, contentWrapper) {
       filteredInsertSelection.map(() => {
         const insertUrlTextDiv = document.createElement("div")
         insertUrlTextDiv.setAttribute("class", "content-details-div")
@@ -1214,7 +1215,8 @@ class HomePage {
         insertUrlTitle.innerText = "ICONIX 2 - Drill Image"
         insertUrlTextDiv.appendChild(insertUrlTitle)
         insertUrlTextDiv.appendChild(insertUrlDiv)
-        HomePage.root().appendChild(insertUrlTextDiv)
+        contentWrapper.appendChild(insertUrlTextDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
@@ -1233,7 +1235,7 @@ class HomePage {
     }
     static renderNeedleData(needles, contentWrapper) {
       const needlesDetailsContainer = document.createElement("div")
-      needlesDetailsContainer.setAttribute("class", "insert-details-container")
+      needlesDetailsContainer.setAttribute("class", "content-details-div")
       const needleTitle = document.createElement("h3")
       needleTitle.setAttribute("class", "insert-details-title")
       needleTitle.innerText = "Needle Specifications"
@@ -1242,9 +1244,9 @@ class HomePage {
       // Point Style
       const needlePointStyle = document.createElement("div")
       needlePointStyle.setAttribute("class", "needle-details")
-      needlePointStyle.innerText = `Point Style`
+      needlePointStyle.innerText = `Point Style: `
       // Point style
-      const pointStyle = document.createElement("div")
+      const pointStyle = document.createElement("span")
       pointStyle.setAttribute("class", "wire-diameter")
       pointStyle.innerText = needles.point_style
       needlePointStyle.appendChild(pointStyle)
@@ -1252,10 +1254,10 @@ class HomePage {
       // Circle
       const needleCircle = document.createElement("div")
       needleCircle.setAttribute("class", "needle-details")
-      needleCircle.innerText = `Circle`
+      needleCircle.innerText = `Circle: `
       needleDetailsDiv.appendChild(needleCircle)
       // Circle
-      const circle = document.createElement("div")
+      const circle = document.createElement("span")
       circle.setAttribute("class", "wire-diameter")
       circle.innerText = needles.circle
       needleCircle.appendChild(circle)
@@ -1347,34 +1349,35 @@ class HomePage {
       HomePage.root().appendChild(contentWrapper)
     }
   
-    static iconixImage(selectedInserts, filteredInsertSelection) {
+    static iconixImage(selectedInserts, filteredInsertSelection, contentWrapper) {
       selectedInserts.map((insert) => {
         if (
           insert.implant.name === "ICONIX 1" ||
           insert.implant.name === "ICONIX 1 TT"
         ) {
-          HomePage.implantIconixOneImage(filteredInsertSelection)
+          HomePage.implantIconixOneImage(filteredInsertSelection, contentWrapper)
         } else if (
           insert.implant.name === "ICONIX 2" ||
           insert.implant.name === "ICONIX 2 TT"
         ) {
-          HomePage.implantIconixTwoImage(filteredInsertSelection)
+          HomePage.implantIconixTwoImage(filteredInsertSelection, contentWrapper)
         }
       })
     }
   
-    static trocarImage(selectedInserts) {
+    static trocarImage(selectedInserts, contentWrapper) {
       const insertUrlTextDiv = document.createElement("div")
-      insertUrlTextDiv.setAttribute("class", "insert-details-div")
+      insertUrlTextDiv.setAttribute("class", "content-details-div")
       const insertUrlDiv = document.createElement("div")
       insertUrlDiv.setAttribute("class", "trocar-img-div")
-      // insertUrlDiv.setAttribute("id", "iconix2-img-div")
+      insertUrlDiv.setAttribute("id", "iconix2-img-div")
       const insertUrlTitle = document.createElement("h3")
       insertUrlTitle.setAttribute("class", "insert-details-title")
       insertUrlTitle.innerText = "Trocar Measurements:"
       insertUrlTextDiv.appendChild(insertUrlTitle)
       insertUrlTextDiv.appendChild(insertUrlDiv)
-      HomePage.root().appendChild(insertUrlTextDiv)
+      contentWrapper.appendChild(insertUrlTextDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
   
     static filteredInsertSelection(selectedInserts, selectedInsert) {
@@ -1432,10 +1435,10 @@ class HomePage {
         selectedInsert.id === "3910-500-922" ||
         selectedInsert.id === "3910-500-921"
       ) {
-        HomePage.trocarImage(selectedInserts)
+        HomePage.trocarImage(selectedInserts, contentWrapper)
       }
       // Iconix 1 and 2 images
-      HomePage.iconixImage(selectedInserts, filteredInsertSelection)
+      HomePage.iconixImage(selectedInserts, filteredInsertSelection, contentWrapper)
       // Needle data and image
       HomePage.filterNeedleData(selectedInsert, contentWrapper)
   
@@ -1503,7 +1506,7 @@ class HomePage {
   
     static implantMeasurementImg(contentWrapper) {
       const insertUrlTextDiv = document.createElement("div")
-      insertUrlTextDiv.setAttribute("class", "insert-details-div")
+      insertUrlTextDiv.setAttribute("class", "content-details-div")
       const insertUrlDiv = document.createElement("div")
       insertUrlDiv.setAttribute("class", "measurement-img-div")
       // insertUrlDiv.setAttribute("id", "iconix2-img-div")

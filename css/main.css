@@ -80,9 +80,52 @@
 .pn-div {
     font-style: italic;
 }
+/****** Iconix Images ******/
+#iconix1-img-div {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 90%;
+    height: 200px;
+    background: transparent url("../images/iconix1a.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 365px;
+}
 
-.implant-details-content-div {
+#iconix2-img-div {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 200px;
+    background: transparent url("../images/iconix2a.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 365px;
+}
 
+.measurement-img-div {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 90%;
+    height: 470px;
+    background: transparent url("../images/measurements2.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 320px;
+}
+
+.needle-details-div {
+    background: #ffb600;
+    margin: 0 auto;
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+}
+
+.needle-details {
+    padding: 8px 0px;
+    font-weight: 900;
+}
+
+.wire-diameter {
+    font-weight: 100;
 }
 
 /******* Search Bar Feature **********/
