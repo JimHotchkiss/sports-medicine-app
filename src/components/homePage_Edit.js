@@ -122,7 +122,7 @@ class HomePage {
       const alphavent_products = selectedCapitalProducts[0].alphavent_products
       const alphavent_products_container = document.createElement('div')
       alphavent_products_container.setAttribute("class", "content-wrapper")
-      alphavent_products_container.setAttribute("id", "features-container")
+      alphavent_products_container.setAttribute("id", "capital-products-container")
       const root = HomePage.root()
       alphavent_products.map(product => {
         // Alphavent Product Div
@@ -152,8 +152,13 @@ class HomePage {
         //  alphavent_product_div.appendChild(descriptionDiv)
          alphavent_products_container.appendChild(alphavent_product_div)
          root.appendChild(alphavent_products_container)
+         CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
   
       })
+    }
+
+    static renderAlphaventProductDetails(selected_alphavent) {
+      console.log(selected_alphavent)
     }
   
     // Adaptable Beach Chair Details 
@@ -859,10 +864,10 @@ class HomePage {
       Navbar.showBackBtn(selectedProbes)
     }
   
-    static probeName(selectedProbes) {
+    static probeName(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertNameDiv = document.createElement("div")
-        insertNameDiv.setAttribute("class", "insert-details-div")
+        insertNameDiv.setAttribute("class", "content-details-div")
         insertNameDiv.setAttribute("id", "insert-name-div")
         const insertNameTitle = document.createElement("h3")
         insertNameTitle.setAttribute("class", "insert-details-title")
@@ -875,14 +880,15 @@ class HomePage {
         insertNameTextDiv.appendChild(insertNameText)
         insertNameDiv.appendChild(insertNameTitle)
         insertNameDiv.appendChild(insertNameTextDiv)
-        HomePage.root().appendChild(insertNameDiv)
+        contentWrapper.appendChild(insertNameDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static probePn(selectedProbes) {
+    static probePn(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -894,14 +900,15 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static probeLength(selectedProbes) {
+    static probeLength(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -913,14 +920,15 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static probeOuterDiamter(selectedProbes) {
+    static probeOuterDiamter(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -932,14 +940,15 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static probeCoag(selectedProbes) {
+    static probeCoag(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -951,14 +960,15 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static probeCutDefault(selectedProbes) {
+    static probeCutDefault(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -970,14 +980,15 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
-    static probeCutMax(selectedProbes) {
+    static probeCutMax(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
         const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "insert-details-div")
+        insertPnDiv.setAttribute("class", "content-details-div")
         const insertPnTitle = document.createElement("h3")
         insertPnTitle.setAttribute("class", "insert-details-title")
         const insertPnTextDiv = document.createElement("div")
@@ -989,19 +1000,22 @@ class HomePage {
         insertPnTextDiv.appendChild(insertPnText)
         insertPnDiv.appendChild(insertPnTitle)
         insertPnDiv.appendChild(insertPnTextDiv)
-        HomePage.root().appendChild(insertPnDiv)
+        contentWrapper.appendChild(insertPnDiv)
+        HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static renderProbeDetails(selectedProbes) {
+      const contentWrapper = document.createElement('div')
+      contentWrapper.setAttribute('class', 'content-wrapper')
       HomePage.scrollToTop()
-      HomePage.probeName(selectedProbes)
-      HomePage.probePn(selectedProbes)
-      HomePage.probeLength(selectedProbes)
-      HomePage.probeOuterDiamter(selectedProbes)
-      HomePage.probeCoag(selectedProbes)
-      HomePage.probeCutDefault(selectedProbes)
-      HomePage.probeCutMax(selectedProbes)
+      HomePage.probeName(selectedProbes, contentWrapper)
+      HomePage.probePn(selectedProbes, contentWrapper)
+      HomePage.probeLength(selectedProbes, contentWrapper)
+      HomePage.probeOuterDiamter(selectedProbes, contentWrapper)
+      HomePage.probeCoag(selectedProbes, contentWrapper)
+      HomePage.probeCutDefault(selectedProbes, contentWrapper)
+      HomePage.probeCutMax(selectedProbes, contentWrapper)
     }
   
     static implantName(selectedInserts, contentWrapper) {
