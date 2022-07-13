@@ -34,11 +34,10 @@ class CapitalProducts {
             let selected_alphavent = ""
             alphavent_products.map((product, i) => {
               console.log(product.name, item.id, alphavent_products[i])
-              // if (product.name === item.id) {
-              //   selected_alphavent = item[i]
-              // }
+              if (product.name === item.id) {
+                selected_alphavent = product
+              }
             })
-            const selectedCapitalProduct = item
             Navbar.updateTitle("Capital Products")
             HomePage.clearCapitalProductsText()
             HomePage.renderAlphaventProductDetails(selected_alphavent)
