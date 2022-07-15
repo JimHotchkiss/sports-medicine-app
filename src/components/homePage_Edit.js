@@ -136,12 +136,14 @@ class HomePage {
          alphaventImgTitleDiv.setAttribute("class", "feature-img-title-div")
          // Image div
          const imgDiv = document.createElement("div")
-         imgDiv.setAttribute("class", "feature-img-div")
+         imgDiv.setAttribute("class", "alphavent-feature-img-div")
          imgDiv.setAttribute("id", `${product.id}-img-url`)
          alphaventImgTitleDiv.appendChild(imgDiv)
          //Title div
          const titleDiv = document.createElement("div")
          titleDiv.setAttribute("class", "content-title-div")
+         titleDiv.setAttribute("id", `${product.id}-title`)
+
          titleDiv.innerText = product.name
          alphaventImgTitleDiv.appendChild(titleDiv)
          // Description div
@@ -201,80 +203,105 @@ class HomePage {
     // Product Name
     static ProductName(selectedProductName, contentWrapper) {
       const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        // insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Name"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = selectedProductName
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
+        HomePage.root().appendChild(contentWrapper)
+    }
+  
+    // Product PN
+    static ProductPn(selectedProductPn, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Part Number"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = selectedProductPn
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
+        HomePage.root().appendChild(contentWrapper)
+    }
+  
+    // Product Description 
+    static ProductDescription(selectedProductDescription, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
       insertNameDiv.setAttribute("id", "insert-name-div")
+
       const insertNameTitleDiv = document.createElement('div')
       insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
       const insertNameTitle = document.createElement("h3")
       insertNameTitle.setAttribute("class", "insert-details-title")
-      const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "product-name-div")
-      const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-text")
-      insertNameTitle.innerText = "Name"
-      insertNameText.innerText = selectedProductName
+      insertNameTitle.innerText = "Description"
       insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = selectedProductDescription
       insertNameTextDiv.appendChild(insertNameText)
+
       insertNameDiv.appendChild(insertNameTitleDiv)
       insertNameDiv.appendChild(insertNameTextDiv)
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
-    // Product PN
-    static ProductPn(selectedProductPn, contentWrapper) {
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-      const insertPnText = document.createElement("p")
-      insertPnText.setAttribute("class", "insert-details-text")
-      insertPnTitle.innerText = "Part Number"
-      insertPnText.innerText =  selectedProductPn
-      insertPnTextDiv.appendChild(insertPnText)
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
-      HomePage.root().appendChild(contentWrapper)
-    }
-  
-    // Product Description 
-    static ProductDescription(selectedProductDescription, contentWrapper) {
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-      const insertPnText = document.createElement("p")
-      insertPnText.setAttribute("class", "insert-details-text")
-      insertPnTitle.innerText = "Description"
-      insertPnText.innerText =  selectedProductDescription
-      insertPnTextDiv.appendChild(insertPnText)
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
-      HomePage.root().appendChild(contentWrapper)
-    }
-  
     // ABC Chair Weight
     static ABCChairWeight(selectedCapitalProduct, contentWrapper){
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-      const insertPnText = document.createElement("p")
-      insertPnText.setAttribute("class", "insert-details-text")
-      insertPnTitle.innerText = "Chair Weight"
-      insertPnText.innerText =  selectedCapitalProduct[0].chair_weight
-      insertPnTextDiv.appendChild(insertPnText)
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Chair Weight"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = selectedCapitalProduct[0].chair_weight
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
@@ -888,17 +915,24 @@ class HomePage {
       selectedProbes.map((probe) => {
         const insertNameDiv = document.createElement("div")
         insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
         insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
         const insertNameTitle = document.createElement("h3")
         insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Name"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
         const insertNameTextDiv = document.createElement("div")
         insertNameTextDiv.setAttribute("class", "name-div")
         const insertNameText = document.createElement("p")
-        insertNameText.setAttribute("class", "insert-details-text")
-        insertNameTitle.innerText = "Name"
+        insertNameText.setAttribute("class", "product-name-div")
         insertNameText.innerText = probe.probe.name
         insertNameTextDiv.appendChild(insertNameText)
-        insertNameDiv.appendChild(insertNameTitle)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
         insertNameDiv.appendChild(insertNameTextDiv)
         contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
@@ -907,120 +941,168 @@ class HomePage {
   
     static probePn(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Part Number"
-        insertPnText.innerText = probe.probe.pn
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Part Number"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = probe.probe.pn
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static probeLength(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Length"
-        insertPnText.innerText = probe.probe.length
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Length"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = probe.probe.length
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static probeOuterDiamter(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Outer Diamter"
-        insertPnText.innerText = probe.probe.outer_diameter
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Outer Diameter"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = probe.probe.outer_diameter
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static probeCoag(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Coag"
-        insertPnText.innerText = probe.probe.coag
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Coag"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = probe.probe.coag
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static probeCutDefault(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Cut Default"
-        insertPnText.innerText = probe.probe.cut_default
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Cut Default"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = probe.probe.cut_default
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static probeCutMax(selectedProbes, contentWrapper) {
       selectedProbes.map((probe) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Cut Max"
-        insertPnText.innerText = probe.probe.cut_max
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", probe.probe.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Cut Max"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = probe.probe.cut_max
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
@@ -1044,17 +1126,22 @@ class HomePage {
         insertNameDiv.setAttribute("class", "content-details-div")
         insertNameDiv.setAttribute("data-index", insert.implant.id)
         insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
         const insertNameTitle = document.createElement("h3")
         insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Name"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
         const insertNameTextDiv = document.createElement("div")
         insertNameTextDiv.setAttribute("class", "name-div")
         const insertNameText = document.createElement("p")
-        insertNameText.setAttribute("class", "insert-details-text")
-        insertNameTitle.innerText = "Name"
-        console.log(insert.implant.name)
+        insertNameText.setAttribute("class", "product-name-div")
         insertNameText.innerText = insert.implant.name
-        insertNameTextDiv.appendChild(insertNameTitle)
         insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
         insertNameDiv.appendChild(insertNameTextDiv)
         contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
@@ -1063,159 +1150,223 @@ class HomePage {
   
     static implantPn(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertPnDiv = document.createElement("div")
-        insertPnDiv.setAttribute("class", "content-details-div")
-        const insertPnTitle = document.createElement("h3")
-        insertPnTitle.setAttribute("class", "insert-details-title")
-        const insertPnTextDiv = document.createElement("div")
-        insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-details-text")
-        insertPnTitle.innerText = "Part Number"
-        insertPnText.innerText = insert.implant.pn
-        insertPnTextDiv.appendChild(insertPnText)
-        insertPnDiv.appendChild(insertPnTitle)
-        insertPnDiv.appendChild(insertPnTextDiv)
-        contentWrapper.appendChild(insertPnDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Part Number"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.pn
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantMaterial(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertMaterialDiv = document.createElement("div")
-        insertMaterialDiv.setAttribute("class", "content-details-div")
-        const insertMaterialTitle = document.createElement("h3")
-        insertMaterialTitle.setAttribute("class", "insert-details-title")
-        const insertMaterialTextDiv = document.createElement("div")
-        insertMaterialTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertMaterialText = document.createElement("p")
-        insertMaterialText.setAttribute("class", "insert-details-text")
-        insertMaterialTitle.innerText = "Material"
-        insertMaterialText.innerText = insert.implant.MATERIAL
-        insertMaterialTextDiv.appendChild(insertMaterialText)
-        insertMaterialDiv.appendChild(insertMaterialTitle)
-        insertMaterialDiv.appendChild(insertMaterialTextDiv)
-        contentWrapper.appendChild(insertMaterialDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Material"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.MATERIAL
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantDrillDepth(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertDrillDepthDiv = document.createElement("div")
-        insertDrillDepthDiv.setAttribute("class", "content-details-div")
-        const insertDrillDepthTitle = document.createElement("h3")
-        insertDrillDepthTitle.setAttribute("class", "insert-details-title")
-        const insertDrillDepthTextDiv = document.createElement("div")
-        insertDrillDepthTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertDrillDepthText = document.createElement("p")
-        insertDrillDepthText.setAttribute("class", "insert-details-text")
-        insertDrillDepthTitle.innerText = "Drill Depth"
-        insertDrillDepthText.innerText = insert.implant.IMPLANT_DRILL_DEPTH
-        insertDrillDepthTextDiv.appendChild(insertDrillDepthText)
-        insertDrillDepthDiv.appendChild(insertDrillDepthTitle)
-        insertDrillDepthDiv.appendChild(insertDrillDepthTextDiv)
-        contentWrapper.appendChild(insertDrillDepthDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Drill Depth"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.IMPLANT_DRILL_DEPTH
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
     static implantDrillWidth(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertDrillWidthDiv = document.createElement("div")
-        insertDrillWidthDiv.setAttribute("class", "content-details-div")
-        const insertDrillWidthTitle = document.createElement("h3")
-        insertDrillWidthTitle.setAttribute("class", "insert-details-title")
-        const insertDrillWidthTextDiv = document.createElement("div")
-        insertDrillWidthTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertDrillWidthText = document.createElement("p")
-        insertDrillWidthText.setAttribute("class", "insert-details-text")
-        insertDrillWidthTitle.innerText = "Drill Diameter"
-        insertDrillWidthText.innerText = insert.implant.IMPLANT_DRILL_WIDTH
-        insertDrillWidthTextDiv.appendChild(insertDrillWidthText)
-        insertDrillWidthDiv.appendChild(insertDrillWidthTitle)
-        insertDrillWidthDiv.appendChild(insertDrillWidthTextDiv)
-        contentWrapper.appendChild(insertDrillWidthDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Drill Width"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.IMPLANT_DRILL_WIDTH
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantLength(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertLengthDiv = document.createElement("div")
-        insertLengthDiv.setAttribute("class", "content-details-div")
-        const insertLengthTitle = document.createElement("h3")
-        insertLengthTitle.setAttribute("class", "insert-details-title")
-        const insertLengthTextDiv = document.createElement("div")
-        insertLengthTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertLengthText = document.createElement("p")
-        insertLengthText.setAttribute("class", "insert-details-text")
-        insertLengthTitle.innerText = "Length"
-        insertLengthText.innerText = insert.implant.IMPLANT_LENGTH
-        insertLengthTextDiv.appendChild(insertLengthText)
-        insertLengthDiv.appendChild(insertLengthTitle)
-        insertLengthDiv.appendChild(insertLengthTextDiv)
-        contentWrapper.appendChild(insertLengthDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Length"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.IMPLANT_LENGTH
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantWidth(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertWidthDiv = document.createElement("div")
-        insertWidthDiv.setAttribute("class", "content-details-div")
-        const insertWidthTitle = document.createElement("h3")
-        insertWidthTitle.setAttribute("class", "insert-details-title")
-        const insertWidthTextDiv = document.createElement("div")
-        insertWidthTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertWidthText = document.createElement("p")
-        insertWidthText.setAttribute("class", "insert-details-text")
-        insertWidthTitle.innerText = "Diameter"
-        insertWidthText.innerText = insert.implant.IMPLANT_WIDTH
-        insertWidthTextDiv.appendChild(insertWidthText)
-        insertWidthDiv.appendChild(insertWidthTitle)
-        insertWidthDiv.appendChild(insertWidthTextDiv)
-        contentWrapper.appendChild(insertWidthDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Diameter"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.IMPLANT_WIDTH
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantNotes(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertNotesDiv = document.createElement("div")
-        insertNotesDiv.setAttribute("class", "content-details-div")
-        const insertNotesTitle = document.createElement("h3")
-        insertNotesTitle.setAttribute("class", "insert-details-title")
-        const insertNotesTextDiv = document.createElement("div")
-        insertNotesTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertNotesText = document.createElement("p")
-        insertNotesText.setAttribute("class", "insert-details-text")
-        insertNotesTitle.innerText = "Notes"
-        insertNotesText.innerText = insert.implant.NOTES
-        insertNotesTextDiv.appendChild(insertNotesText)
-        insertNotesDiv.appendChild(insertNotesTitle)
-        insertNotesDiv.appendChild(insertNotesTextDiv)
-        contentWrapper.appendChild(insertNotesDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Notes"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.NOTES
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }
   
     static implantPositiveStop(selectedInserts, contentWrapper) {
       selectedInserts.map((insert) => {
-        const insertPositiveStopDiv = document.createElement("div")
-        insertPositiveStopDiv.setAttribute("class", "content-details-div")
-        const insertPositiveStopTitle = document.createElement("h3")
-        insertPositiveStopTitle.setAttribute("class", "insert-details-title")
-        const insertPositiveStopTextDiv = document.createElement("div")
-        insertPositiveStopTextDiv.setAttribute("class", "insert-details-text-div")
-        const insertPositiveStopText = document.createElement("p")
-        insertPositiveStopText.setAttribute("class", "insert-details-text")
-        insertPositiveStopTitle.innerText = "Positive Stop"
-        insertPositiveStopText.innerText = insert.implant.POSITIVE_STOP
-        insertPositiveStopTextDiv.appendChild(insertPositiveStopText)
-        insertPositiveStopDiv.appendChild(insertPositiveStopTitle)
-        insertPositiveStopDiv.appendChild(insertPositiveStopTextDiv)
-        contentWrapper.appendChild(insertPositiveStopDiv)
+        const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("data-index", insert.implant.id)
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Positive Stop"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "product-name-div")
+        insertNameText.innerText = insert.implant.POSITIVE_STOP
+        insertNameTextDiv.appendChild(insertNameText)
+
+        insertNameDiv.appendChild(insertNameTitleDiv)
+        insertNameDiv.appendChild(insertNameTextDiv)
+        contentWrapper.appendChild(insertNameDiv)
         HomePage.root().appendChild(contentWrapper)
       })
     }

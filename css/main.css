@@ -19,6 +19,10 @@
 
 }
 
+.insert-details-title {
+    color: #fff;
+}
+
 .product-name-div {
     padding: 8px 16px;
     margin-bottom: 16px;
@@ -68,6 +72,43 @@
 }
 
 /****** Capital Products *******/
+.alphavent-feature-img-div {
+    margin-top: 3px;
+    width: 50px;
+    height: 40px;
+    opacity: 1;
+}
+#alpha4_75-img-url {
+    background: transparent url(../images/soccer.svg) 0% 0% no-repeat padding-box;
+    background-size: 35px;
+}
+
+#alpha4_75-title{
+    padding-top: 4px;
+    padding-left: 32px;
+}
+
+#alpha5_5-img-url {
+    background: transparent url(../images/football.svg) 0% 0% no-repeat padding-box;
+    background-size: 40px;
+}
+
+#alpha5_5-title{
+    padding-top: 4px;
+    padding-left: 32px;
+}
+
+#alpha6_5-img-url {
+    background: transparent url(../images/racketball.svg) 0% 0% no-repeat padding-box;
+    background-size: 50px;
+
+}
+
+#alpha6_5-title {
+    padding-top: 4px;
+    padding-left: 32px;
+
+}
 
 
 /****** Implant Divs *******/
