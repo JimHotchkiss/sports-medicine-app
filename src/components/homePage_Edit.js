@@ -181,10 +181,11 @@ class HomePage {
       contentWrapper.setAttribute('class', 'content-wrapper')
       const selectedProductName = selectedCapitalProducts[0].title
       const selectedProductPn = selectedCapitalProducts[0].pn
+      const selectedProductDescription = selectedCapitalProducts[0].description
       HomePage.scrollToTop()
       HomePage.ProductName(selectedProductName, contentWrapper)
       HomePage.ProductPn(selectedProductPn, contentWrapper)
-      // HomePage.ProductDescription(selectedProduct, contentWrapper)
+      HomePage.ProductDescription(selectedProductDescription, contentWrapper)
       // HomePage.ABCChairWeight(selectedProduct, contentWrapper)
       // HomePage.ABCPatientWeightLimit(selectedProduct, contentWrapper)
       // HomePage.ABCPatientHeightRange(selectedProduct, contentWrapper)
@@ -202,6 +203,8 @@ class HomePage {
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
       insertNameDiv.setAttribute("id", "insert-name-div")
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
       const insertNameTitle = document.createElement("h3")
       insertNameTitle.setAttribute("class", "insert-details-title")
       const insertNameTextDiv = document.createElement("div")
@@ -210,8 +213,9 @@ class HomePage {
       insertNameText.setAttribute("class", "product-name-text")
       insertNameTitle.innerText = "Name"
       insertNameText.innerText = selectedProductName
+      insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameTextDiv.appendChild(insertNameText)
-      insertNameDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
       insertNameDiv.appendChild(insertNameTextDiv)
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
@@ -237,7 +241,7 @@ class HomePage {
     }
   
     // Product Description 
-    static ProductDescription(selectedCapitalProduct, contentWrapper) {
+    static ProductDescription(selectedProductDescription, contentWrapper) {
       const insertPnDiv = document.createElement("div")
       insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
@@ -247,7 +251,7 @@ class HomePage {
       const insertPnText = document.createElement("p")
       insertPnText.setAttribute("class", "insert-details-text")
       insertPnTitle.innerText = "Description"
-      insertPnText.innerText =  selectedCapitalProduct[0].description
+      insertPnText.innerText =  selectedProductDescription
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
