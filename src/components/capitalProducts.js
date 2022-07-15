@@ -33,9 +33,8 @@ class CapitalProducts {
           item.addEventListener("click", () => {
             let selected_alphavent = ""
             alphavent_products.map((product, i) => {
-              console.log(product.name, item.id, alphavent_products[i])
               if (product.name === item.id) {
-                selected_alphavent = product
+              return   selected_alphavent = product
               }
             })
             Navbar.updateTitle("Capital Products")

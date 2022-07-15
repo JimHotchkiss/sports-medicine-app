@@ -109,8 +109,8 @@ class HomePage {
           return selectedCapitalProducts.push(capital_product)
         }
       })
-     if (selectedCapitalProducts[0].title == "Alphavent") {
-        HomePage.renderAlphaventProducts(selectedCapitalProducts)
+     if (selectedCapitalProducts[0].title === "Alphavent") {
+        return HomePage.renderAlphaventProducts(selectedCapitalProducts)
      } else {
         HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
      }
@@ -119,6 +119,7 @@ class HomePage {
   
     // Alphavent 
     static renderAlphaventProducts(selectedCapitalProducts) {
+      console.log(selectedCapitalProducts)
       const alphavent_products = selectedCapitalProducts[0].alphavent_products
       const alphavent_products_container = document.createElement('div')
       alphavent_products_container.setAttribute("class", "content-wrapper")
@@ -152,37 +153,52 @@ class HomePage {
         //  alphavent_product_div.appendChild(descriptionDiv)
          alphavent_products_container.appendChild(alphavent_product_div)
          root.appendChild(alphavent_products_container)
-         CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
-  
       })
+      CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
     }
 
     static renderAlphaventProductDetails(selected_alphavent) {
       console.log(selected_alphavent)
+      const contentWrapper = document.createElement('div')
+      contentWrapper.setAttribute('class', 'content-wrapper')
+      const productName = selected_alphavent.name
+      const alphaventPnsConfigurations = selected_alphavent.suture_anchors
+      HomePage.ProductName(productName, contentWrapper)
+      HomePage.AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper)
+    }
+
+    // Alphavent PNs Configuration
+    static AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper){
+      alphaventPnsConfigurations.map(item => (
+        console.log(item)
+      ))
+
     }
   
     // Adaptable Beach Chair Details 
     static renderAdaptableBeachChairDetails(selectedCapitalProducts) {
       const contentWrapper = document.createElement('div')
       contentWrapper.setAttribute('class', 'content-wrapper')
+      const selectedProductName = selectedCapitalProducts[0].title
+      const selectedProductPn = selectedCapitalProducts[0].pn
       HomePage.scrollToTop()
-      HomePage.ProductName(selectedCapitalProducts, contentWrapper)
-      HomePage.ProductPn(selectedCapitalProducts, contentWrapper)
-      HomePage.ProductDescription(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCChairWeight(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCPatientWeightLimit(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCPatientHeightRange(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCBenefitsForAnesthesia(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCBenefitsForStaff(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCBenefitsForPatients(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCDisposable(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCDisposables(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCBReplacementParts(selectedCapitalProducts, contentWrapper)
+      HomePage.ProductName(selectedProductName, contentWrapper)
+      HomePage.ProductPn(selectedProductPn, contentWrapper)
+      // HomePage.ProductDescription(selectedProduct, contentWrapper)
+      // HomePage.ABCChairWeight(selectedProduct, contentWrapper)
+      // HomePage.ABCPatientWeightLimit(selectedProduct, contentWrapper)
+      // HomePage.ABCPatientHeightRange(selectedProduct, contentWrapper)
+      // HomePage.ABCBenefitsForAnesthesia(selectedProduct, contentWrapper)
+      // HomePage.ABCBenefitsForSurgeons(selectedProduct, contentWrapper)
+      // HomePage.ABCBenefitsForStaff(selectedProduct, contentWrapper)
+      // HomePage.ABCBenefitsForPatients(selectedProduct, contentWrapper)
+      // HomePage.ABCDisposable(selectedProduct, contentWrapper)
+      // HomePage.ABCDisposables(selectedProduct, contentWrapper)
+      // HomePage.ABCBReplacementParts(selectedProduct, contentWrapper)
     }
   
     // Product Name
-    static ProductName(selectedCapitalProduct, contentWrapper) {
+    static ProductName(selectedProductName, contentWrapper) {
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
       insertNameDiv.setAttribute("id", "insert-name-div")
@@ -193,7 +209,7 @@ class HomePage {
       const insertNameText = document.createElement("p")
       insertNameText.setAttribute("class", "product-name-text")
       insertNameTitle.innerText = "Name"
-      insertNameText.innerText = selectedCapitalProduct[0].title
+      insertNameText.innerText = selectedProductName
       insertNameTextDiv.appendChild(insertNameText)
       insertNameDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTextDiv)
@@ -202,7 +218,7 @@ class HomePage {
     }
   
     // Product PN
-    static ProductPn(selectedCapitalProduct, contentWrapper) {
+    static ProductPn(selectedProductPn, contentWrapper) {
       const insertPnDiv = document.createElement("div")
       insertPnDiv.setAttribute("class", "content-details-div")
       const insertPnTitle = document.createElement("h3")
@@ -212,7 +228,7 @@ class HomePage {
       const insertPnText = document.createElement("p")
       insertPnText.setAttribute("class", "insert-details-text")
       insertPnTitle.innerText = "Part Number"
-      insertPnText.innerText =  selectedCapitalProduct[0].pn
+      insertPnText.innerText =  selectedProductPn
       insertPnTextDiv.appendChild(insertPnText)
       insertPnDiv.appendChild(insertPnTitle)
       insertPnDiv.appendChild(insertPnTextDiv)
