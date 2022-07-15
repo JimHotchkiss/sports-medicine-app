@@ -82,7 +82,6 @@ class Navbar {
   }
 
   static bindBackBtnEventListener(selectedItem) {
-    console.log(selectedItem)
     const userSelection = Store.getUserSelection()
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     // const implantFamilies = Store.getImplantFamilies()
@@ -101,6 +100,10 @@ class Navbar {
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
+      } else if (selectedItem[0].id === 'alpha4_75') {
+        HomePage.clearImplantDetails()
+        // HomePage.renderCapitalProducts(selectedItem)
+        Navbar.updateTitle("Capital Products")
       } else if (selectedItem[0].feature_id == 'capital') {
         HomePage.clearImplantDetails()
         HomePage.renderCapitalProducts(capitalProducts)
@@ -140,7 +143,7 @@ class Navbar {
         HomePage.renderXf2Errors(xf2Errors)
         Search.bindErrorSearchEventListener()
         HomePage.scrollToTop()
-      } else {
+      }  else {
         HomePage.clearImplantDetails()
         HomePage.renderCapitalProducts(capitalProducts)
         Navbar.updateTitle("Capital Products")

@@ -28,6 +28,7 @@ class CapitalProducts {
       }
 
       static bindingAlphaventProductsEventListener(alphavent_products) {
+        console.log(alphavent_products)
         const capitalProductsDivs = document.getElementsByClassName("content-div")
         for (let item of capitalProductsDivs) {
           item.addEventListener("click", () => {
@@ -39,7 +40,7 @@ class CapitalProducts {
             })
             Navbar.updateTitle("Capital Products")
             HomePage.clearCapitalProductsText()
-            HomePage.renderAlphaventProductDetails(selected_alphavent)
+            HomePage.renderAlphaventProductDetails(selected_alphavent, alphavent_products)
           })
         }
       }

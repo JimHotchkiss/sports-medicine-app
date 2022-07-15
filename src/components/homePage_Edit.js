@@ -119,7 +119,6 @@ class HomePage {
   
     // Alphavent 
     static renderAlphaventProducts(selectedCapitalProducts) {
-      console.log(selectedCapitalProducts)
       const alphavent_products = selectedCapitalProducts[0].alphavent_products
       const alphavent_products_container = document.createElement('div')
       alphavent_products_container.setAttribute("class", "content-wrapper")
@@ -159,21 +158,22 @@ class HomePage {
       CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
     }
 
-    static renderAlphaventProductDetails(selected_alphavent) {
-      console.log(selected_alphavent)
+    static renderAlphaventProductDetails(selected_alphavent, alphavent_products) {
+      console.log(selected_alphavent, alphavent_products)
       const contentWrapper = document.createElement('div')
       contentWrapper.setAttribute('class', 'content-wrapper')
       const productName = selected_alphavent.name
       const alphaventPnsConfigurations = selected_alphavent.suture_anchors
       HomePage.ProductName(productName, contentWrapper)
       HomePage.AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper)
+      Navbar.showBackBtn(alphavent_products)
     }
 
     // Alphavent PNs Configuration
     static AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper){
-      alphaventPnsConfigurations.map(item => (
-        console.log(item)
-      ))
+      // alphaventPnsConfigurations.map(item => (
+      //   console.log(item)
+      // ))
 
     }
   
