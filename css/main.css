@@ -23,6 +23,17 @@
     color: #fff;
 }
 
+.disposables-details-title {
+    color: #fff;
+    padding-top: 12px;
+}
+
+.replacement-parts-details-title {
+    color: #fff;
+    padding-top: 12px;
+}
+
+
 .product-name-div {
     padding: 8px 16px;
     margin-bottom: 16px;
@@ -34,28 +45,24 @@
 
 }
 
+.disposables-pn-div {
+    color: #fff;
+    font-weight: 500;
+    padding-left: 12px;
+}
+
+.replacement-parts-pn-div {
+    color: #fff;
+    font-weight: 500;
+    padding-left: 12px;
+}
+
 .alpha-product-pn-div{
     color: #fff;
     font-weight: 500;
     padding-left: 12px;
-    /* padding: 8px 16px;
-    margin-bottom: 16px;
-    min-width: 275px;
-    max-width: 300px;
-    background: #ffb600;
-    border-radius: 5px;
-    transition: 0.3ms; */
+ 
 }
-
-/* .content-details-div {
-    padding: 8px 16px;
-    margin-bottom: 16px;
-    min-width: 275px;
-    max-width: 300px;
-    background: #ffb600;
-    border-radius: 5px;
-    transition: 0.3ms;
-} */
 
 .content-details-div:hover {
     cursor: pointer;

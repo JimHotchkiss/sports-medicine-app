@@ -429,7 +429,6 @@ class HomePage {
         insertNameTextDiv.appendChild(insertNameText)
 
         // Configurations
-        console.log(item)
         const configDiv = document.createElement("div")
         configDiv.setAttribute("class", "name-div")
         const configDivText = document.createElement("p")
@@ -454,20 +453,23 @@ class HomePage {
       const selectedProductName = selectedCapitalProducts[0].title
       const selectedProductPn = selectedCapitalProducts[0].pn
       const selectedProductDescription = selectedCapitalProducts[0].description
+      const selectedProductWeight = selectedCapitalProducts[0].chair_weight
+      const selectedProductWeightLimit = selectedCapitalProducts[0].patient_weight_limit
+      const selectProductHeightRange = selectedCapitalProducts[0].patient_height_range
       HomePage.scrollToTop()
       HomePage.ProductName(selectedProductName, contentWrapper)
       HomePage.ProductPn(selectedProductPn, contentWrapper)
       HomePage.ProductDescription(selectedProductDescription, contentWrapper)
-      // HomePage.ABCChairWeight(selectedProduct, contentWrapper)
-      // HomePage.ABCPatientWeightLimit(selectedProduct, contentWrapper)
-      // HomePage.ABCPatientHeightRange(selectedProduct, contentWrapper)
-      // HomePage.ABCBenefitsForAnesthesia(selectedProduct, contentWrapper)
-      // HomePage.ABCBenefitsForSurgeons(selectedProduct, contentWrapper)
-      // HomePage.ABCBenefitsForStaff(selectedProduct, contentWrapper)
-      // HomePage.ABCBenefitsForPatients(selectedProduct, contentWrapper)
-      // HomePage.ABCDisposable(selectedProduct, contentWrapper)
-      // HomePage.ABCDisposables(selectedProduct, contentWrapper)
-      // HomePage.ABCBReplacementParts(selectedProduct, contentWrapper)
+      HomePage.ABCChairWeight(selectedProductWeight, contentWrapper)
+      HomePage.ABCPatientWeightLimit(selectedProductWeightLimit, contentWrapper)
+      HomePage.ABCPatientHeightRange(selectProductHeightRange, contentWrapper)
+      HomePage.ABCBenefitsForAnesthesia(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForStaff(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBenefitsForPatients(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCDisposable(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCDisposables(selectedCapitalProducts, contentWrapper)
+      HomePage.ABCBReplacementParts(selectedCapitalProducts, contentWrapper)
     }
   
     // Product Name
@@ -566,7 +568,7 @@ class HomePage {
       insertNameTextDiv.setAttribute("class", "name-div")
       const insertNameText = document.createElement("p")
       insertNameText.setAttribute("class", "product-name-div")
-      insertNameText.innerText = selectedCapitalProduct[0].chair_weight
+      insertNameText.innerText = selectedCapitalProduct
       insertNameTextDiv.appendChild(insertNameText)
 
       insertNameDiv.appendChild(insertNameTitleDiv)
@@ -577,83 +579,111 @@ class HomePage {
   
     // ABC Patient Weight Limit
     static ABCPatientWeightLimit(selectedCapitalProduct, contentWrapper) {
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-      const insertPnText = document.createElement("p")
-      insertPnText.setAttribute("class", "insert-details-text")
-      insertPnTitle.innerText = "Patient Weight Limit"
-      insertPnText.innerText =  selectedCapitalProduct[0].patient_weight_limit
-      insertPnTextDiv.appendChild(insertPnText)
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Patient Weight Limit"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = selectedCapitalProduct
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Height Range 
     static ABCPatientHeightRange(selectedCapitalProduct, contentWrapper) {
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-details-text-div")
-      const insertPnText = document.createElement("p")
-      insertPnText.setAttribute("class", "insert-details-text")
-      insertPnTitle.innerText = "Patient Height Range"
-      insertPnText.innerText =  selectedCapitalProduct[0].patient_height_range
-      insertPnTextDiv.appendChild(insertPnText)
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Patient Height Range"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = selectedCapitalProduct
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Benefits for Anethesia 
     static ABCBenefitsForAnesthesia(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_anesthesia
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-list-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Benefits for Anesthesia"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. ${benefit}`
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Benefits for Anesthesia"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = `${index + 1}. ${item}`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // Benefits for Surgeons 
     static ABCBenefitsForSurgeons(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_surgeon
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Benefits for Surgeons"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. ${benefit}`
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Benefits for Surgeon"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = `${index + 1}. ${item}`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
   
     }
@@ -661,118 +691,161 @@ class HomePage {
     // Benefits for Staff 
     static ABCBenefitsForStaff(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_staff
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Benefits for Staff"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. ${benefit}`
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Benefits for Staff"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = `${index + 1}. ${item}`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // Benefits for Patients
     static ABCBenefitsForPatients(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].benefits_for_patient
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Benefits for Patients"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. ${benefit}`
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Benefits for Patient"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = `${index + 1}. ${item}`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Disposable
     static ABCDisposable(selectedCapitalProduct, contentWrapper){
       const benefitArray = selectedCapitalProduct[0].disposable
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Disposable Items"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `${index + 1}. ${benefit}`
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Disposable"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = `${index + 1}. ${item}`
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Disposables 
     static ABCDisposables(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].disposables
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Disposables"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        const insertDescriptionText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertDescriptionText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `PN: ${benefit.pn}`
-        insertDescriptionText.innerText = `${index + 1}. ${benefit.description}`
-        insertPnTextDiv.appendChild(insertDescriptionText)
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "disposables-details-title")
+      insertNameTitle.innerText = "Disposables:"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'disposables-pn-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.innerText = `${index + 1}. ${item.pn}`
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameTextDiv.appendChild(insertNameTitleDiv)
+
+
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = item.description
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
   
     // ABC Replacement Parts 
-    static ABCBReplacementParts(selectedCapitalProducts, contentWrapper) {
-      const benefitArray = selectedCapitalProducts[0].replacement_parts
-      const insertPnDiv = document.createElement("div")
-      insertPnDiv.setAttribute("class", "content-details-div")
-      const insertPnTitle = document.createElement("h3")
-      insertPnTitle.setAttribute("class", "insert-details-title")
-      const insertPnTextDiv = document.createElement("div")
-      insertPnTextDiv.setAttribute("class", "insert-list-details-text-div")
-      insertPnTitle.innerText = "Replacement Parts"
-      benefitArray.map((benefit, index) => {
-        const insertPnText = document.createElement("p")
-        const insertDescriptionText = document.createElement("p")
-        insertPnText.setAttribute("class", "insert-list-details-text")
-        insertDescriptionText.setAttribute("class", "insert-list-details-text")
-        insertPnText.innerText = `PN: ${benefit.pn}`
-        insertDescriptionText.innerText = `${index + 1}. ${benefit.description}`
-        insertPnTextDiv.appendChild(insertDescriptionText)
-        insertPnTextDiv.appendChild(insertPnText)
-      })
-      insertPnDiv.appendChild(insertPnTitle)
-      insertPnDiv.appendChild(insertPnTextDiv)
-      contentWrapper.appendChild(insertPnDiv)
+    static ABCBReplacementParts(selectedCapitalProduct, contentWrapper) {
+      const benefitArray = selectedCapitalProduct[0].replacement_parts
+
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "replacement-parts-details-title")
+      insertNameTitle.innerText = "Replacement Parts:"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      benefitArray.map((item, index) => {
+      const insertNameTextDiv = document.createElement("div")
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'replacement-parts-pn-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.innerText = `${index + 1}. ${item.pn}`
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameTextDiv.appendChild(insertNameTitleDiv)
+
+
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = item.description
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      })      
+      contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
   
     }
