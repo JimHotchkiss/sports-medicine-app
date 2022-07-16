@@ -119,7 +119,14 @@ class HomePage {
   
     // Alphavent 
     static renderAlphaventProducts(selectedCapitalProducts) {
-      const alphavent_products = selectedCapitalProducts[0].alphavent_products
+     const capitalProducts = Store.getCapitalProducts()
+     let alphavent_products
+     if (selectedCapitalProducts[0].alphavent_products === undefined) {
+      alphavent_products = selectedCapitalProducts
+     } else {
+      alphavent_products = selectedCapitalProducts[0].alphavent_products
+     }
+      
       const alphavent_products_container = document.createElement('div')
       alphavent_products_container.setAttribute("class", "content-wrapper")
       alphavent_products_container.setAttribute("id", "capital-products-container")
@@ -156,24 +163,287 @@ class HomePage {
          root.appendChild(alphavent_products_container)
       })
       CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
+      Navbar.showBackBtn(capitalProducts.capital_products)
     }
 
     static renderAlphaventProductDetails(selected_alphavent, alphavent_products) {
-      console.log(selected_alphavent, alphavent_products)
+      console.log(selected_alphavent)
       const contentWrapper = document.createElement('div')
       contentWrapper.setAttribute('class', 'content-wrapper')
       const productName = selected_alphavent.name
       const alphaventPnsConfigurations = selected_alphavent.suture_anchors
+      const productLength = selected_alphavent.length
+      const productWidth = selected_alphavent.diameter
+      const productPilotHoleDepth = selected_alphavent.pilot_hole_depth
+      const productPilotHoleWidth = selected_alphavent.pilot_hole_width
+      const productInstrumentCompatibility = selected_alphavent.instrument_compatibility
+      const productEyelet = selected_alphavent.eyelet
+      const productAdditionalFeatures = selected_alphavent.additional_features
+      const productCategory = selected_alphavent.category
       HomePage.ProductName(productName, contentWrapper)
       HomePage.AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper)
+      HomePage.AlphaventLength(productLength, contentWrapper)
+      HomePage.AlphaventWidth(productWidth, contentWrapper)
+      HomePage.AlphaventPilotHoleDepth(productPilotHoleDepth, contentWrapper)
+      HomePage.AlphaventPilotHoleWidth(productPilotHoleWidth, contentWrapper)
+      HomePage.AlphaventInstrumentCompatibility(productInstrumentCompatibility, contentWrapper)
+      HomePage.AlphaventProductEyelet(productEyelet, contentWrapper)
+      HomePage.AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper)
+      HomePage.AlphaventCategory(productCategory, contentWrapper)
       Navbar.showBackBtn(alphavent_products)
+    }
+
+    // Alphavent Product Category
+    static AlphaventCategory(productCategory, contentWrapper){
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Category"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = productCategory
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+    }
+
+    // Alphavent Product Additional Features
+    static AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Additional Features"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = productAdditionalFeatures
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+
+    }
+
+    // Alphavent Product Eyelet
+    static AlphaventProductEyelet(productEyelet, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Eyelet"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = productEyelet
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+    }
+
+    // Alphavent Product Compatability
+    static AlphaventInstrumentCompatibility(productInstrumentCompatibility, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Instrument Compatibility"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      
+      productInstrumentCompatibility.map(item => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = item
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)  
+      contentWrapper.appendChild(insertNameDiv)      
+      })
+      HomePage.root().appendChild(contentWrapper)
+    }
+
+    // Alphavent Pilot Hole Width
+    static AlphaventPilotHoleWidth(productPilotHoleWidth, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Pilot Hole Width"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      
+      productPilotHoleWidth.map(item => {
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = item
+      insertNameTextDiv.appendChild(insertNameText)
+      insertNameDiv.appendChild(insertNameTextDiv)  
+      contentWrapper.appendChild(insertNameDiv)      
+      })
+      HomePage.root().appendChild(contentWrapper)
+    }
+
+    // Alphavent Pilot Hole Depth
+    static AlphaventPilotHoleDepth(productPilotHoleDepth, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Pilot Hole Depth"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = productPilotHoleDepth
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+    }
+
+    // Alphavent Width
+    static AlphaventWidth(productWidth, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Diameter"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = productWidth
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+    }
+
+    // Alphavent Length
+    static AlphaventLength(productLength, contentWrapper) {
+      const insertNameDiv = document.createElement("div")
+      insertNameDiv.setAttribute("class", "content-details-div")
+      insertNameDiv.setAttribute("id", "insert-name-div")
+
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Length"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = productLength
+      insertNameTextDiv.appendChild(insertNameText)
+
+      insertNameDiv.appendChild(insertNameTitleDiv)
+      insertNameDiv.appendChild(insertNameTextDiv)
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
     }
 
     // Alphavent PNs Configuration
     static AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper){
-      // alphaventPnsConfigurations.map(item => (
-      //   console.log(item)
-      // ))
+      const insertNameDiv = document.createElement("div")
+        insertNameDiv.setAttribute("class", "content-details-div")
+        insertNameDiv.setAttribute("id", "insert-name-div")
+
+        const insertNameTitleDiv = document.createElement('div')
+        insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+        const insertNameTitle = document.createElement("h3")
+        insertNameTitle.setAttribute("class", "insert-details-title")
+        insertNameTitle.innerText = "Part Number Configuration"
+        insertNameTitleDiv.appendChild(insertNameTitle)
+        insertNameDiv.appendChild(insertNameTitleDiv)
+      alphaventPnsConfigurations.map(item => {
+        //PNs 
+        const insertNameTextDiv = document.createElement("div")
+        insertNameTextDiv.setAttribute("class", "name-div")
+        const insertNameText = document.createElement("p")
+        insertNameText.setAttribute("class", "alpha-product-pn-div")
+        insertNameText.innerText = item.pn
+        insertNameTextDiv.appendChild(insertNameText)
+
+        // Configurations
+        console.log(item)
+        const configDiv = document.createElement("div")
+        configDiv.setAttribute("class", "name-div")
+        const configDivText = document.createElement("p")
+        configDivText.setAttribute("class", "product-name-div")
+        configDivText.innerText = item.description
+        configDiv.appendChild(configDivText)
+       
+
+        insertNameDiv.appendChild(insertNameTextDiv)
+        insertNameDiv.appendChild(configDiv)
+        contentWrapper.appendChild(insertNameDiv)
+        HomePage.root().appendChild(contentWrapper)
+        
+    })
 
     }
   

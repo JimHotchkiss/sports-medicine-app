@@ -28,7 +28,6 @@ class CapitalProducts {
       }
 
       static bindingAlphaventProductsEventListener(alphavent_products) {
-        console.log(alphavent_products)
         const capitalProductsDivs = document.getElementsByClassName("content-div")
         for (let item of capitalProductsDivs) {
           item.addEventListener("click", () => {

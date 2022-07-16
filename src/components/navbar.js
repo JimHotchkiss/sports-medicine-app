@@ -70,7 +70,6 @@ class Navbar {
     return navbarBackBtn
   }
   static showBackBtn(selectedItem) {
-    // console.log(selectedItem)
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
     Navbar.bindBackBtnEventListener(selectedItem)
@@ -96,13 +95,12 @@ class Navbar {
       if (selectedItem == undefined) {
         HomePage.clearImplantDetails()
         HomePage.clearImplantFamliesText()
-        // Navbar.updateImplantFamiliesTitle(userSelection)
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
       } else if (selectedItem[0].id === 'alpha4_75') {
         HomePage.clearImplantDetails()
-        // HomePage.renderCapitalProducts(selectedItem)
+        HomePage.renderAlphaventProducts(selectedItem)
         Navbar.updateTitle("Capital Products")
       } else if (selectedItem[0].feature_id == 'capital') {
         HomePage.clearImplantDetails()
@@ -154,7 +152,6 @@ class Navbar {
 
   // Update Implant Families Title
   static updateImplantFamiliesTitle(userSelection){
-    console.log('updateImplantFamilies', userSelection)
     const navbarTitleDiv = document.getElementsByClassName("title-div")
     const spanDiv = document.getElementsByClassName("span-div")
     const imgDiv = document.getElementById("img-div")
