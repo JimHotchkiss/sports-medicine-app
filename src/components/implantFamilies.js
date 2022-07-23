@@ -30,7 +30,6 @@ class ImplantFamilies {
       }
 
       static selectedImplantFamily(selectedFamily) {
-        const implantFamilies = Store.getImplantFamilies()
         const inserts = Store.getInserts()
         const selectedFamilyImplantsArray = []
         inserts.map(insert => {
@@ -43,6 +42,11 @@ class ImplantFamilies {
         Search.bindInsertSearchEventListener()
         HomePage.clearImplantFamliesText()
         Navbar.showBackBtn()
-        HomePage.renderImplants(selectedFamilyImplantsArray)
+        if (selectedFamilyImplantsArray[0].implant.family === 'Alphavent') {
+          const alphaventProducts = selectedFamilyImplantsArray[0].implant.alphavent_products
+          HomePage.renderAlphaventProducts(alphaventProducts)
+        } else {
+          HomePage.renderImplants(selectedFamilyImplantsArray)
+        }
       }
 }

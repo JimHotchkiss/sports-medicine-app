@@ -163,11 +163,10 @@ class HomePage {
          root.appendChild(alphavent_products_container)
       })
       CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
-      Navbar.showBackBtn(capitalProducts.capital_products)
+      Navbar.showBackBtn(selectedCapitalProducts)
     }
 
     static renderAlphaventProductDetails(selected_alphavent, alphavent_products) {
-      console.log(selected_alphavent)
       const contentWrapper = document.createElement('div')
       contentWrapper.setAttribute('class', 'content-wrapper')
       const productName = selected_alphavent.name
@@ -190,7 +189,8 @@ class HomePage {
       HomePage.AlphaventProductEyelet(productEyelet, contentWrapper)
       HomePage.AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper)
       HomePage.AlphaventCategory(productCategory, contentWrapper)
-      Navbar.showBackBtn(alphavent_products)
+      Navbar.showBackBtn(alphavent_products, selected_alphavent
+        )
     }
 
     // Alphavent Product Category
@@ -2281,13 +2281,13 @@ class HomePage {
       ImplantFamilies.bindingImplantFamiliesEventListener()
     }
   
-    static renderImplants(inserts) {
+    static renderImplants(implants) {
       const root = HomePage.root()
       const implantContainer = document.createElement("div")
       implantContainer.setAttribute("class", "content-wrapper")
       implantContainer.setAttribute("id", "implant-container")
   
-      inserts.map((implant) => {
+      implants.map((implant) => {
         const implantDiv = document.createElement("div")
         implantDiv.setAttribute("class", "content-div")
         implantDiv.setAttribute("id", implant.implant.pn)

@@ -69,10 +69,19 @@ class Navbar {
     navbarBackBtn.setAttribute("id", "navbar-back-btn")
     return navbarBackBtn
   }
-  static showBackBtn(selectedItem) {
+  static showBackBtn(items, selectedItem) {
+    // console.log(selectedItem, items)
+    const alphaventProducts = Store.getInserts()[62].implant.alphavent_products
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
-    Navbar.bindBackBtnEventListener(selectedItem)
+    if (selectedItem === undefined) {
+      console.log('undefined')
+      Navbar.bindBackBtnEventListener(items)
+    } else if (selectedItem.id == 'alpha4_75' || selectedItem.id == 'alpha5_5' || selectedItem.id == 'alpha6_5') {
+      console.log('else if')
+      Navbar.bindBackBtnEventListener(alphaventProducts)
+    }
+    
   }
 
   static hideBackBtn() {
@@ -81,6 +90,7 @@ class Navbar {
   }
 
   static bindBackBtnEventListener(selectedItem) {
+    console.log(selectedItem)
     const userSelection = Store.getUserSelection()
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     // const implantFamilies = Store.getImplantFamilies()
@@ -98,10 +108,10 @@ class Navbar {
         Navbar.hideBackBtn()
         Search.clearSearchField()
         HomePage.renderImplantFamilies(implantFamilies)
-      } else if (selectedItem[0].id === 'alpha4_75') {
+      } else if (selectedItem[0].id == 'alpha4_75') {
         HomePage.clearImplantDetails()
         HomePage.renderAlphaventProducts(selectedItem)
-        Navbar.updateTitle("Capital Products")
+        Navbar.updateTitle("Implant Families")
       } else if (selectedItem[0].feature_id == 'capital') {
         HomePage.clearImplantDetails()
         HomePage.renderCapitalProducts(capitalProducts)
