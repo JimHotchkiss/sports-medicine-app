@@ -1,10 +1,9 @@
 class ImplantFamiliesAdapter {
     constructor() {
-      // this.dataUrl = "../../data/implantFamiliesData.json"
-      this.dataUrl = "../../data/implantData.json"
+      this.dataUrl = "../../data/implantFamiliesData.json"
     }
   
     fetchImplantFamiliesData() {
-      return fetch(this.dataUrl).then((resp) => resp.json())
+      return fetch("../../data/implantFamiliesData.json").then((resp) => resp.json())
     }
   }
