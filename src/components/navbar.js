@@ -96,6 +96,7 @@ class Navbar {
         HomePage.clearImplantDetails()
         HomePage.renderAlphaventProducts(alphaventProducts)
       } else {
+        Navbar.hideBackBtn()
         HomePage.clearImplantDetails()
         HomePage.renderImplantFamilies(implantFamilies)
       }

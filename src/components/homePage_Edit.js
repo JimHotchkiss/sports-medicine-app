@@ -404,6 +404,7 @@ class HomePage {
 
     // Alphavent PNs Configuration
     static AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper){
+      console.log(alphaventPnsConfigurations)
       const insertNameDiv = document.createElement("div")
         insertNameDiv.setAttribute("class", "content-details-div")
         insertNameDiv.setAttribute("id", "insert-name-div")
@@ -415,30 +416,47 @@ class HomePage {
         insertNameTitle.innerText = "Part Number Configuration"
         insertNameTitleDiv.appendChild(insertNameTitle)
         insertNameDiv.appendChild(insertNameTitleDiv)
-      alphaventPnsConfigurations.map(item => {
-        //PNs 
-        const insertNameTextDiv = document.createElement("div")
-        insertNameTextDiv.setAttribute("class", "name-div")
-        const insertNameText = document.createElement("p")
-        insertNameText.setAttribute("class", "alpha-product-pn-div")
-        insertNameText.innerText = item.pn
-        insertNameTextDiv.appendChild(insertNameText)
+        
 
-        // Configurations
-        const configDiv = document.createElement("div")
-        configDiv.setAttribute("class", "name-div")
-        const configDivText = document.createElement("p")
-        configDivText.setAttribute("class", "product-name-div")
-        configDivText.innerText = item.description
-        configDiv.appendChild(configDivText)
+      // PN Configuration Image 
+      const pnConfigImgDiv = document.createElement('div')
+      pnConfigImgDiv.setAttribute('class', 'details-img-div')
+      if (alphaventPnsConfigurations.length == 10) {
+        pnConfigImgDiv.setAttribute('id', 'config-div-475')
+      } else if (alphaventPnsConfigurations.length == 8) {
+        pnConfigImgDiv.setAttribute('id', 'config-div-55')
+      } else {
+        pnConfigImgDiv.setAttribute('id', 'config-div-65')
+      }
+      insertNameDiv.appendChild(pnConfigImgDiv)
+
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+
+    //   alphaventPnsConfigurations.map(item => {
+    //     //PNs 
+    //     const insertNameTextDiv = document.createElement("div")
+    //     insertNameTextDiv.setAttribute("class", "name-div")
+    //     const insertNameText = document.createElement("p")
+    //     insertNameText.setAttribute("class", "alpha-product-pn-div")
+    //     insertNameText.innerText = item.pn
+    //     insertNameTextDiv.appendChild(insertNameText)
+
+    //     // Configurations
+    //     const configDiv = document.createElement("div")
+    //     configDiv.setAttribute("class", "name-div")
+    //     const configDivText = document.createElement("p")
+    //     configDivText.setAttribute("class", "product-name-div")
+    //     configDivText.innerText = item.description
+    //     configDiv.appendChild(configDivText)
        
 
-        insertNameDiv.appendChild(insertNameTextDiv)
-        insertNameDiv.appendChild(configDiv)
-        contentWrapper.appendChild(insertNameDiv)
-        HomePage.root().appendChild(contentWrapper)
+    //     insertNameDiv.appendChild(insertNameTextDiv)
+    //     insertNameDiv.appendChild(configDiv)
+    //     contentWrapper.appendChild(insertNameDiv)
+    //     HomePage.root().appendChild(contentWrapper)
         
-    })
+    // })
 
     }
   
@@ -811,6 +829,7 @@ class HomePage {
     // ABC Replacement Parts 
     static ABCBReplacementParts(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].replacement_parts
+      console.log(selectedCapitalProduct[0].pn)
 
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
@@ -824,23 +843,29 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
 
-      benefitArray.map((item, index) => {
-      const insertNameTextDiv = document.createElement("div")
-      const insertNameTitleDiv = document.createElement('div')
-      insertNameTitleDiv.setAttribute('class', 'replacement-parts-pn-div')
-      const insertNameTitle = document.createElement("h3")
-      insertNameTitle.innerText = `${index + 1}. ${item.pn}`
-      insertNameTitleDiv.appendChild(insertNameTitle)
-      insertNameTextDiv.appendChild(insertNameTitleDiv)
+      // Replacement Parts Image 
+      const replacementPartsImageDiv = document.createElement('div')
+      replacementPartsImageDiv.setAttribute('class', 'details-img-div')
+      replacementPartsImageDiv.setAttribute('id', `replacement-img-${selectedCapitalProduct[0].pn}`)
+      insertNameDiv.appendChild(replacementPartsImageDiv)
+
+      // benefitArray.map((item, index) => {
+      // const insertNameTextDiv = document.createElement("div")
+      // const insertNameTitleDiv = document.createElement('div')
+      // insertNameTitleDiv.setAttribute('class', 'replacement-parts-pn-div')
+      // const insertNameTitle = document.createElement("h3")
+      // insertNameTitle.innerText = `${index + 1}. ${item.pn}`
+      // insertNameTitleDiv.appendChild(insertNameTitle)
+      // insertNameTextDiv.appendChild(insertNameTitleDiv)
 
 
-      insertNameTextDiv.setAttribute("class", "name-div")
-      const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
-      insertNameText.innerText = item.description
-      insertNameTextDiv.appendChild(insertNameText)
-      insertNameDiv.appendChild(insertNameTextDiv)
-      })      
+      // insertNameTextDiv.setAttribute("class", "name-div")
+      // const insertNameText = document.createElement("p")
+      // insertNameText.setAttribute("class", "product-name-div")
+      // insertNameText.innerText = item.description
+      // insertNameTextDiv.appendChild(insertNameText)
+      // insertNameDiv.appendChild(insertNameTextDiv)
+      // })      
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
   
