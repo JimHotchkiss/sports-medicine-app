@@ -47,21 +47,22 @@ class ImplantFamilies {
         }
      ]
     }
-      this.fetchInplantFamilies()
+      // this.fetchInplantFamilies()
+      Store.addImplantFamilies(this.implantFamiliesData)
       
     
     
     }
 
-    fetchInplantFamilies() {
-      console.log(this.implantFamiliesData)
-      Store.addImplantFamilies(this.implantFamiliesData)
-      // Store.addImplantFamilies(this.implantFamiliesData)
-        // this.implantFamiliesAdapter.fetchImplantFamiliesData().then((data) => {
-        //   return console.log(data)
-        //   Store.addImplantFamilies(data)
-        // })
-      }
+    // fetchInplantFamilies() {
+    //   console.log(this.implantFamiliesData)
+    //   Store.addImplantFamilies(this.implantFamiliesData)
+    //   Store.addImplantFamilies(this.implantFamiliesData)
+    //     this.implantFamiliesAdapter.fetchImplantFamiliesData().then((data) => {
+    //       return console.log(data)
+    //       Store.addImplantFamilies(data)
+    //     })
+    //   }
 
       static bindingImplantFamiliesEventListener() {
         const implantFamilyDivs = document.getElementsByClassName("content-div")

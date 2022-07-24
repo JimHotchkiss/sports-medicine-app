@@ -6,8 +6,8 @@ class ImplantFamiliesAdapter {
 
     }
   
-    fetchImplantFamiliesData() {
-      console.log('ImplantFamiliesAdapter')
-      return fetch(this.dataUrl).then((resp) => resp.json())
-    }
+    // fetchImplantFamiliesData() {
+    //   console.log('ImplantFamiliesAdapter')
+    //   return fetch(this.dataUrl).then((resp) => resp.json())
+    // }
   }
