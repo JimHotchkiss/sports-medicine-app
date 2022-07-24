@@ -45,8 +45,10 @@ class Store {
   static getImplantFamilies() {
     let implantFamilies
     if (localStorage.getItem("implant families") === null) {
+      console.log('null')
       implantFamilies = []
     } else {
+      console.log('implant families')
       implantFamilies = JSON.parse(localStorage.getItem("implant families"))
     }
     return implantFamilies
@@ -64,7 +66,6 @@ class Store {
   }
 
   static addProbes(fetchedProbes) {
-    console.log(fetchedProbes)
     localStorage.setItem("probes", JSON.stringify(fetchedProbes))
   }
 
