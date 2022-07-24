@@ -7,6 +7,7 @@ class ImplantFamilies {
 
     fetchInplantFamilies() {
         this.implantFamiliesAdapter.fetchImplantFamiliesData().then((data) => {
+          console.log(data)
           Store.addImplantFamilies(data)
         })
       }
