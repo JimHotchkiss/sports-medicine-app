@@ -1,7 +1,7 @@
 class ImplantFamilies {
     constructor() {
-      this.implantFamiliesAdapter = new ImplantFamiliesAdapter()
       console.log('fetch')
+      this.implantFamiliesAdapter = new ImplantFamiliesAdapter()
       this.fetchInplantFamilies()
     
     }
