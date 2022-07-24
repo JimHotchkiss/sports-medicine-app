@@ -6,7 +6,6 @@ class Probes {
 
   fetchProbesSpecifications() {
     this.probeAdapter.fetchProbeData().then((data) => {
-      console.log(data)
       Store.addProbes(data)
     })
   }
