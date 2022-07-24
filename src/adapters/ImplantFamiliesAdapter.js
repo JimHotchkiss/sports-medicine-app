@@ -4,6 +4,6 @@ class ImplantFamiliesAdapter {
     }
   
     fetchImplantFamiliesData() {
-      return fetch("../../data/implantFamiliesData.json").then((resp) => resp.json())
+      return fetch(this.dataUrl).then((resp) => resp.json())
     }
   }
