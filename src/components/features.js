@@ -7,9 +7,9 @@ class Features {
     this.capitalProducts = new CapitalProducts()
     this.shavers = new Probes()
     this.probes = new Shavers()
-    this.xf2Errors = new Xf2Errors()
-    this.xflowErrors = new XflowErrors()
-    this.defaultSettings = new DefaultSettings()
+    // this.xf2Errors = new Xf2Errors()
+    // this.xflowErrors = new XflowErrors()
+    // this.defaultSettings = new DefaultSettings()
     this.retrieveFeatureData()
   }
 
@@ -87,6 +87,7 @@ class Features {
           Search.bindInsertSearchEventListener()
           Store.setUserSelection(userSelection)
         } else if (item.id === "probe") {
+          console.log('probe')
           userSelection = "Probe"
           const probes = Store.getProbes()
           HomePage.renderSearchField()
@@ -94,6 +95,7 @@ class Features {
           Search.bindProbeSearchEventListener()
           Store.setUserSelection(userSelection)
         } else if (item.id === "shaver") {
+          console.log('shaver')
           userSelection = "Shaver"
           const shavers = Store.getShavers()
           HomePage.renderSearchField()

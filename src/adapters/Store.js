@@ -64,6 +64,7 @@ class Store {
   }
 
   static addProbes(fetchedProbes) {
+    console.log(fetchedProbes)
     localStorage.setItem("probes", JSON.stringify(fetchedProbes))
   }
 

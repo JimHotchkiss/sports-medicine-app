@@ -84,3 +84,22 @@
     {
         "id": "default", "title": "Arthro Default Settings", "iconUrl": "../images/error.png", "description": "Default settings for hand pieces and foot pedals."
     },
+
+# Features Data - removed shavers, probes arthro default ect.
+
+,
+    {
+        "id": "probe", "title": "Arthro Specifications", "iconUrl": "../images/tennis.png", "description": "Sports Medicine probe specifications including length, outer diameter, coag, cut default and cut max."
+    },
+    {
+        "id": "shaver", "title": "Shaver Specifications", "iconUrl": "../images/soccer.png", "description": "Sports Medicine shaver specifications including maximum, minimum and default RPMs."
+    },
+    {
+        "id": "default", "title": "Arthro Default Settings", "iconUrl": "../images/error.png", "description": "Default settings for hand pieces and foot pedals."
+    },
+    {
+        "id": "crossflow-errors", "title": "Crossflow Error Codes", "iconUrl": "../images/error.png", "description": "Search by error codes to find the details of each error code."
+    },
+    {
+        "id": "crossfire-errors", "title": "Xf2 Error Codes", "iconUrl": "../images/error.png", "description": "Search by error codes to find the details of each error code."
+    }

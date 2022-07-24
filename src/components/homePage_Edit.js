@@ -176,6 +176,7 @@ class HomePage {
       const productEyelet = selected_alphavent.eyelet
       const productAdditionalFeatures = selected_alphavent.additional_features
       const productCategory = selected_alphavent.category
+      Search.clearSearchField()
       HomePage.ProductName(productName, contentWrapper)
       HomePage.AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper)
       HomePage.AlphaventLength(productLength, contentWrapper)
@@ -2114,6 +2115,7 @@ class HomePage {
     }
   
     static renderProbes(probes) {
+      console.log(probes)
       const root = HomePage.root()
       const probesContainer = document.createElement("div")
       probesContainer.setAttribute("class", "content-wrapper")
