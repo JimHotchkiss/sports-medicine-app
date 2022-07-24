@@ -118,14 +118,15 @@ class HomePage {
     }
   
     // Alphavent 
-    static renderAlphaventProducts(selectedCapitalProducts) {
-     const capitalProducts = Store.getCapitalProducts()
-     let alphavent_products
-     if (selectedCapitalProducts[0].alphavent_products === undefined) {
-      alphavent_products = selectedCapitalProducts
-     } else {
-      alphavent_products = selectedCapitalProducts[0].alphavent_products
-     }
+    static renderAlphaventProducts(alphavent_products) {
+      console.log(alphavent_products)
+    //  const capitalProducts = Store.getCapitalProducts()
+    //  let alphavent_products
+    //  if (selectedCapitalProducts[0].alphavent_products === undefined) {
+    //   alphavent_products = selectedCapitalProducts
+    //  } else {
+    //   alphavent_products = selectedCapitalProducts[0].alphavent_products
+    //  }
       
       const alphavent_products_container = document.createElement('div')
       alphavent_products_container.setAttribute("class", "content-wrapper")
@@ -152,18 +153,14 @@ class HomePage {
 
          titleDiv.innerText = product.name
          alphaventImgTitleDiv.appendChild(titleDiv)
-         // Description div
-        //  const descriptionDiv = document.createElement("div")
-        //  descriptionDiv.setAttribute("class", "feature-description-div")
-        //  descriptionDiv.innerText = product.size
    
          alphavent_product_div.appendChild(alphaventImgTitleDiv)
         //  alphavent_product_div.appendChild(descriptionDiv)
          alphavent_products_container.appendChild(alphavent_product_div)
          root.appendChild(alphavent_products_container)
       })
+      Navbar.showAlphaventBackBtn(alphavent_products)
       CapitalProducts.bindingAlphaventProductsEventListener(alphavent_products)
-      Navbar.showBackBtn(selectedCapitalProducts)
     }
 
     static renderAlphaventProductDetails(selected_alphavent, alphavent_products) {
@@ -189,8 +186,7 @@ class HomePage {
       HomePage.AlphaventProductEyelet(productEyelet, contentWrapper)
       HomePage.AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper)
       HomePage.AlphaventCategory(productCategory, contentWrapper)
-      Navbar.showBackBtn(alphavent_products, selected_alphavent
-        )
+      Navbar.showAlphaventBackBtn(selected_alphavent)
     }
 
     // Alphavent Product Category
@@ -852,6 +848,7 @@ class HomePage {
     
   
     static getImplantDetails(selectedInsert) {
+      console.log(selectedInsert)
       const inserts = Store.getInserts()
       const selectedInserts = []
       inserts.map((insert) => {
@@ -2255,11 +2252,10 @@ class HomePage {
         root.appendChild(capitalProductsContainer)
       })
       CapitalProducts.bindingCapitalProductsEventListener()
-      
-  
     }
   
     static renderImplantFamilies(implantFamiles) {
+      console.log(implantFamiles)
       const root = HomePage.root()
       const implantFamiliesContainer = document.createElement('div')
       implantFamiliesContainer.setAttribute("class", "content-wrapper")

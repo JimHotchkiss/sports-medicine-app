@@ -70,18 +70,15 @@ class Navbar {
     return navbarBackBtn
   }
   static showBackBtn(items, selectedItem) {
-    // console.log(selectedItem, items)
-    const alphaventProducts = Store.getInserts()[62].implant.alphavent_products
     const navbarBackBtn = document.getElementById("navbar-back-btn")
     navbarBackBtn.classList.add("navbar-back-btn-show")
-    if (selectedItem === undefined) {
-      console.log('undefined')
-      Navbar.bindBackBtnEventListener(items)
-    } else if (selectedItem.id == 'alpha4_75' || selectedItem.id == 'alpha5_5' || selectedItem.id == 'alpha6_5') {
-      console.log('else if')
-      Navbar.bindBackBtnEventListener(alphaventProducts)
-    }
-    
+    Navbar.bindBackBtnEventListener(items)
+  }
+
+  static showAlphaventBackBtn (items) {
+    const navbarBackBtn = document.getElementById("navbar-back-btn")
+    navbarBackBtn.classList.add("navbar-back-btn-show")
+    Navbar.bindAplphaventBackBtnEventListener(items)
   }
 
   static hideBackBtn() {
@@ -89,11 +86,26 @@ class Navbar {
     navbarBackBtn.classList.remove("navbar-back-btn-show")
   }
 
+  static bindAplphaventBackBtnEventListener(alphaventItem) {
+    console.log(alphaventItem)
+    const navbarAlphaventBackBtn = document.getElementById("navbar-back-btn")
+    const implantFamilies = ImplantFamilies.getImplantFamiliesFromStore()
+    const alphaventProducts = Implants.getImplantsFromStore()[62].implant.alphavent_products
+    navbarAlphaventBackBtn.addEventListener('click', () => {
+      if (alphaventItem.id) {
+        HomePage.clearImplantDetails()
+        HomePage.renderAlphaventProducts(alphaventProducts)
+      } else {
+        HomePage.clearImplantDetails()
+        HomePage.renderImplantFamilies(implantFamilies)
+      }
+    })
+  }
+
   static bindBackBtnEventListener(selectedItem) {
     console.log(selectedItem)
     const userSelection = Store.getUserSelection()
     const navbarBackBtn = document.getElementById("navbar-back-btn")
-    // const implantFamilies = Store.getImplantFamilies()
     navbarBackBtn.addEventListener("click", () => {
       const implants = Implants.getImplantsFromStore()
       const probes = Probes.getProbesFromStore()
