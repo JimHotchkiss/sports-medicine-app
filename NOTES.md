@@ -581,7 +581,28 @@ Titanium Wedge Anchor
     () 5.5mm
     () 6.5mm 
 
-// Test notes - more dummynotes
+[] Tool-Box Feedback 30-Jul-22
+Adaptable Beach Chair
+
+    [X] Change patient weight limit to 400 lbs.
+    [] For all of the benefit sections, can we put the bullets in the same box?
+ 
+
+    [X] Number 2 should say “Designed to accommodate both shoulder and arthroscopy and arthroplasty procedures”
+ 
+    [] Combine both disposables sections to have a screenshot from the brochure
+        () Create PNG from brochure
+        () Replace test display with image
+ 
+Implant Families
+    [] Can we alphabetize so Alphavent is at the top?
+
+Alphavent
+
+    [] For all sections with multiple bullets, can we put all content in one gold box together?
+ 
+
+    [] Remove “Category” box
 
 
 // Alphavent Data 

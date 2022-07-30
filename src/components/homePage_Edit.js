@@ -482,7 +482,6 @@ class HomePage {
       HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts, contentWrapper)
       HomePage.ABCBenefitsForStaff(selectedCapitalProducts, contentWrapper)
       HomePage.ABCBenefitsForPatients(selectedCapitalProducts, contentWrapper)
-      HomePage.ABCDisposable(selectedCapitalProducts, contentWrapper)
       HomePage.ABCDisposables(selectedCapitalProducts, contentWrapper)
       HomePage.ABCBReplacementParts(selectedCapitalProducts, contentWrapper)
     }
@@ -660,15 +659,19 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
 
-      benefitArray.map((item, index) => {
       const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
+      insertNameTextDiv.setAttribute("class", "benefits-div")
+
+      benefitArray.map((item, index) => {
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.setAttribute("class", "benefits-info")
       insertNameText.innerText = `${index + 1}. ${item}`
       insertNameTextDiv.appendChild(insertNameText)
+     
+      }) 
+      
       insertNameDiv.appendChild(insertNameTextDiv)
-      })      
+
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
@@ -689,11 +692,12 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
 
-      benefitArray.map((item, index) => {
       const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
+      insertNameTextDiv.setAttribute("class", "benefits-div")
+
+      benefitArray.map((item, index) => {
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.setAttribute("class", "benefits-info")
       insertNameText.innerText = `${index + 1}. ${item}`
       insertNameTextDiv.appendChild(insertNameText)
       insertNameDiv.appendChild(insertNameTextDiv)
@@ -719,11 +723,12 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
 
-      benefitArray.map((item, index) => {
       const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
+      insertNameTextDiv.setAttribute("class", "benefits-div")
+
+      benefitArray.map((item, index) => {
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.setAttribute("class", "benefits-info")
       insertNameText.innerText = `${index + 1}. ${item}`
       insertNameTextDiv.appendChild(insertNameText)
       insertNameDiv.appendChild(insertNameTextDiv)
@@ -748,11 +753,12 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
 
-      benefitArray.map((item, index) => {
       const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
+      insertNameTextDiv.setAttribute("class", "benefits-div")
+
+      benefitArray.map((item, index) => {
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.setAttribute("class", "benefits-info")
       insertNameText.innerText = `${index + 1}. ${item}`
       insertNameTextDiv.appendChild(insertNameText)
       insertNameDiv.appendChild(insertNameTextDiv)
@@ -760,39 +766,12 @@ class HomePage {
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
-  
-    // ABC Disposable
-    static ABCDisposable(selectedCapitalProduct, contentWrapper){
-      const benefitArray = selectedCapitalProduct[0].disposable
 
-      const insertNameDiv = document.createElement("div")
-      insertNameDiv.setAttribute("class", "content-details-div")
-      insertNameDiv.setAttribute("id", "insert-name-div")
-
-      const insertNameTitleDiv = document.createElement('div')
-      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
-      const insertNameTitle = document.createElement("h3")
-      insertNameTitle.setAttribute("class", "insert-details-title")
-      insertNameTitle.innerText = "Disposable"
-      insertNameTitleDiv.appendChild(insertNameTitle)
-      insertNameDiv.appendChild(insertNameTitleDiv)
-
-      benefitArray.map((item, index) => {
-      const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
-      const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
-      insertNameText.innerText = `${index + 1}. ${item}`
-      insertNameTextDiv.appendChild(insertNameText)
-      insertNameDiv.appendChild(insertNameTextDiv)
-      })      
-      contentWrapper.appendChild(insertNameDiv)
-      HomePage.root().appendChild(contentWrapper)
-    }
   
     // ABC Disposables 
     static ABCDisposables(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].disposables
+      console.log(benefitArray)
 
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
@@ -801,28 +780,17 @@ class HomePage {
       const insertNameTitleDiv = document.createElement('div')
       insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
       const insertNameTitle = document.createElement("h3")
-      insertNameTitle.setAttribute("class", "disposables-details-title")
+      insertNameTitle.setAttribute("class", "replacement-parts-details-title")
       insertNameTitle.innerText = "Disposables:"
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
 
-      benefitArray.map((item, index) => {
-      const insertNameTextDiv = document.createElement("div")
-      const insertNameTitleDiv = document.createElement('div')
-      insertNameTitleDiv.setAttribute('class', 'disposables-pn-div')
-      const insertNameTitle = document.createElement("h3")
-      insertNameTitle.innerText = `${index + 1}. ${item.pn}`
-      insertNameTitleDiv.appendChild(insertNameTitle)
-      insertNameTextDiv.appendChild(insertNameTitleDiv)
-
-
-      insertNameTextDiv.setAttribute("class", "name-div")
-      const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
-      insertNameText.innerText = item.description
-      insertNameTextDiv.appendChild(insertNameText)
-      insertNameDiv.appendChild(insertNameTextDiv)
-      })      
+      // Disposable Parts Image 
+      const replacementPartsImageDiv = document.createElement('div')
+      replacementPartsImageDiv.setAttribute('class', 'dispoables-img-div')
+      replacementPartsImageDiv.setAttribute('id', 'dispoables-image')
+      insertNameDiv.appendChild(replacementPartsImageDiv)
+     
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
     }
@@ -849,24 +817,7 @@ class HomePage {
       replacementPartsImageDiv.setAttribute('class', 'details-img-div')
       replacementPartsImageDiv.setAttribute('id', `replacement-img-${selectedCapitalProduct[0].pn}`)
       insertNameDiv.appendChild(replacementPartsImageDiv)
-
-      // benefitArray.map((item, index) => {
-      // const insertNameTextDiv = document.createElement("div")
-      // const insertNameTitleDiv = document.createElement('div')
-      // insertNameTitleDiv.setAttribute('class', 'replacement-parts-pn-div')
-      // const insertNameTitle = document.createElement("h3")
-      // insertNameTitle.innerText = `${index + 1}. ${item.pn}`
-      // insertNameTitleDiv.appendChild(insertNameTitle)
-      // insertNameTextDiv.appendChild(insertNameTitleDiv)
-
-
-      // insertNameTextDiv.setAttribute("class", "name-div")
-      // const insertNameText = document.createElement("p")
-      // insertNameText.setAttribute("class", "product-name-div")
-      // insertNameText.innerText = item.description
-      // insertNameTextDiv.appendChild(insertNameText)
-      // insertNameDiv.appendChild(insertNameTextDiv)
-      // })      
+     
       contentWrapper.appendChild(insertNameDiv)
       HomePage.root().appendChild(contentWrapper)
   

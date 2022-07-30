@@ -34,6 +34,17 @@
 }
 
 
+.benefits-div {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+
 .product-name-div {
     padding: 8px 16px;
     margin-bottom: 16px;
@@ -54,6 +65,16 @@
 .details-img-div {
     height: 390px;
     border-radius: 5px;
+}
+
+.dispoables-img-div {
+    height: 90px;
+    border-radius: 5px;
+}
+
+#dispoables-image {
+    background: transparent url(../images/beach-chair-disposables.png) 0% 0% no-repeat padding-box;
+    background-size: cover;
 }
 
 #replacement-img-3105400030 {
