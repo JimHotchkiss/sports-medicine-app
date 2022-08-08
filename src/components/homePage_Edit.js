@@ -175,7 +175,7 @@ class HomePage {
       const productInstrumentCompatibility = selected_alphavent.instrument_compatibility
       const productEyelet = selected_alphavent.eyelet
       const productAdditionalFeatures = selected_alphavent.additional_features
-      const productCategory = selected_alphavent.category
+      // const productCategory = selected_alphavent.category
       Search.clearSearchField()
       HomePage.ProductName(productName, contentWrapper)
       HomePage.AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper)
@@ -186,35 +186,35 @@ class HomePage {
       HomePage.AlphaventInstrumentCompatibility(productInstrumentCompatibility, contentWrapper)
       HomePage.AlphaventProductEyelet(productEyelet, contentWrapper)
       HomePage.AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper)
-      HomePage.AlphaventCategory(productCategory, contentWrapper)
+      // HomePage.AlphaventCategory(productCategory, contentWrapper)
       Navbar.showAlphaventBackBtn(selected_alphavent)
     }
 
     // Alphavent Product Category
-    static AlphaventCategory(productCategory, contentWrapper){
-      const insertNameDiv = document.createElement("div")
-      insertNameDiv.setAttribute("class", "content-details-div")
-      insertNameDiv.setAttribute("id", "insert-name-div")
+    // static AlphaventCategory(productCategory, contentWrapper){
+    //   const insertNameDiv = document.createElement("div")
+    //   insertNameDiv.setAttribute("class", "content-details-div")
+    //   insertNameDiv.setAttribute("id", "insert-name-div")
 
-      const insertNameTitleDiv = document.createElement('div')
-      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
-      const insertNameTitle = document.createElement("h3")
-      insertNameTitle.setAttribute("class", "insert-details-title")
-      insertNameTitle.innerText = "Category"
-      insertNameTitleDiv.appendChild(insertNameTitle)
+    //   const insertNameTitleDiv = document.createElement('div')
+    //   insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    //   const insertNameTitle = document.createElement("h3")
+    //   insertNameTitle.setAttribute("class", "insert-details-title")
+    //   insertNameTitle.innerText = "Category"
+    //   insertNameTitleDiv.appendChild(insertNameTitle)
 
-      const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
-      const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
-      insertNameText.innerText = productCategory
-      insertNameTextDiv.appendChild(insertNameText)
+    //   const insertNameTextDiv = document.createElement("div")
+    //   insertNameTextDiv.setAttribute("class", "name-div")
+    //   const insertNameText = document.createElement("p")
+    //   insertNameText.setAttribute("class", "product-name-div")
+    //   insertNameText.innerText = productCategory
+    //   insertNameTextDiv.appendChild(insertNameText)
 
-      insertNameDiv.appendChild(insertNameTitleDiv)
-      insertNameDiv.appendChild(insertNameTextDiv)
-      contentWrapper.appendChild(insertNameDiv)
-      HomePage.root().appendChild(contentWrapper)
-    }
+    //   insertNameDiv.appendChild(insertNameTitleDiv)
+    //   insertNameDiv.appendChild(insertNameTextDiv)
+    //   contentWrapper.appendChild(insertNameDiv)
+    //   HomePage.root().appendChild(contentWrapper)
+    // }
 
     // Alphavent Product Additional Features
     static AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper) {

@@ -585,7 +585,7 @@ Titanium Wedge Anchor
 Adaptable Beach Chair
 
     [X] Change patient weight limit to 400 lbs.
-    [] For all of the benefit sections, can we put the bullets in the same box?
+    [X] For all of the benefit sections, can we put the bullets in the same box?
  
 
     [X] Number 2 should say “Designed to accommodate both shoulder and arthroscopy and arthroplasty procedures”
@@ -595,20 +595,17 @@ Adaptable Beach Chair
         (x) Replace test display with image
  
 Implant Families
-    [] Can we alphabetize so Alphavent is at the top?
+    [X] Can we alphabetize so Alphavent is at the top?
 
 Alphavent
 
     [] For all sections with multiple bullets, can we put all content in one gold box together?
  
 
-    [] Remove “Category” box
+    [X] Remove “Category” box
 
 
-// Alphavent Data 
-  {
-      "feature_id":"Alphavent","pn":"Suture System", "title": "Alphavent", "description": "Alpnavent Suture System","alphavent_products": [{"id":"alpha4_75","size": "4.75mm", "name":"Alphavent 4.75mm", "suture_anchors":[{"pn": "3910947022", "description": "4.75mm suture anchor, PEEK, 2 strands of #2 Force Fiber"}, {"pn": "3910947032", "description": "4.75mm suture anchor, PEEK, 3 strands of #2 Force Fiber"}, {"pn": "3910947132", "description": "4.75mm suture anchor, PEEK, 3 strands of #2 Force Fiber with needles"}, {"pn": "3910947021", "description": "4.75mm suture anchor, PEEK, 2 strands of 1.4mm XBraid TT"}, {"pn": "3910947031", "description": "4.75mm suture anchor, PEEK, 3 strands of 1.4mm XBraid TT"}, {"pn": "3910947131", "description": "4.75mm suture anchor, PEEK, 3 strands of 1.4mm XBraid TT with needles"}, {"pn": "3910947020", "description": "4.75mm suture anchor, PEEK, 2 strands of 1.8mm XBraid TT"}, {"pn": "3910947120", "description": "4.75mm suture anchor, PEEK, 2 strands of 1.8mm XBraid TT with needles"}, {"pn": "3910947221", "description": "4.75mm suture anchor, PEEK, 1 strands of 1.8mm XBraid TT and 1 strand of 1.4mm XBraid TT"}, {"pn": "3910947222", "description": "4.75mm suture anchor, PEEK, 1 strands of 1.8mm XBraid TT and 1 strand of #2 Force Fiber"}], "length": "16mm", "diameter": "4.75mm", "pilot_hole_depth": "20mm", "pilot_hole_width": ["2.5mm", "3.4mm", "3.6mm"], "instrument_compatibility": ["3910-947-200", "3910-947-201", "3910-947-207", "3910-947-208"], "eyelet": "Proprietary triple-soft eyelet", "additional_features": "'Dual-thread' technology employed to optimize engagement in cortical and cancellous bone", "category": "Implant Specification"},{"id": "alpha5_5","size": "5.5mm", "name":"Alphavent 5.5mm", "suture_anchors":[{"pn": "3910955022", "description": "5.5mm suture anchor, PEEK, 2 strands of #2 Force Fiber"}, {"pn": "3910955032", "description": "5.5mm suture anchor, PEEK, 3 strands of #2 Force Fiber"}, {"pn": "3910955132", "description": "5.5mm suture anchor, PEEK, 3 strands of #2 Force Fiber with needle"}, {"pn": "3910955021", "description": "5.5mm suture anchor, PEEK, 2 strands of 1.4mm XBraid TT"}, {"pn": "3910955031", "description": "5.5mm suture anchor, PEEK, 3 strands of 1.4mm XBraid TT"}, {"pn": "3910955020", "description": "5.5mm suture anchor, PEEK, 2 strands of 1.8mm XBraid TT"}, {"pn": "3910955221", "description": "5.5mm suture anchor, PEEK, 1 strands of 1.8mm XBraid TT and 1 strand of 1.4mm XBraid TT"}, {"pn": "3910955222", "description": "5.5mm suture anchor, PEEK, 1 strands of 1.8mm XBraid TT and 1 strand of #2 Force Fiber"}], "length": "16mm", "diameter": "5.5mm", "pilot_hole_depth": "20mm", "pilot_hole_width": ["3.6mm"], "instrument_compatibility": ["3910-947-201", "3910-947-203", "3910-947-208", "3910-947-209"], "eyelet": "Proprietary triple-soft eyelet", "additional_features": "'Dual-thread' technology employed to optimize engagement in cortical and cancellous bone", "category": "Implant Specification"},{"id": "alpha6_5","size": "6.5mm", "name":"Alphavent 6.5mm", "suture_anchors":[{"pn": "3910965032", "description": "6.5mm suture anchor, PEEK, 3 strands of #2 Force Fiber"}, {"pn": "3910965031", "description": "6.5mm suture anchor, PEEK, 3 strands of 1.4mm XBraid TT"}, {"pn": "3910965221", "description": "6.5mm suture anchor, PEEK, 1 strand of 1.8mm XBraid TT and 1 strand of 1.4mm XBraid TT"}, {"pn": "3910965222", "description": "6.5mm suture anchor, PEEK, 1 strand of 1.8mm XBraid TT and 1 strand of #2 Force Fiber"}], "length": "16mm", "diameter": "6.5mm", "pilot_hole_depth": "20mm", "pilot_hole_width": ["3.6mm"], "instrument_compatibility": ["3910-947-201", "3910-947-203", "3910-947-208"], "eyelet": "Proprietary triple-soft eyelet", "additional_features": "'Dual-thread' technology employed to optimize engagement in cortical and cancellous bone", "category": "Implant Specification"}]
-   }
+
 
   
    
