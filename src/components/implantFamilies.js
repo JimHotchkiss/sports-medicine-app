@@ -4,6 +4,9 @@ class ImplantFamilies {
       // this.implantFamiliesAdapter = new ImplantFamiliesAdapter()
       this.implantFamiliesData = {"implant_families":[
         {
+          "id": "Alphavent", "name": "Alphavent", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
+        },
+        {
             "id": "iconix", "name": "Iconix", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
         },
         {
@@ -41,9 +44,6 @@ class ImplantFamilies {
         },
         {
             "id": "titaniumwedgeanchor", "name": "Titanium Wedge Anchor", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
-        },
-        {
-            "id": "Alphavent", "name": "Alphavent", "iconUrl": "../images/placeholder.png", "description": "Baseball ipsum dolor sit amet screwball contact, rope range. Moneyball pitchout bullpen walk off stance defensive indifference right fielder."
         }
      ]
     }

@@ -590,9 +590,9 @@ Adaptable Beach Chair
 
     [X] Number 2 should say “Designed to accommodate both shoulder and arthroscopy and arthroplasty procedures”
  
-    [] Combine both disposables sections to have a screenshot from the brochure
-        () Create PNG from brochure
-        () Replace test display with image
+    [X] Combine both disposables sections to have a screenshot from the brochure
+        (x) Create PNG from brochure
+        (x) Replace test display with image
  
 Implant Families
     [] Can we alphabetize so Alphavent is at the top?
