@@ -600,6 +600,8 @@ Implant Families
 Alphavent
 
     [] For all sections with multiple bullets, can we put all content in one gold box together?
+        () Pilot Hole Width
+        () Instrument Compatability
  
 
     [X] Remove “Category” box

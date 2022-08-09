@@ -60,6 +60,21 @@
 
 }
 
+.alphavent-name-div{
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.alphavent-name-div .alphavent-name-text {
+    font-style: italic;
+    font-weight: 500;
+}
+
 .disposables-pn-div {
     color: #fff;
     font-weight: 500;
@@ -243,7 +258,7 @@
 .needle-details-div {
     background: #ffb600;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 24px;
     border-radius: 5px;

@@ -119,15 +119,6 @@ class HomePage {
   
     // Alphavent 
     static renderAlphaventProducts(alphavent_products) {
-      console.log(alphavent_products)
-    //  const capitalProducts = Store.getCapitalProducts()
-    //  let alphavent_products
-    //  if (selectedCapitalProducts[0].alphavent_products === undefined) {
-    //   alphavent_products = selectedCapitalProducts
-    //  } else {
-    //   alphavent_products = selectedCapitalProducts[0].alphavent_products
-    //  }
-      
       const alphavent_products_container = document.createElement('div')
       alphavent_products_container.setAttribute("class", "content-wrapper")
       alphavent_products_container.setAttribute("id", "capital-products-container")
@@ -186,35 +177,8 @@ class HomePage {
       HomePage.AlphaventInstrumentCompatibility(productInstrumentCompatibility, contentWrapper)
       HomePage.AlphaventProductEyelet(productEyelet, contentWrapper)
       HomePage.AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper)
-      // HomePage.AlphaventCategory(productCategory, contentWrapper)
       Navbar.showAlphaventBackBtn(selected_alphavent)
     }
-
-    // Alphavent Product Category
-    // static AlphaventCategory(productCategory, contentWrapper){
-    //   const insertNameDiv = document.createElement("div")
-    //   insertNameDiv.setAttribute("class", "content-details-div")
-    //   insertNameDiv.setAttribute("id", "insert-name-div")
-
-    //   const insertNameTitleDiv = document.createElement('div')
-    //   insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
-    //   const insertNameTitle = document.createElement("h3")
-    //   insertNameTitle.setAttribute("class", "insert-details-title")
-    //   insertNameTitle.innerText = "Category"
-    //   insertNameTitleDiv.appendChild(insertNameTitle)
-
-    //   const insertNameTextDiv = document.createElement("div")
-    //   insertNameTextDiv.setAttribute("class", "name-div")
-    //   const insertNameText = document.createElement("p")
-    //   insertNameText.setAttribute("class", "product-name-div")
-    //   insertNameText.innerText = productCategory
-    //   insertNameTextDiv.appendChild(insertNameText)
-
-    //   insertNameDiv.appendChild(insertNameTitleDiv)
-    //   insertNameDiv.appendChild(insertNameTextDiv)
-    //   contentWrapper.appendChild(insertNameDiv)
-    //   HomePage.root().appendChild(contentWrapper)
-    // }
 
     // Alphavent Product Additional Features
     static AlphaventAdditionalFeatures(productAdditionalFeatures, contentWrapper) {
@@ -283,17 +247,18 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
       contentWrapper.appendChild(insertNameDiv)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "alphavent-name-div")
       
       productInstrumentCompatibility.map(item => {
-      const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.setAttribute("class", "alphavent-name-text")
       insertNameText.innerText = item
       insertNameTextDiv.appendChild(insertNameText)
-      insertNameDiv.appendChild(insertNameTextDiv)  
-      contentWrapper.appendChild(insertNameDiv)      
+      insertNameDiv.appendChild(insertNameTextDiv)       
       })
+      contentWrapper.appendChild(insertNameDiv) 
       HomePage.root().appendChild(contentWrapper)
     }
 
@@ -311,17 +276,19 @@ class HomePage {
       insertNameTitleDiv.appendChild(insertNameTitle)
       insertNameDiv.appendChild(insertNameTitleDiv)
       contentWrapper.appendChild(insertNameDiv)
+
+      const insertNameTextDiv = document.createElement("div")
+      insertNameTextDiv.setAttribute("class", "alphavent-name-div")
       
       productPilotHoleWidth.map(item => {
-      const insertNameTextDiv = document.createElement("div")
-      insertNameTextDiv.setAttribute("class", "name-div")
       const insertNameText = document.createElement("p")
-      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.setAttribute("class", "alphavent-name-text")
       insertNameText.innerText = item
+      console.log(item)
       insertNameTextDiv.appendChild(insertNameText)
-      insertNameDiv.appendChild(insertNameTextDiv)  
-      contentWrapper.appendChild(insertNameDiv)      
+      // insertNameDiv.appendChild(insertNameTextDiv)  
       })
+      contentWrapper.appendChild(insertNameTextDiv)      
       HomePage.root().appendChild(contentWrapper)
     }
 
@@ -405,7 +372,6 @@ class HomePage {
 
     // Alphavent PNs Configuration
     static AlphaventPNsConfiguration(alphaventPnsConfigurations, contentWrapper){
-      console.log(alphaventPnsConfigurations)
       const insertNameDiv = document.createElement("div")
         insertNameDiv.setAttribute("class", "content-details-div")
         insertNameDiv.setAttribute("id", "insert-name-div")
@@ -771,7 +737,6 @@ class HomePage {
     // ABC Disposables 
     static ABCDisposables(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].disposables
-      console.log(benefitArray)
 
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
@@ -798,7 +763,6 @@ class HomePage {
     // ABC Replacement Parts 
     static ABCBReplacementParts(selectedCapitalProduct, contentWrapper) {
       const benefitArray = selectedCapitalProduct[0].replacement_parts
-      console.log(selectedCapitalProduct[0].pn)
 
       const insertNameDiv = document.createElement("div")
       insertNameDiv.setAttribute("class", "content-details-div")
@@ -825,7 +789,6 @@ class HomePage {
     
   
     static getImplantDetails(selectedInsert) {
-      console.log(selectedInsert)
       const inserts = Store.getInserts()
       const selectedInserts = []
       inserts.map((insert) => {
@@ -2066,7 +2029,6 @@ class HomePage {
     }
   
     static renderProbes(probes) {
-      console.log(probes)
       const root = HomePage.root()
       const probesContainer = document.createElement("div")
       probesContainer.setAttribute("class", "content-wrapper")
@@ -2233,7 +2195,6 @@ class HomePage {
     }
   
     static renderImplantFamilies(implantFamiles) {
-      console.log(implantFamiles)
       const root = HomePage.root()
       const implantFamiliesContainer = document.createElement('div')
       implantFamiliesContainer.setAttribute("class", "content-wrapper")
@@ -2317,15 +2278,12 @@ class HomePage {
     }
   
     static renderShaverFootPedalDefaults(shaverFootpedalDefaults) {
-      // console.log(shaverFootpedalDefaults)
     }
   
     static renderRfDefaults(rfDefaultSettings) {
-      // console.log(rfDefaultSettings)
     }
   
     static renderRfFootpedalDefaults(rfFootpedalDefaultSettings) {
-      // console.log(rfFootpedalDefaultSettings)
     }
   }
   
