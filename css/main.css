@@ -102,19 +102,19 @@
 }
 
 #config-div-475 {
-    background: transparent url(../images/alpha-pn-475.png) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/alpha-pn-config-475.png) 0% 0% no-repeat padding-box;
     background-size: cover;
     height: 340px;
 }
 
 #config-div-55 {
-    background: transparent url(../images/alpha-pn-55.png) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/) 0% 0% no-repeat padding-box;
     background-size: cover;
     height: 260px;
 }
 
 #config-div-65 {
-    background: transparent url(../images/alpha-pn-65.png) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/) 0% 0% no-repeat padding-box;
     background-size: cover;
     height: 140px;
 }
@@ -167,8 +167,8 @@
     opacity: 1;
 }
 #alpha4_75-img-url {
-    background: transparent url(../images/soccer.svg) 0% 0% no-repeat padding-box;
-    background-size: 35px;
+    background: transparent url(../images/lacrosse.svg) 0% 0% no-repeat padding-box;
+    /* background-size: 35px; */
 }
 
 #alpha4_75-title{
@@ -177,8 +177,8 @@
 }
 
 #alpha5_5-img-url {
-    background: transparent url(../images/football.svg) 0% 0% no-repeat padding-box;
-    background-size: 40px;
+    background: transparent url(../images/basketball.svg) 0% 0% no-repeat padding-box;
+    /* background-size: 40px; */
 }
 
 #alpha5_5-title{
@@ -187,8 +187,8 @@
 }
 
 #alpha6_5-img-url {
-    background: transparent url(../images/racketball.svg) 0% 0% no-repeat padding-box;
-    background-size: 50px;
+    background: transparent url(../images/soccer.svg) 0% 0% no-repeat padding-box;
+    /* background-size: 50px; */
 
 }
 
@@ -196,6 +196,16 @@
     padding-top: 4px;
     padding-left: 28px;
 
+}
+
+/********* DARTS **********/
+
+.compatability-img-div {
+   height: 235px;
+}
+#darts-compatability-image {
+    background: transparent url(../images/darts_comp_table.png) 0% 0% no-repeat padding-box;
+    background-size:cover;
 }
 
 
@@ -250,7 +260,7 @@
     margin-bottom: 8px;
     width: 90%;
     height: 470px;
-    background: transparent url("../images/measurements2.png") 0% 0% no-repeat padding-box;
+    background: transparent url(../images//measurements2.png) 0% 0% no-repeat padding-box;
     opacity: 1;
     background-size: 320px;
 }

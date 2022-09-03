@@ -155,17 +155,17 @@
 }
 
 #alpha5_5-img-url{
-    background: transparent url(../images/lacrosse.svg) 0% 0% no-repeat padding-box;
+    background: transparent url("../images/lacrosse.svg") 0% 0% no-repeat padding-box;
     background-size: 35px;
 }
 
 #alpha6_5-img-url{
-    background: transparent url(../images/basketball.svg) 0% 0% no-repeat padding-box;
+    background: transparent url("../images/basketball.svg") 0% 0% no-repeat padding-box;
     background-size: 35px;
 }
 
 #alpha4_75-img-url{
-    background: transparent url(../images/soccer.svg) 0% 0% no-repeat padding-box;
+    background: transparent url("../images/soccer.svg") 0% 0% no-repeat padding-box;
     background-size: 35px;
 }
 
