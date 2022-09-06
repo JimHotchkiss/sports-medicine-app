@@ -102,19 +102,19 @@
 }
 
 #config-div-475 {
-    background: transparent url(../images/alpha-pn-config-475.png) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/alpha-pn-475.png) 0% 0% no-repeat padding-box;
     background-size: cover;
     height: 340px;
 }
 
 #config-div-55 {
-    background: transparent url(../images/) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/alpha-pn-55.png) 0% 0% no-repeat padding-box;
     background-size: cover;
     height: 260px;
 }
 
 #config-div-65 {
-    background: transparent url(../images/) 0% 0% no-repeat padding-box;
+    background: transparent url(../images/alpha-pn-65.png) 0% 0% no-repeat padding-box;
     background-size: cover;
     height: 140px;
 }
@@ -282,6 +282,26 @@
 .wire-diameter {
     font-weight: 100;
 }
+/********* Reusable Image ********/
+.reusable3_9-img-div {
+    margin-bottom: 16px;
+    margin: 0 auto;
+    max-width: 380px;
+    height: 820px;
+    background: transparent url("../images/reusable3_9.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 300px;
+} 
+
+.reusable4_7-img-div {
+    margin-bottom: 16px;
+    margin: 0 auto;
+    max-width: 380px;
+    height: 820px;
+    background: transparent url("../images/reusable4_7.png") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 300px;
+} 
 
 /******* Search Bar Feature **********/
 .search-container {

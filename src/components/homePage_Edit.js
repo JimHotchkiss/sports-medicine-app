@@ -123,26 +123,13 @@ class HomePage {
     const contentWrapper = document.createElement('div')
     contentWrapper.setAttribute('class', 'content-wrapper')
     const selectedProductName = darts_products[0].title
-    // const selectedProductPn = selectedCapitalProducts[0].compatability_table
-    // const selectedProductDescription = selectedCapitalProducts[0].description
+
     const selectedProductWeight = darts_products[0].patient_size
-    // const selectedProductWeightLimit = selectedCapitalProducts[0].patient_weight_limit
-    // const selectProductHeightRange = selectedCapitalProducts[0].patient_height_range
+
     HomePage.scrollToTop()
     HomePage.ProductName(selectedProductName, contentWrapper)
     HomePage.DartsCompatbilityTable(darts_products, contentWrapper)
     HomePage.DartsPatientSize(selectedProductWeight, contentWrapper)
-    // HomePage.ProductPn(selectedProductPn, contentWrapper)
-    // HomePage.ProductDescription(selectedProductDescription, contentWrapper)
-    // HomePage.ABCChairWeight(selectedProductWeight, contentWrapper)
-    // HomePage.ABCPatientWeightLimit(selectedProductWeightLimit, contentWrapper)
-    // HomePage.ABCPatientHeightRange(selectProductHeightRange, contentWrapper)
-    // HomePage.ABCBenefitsForAnesthesia(selectedCapitalProducts, contentWrapper)
-    // HomePage.ABCBenefitsForSurgeons(selectedCapitalProducts, contentWrapper)
-    // HomePage.ABCBenefitsForStaff(selectedCapitalProducts, contentWrapper)
-    // HomePage.ABCBenefitsForPatients(selectedCapitalProducts, contentWrapper)
-    // HomePage.ABCDisposables(selectedCapitalProducts, contentWrapper)
-    // HomePage.ABCBReplacementParts(selectedCapitalProducts, contentWrapper)
   }
 
   // DARTS Patient Size 
