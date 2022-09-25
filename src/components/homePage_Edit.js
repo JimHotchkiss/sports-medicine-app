@@ -110,7 +110,7 @@ class HomePage {
       }
     })
 
-    if (selectedCapitalProducts[0].title === "DARTS") {
+    if (selectedCapitalProducts[0].title === "Pivot Guardian Direct") {
       HomePage.renderDartsDetails(selectedCapitalProducts)
     } else {
       HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
@@ -120,9 +120,12 @@ class HomePage {
 
   // DARTS
   static renderDartsDetails(darts_products) {
+    console.log(darts_products[0].disposables)
     const contentWrapper = document.createElement('div')
     contentWrapper.setAttribute('class', 'content-wrapper')
     const selectedProductName = darts_products[0].title
+    const selectedProductDisposables = darts_products[0].disposables
+    const selectedClinicalIndications = darts_products[0].clinical_indications
 
     const selectedProductWeight = darts_products[0].patient_size
 
@@ -130,7 +133,67 @@ class HomePage {
     HomePage.ProductName(selectedProductName, contentWrapper)
     HomePage.DartsCompatbilityTable(darts_products, contentWrapper)
     HomePage.DartsPatientSize(selectedProductWeight, contentWrapper)
+    HomePage.DartsDisposablesTitle(selectedProductDisposables, contentWrapper)
+    HomePage.DartClinicalIndications(selectedClinicalIndications, contentWrapper)
   }
+
+  // Dart Clinical Indications 
+  static DartClinicalIndications(selectedClinicalIndications, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Clinical Indications"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    contentWrapper.appendChild(insertNameDiv)
+
+
+    const insertIndicationTextDiv = document.createElement("div")
+    insertIndicationTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = selectedClinicalIndications
+
+    insertIndicationTextDiv.appendChild(insertNameText)
+    contentWrapper.appendChild(insertIndicationTextDiv)
+ 
+    HomePage.root().appendChild(contentWrapper)
+
+  }
+
+  // DARTS Patient Disposables 
+  static DartsDisposablesTitle(selectedProductDisposables, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Disposables"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    contentWrapper.appendChild(insertNameDiv)
+
+    selectedProductDisposables.forEach(disposable => {
+      //  PN
+      const insertPnTextDiv = document.createElement("div")
+      insertPnTextDiv.setAttribute("class", "name-div")
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = disposable.item
+
+      insertPnTextDiv.appendChild(insertNameText)
+      contentWrapper.appendChild(insertPnTextDiv)
+   
+    })
+    HomePage.root().appendChild(contentWrapper)
+  }
+
 
   // DARTS Patient Size 
   static DartsPatientSize(selectedProductWeight, contentWrapper) {

@@ -606,6 +606,14 @@ Alphavent
 
     [X] Remove “Category” box
 
+DARTS Updates
+    [X] Change DARTS name to Pivot Guardian Direct
+    [X] Disposables
+        (x) 3105000740 Pivot Guardian safety boot liners, small
+        (x) 3105000741 Pivot Guardian safety boot liners, medium
+        (x) 3105000742 Pivot Guardian safety boot liners, large
+    [] Clinical Indications
+        () Direct anterior total hip arthroplasty, hip pinning, hip fracture, periacetabular osteotomy, and derotational femoral osteotomy
 
 
 
