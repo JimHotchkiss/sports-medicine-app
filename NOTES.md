@@ -612,8 +612,15 @@ DARTS Updates
         (x) 3105000740 Pivot Guardian safety boot liners, small
         (x) 3105000741 Pivot Guardian safety boot liners, medium
         (x) 3105000742 Pivot Guardian safety boot liners, large
-    [] Clinical Indications
-        () Direct anterior total hip arthroplasty, hip pinning, hip fracture, periacetabular osteotomy, and derotational femoral osteotomy
+    [X] Clinical Indications
+        (x) Direct anterior total hip arthroplasty, hip pinning, hip fracture, periacetabular osteotomy, and derotational femoral osteotomy
+
+Notes: Order of developmemnt
+    [X] Darts
+    [] Guardian
+    [] Hip Map
+    [] Hip Check
+    [] Adaptable Arm Positioner 
 
 
 
