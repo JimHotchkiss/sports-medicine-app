@@ -617,6 +617,7 @@ DARTS Updates
 
 Notes: Order of developmemnt
     [X] Darts
+        () Add images to DARTS - Jake's email
     [] Guardian
     [] Hip Map
     [] Hip Check

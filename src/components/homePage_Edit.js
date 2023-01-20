@@ -120,7 +120,6 @@ class HomePage {
 
   // DARTS
   static renderDartsDetails(darts_products) {
-    console.log(darts_products[0].disposables)
     const contentWrapper = document.createElement('div')
     contentWrapper.setAttribute('class', 'content-wrapper')
     const selectedProductName = darts_products[0].title
@@ -132,9 +131,44 @@ class HomePage {
     HomePage.scrollToTop()
     HomePage.ProductName(selectedProductName, contentWrapper)
     HomePage.DartsCompatbilityTable(darts_products, contentWrapper)
+    // Add DARTS supporting images - Jake's email
+    const darts_images = darts_products[0].dart_images
+    HomePage.RenderDartsImages(darts_products[0].dart_images, contentWrapper)
+
     HomePage.DartsPatientSize(selectedProductWeight, contentWrapper)
     HomePage.DartsDisposablesTitle(selectedProductDisposables, contentWrapper)
     HomePage.DartClinicalIndications(selectedClinicalIndications, contentWrapper)
+  }
+
+  // Dart Images 
+  static RenderDartsImages(darts_images, contentWrapper) {
+    
+    
+    darts_images.map((image, index) => {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "replacement-parts-details-title")
+    if (index === 0) {
+      insertNameTitle.innerText = "DARTS:"
+    } else {
+      insertNameTitle.innerText = "Part Numbers:"
+    }
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    // Images
+    const replacementPartsImageDiv = document.createElement('div')
+    replacementPartsImageDiv.setAttribute('class', 'compatability-img-div')
+    replacementPartsImageDiv.setAttribute('id', `darts-compatability-image-${index}`)
+    insertNameDiv.appendChild(replacementPartsImageDiv)
+   
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+    })
   }
 
   // Dart Clinical Indications 
@@ -418,7 +452,6 @@ class HomePage {
     const insertNameText = document.createElement("p")
     insertNameText.setAttribute("class", "alphavent-name-text")
     insertNameText.innerText = item
-    console.log(item)
     insertNameTextDiv.appendChild(insertNameText)
     // insertNameDiv.appendChild(insertNameTextDiv)  
     })

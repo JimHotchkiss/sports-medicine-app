@@ -204,7 +204,16 @@
    height: 235px;
 }
 #darts-compatability-image {
-    background: transparent url(../images/darts_comp_table.png) 0% 0% no-repeat padding-box;
+    background:  url(../images/darts_comp_table.png) 0% 0% no-repeat padding-box;
+    background-size:cover;
+}
+#darts-compatability-image-0 {
+    background: transparent url(../images/dart-img.png) 0% 0% no-repeat padding-box;
+    background-size:cover;
+
+}
+#darts-compatability-image-1 {
+    background: transparent url(../images/darts_img2.png) 0% 0% no-repeat padding-box;
     background-size:cover;
 }
 
