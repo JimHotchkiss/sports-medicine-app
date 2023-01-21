@@ -4,6 +4,9 @@
    },
    {
      "feature_id":"capital","pn":"", "title": "Pivot Guardian Direct", "compatability_table" : "./darts_comb_table.png", "patient_size": "Height: 4'10'' to 6'10'' \n Weight: 400LBS Max","dart_images":[{"img_url": "./darts_img1.png"}, {"img_url": "./darts_img2.png"}], "ifu_url": "#", "order_ifo_url": "https://stryker.highspot.com/signin", "disposables": [{"item": "3105000740\n Pivot Guardian safety boot liners, small"}, {"item": "3105000741\n Pivot Guardian safety boot liners, medium"},{"item": "3105000742\n Pivot Guardian safety boot liners, large"} ], "clinical_indications": "Direct anterior total hip arthroplasty, hip pinning, hip fracture, periacetabular osteotomy, and derotational femoral osteotomy"
+  },
+   {
+     "feature_id":"capital","pn":"", "title": "Guardian", "compatability_table" : "./darts_comb_table.png", "patient_size": "Height: 4'10'' to 6'10'' \n Weight: 400LBS Max","dart_images":[{"img_url": "./darts_img1.png"}, {"img_url": "./darts_img2.png"}], "ifu_url": "#", "order_ifo_url": "https://stryker.highspot.com/signin", "disposables": [{"item": "3105000740\n Pivot Guardian safety boot liners, small"}, {"item": "3105000741\n Pivot Guardian safety boot liners, medium"},{"item": "3105000742\n Pivot Guardian safety boot liners, large"} ], "clinical_indications": "Direct anterior total hip arthroplasty, hip pinning, hip fracture, periacetabular osteotomy, and derotational femoral osteotomy"
   }
  
 ]

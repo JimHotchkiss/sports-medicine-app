@@ -617,8 +617,9 @@ DARTS Updates
 
 Notes: Order of developmemnt
     [X] Darts
-        () Add images to DARTS - Jake's email
+        (x) Add images to DARTS - Jake's email
     [] Guardian
+        () Note: In the Excel sheet there's no 'Disposables' or 'Clinical Indications'
     [] Hip Map
     [] Hip Check
     [] Adaptable Arm Positioner 

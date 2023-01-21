@@ -112,11 +112,91 @@ class HomePage {
 
     if (selectedCapitalProducts[0].title === "Pivot Guardian Direct") {
       HomePage.renderDartsDetails(selectedCapitalProducts)
+    } else if (selectedCapitalProducts[0].title === "Guardian") {
+      HomePage.renderGuardianDetails(selectedCapitalProducts)
     } else {
       HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
     }
     Navbar.showBackBtn(selectedCapitalProducts)
   }
+
+  // Guardian
+  static renderGuardianDetails(guardian_products) {
+    console.log(guardian_products)
+    const contentWrapper = document.createElement('div')
+    contentWrapper.setAttribute('class', 'content-wrapper')
+    const selectedProductName = guardian_products[0].title
+    const selectedProductDisposables = guardian_products[0].disposables
+    const selectedClinicalIndications = guardian_products[0].clinical_indications
+
+    const selectedProductWeight = guardian_products[0].patient_size
+
+    HomePage.scrollToTop()
+    HomePage.ProductName(selectedProductName, contentWrapper)
+
+    
+    // HomePage.RenderDartsImages(darts_products[0].dart_images, contentWrapper)
+    HomePage.GuardianCompatabilityTable(guardian_products, contentWrapper)
+
+    HomePage.GuardianPatientSize(selectedProductWeight, contentWrapper)
+    // HomePage.DartsDisposablesTitle(selectedProductDisposables, contentWrapper)
+    // HomePage.DartClinicalIndications(selectedClinicalIndications, contentWrapper)
+  }
+
+  // Guardian Patient Size 
+  static GuardianPatientSize(selectedProductWeight, contentWrapper){
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Patient Size"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = selectedProductWeight
+    
+    insertNameTextDiv.appendChild(insertNameText)
+
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    insertNameDiv.appendChild(insertNameTextDiv)
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+  }
+
+  // Guardian Compatability Table 
+  static GuardianCompatabilityTable(guardian_products, contentWrapper) {
+    const benefitArray = guardian_products[0].compatability_table
+
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "replacement-parts-details-title")
+    insertNameTitle.innerText = "Compatability Table:"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    // Compatablity Table Image 
+    const replacementPartsImageDiv = document.createElement('div')
+    replacementPartsImageDiv.setAttribute('class', 'compatability-img-div')
+    replacementPartsImageDiv.setAttribute('id', 'darts-compatability-image')
+    insertNameDiv.appendChild(replacementPartsImageDiv)
+   
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+  }
+
+
 
   // DARTS
   static renderDartsDetails(darts_products) {
@@ -130,10 +210,11 @@ class HomePage {
 
     HomePage.scrollToTop()
     HomePage.ProductName(selectedProductName, contentWrapper)
-    HomePage.DartsCompatbilityTable(darts_products, contentWrapper)
+
     // Add DARTS supporting images - Jake's email
     const darts_images = darts_products[0].dart_images
     HomePage.RenderDartsImages(darts_products[0].dart_images, contentWrapper)
+    HomePage.DartsCompatbilityTable(darts_products, contentWrapper)
 
     HomePage.DartsPatientSize(selectedProductWeight, contentWrapper)
     HomePage.DartsDisposablesTitle(selectedProductDisposables, contentWrapper)
@@ -154,7 +235,7 @@ class HomePage {
     const insertNameTitle = document.createElement("h3")
     insertNameTitle.setAttribute("class", "replacement-parts-details-title")
     if (index === 0) {
-      insertNameTitle.innerText = "DARTS:"
+      insertNameTitle.innerText = "Pivot Guardian Direct:"
     } else {
       insertNameTitle.innerText = "Part Numbers:"
     }
@@ -162,7 +243,7 @@ class HomePage {
     insertNameDiv.appendChild(insertNameTitleDiv)
     // Images
     const replacementPartsImageDiv = document.createElement('div')
-    replacementPartsImageDiv.setAttribute('class', 'compatability-img-div')
+    replacementPartsImageDiv.setAttribute('class', 'darts-img-div')
     replacementPartsImageDiv.setAttribute('id', `darts-compatability-image-${index}`)
     insertNameDiv.appendChild(replacementPartsImageDiv)
    
@@ -2313,7 +2394,7 @@ class HomePage {
     const capitalProductsContainer = document.createElement('div')
     capitalProductsContainer.setAttribute("class", "content-wrapper")
     capitalProductsContainer.setAttribute("id", "capital-products-container")
-
+console.log(capitalProducts)
     capitalProducts.capital_products.map(product => {
       const capitalProductDiv = document.createElement("div")
       capitalProductDiv.setAttribute("class", "content-div")
