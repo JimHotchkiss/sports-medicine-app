@@ -48,7 +48,6 @@
     
 }
 
-
 .product-name-div {
     padding: 8px 16px;
     margin-bottom: 16px;
@@ -220,6 +219,12 @@
 #darts-compatability-image-1 {
     background: transparent url(../images/darts_img2.png) 0% 0% no-repeat padding-box;
     background-size:cover;
+}
+
+.product-name-div a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
 }
 
 

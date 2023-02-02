@@ -219,6 +219,37 @@ class HomePage {
     HomePage.DartsPatientSize(selectedProductWeight, contentWrapper)
     HomePage.DartsDisposablesTitle(selectedProductDisposables, contentWrapper)
     HomePage.DartClinicalIndications(selectedClinicalIndications, contentWrapper)
+    HomePage.DartOrderLink(contentWrapper)
+  }
+
+  // Dart Order Link
+  static DartOrderLink(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "How to order?"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    contentWrapper.appendChild(insertNameDiv)
+
+
+    const insertIndicationTextDiv = document.createElement("div")
+    insertIndicationTextDiv.setAttribute("class", "product-name-div")
+    const insertNameText = document.createElement("a")
+    insertNameText.setAttribute("class", "dart-order-anchor")
+    insertNameText.setAttribute("href", "https://stryker.highspot.com/items/62c727a54882429bdb51e9c9?lfrm=srp.0")
+    insertNameText.setAttribute("target", "_blank")
+    insertNameText.innerText = "Click for ordering information"
+
+    insertIndicationTextDiv.appendChild(insertNameText)
+    contentWrapper.appendChild(insertIndicationTextDiv)
+ 
+    HomePage.root().appendChild(contentWrapper)
+    
   }
 
   // Dart Images 

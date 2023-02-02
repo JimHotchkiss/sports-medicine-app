@@ -618,10 +618,17 @@ DARTS Updates
 Notes: Order of developmemnt
     [X] Darts
         (x) Add images to DARTS - Jake's email
-    [] Guardian
+        (x)  Add link for ordering 
+            - https://stryker.highspot.com/items/62c727a54882429bdb51e9c9?lfrm=srp.0
+        ()  Provided link, cannot open
+    [X] Guardian
         () Note: In the Excel sheet there's no 'Disposables' or 'Clinical Indications'
+            - Email sent to Team about additional information 21-Jan-23
+                * Nobody responded, move ahead with HipMap and HipCheck
     [] Hip Map
+        - Confirmed with Jeff (email) that the information on the spreadsheet is accurate
     [] Hip Check
+        - Confirmed with Jeff (email) that the information on the spreadsheet is accurate
     [] Adaptable Arm Positioner 
 
 
