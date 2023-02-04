@@ -57,6 +57,26 @@
 
 }
 
+.id-portol-div {
+    padding: 8px 16px;
+    margin-top: -8px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
+.endo-tech-div {
+    padding: 8px 16px;
+    margin-top: -8px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+}
+
 .alphavent-name-div{
     padding: 8px 16px;
     margin-bottom: 16px;
@@ -266,6 +286,19 @@
 .edit-hip-anchor {
     text-decoration: none;
     padding: 8px 142px 8px 8px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+    font-weight: normal;
+    color: black; 
+}
+
+.c-arm-hip-anchor {
+    text-decoration: none;
+    padding: 8px 68px 8px 8px;
     margin-bottom: 16px;
     min-width: 275px;
     max-width: 300px;

@@ -110,7 +110,10 @@ class HomePage {
       }
     })
 
-    if (selectedCapitalProducts[0].title === "HipMap") {
+    if (selectedCapitalProducts[0].title === "HipCheck") {
+      HomePage.renderHipCheckDetails(selectedCapitalProduct)
+    } 
+      else if (selectedCapitalProducts[0].title === "HipMap") {
       HomePage.renderHipMapDetails(selectedCapitalProduct)
     } else if(selectedCapitalProducts[0].title === "Pivot Guardian Direct") {
       HomePage.renderDartsDetails(selectedCapitalProducts)
@@ -122,6 +125,45 @@ class HomePage {
     Navbar.showBackBtn(selectedCapitalProducts)
   }
 
+  // HipCheck 
+  static renderHipCheckDetails(selectedCapitalProduct) {
+    const contentWrapper = document.createElement('div')
+    contentWrapper.setAttribute('class', 'content-wrapper')
+    HomePage.renderHipCheckCArmInfo(contentWrapper)
+
+
+  }
+
+  // HipCheck C-Arm Information
+  static renderHipCheckCArmInfo(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "C-Arm Compatability?"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("a")
+    insertNameText.setAttribute("href", "https://stryker.highspot.com/items/602571b5811717087db4118c?lfrm=srp.0")
+    insertNameText.setAttribute("target", "_blank")
+    insertNameText.setAttribute("class", "c-arm-hip-anchor")
+    insertNameText.innerText = "Follow link for C-Arm compatability"
+    
+    insertNameTextDiv.appendChild(insertNameText)
+
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    insertNameDiv.appendChild(insertNameTextDiv)
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+  }
+
+
   // HipMap
   static renderHipMapDetails(hipMap_products){
     const contentWrapper = document.createElement('div')
@@ -129,6 +171,35 @@ class HomePage {
     HomePage.renderHipMapIDPortalInfo(contentWrapper)
     HomePage.renderHipMapNewAccountInfo(contentWrapper)
     HomePage.renderHipMapAccountChangesInfo(contentWrapper)
+    HomePage.renderHipMapTechSupportInfo(contentWrapper)
+  }
+
+  // HipMap Tech Support Info
+  static renderHipMapTechSupportInfo(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Endo Tech Support"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "endo-tech-div")
+    insertNameText.innerText = "877-478-7953"
+    
+    insertNameTextDiv.appendChild(insertNameText)
+
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    insertNameDiv.appendChild(insertNameTextDiv)
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+
   }
 
   // HipMap Account Changes Information
@@ -206,7 +277,7 @@ class HomePage {
     const insertNameTextDiv = document.createElement("div")
     insertNameTextDiv.setAttribute("class", "name-div")
     const insertNameText = document.createElement("p")
-    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.setAttribute("class", "id-portol-div")
     insertNameText.innerText = "For questions relating to iD Portal (eRequest / fit.stryker.com), please contact the Tech Support team at hipmaperequests@stryker.com"
     
     insertNameTextDiv.appendChild(insertNameText)
