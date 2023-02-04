@@ -110,7 +110,9 @@ class HomePage {
       }
     })
 
-    if (selectedCapitalProducts[0].title === "Pivot Guardian Direct") {
+    if (selectedCapitalProducts[0].title === "HipMap") {
+      HomePage.renderHipMapDetails(selectedCapitalProduct)
+    } else if(selectedCapitalProducts[0].title === "Pivot Guardian Direct") {
       HomePage.renderDartsDetails(selectedCapitalProducts)
     } else if (selectedCapitalProducts[0].title === "Guardian") {
       HomePage.renderGuardianDetails(selectedCapitalProducts)
@@ -118,6 +120,102 @@ class HomePage {
       HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
     }
     Navbar.showBackBtn(selectedCapitalProducts)
+  }
+
+  // HipMap
+  static renderHipMapDetails(hipMap_products){
+    const contentWrapper = document.createElement('div')
+    contentWrapper.setAttribute('class', 'content-wrapper')
+    HomePage.renderHipMapIDPortalInfo(contentWrapper)
+    HomePage.renderHipMapNewAccountInfo(contentWrapper)
+    HomePage.renderHipMapAccountChangesInfo(contentWrapper)
+  }
+
+  // HipMap Account Changes Information
+  static renderHipMapAccountChangesInfo(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Changes to Account?"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("a")
+    insertNameText.setAttribute("href", "https://forms.office.com/Pages/ResponsePage.aspx?id=-7udTko5g0WIEFP4H4GeO7O88jBJAlhDhL-SJ9XG_jtUMVc1WVdURTBCVEZOWVlGV1dVMjBSTUdQNiQlQCN0PWcu")
+    insertNameText.setAttribute("target", "_blank")
+    insertNameText.setAttribute("class", "edit-hip-anchor")
+    insertNameText.innerText = "Follow link to edit account"
+    
+    insertNameTextDiv.appendChild(insertNameText)
+
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    insertNameDiv.appendChild(insertNameTextDiv)
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+
+  }
+  // HipMap New Account Information
+  static renderHipMapNewAccountInfo(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Create a new account?"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("a")
+    insertNameText.setAttribute("href", "https://forms.office.com/Pages/ResponsePage.aspx?id=-7udTko5g0WIEFP4H4GeO7O88jBJAlhDhL-SJ9XG_jtURDFaU0RPMkdVVzZTTVcxUE1KTDYySU1DWiQlQCN0PWcu")
+    insertNameText.setAttribute("target", "_blank")
+    insertNameText.setAttribute("class", "hip-anchor")
+    insertNameText.innerText = "Follow link to create a new account"
+    
+    insertNameTextDiv.appendChild(insertNameText)
+
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    insertNameDiv.appendChild(insertNameTextDiv)
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+
+  }
+
+  // HipMap Information
+  static renderHipMapIDPortalInfo(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "ID Portal"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = "For questions relating to iD Portal (eRequest / fit.stryker.com), please contact the Tech Support team at hipmaperequests@stryker.com"
+    
+    insertNameTextDiv.appendChild(insertNameText)
+
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    insertNameDiv.appendChild(insertNameTextDiv)
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+
   }
 
   // Guardian

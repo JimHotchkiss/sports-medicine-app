@@ -3,6 +3,7 @@
     margin: 84px auto;
 }
 
+
 .content-div {
     text-align: center;
     padding: 8px 16px;
@@ -44,9 +45,6 @@
     transition: 0.3ms;
 }
 
-.benefits-info{
-    
-}
 
 .product-name-div {
     padding: 8px 16px;
@@ -249,6 +247,33 @@
 .name-div p {
     font-weight: 500;
     font-style: italic;
+}
+
+/***** HipMap and HipCheck ******/
+.hip-anchor {
+    text-decoration: none;
+    padding: 8px 75px 8px 8px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+    font-weight: normal;
+    color: black;
+}
+
+.edit-hip-anchor {
+    text-decoration: none;
+    padding: 8px 142px 8px 8px;
+    margin-bottom: 16px;
+    min-width: 275px;
+    max-width: 300px;
+    background: #ffb600;
+    border-radius: 5px;
+    transition: 0.3ms;
+    font-weight: normal;
+    color: black; 
 }
 
 .pn-div {
