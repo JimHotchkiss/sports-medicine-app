@@ -119,10 +119,37 @@ class HomePage {
       HomePage.renderDartsDetails(selectedCapitalProducts)
     } else if (selectedCapitalProducts[0].title === "Guardian") {
       HomePage.renderGuardianDetails(selectedCapitalProducts)
-    } else {
-      HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)
-    }
+    } else if (selectedCapitalProducts[0].title === "Adaptable Arm Positioner") {
+      const selectedCapitalProduct = selectedCapitalProducts[0]
+      HomePage.renderAdaptableArmPositionerDetails(selectedCapitalProduct)
+    } 
+      else {HomePage.renderAdaptableBeachChairDetails()}
     Navbar.showBackBtn(selectedCapitalProducts)
+  }
+
+  // Adaptable Arm Positioner
+  static renderAdaptableArmPositionerDetails(selectedCapitalProduct) {
+    const contentWrapper = document.createElement('div')
+    contentWrapper.setAttribute('class', 'content-wrapper')
+    const productName = selectedCapitalProduct.title
+    HomePage.ProductName(productName,contentWrapper)
+    HomePage.renderAdaptableArmPositionerPNs(contentWrapper)
+
+  }
+
+  static renderAdaptableArmPositionerPNs(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+    insertNameDiv.setAttribute("id", "insert-name-div")
+    insertNameDiv.innerText = "Part Numbers"
+
+    const adaptablePNImageDiv = document.createElement('div')
+    adaptablePNImageDiv.setAttribute('class', 'adaptable-arm-img-div')
+    adaptablePNImageDiv.setAttribute('id', `adaptable-arm-pn-image`)
+    insertNameDiv.appendChild(adaptablePNImageDiv)
+   
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
   }
 
   // HipCheck 

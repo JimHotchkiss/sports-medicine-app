@@ -625,11 +625,15 @@ Notes: Order of developmemnt
         () Note: In the Excel sheet there's no 'Disposables' or 'Clinical Indications'
             - Email sent to Team about additional information 21-Jan-23
                 * Nobody responded, move ahead with HipMap and HipCheck
-    [] Hip Map
+                * Calli sent me the IFU not the URL to the IFU
+    [X] Hip Map
         - Confirmed with Jeff (email) that the information on the spreadsheet is accurate
-    [] Hip Check
+    [X] Hip Check
         - Confirmed with Jeff (email) that the information on the spreadsheet is accurate
     [] Adaptable Arm Positioner 
+        (x) Add to Data
+        () Add to Feature page
+        () Render details 
 
 
 

@@ -215,6 +215,18 @@
 
 }
 
+/********* Adaptable Arms ***********/
+#adaptable-arm-pn-image {
+    background:  transparent url(../images/arm-positioner-pn.png) 0% 0% no-repeat padding-box;
+    background-size: contain;
+}
+
+.adaptable-arm-img-div {
+    width: 307px;
+    height: 400px
+    
+}
+
 /********* DARTS **********/
 
 .darts-img-div {
