@@ -217,14 +217,23 @@
 
 /********* Adaptable Arms ***********/
 #adaptable-arm-pn-image {
-    background:  transparent url(../images/arm-positioner-pn.png) 0% 0% no-repeat padding-box;
-    background-size: contain;
+    background:  transparent url(../images/arm-positioner-pn2.png) 0% 0% no-repeat padding-box;
+    background-size: cover;
 }
 
 .adaptable-arm-img-div {
-    width: 307px;
-    height: 400px
+    height: 330px;
+    border-radius: 5px;
     
+}
+
+#adaptable-arm-image1 {
+    background:  transparent url(../images/arm-positioner-1.png) 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+#adaptable-arm-image2 {
+    background:  transparent url(../images/arm-positioner-2.png) 0% 0% no-repeat padding-box;
+    background-size: cover;
 }
 
 /********* DARTS **********/

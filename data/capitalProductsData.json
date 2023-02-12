@@ -15,9 +15,8 @@
      "feature_id":"capital","pn":"", "title": "HipCheck", "compatability_table" : "", "patient_size": "","dart_images":[{"img_url": "./darts_img1.png"}, {"img_url": ""}], "ifu_url": "#", "order_ifo_url": "", "disposables": [{"item": ""}, {"item": ""},{"item": ""} ], "clinical_indications": ""
   },
    {
-     "feature_id":"capital","pn":"", "title": "Adaptable Arm Positioner", "material" : "Carbon Fiber", "positioner_weight": "10 lbs.","max_length":"34 inches", "mode_of_operation":"Fully mechanical (no cords, compressed gas, batteries, external power, or foot pedal needed)", "disposable":"3105400010- formable foam arm cradle, camera drape, self-adhesive wrap, foam hand post pad)", "sterility":["Lateral Decubitus attachment option",
-     "Anti-slip 'alumifoam' is designed to prevent arm slippage",
-     "Procare option","one-year warranty"]
+     "feature_id":"capital","pn":"", "title": "Adaptable Arm Positioner", "material" : "Carbon Fiber", "positioner_weight": "10 lbs.","max_length":"34 inches", "mode_of_operation":"Fully mechanical (no cords, compressed gas, batteries, external power, or foot pedal needed)", "disposable":"3105400010- formable foam arm cradle, camera drape, self-adhesive wrap, foam hand post pad", "sterility":[{"sterile":"-Connector & connector screws\n -Arm Tray\n -Drape\n -Non-operative arm pad"}, {"non_sterile": "-Arm positioner"}],
+     "additional_features":"- Lateral Decubitus attachment option\n -Anti-slip 'alumifoam'designed to prevent arm slippage\n -Procare option, one-year warranty"
   }
  
 ]

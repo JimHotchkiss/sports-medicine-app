@@ -110,6 +110,8 @@ class HomePage {
       }
     })
 
+
+
     if (selectedCapitalProducts[0].title === "HipCheck") {
       HomePage.renderHipCheckDetails(selectedCapitalProduct)
     } 
@@ -123,7 +125,7 @@ class HomePage {
       const selectedCapitalProduct = selectedCapitalProducts[0]
       HomePage.renderAdaptableArmPositionerDetails(selectedCapitalProduct)
     } 
-      else {HomePage.renderAdaptableBeachChairDetails()}
+      else {HomePage.renderAdaptableBeachChairDetails(selectedCapitalProducts)}
     Navbar.showBackBtn(selectedCapitalProducts)
   }
 
@@ -132,24 +134,260 @@ class HomePage {
     const contentWrapper = document.createElement('div')
     contentWrapper.setAttribute('class', 'content-wrapper')
     const productName = selectedCapitalProduct.title
+    const productMaterial = selectedCapitalProduct.material
+    const positionerWeight = selectedCapitalProduct.positioner_weight
+    const positionerMaxLength = selectedCapitalProduct.max_length
+    const positionerModeOfOperation = selectedCapitalProduct.mode_of_operation
+    const positionerDisposable = selectedCapitalProduct.disposable
+    const postionerSterility = selectedCapitalProduct.sterility
+    const postionerAdditionalFeatures = selectedCapitalProduct.additional_features
     HomePage.ProductName(productName,contentWrapper)
     HomePage.renderAdaptableArmPositionerPNs(contentWrapper)
+    HomePage.renderAdaptableArmPositionerMaterial(productMaterial, contentWrapper)
+    HomePage.renderAdaptableArmPositionerWeight(positionerWeight, contentWrapper)
+    HomePage.renderAdaptableArmPositionerMaxLength(positionerMaxLength, contentWrapper)
+    HomePage.renderAdaptableArmPositionerModeOfOperation(positionerModeOfOperation, contentWrapper)
+    HomePage.renderAdaptableArmPositionerDisposable(positionerDisposable, contentWrapper)
+    HomePage.renderAdaptableArmPositionerSterile(postionerSterility, contentWrapper )
+    HomePage.renderAdaptableArmPositionerNonSterile(postionerSterility, contentWrapper )
+    HomePage.renderAdaptableArmPositionerAdditionalFeatures(postionerAdditionalFeatures, contentWrapper)
+    HomePage.renderAdaptableArmPositionerImages(contentWrapper)
+
+  }
+
+  static renderAdaptableArmPositionerImages(contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Images"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    // Image One
+    const adaptableImageDiv1 = document.createElement('div')
+    adaptableImageDiv1.setAttribute('class', 'adaptable-arm-img-div')
+    adaptableImageDiv1.setAttribute('id', `adaptable-arm-image1`)
+    insertNameDiv.appendChild(adaptableImageDiv1)
+
+    const adaptableImageDiv2 = document.createElement('div')
+    adaptableImageDiv2.setAttribute('class', 'adaptable-arm-img-div')
+    adaptableImageDiv2.setAttribute('id', `adaptable-arm-image2`)
+    insertNameDiv.appendChild(adaptableImageDiv2)
+
+    contentWrapper.appendChild(insertNameDiv)
+    HomePage.root().appendChild(contentWrapper)
+
+  }
+
+  static renderAdaptableArmPositionerAdditionalFeatures(postionerAdditionalFeatures, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Additional Features"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = postionerAdditionalFeatures
+    insertNameDiv.appendChild(insertNameText)
+
+    contentWrapper.appendChild(insertNameDiv)
+  }
+
+  static renderAdaptableArmPositionerSterile(postionerSterility, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Sterile Items"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    postionerSterility.map(item => {
+    if (item.sterile) {
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = item.sterile
+      insertNameDiv.appendChild(insertNameText)
+    } 
+    contentWrapper.appendChild(insertNameDiv)
+    })
+  }
+
+  static renderAdaptableArmPositionerNonSterile(postionerSterility, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Non-Sterile Items"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    postionerSterility.map(item => {
+    if (item.non_sterile) {
+      const insertNameText = document.createElement("p")
+      insertNameText.setAttribute("class", "product-name-div")
+      insertNameText.innerText = item.non_sterile
+      insertNameDiv.appendChild(insertNameText)
+    } 
+    contentWrapper.appendChild(insertNameDiv)
+    })
+  }
+
+  static renderAdaptableArmPositionerDisposable(positionerDisposable, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Disposable"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = positionerDisposable
+    insertNameDiv.appendChild(insertNameText)
+
+    contentWrapper.appendChild(insertNameDiv)
+  }
+
+  static renderAdaptableArmPositionerModeOfOperation(positionerModeOfOperation, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Mode of Operatiopn"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = positionerModeOfOperation
+    insertNameDiv.appendChild(insertNameText)
+
+    contentWrapper.appendChild(insertNameDiv)
+  }
+
+  static renderAdaptableArmPositionerMaxLength(positionerMaxLength, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Max Length"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = positionerMaxLength
+    insertNameDiv.appendChild(insertNameText)
+
+    contentWrapper.appendChild(insertNameDiv)
+  }
+
+  static renderAdaptableArmPositionerWeight(positionerWeight, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Positioner Weight"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = positionerWeight
+    insertNameDiv.appendChild(insertNameText)
+
+    contentWrapper.appendChild(insertNameDiv)
+
+  }
+
+  static renderAdaptableArmPositionerMaterial(productMaterial, contentWrapper) {
+    const insertNameDiv = document.createElement("div")
+    insertNameDiv.setAttribute("class", "content-details-div")
+
+    const insertNameTitleDiv = document.createElement('div')
+    insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+    const insertNameTitle = document.createElement("h3")
+    insertNameTitle.setAttribute("class", "insert-details-title")
+    insertNameTitle.innerText = "Material"
+    insertNameTitleDiv.appendChild(insertNameTitle)
+    insertNameDiv.appendChild(insertNameTitleDiv)
+
+    const insertNameTextDiv = document.createElement("div")
+    insertNameTextDiv.setAttribute("class", "name-div")
+    const insertNameText = document.createElement("p")
+    insertNameText.setAttribute("class", "product-name-div")
+    insertNameText.innerText = productMaterial
+    insertNameDiv.appendChild(insertNameText)
+
+    contentWrapper.appendChild(insertNameDiv)
+
+
 
   }
 
   static renderAdaptableArmPositionerPNs(contentWrapper) {
     const insertNameDiv = document.createElement("div")
-    insertNameDiv.setAttribute("class", "content-details-div")
-    insertNameDiv.setAttribute("id", "insert-name-div")
-    insertNameDiv.innerText = "Part Numbers"
+      insertNameDiv.setAttribute("class", "content-details-div")
+      // insertNameDiv.setAttribute("id", "insert-name-div")
 
-    const adaptablePNImageDiv = document.createElement('div')
-    adaptablePNImageDiv.setAttribute('class', 'adaptable-arm-img-div')
-    adaptablePNImageDiv.setAttribute('id', `adaptable-arm-pn-image`)
-    insertNameDiv.appendChild(adaptablePNImageDiv)
-   
-    contentWrapper.appendChild(insertNameDiv)
-    HomePage.root().appendChild(contentWrapper)
+      const insertNameTitleDiv = document.createElement('div')
+      insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
+      const insertNameTitle = document.createElement("h3")
+      insertNameTitle.setAttribute("class", "insert-details-title")
+      insertNameTitle.innerText = "Part Numbers"
+      insertNameTitleDiv.appendChild(insertNameTitle)
+      insertNameDiv.appendChild(insertNameTitleDiv)
+
+      const adaptablePNImageDiv = document.createElement('div')
+      adaptablePNImageDiv.setAttribute('class', 'adaptable-arm-img-div')
+      adaptablePNImageDiv.setAttribute('id', `adaptable-arm-pn-image`)
+      insertNameDiv.appendChild(adaptablePNImageDiv)
+
+      contentWrapper.appendChild(insertNameDiv)
+      HomePage.root().appendChild(contentWrapper)
+  
   }
 
   // HipCheck 
@@ -878,6 +1116,7 @@ class HomePage {
 
   // Adaptable Beach Chair Details 
   static renderAdaptableBeachChairDetails(selectedCapitalProducts) {
+    console.log(selectedCapitalProducts)
     const contentWrapper = document.createElement('div')
     contentWrapper.setAttribute('class', 'content-wrapper')
     const selectedProductName = selectedCapitalProducts[0].title
