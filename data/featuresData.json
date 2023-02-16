@@ -7,9 +7,6 @@
     },
     {
         "id": "probe", "title": "Arthro Specifications", "iconUrl": "../images/tennis.png", "description": "Sports Medicine probe specifications including length, outer diameter, coag, cut default and cut max."
-    },
-    {
-        "id": "complaint", "title": "File Complaint", "iconUrl": "../images/complaint.png", "description": "Submit the necessary information to file a complaint."
     }
  ]
 }

@@ -635,6 +635,11 @@ Notes: Order of developmemnt
         () Add to Feature page
         () Render details 
 
+Note: Removed complaint feature from feature data
+ {
+        "id": "complaint", "title": "File Complaint", "iconUrl": "../images/complaint.png", "description": "Submit the necessary information to file a complaint."
+    }
+
 
 
   
