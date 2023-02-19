@@ -156,6 +156,9 @@ class HomePage {
   }
 
   static renderAdaptableArmPositionerImages(contentWrapper) {
+    const imagesUrl = ["../images/lateral-arm.jpg", "../images/isolated-arm.jpg"]
+
+    imagesUrl.forEach(image => {
     const insertNameDiv = document.createElement("div")
     insertNameDiv.setAttribute("class", "content-details-div")
 
@@ -167,19 +170,33 @@ class HomePage {
     insertNameTitleDiv.appendChild(insertNameTitle)
     insertNameDiv.appendChild(insertNameTitleDiv)
 
-    // Image One
     const adaptableImageDiv1 = document.createElement('div')
     adaptableImageDiv1.setAttribute('class', 'adaptable-arm-img-div')
     adaptableImageDiv1.setAttribute('id', `adaptable-arm-image1`)
-    insertNameDiv.appendChild(adaptableImageDiv1)
 
-    const adaptableImageDiv2 = document.createElement('div')
-    adaptableImageDiv2.setAttribute('class', 'adaptable-arm-img-div')
-    adaptableImageDiv2.setAttribute('id', `adaptable-arm-image2`)
-    insertNameDiv.appendChild(adaptableImageDiv2)
+    const imgTag = document.createElement('img')
+    imgTag.setAttribute('href', image)
+    adaptableImageDiv1.appendChild(imgTag)
+    insertNameDiv.appendChild(adaptableImageDiv1)
 
     contentWrapper.appendChild(insertNameDiv)
     HomePage.root().appendChild(contentWrapper)
+      console.log(imagesUrl)
+    })
+   
+
+    // Image One
+    // const adaptableImageDiv1 = document.createElement('div')
+    // adaptableImageDiv1.setAttribute('class', 'adaptable-arm-img-div')
+    // adaptableImageDiv1.setAttribute('id', `adaptable-arm-image1`)
+    // insertNameDiv.appendChild(adaptableImageDiv1)
+
+    // const adaptableImageDiv2 = document.createElement('div')
+    // adaptableImageDiv2.setAttribute('class', 'adaptable-arm-img-div')
+    // adaptableImageDiv2.setAttribute('id', `adaptable-arm-image2`)
+    // insertNameDiv.appendChild(adaptableImageDiv2)
+
+    
 
   }
 
