@@ -227,12 +227,14 @@
     
 }
 
-#adaptable-arm-image1 {
-    background-size: cover;
+.adaptable-arm-imgs-div {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: auto;
+    border-radius: 5px;
 }
-#adaptable-arm-image2 {
-    background-size: cover;
-}
+
 
 /********* DARTS **********/
 

@@ -156,7 +156,7 @@ class HomePage {
   }
 
   static renderAdaptableArmPositionerImages(contentWrapper) {
-    const imagesUrl = ["../images/lateral-arm.jpg", "../images/isolated-arm.jpg"]
+    const imagesUrl = ["../../images/lateral-arm.jpg", "../../images/isolated-arm.png"]
 
     imagesUrl.forEach(image => {
     const insertNameDiv = document.createElement("div")
@@ -166,16 +166,25 @@ class HomePage {
     insertNameTitleDiv.setAttribute('class', 'product-name-title-div')
     const insertNameTitle = document.createElement("h3")
     insertNameTitle.setAttribute("class", "insert-details-title")
-    insertNameTitle.innerText = "Images"
+    if (image === "../../images/lateral-arm.jpg") {
+      insertNameTitle.innerText = "Lateral Decubitus"
+    } else {
+      insertNameTitle.innerText = "Arm Positioner"
+    }
+    
     insertNameTitleDiv.appendChild(insertNameTitle)
     insertNameDiv.appendChild(insertNameTitleDiv)
 
     const adaptableImageDiv1 = document.createElement('div')
-    adaptableImageDiv1.setAttribute('class', 'adaptable-arm-img-div')
-    adaptableImageDiv1.setAttribute('id', `adaptable-arm-image1`)
+    adaptableImageDiv1.setAttribute('class', 'adaptable-arm-imgs-div')
+    adaptableImageDiv1.setAttribute('id', `adaptable-arm-image`)
 
     const imgTag = document.createElement('img')
-    imgTag.setAttribute('href', image)
+    imgTag.setAttribute('src', image)
+    imgTag.setAttribute('height', '360px')
+    imgTag.setAttribute('object-fit', 'contain')
+  
+    
     adaptableImageDiv1.appendChild(imgTag)
     insertNameDiv.appendChild(adaptableImageDiv1)
 
