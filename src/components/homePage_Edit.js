@@ -734,8 +734,14 @@ class HomePage {
     insertNameDiv.appendChild(insertNameTitleDiv)
     // Images
     const replacementPartsImageDiv = document.createElement('div')
-    replacementPartsImageDiv.setAttribute('class', 'darts-img-div')
+    if (index === 0) {
+      replacementPartsImageDiv.setAttribute('class', 'darts-img-div')
     replacementPartsImageDiv.setAttribute('id', `darts-compatability-image-${index}`)
+
+    } else {
+      replacementPartsImageDiv.setAttribute('class', 'darts-pn-img-div')
+    replacementPartsImageDiv.setAttribute('id', `darts-compatability-image-${index}`)
+    }
     insertNameDiv.appendChild(replacementPartsImageDiv)
    
     contentWrapper.appendChild(insertNameDiv)
@@ -1153,7 +1159,7 @@ class HomePage {
     const selectProductHeightRange = selectedCapitalProducts[0].patient_height_range
     HomePage.scrollToTop()
     HomePage.ProductName(selectedProductName, contentWrapper)
-    HomePage.ProductPn(selectedProductPn, contentWrapper)
+    // HomePage.ProductPn(selectedProductPn, contentWrapper)
     HomePage.ProductDescription(selectedProductDescription, contentWrapper)
     HomePage.ABCChairWeight(selectedProductWeight, contentWrapper)
     HomePage.ABCPatientWeightLimit(selectedProductWeightLimit, contentWrapper)
