@@ -240,15 +240,15 @@
 
 .darts-img-div {
    height: 235px;
-   background-color: red;
+   border-radius: 5px;
 }
 .darts-pn-img-div {
    height: 280px;
-   background-color: red;
+   border-radius: 5px;
 }
 .compatability-img-div {
    height: 235px;
-   background-color: red;
+   border-radius: 5px;
 }
 #darts-compatability-image {
     background:  transparent url(../images/darts_comp_table.png) 0% 0% no-repeat padding-box;
